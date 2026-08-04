@@ -96,10 +96,26 @@ async function fetchCloudData() {
         const cloudKeys = Array.isArray(dbObj.keys) ? dbObj.keys : [];
         const cloudUsers = Array.isArray(dbObj.users) ? dbObj.users : [];
 
-        // Smart Map Merge: Combine cloud and local keys so fast-created keys are NEVER lost
+        // Smart Map Merge: USED status ALWAYS wins!
         const keyMap = new Map();
-        cloudKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
-        lKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
+        lKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), { ...k }); });
+
+        cloudKeys.forEach(ck => {
+          if (ck && ck.key) {
+            const upper = ck.key.toUpperCase();
+            const existing = keyMap.get(upper);
+            if (!existing) {
+              keyMap.set(upper, { ...ck });
+            } else {
+              if (ck.status === 'used' || existing.status === 'used') {
+                existing.status = 'used';
+                existing.deviceId = ck.deviceId || existing.deviceId;
+                existing.activatedAt = ck.activatedAt || existing.activatedAt;
+              }
+              keyMap.set(upper, existing);
+            }
+          }
+        });
 
         const userMap = new Map();
         cloudUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
@@ -107,6 +123,17 @@ async function fetchCloudData() {
 
         const finalKeys = Array.from(keyMap.values());
         const finalUsers = Array.from(userMap.values());
+
+        // Cross-sync: If user array redeemed a key, enforce used status on key!
+        finalUsers.forEach(u => {
+          if (u.role === 'vip' && u.activatedKey && u.activatedKey.startsWith('MAC-')) {
+            const kObj = finalKeys.find(k => k.key.toUpperCase() === u.activatedKey.toUpperCase());
+            if (kObj) {
+              kObj.status = 'used';
+              kObj.deviceId = u.deviceId;
+            }
+          }
+        });
 
         localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(finalKeys));
         localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(finalUsers));

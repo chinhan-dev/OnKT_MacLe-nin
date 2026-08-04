@@ -487,10 +487,26 @@
             const cloudKeys = Array.isArray(json.keys) ? json.keys : [];
             const cloudUsers = Array.isArray(json.users) ? json.users : [];
             
-            // Smart Map Merge: Combine cloud and local keys so fast-created keys are NEVER lost
+            // Smart Map Merge: USED status ALWAYS wins!
             const keyMap = new Map();
-            cloudKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
-            localKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
+            localKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), { ...k }); });
+
+            cloudKeys.forEach(ck => {
+              if (ck && ck.key) {
+                const upper = ck.key.toUpperCase();
+                const existing = keyMap.get(upper);
+                if (!existing) {
+                  keyMap.set(upper, { ...ck });
+                } else {
+                  if (ck.status === 'used' || existing.status === 'used') {
+                    existing.status = 'used';
+                    existing.deviceId = ck.deviceId || existing.deviceId;
+                    existing.activatedAt = ck.activatedAt || existing.activatedAt;
+                  }
+                  keyMap.set(upper, existing);
+                }
+              }
+            });
 
             const userMap = new Map();
             cloudUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
@@ -499,9 +515,19 @@
             const mergedKeys = Array.from(keyMap.values());
             const mergedUsers = Array.from(userMap.values());
 
+            // Cross-sync: If user array redeemed a key, enforce used status on key!
+            mergedUsers.forEach(u => {
+              if (u.role === 'vip' && u.activatedKey && u.activatedKey.startsWith('MAC-')) {
+                const kObj = mergedKeys.find(k => k.key.toUpperCase() === u.activatedKey.toUpperCase());
+                if (kObj) {
+                  kObj.status = 'used';
+                  kObj.deviceId = u.deviceId;
+                }
+              }
+            });
+
             saveLocalData(mergedKeys, mergedUsers);
 
-            // Re-push merged state to cloud if cloud was missing any key
             if (mergedKeys.length > cloudKeys.length || mergedUsers.length > cloudUsers.length) {
               pushCloudData(mergedKeys, mergedUsers);
             }
