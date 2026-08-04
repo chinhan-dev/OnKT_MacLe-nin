@@ -1,4 +1,96 @@
-/* ==========================================================================
+import json, re
+
+# 1. Add User Management Styles to styles.css
+user_mgmt_css = """
+
+/* Admin User Management Styles */
+.admin-tab-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.admin-tab-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.admin-tab-btn.active {
+  background-color: #7e22ce;
+  color: #ffffff;
+  border-color: #7e22ce;
+}
+
+.admin-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stat-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  text-align: center;
+}
+
+.stat-box .num {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1e3a8a;
+}
+
+.stat-box .lbl {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.btn-promote-user {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ecfdf5;
+  color: #047857;
+  font-weight: 700;
+  font-size: 0.78rem;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.btn-block-user {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #fff7ed;
+  color: #c2410c;
+  font-weight: 700;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+"""
+
+with open('styles.css', 'a', encoding='utf-8') as f:
+    f.write(user_mgmt_css)
+
+print("User Management CSS added to styles.css.")
+
+# 2. Rebuild admin.js with User Management features
+admin_full_js = """/* ==========================================================================
    ADMIN PANEL & USER MANAGEMENT SYSTEM (Pass: chinhanxt)
    ========================================================================== */
 
@@ -368,3 +460,9 @@ function promptAdminLogin() {
 }
 
 document.addEventListener('DOMContentLoaded', trackCurrentDeviceUser);
+"""
+
+with open('admin.js', 'w', encoding='utf-8') as f:
+    f.write(admin_full_js)
+
+print("Updated admin.js with complete User Management system.")
