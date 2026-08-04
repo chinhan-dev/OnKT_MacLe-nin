@@ -353,7 +353,26 @@
             </div>
           </div>
 
-          <div class="admin-tab-bar" style="margin-top: 24px;">
+          <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 14px; padding: 16px; margin-top: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-weight: 800; color: #166534; font-size: 0.95rem;">
+                <i class="fa-solid fa-file-excel" style="color: #15803d;"></i> Quản lý Database bằng Google Sheet
+              </span>
+              <a href="https://docs.google.com/spreadsheets/d/1Zq8figZJxwLqEd7QlAEhBI6XXLilQ01vyU6JfuQxKvY/edit" target="_blank" style="font-size: 0.82rem; font-weight: 700; color: #15803d; text-decoration: none;">
+                <i class="fa-solid fa-external-link"></i> Mở Google Sheet
+              </a>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="ggSheetUrlInput" placeholder="Nhập Google Apps Script Web App URL (VD: https://script.google.com/macros/s/.../exec)..." 
+                value="${localStorage.getItem('lms_gg_sheet_script_url') || ''}"
+                style="flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid #86efac; font-size: 0.85rem;">
+              <button id="saveGgSheetUrlBtn" style="padding: 10px 16px; background: #166534; color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+                <i class="fa-solid fa-floppy-disk"></i> Lưu URL Google Sheet
+              </button>
+            </div>
+          </div>
+
+          <div class="admin-tab-bar" style="margin-top: 20px;">
             <button class="admin-tab-btn ${currentAdminTab === 'keys' ? 'active' : ''}" id="adminTabKeysPage">
               <i class="fa-solid fa-key"></i> Quản Lý Mã VIP (${keys.length})
             </button>
@@ -369,6 +388,22 @@
       const tabKeys = document.getElementById('adminTabKeysPage');
       const tabUsers = document.getElementById('adminTabUsersPage');
       const genBtn = document.getElementById('btnGenKeyPage');
+      const saveSheetBtn = document.getElementById('saveGgSheetUrlBtn');
+      const sheetUrlInput = document.getElementById('ggSheetUrlInput');
+
+      if (saveSheetBtn && sheetUrlInput) {
+        saveSheetBtn.addEventListener('click', async () => {
+          const val = sheetUrlInput.value.trim();
+          if (val) {
+            localStorage.setItem('lms_gg_sheet_script_url', val);
+            if (typeof showToast === 'function') showToast('✅ Đã lưu kết nối Google Sheet Web App!', 'success'); else alert('✅ Đã lưu kết nối Google Sheet Web App!');
+          } else {
+            localStorage.removeItem('lms_gg_sheet_script_url');
+            if (typeof showToast === 'function') showToast('ℹ️ Đã xóa URL kết nối Google Sheet', 'info');
+          }
+          await renderAdminStandalonePage();
+        });
+      }
 
       if (tabKeys) tabKeys.addEventListener('click', () => { currentAdminTab = 'keys'; renderAdminStandalonePage(); });
       if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; renderAdminStandalonePage(); });

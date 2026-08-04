@@ -15,28 +15,38 @@ const USERS_DB_STORAGE = 'lms_users_db';
 const DEVICE_ID_KEY = 'lms_device_fingerprint';
 const ACTIVATED_KEY_STORAGE = 'lms_activated_vip_key';
 const CLOUD_DB_ENDPOINT = 'https://jsonblob.com/api/jsonBlob/019fcb1f-708b-750f-948f-caa9398416e8';
+const GG_SHEET_URL_STORAGE = 'lms_gg_sheet_script_url';
 
-// Save & Overwrite Cloud DB Directly for Delete & Modify Actions
+function getCloudEndpoint() {
+  return localStorage.getItem(GG_SHEET_URL_STORAGE) || CLOUD_DB_ENDPOINT;
+}
+
+// Save & Overwrite Cloud DB / Google Sheets Directly
 async function saveAndPushCloudData(keys, users) {
   localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(keys));
   localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(users));
 
+  const endpoint = getCloudEndpoint();
   try {
-    const putRes = await fetch(CLOUD_DB_ENDPOINT, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        keys: keys,
-        users: users
-      })
-    });
+    const isGoogleSheet = endpoint.includes('script.google.com');
+    const fetchOptions = isGoogleSheet
+      ? {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ keys: keys, users: users })
+        }
+      : {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ keys: keys, users: users })
+        };
 
+    const putRes = await fetch(endpoint, fetchOptions);
     if (putRes.ok) {
-      await putRes.json();
-      console.log('Cloud DB save confirmed.');
+      console.log('Cloud DB / Google Sheet save confirmed.');
     }
   } catch (e) {
-    console.warn('Cloud DB save error:', e);
+    console.warn('Cloud DB / Google Sheet save error:', e);
   }
 }
 
@@ -68,13 +78,14 @@ function aggregateUsersFromKeys(keys, users) {
   return mergedUsers;
 }
 
-// Fetch Both Keys & Users from Cloud DB & Merge Cleanly
+// Fetch Both Keys & Users from Cloud DB / Google Sheets & Merge Cleanly
 async function fetchCloudData() {
+  const endpoint = getCloudEndpoint();
   try {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 3500);
+    const timer = setTimeout(() => controller.abort(), 4000);
 
-    const res = await fetch(CLOUD_DB_ENDPOINT, { cache: 'no-store', signal: controller.signal });
+    const res = await fetch(endpoint, { cache: 'no-store', signal: controller.signal });
     clearTimeout(timer);
 
     if (res.ok) {
@@ -117,7 +128,7 @@ async function fetchCloudData() {
       }
     }
   } catch (e) {
-    console.warn('Cloud DB fetch offline/timeout, using local storage.', e);
+    console.warn('Cloud DB / Google Sheet fetch offline/timeout, using local storage.', e);
   }
 
   const lKeys = getVipKeysDB();
@@ -127,52 +138,9 @@ async function fetchCloudData() {
 
 // Push Both Keys & Users to Cloud DB Safely with Merge
 async function pushCloudData(keysToPush, usersToPush) {
-  try {
-    const getRes = await fetch(CLOUD_DB_ENDPOINT, { cache: 'no-store' });
-    let cloudKeys = [];
-    let cloudUsers = [];
-    if (getRes.ok) {
-      const json = await getRes.json();
-      if (json) {
-        const dbObj = json.data || json;
-        cloudKeys = Array.isArray(dbObj.keys) ? dbObj.keys : [];
-        cloudUsers = Array.isArray(dbObj.users) ? dbObj.users : [];
-      }
-    }
-
-    const mergedKeys = [...cloudKeys];
-    for (const k of (keysToPush || getVipKeysDB())) {
-      const idx = mergedKeys.findIndex(ck => ck.key.toUpperCase() === k.key.toUpperCase());
-      if (idx >= 0) mergedKeys[idx] = k; else mergedKeys.push(k);
-    }
-
-    let mergedUsers = [...cloudUsers];
-    for (const u of (usersToPush || getUsersDB())) {
-      const idx = mergedUsers.findIndex(cu => cu.deviceId === u.deviceId);
-      if (idx >= 0) mergedUsers[idx] = u; else mergedUsers.push(u);
-    }
-
-    // Auto-aggregate
-    mergedUsers = aggregateUsersFromKeys(mergedKeys, mergedUsers);
-
-    localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(mergedKeys));
-    localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(mergedUsers));
-
-    const putRes = await fetch(CLOUD_DB_ENDPOINT, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: 'LMS_VIP_KEYS',
-        data: { keys: mergedKeys, users: mergedUsers }
-      })
-    });
-
-    if (putRes.ok) {
-      await putRes.json();
-    }
-  } catch (e) {
-    console.warn('Failed to push to Cloud DB:', e);
-  }
+  const keys = keysToPush || getVipKeysDB();
+  const users = usersToPush || getUsersDB();
+  await saveAndPushCloudData(keys, users);
 }
 
 /* ==========================================================================
@@ -194,7 +162,7 @@ function getDeviceId() {
 // Track/Register user access in Users DB
 async function trackCurrentDeviceUser() {
   const devId = getDeviceId();
-  const role = getUserRole() || 'guest';
+  const role = typeof getUserRole === 'function' ? getUserRole() || 'guest' : localStorage.getItem('lms_user_role') || 'guest';
   const activatedKey = localStorage.getItem(ACTIVATED_KEY_STORAGE) || 'N/A';
   const userAgent = navigator.userAgent.includes('Mobile') ? '📱 Điện thoại' : '💻 Máy tính';
   const lastActive = new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN');
@@ -230,7 +198,7 @@ function getUsersDB() {
       {
         deviceId: currentDevId,
         name: `Học viên (Máy này)`,
-        role: getUserRole() || 'guest',
+        role: (typeof getUserRole === 'function' ? getUserRole() : localStorage.getItem('lms_user_role')) || 'guest',
         activatedKey: localStorage.getItem(ACTIVATED_KEY_STORAGE) || 'N/A',
         deviceType: navigator.userAgent.includes('Mobile') ? '📱 Điện thoại' : '💻 Máy tính',
         createdAt: new Date().toLocaleDateString('vi-VN'),
@@ -282,7 +250,7 @@ async function redeemVipKeyAsync(enteredKey) {
   // Admin Password Shortcut
   if (cleanKey === 'CHINHANXT') {
     localStorage.setItem('lms_is_admin', 'true');
-    setUserRole('vip');
+    if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
     return { success: true, msg: '🎉 Đăng nhập Admin thành công!' };
   }
 
@@ -330,7 +298,7 @@ async function redeemVipKeyAsync(enteredKey) {
   }
 
   // Set VIP role locally (DO NOT set lms_is_admin)
-  setUserRole('vip');
+  if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
   await saveAndPushCloudData(keys, users);
 
@@ -342,7 +310,7 @@ function redeemVipKey(enteredKey) {
 
   if (cleanKey === 'CHINHANXT') {
     localStorage.setItem('lms_is_admin', 'true');
-    setUserRole('vip');
+    if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
     return { success: true, msg: '🎉 Đăng nhập Admin thành công!' };
   }
 
@@ -368,185 +336,12 @@ function redeemVipKey(enteredKey) {
   pushCloudKeysDB(keys);
 
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
-  setUserRole('vip');
+  if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
   trackCurrentDeviceUser();
   return { success: true, msg: '🎉 Kích hoạt VIP thành công trên thiết bị này!' };
 }
 
 let currentAdminTab = 'keys';
-
-async function openAdminPanelModal() {
-  if (localStorage.getItem('lms_is_admin') !== 'true') {
-    window.location.href = 'admin.html';
-    return;
-  }
-
-  let modal = document.getElementById('adminModal');
-  if (!modal) {
-    modal = document.createElement('div');
-    modal.id = 'adminModal';
-    modal.className = 'login-overlay';
-    document.body.appendChild(modal);
-  }
-
-  modal.innerHTML = `
-    <div class="login-card admin-card" style="text-align: center; padding: 48px 32px;">
-      <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95);"><i class="fa-solid fa-spinner fa-spin"></i></div>
-      <h3 style="font-size: 1.2rem; color: #581c87; margin-top: 12px;">Đang tải Dashboard Admin...</h3>
-      <p style="font-size: 0.88rem; color: #64748b;">Đang kết nối & đồng bộ dữ liệu Real-time từ Cloud DB</p>
-    </div>
-  `;
-  modal.style.display = 'flex';
-
-  const cloudData = typeof fetchCloudData === 'function' ? await fetchCloudData() : { keys: getVipKeysDB(), users: getUsersDB() };
-  const keys = cloudData.keys;
-  const users = cloudData.users;
-
-  const vipCount = users.filter(u => u.role === 'vip').length;
-  const guestCount = users.filter(u => u.role === 'guest').length;
-  const totalUsers = users.length;
-
-  let contentHtml = '';
-
-  if (currentAdminTab === 'keys') {
-    let keysRows = keys.map((k) => `
-      <tr>
-        <td style="font-weight: 800; color: #1d4ed8;">${k.key}</td>
-        <td>
-          ${k.status === 'used' 
-            ? `<span class="badge-status-used">🔴 Đã dùng (${k.deviceId || ''})</span>` 
-            : `<span class="badge-status-unused">🟢 Chưa dùng</span>`}
-        </td>
-        <td style="font-size: 0.78rem; color: #64748b;">${k.createdAt || ''}</td>
-        <td>
-          <button class="btn-copy-key" onclick="copyKeyToClipboard('${k.key}')" title="Copy mã"><i class="fa-solid fa-copy"></i></button>
-          <button class="btn-delete-key" onclick="deleteVipKey('${k.key}')" title="Xóa mã"><i class="fa-solid fa-trash"></i></button>
-        </td>
-      </tr>
-    `).join('');
-
-    contentHtml = `
-      <div class="admin-actions">
-        <button class="btn-login-vip" id="btnGenKey" style="background: linear-gradient(135deg, #10b981, #059669);">
-          <i class="fa-solid fa-plus-circle"></i> + Tạo Mã VIP Mới
-        </button>
-      </div>
-
-      <div class="keys-table-container">
-        <table class="admin-keys-table">
-          <thead>
-            <tr>
-              <th>Mã VIP</th>
-              <th>Trạng thái</th>
-              <th>Ngày tạo</th>
-              <th>Thao tác</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${keysRows || '<tr><td colspan="4">Chưa có mã nào. Bấm "+ Tạo Mã VIP Mới" để tạo!</td></tr>'}
-          </tbody>
-        </table>
-      </div>
-    `;
-  } else {
-    let usersRows = users.map((u) => `
-      <tr>
-        <td style="font-weight: 800; color: #1e3a8a;">
-          ${u.deviceId}
-          ${u.deviceId === getDeviceId() ? '<span style="font-size: 0.7rem; color: #2563eb;">(Máy này)</span>' : ''}
-        </td>
-        <td>
-          ${u.role === 'vip' 
-            ? `<span class="badge-status-unused">👑 VIP</span>` 
-            : `<span class="badge-status-used" style="background: #fff7ed; color: #c2410c;">⏱️ Khách</span>`}
-        </td>
-        <td style="font-size: 0.8rem; font-weight: 700;">${u.activatedKey || 'Không'}</td>
-        <td style="font-size: 0.78rem; color: #64748b;">${u.lastActive || ''}</td>
-        <td>
-          ${u.role !== 'vip' 
-            ? `<button class="btn-promote-user" onclick="promoteUserToVip('${u.deviceId}')"><i class="fa-solid fa-crown"></i> Cấp VIP</button>` 
-            : `<button class="btn-block-user" onclick="demoteUserToGuest('${u.deviceId}')"><i class="fa-solid fa-lock"></i> Hạ Khách</button>`}
-          <button class="btn-delete-key" onclick="deleteUserRecord('${u.deviceId}')" title="Xóa User"><i class="fa-solid fa-trash"></i></button>
-        </td>
-      </tr>
-    `).join('');
-
-    contentHtml = `
-      <div class="keys-table-container">
-        <table class="admin-keys-table">
-          <thead>
-            <tr>
-              <th>Thiết Bị / User ID</th>
-              <th>Quyền</th>
-              <th>Mã Kích Hoạt</th>
-              <th>Hoạt động cuối</th>
-              <th>Thao tác</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${usersRows || '<tr><td colspan="5">Chưa có dữ liệu học viên.</td></tr>'}
-          </tbody>
-        </table>
-      </div>
-    `;
-  }
-
-  modal.innerHTML = `
-    <div class="login-card admin-card">
-      <div class="login-header">
-        <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95);"><i class="fa-solid fa-user-shield"></i></div>
-        <h2>TRANG QUẢN TRỊ ADMIN</h2>
-        <p>Quản lý Mã VIP & Danh sách Học viên / Thiết bị</p>
-      </div>
-
-      <div class="admin-stats-row">
-        <div class="stat-box">
-          <div class="num">${totalUsers}</div>
-          <div class="lbl">Tổng Học Viên</div>
-        </div>
-        <div class="stat-box">
-          <div class="num" style="color: #059669;">${vipCount}</div>
-          <div class="lbl">Học Viên VIP</div>
-        </div>
-        <div class="stat-box">
-          <div class="num" style="color: #c2410c;">${guestCount}</div>
-          <div class="lbl">Khách Dùng Thử</div>
-        </div>
-      </div>
-
-      <div class="admin-tab-bar">
-        <button class="admin-tab-btn ${currentAdminTab === 'keys' ? 'active' : ''}" id="adminTabKeys">
-          <i class="fa-solid fa-key"></i> Quản Lý Mã VIP (${keys.length})
-        </button>
-        <button class="admin-tab-btn ${currentAdminTab === 'users' ? 'active' : ''}" id="adminTabUsers">
-          <i class="fa-solid fa-users"></i> Quản Lý Học Viên (${users.length})
-        </button>
-      </div>
-
-      ${contentHtml}
-
-      <button class="btn-login-guest" id="btnCloseAdmin" style="margin-top: 16px;"><i class="fa-solid fa-xmark"></i> Đóng Trang Admin</button>
-    </div>
-  `;
-
-  modal.style.display = 'flex';
-
-  const tabKeys = document.getElementById('adminTabKeys');
-  const tabUsers = document.getElementById('adminTabUsers');
-  const genBtn = document.getElementById('btnGenKey');
-  const closeBtn = document.getElementById('btnCloseAdmin');
-
-  if (tabKeys) tabKeys.addEventListener('click', () => { currentAdminTab = 'keys'; refreshAdminUI(); });
-  if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; refreshAdminUI(); });
-  if (genBtn) genBtn.addEventListener('click', async () => {
-    genBtn.disabled = true;
-    genBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo mã...';
-    const newCode = await generateNewVipKey();
-    if (typeof showToast === 'function') showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`, 'success'); else alert(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
-    await refreshAdminUI();
-  });
-  if (closeBtn) closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
-}
 
 function copyKeyToClipboard(text) {
   navigator.clipboard.writeText(text);
@@ -585,7 +380,7 @@ function promoteUserToVip(devId) {
     pushCloudKeysDB(getVipKeysDB());
 
     if (devId === getDeviceId()) {
-      setUserRole('vip');
+      if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
       location.reload();
     } else {
       refreshAdminUI();
@@ -603,7 +398,7 @@ function demoteUserToGuest(devId) {
     pushCloudKeysDB(getVipKeysDB());
 
     if (devId === getDeviceId()) {
-      setUserRole('guest');
+      if (typeof setUserRole === 'function') setUserRole('guest'); else localStorage.setItem('lms_user_role', 'guest');
       location.reload();
     } else {
       refreshAdminUI();
