@@ -265,10 +265,12 @@
     .sheet-input-row {
       display: flex;
       gap: 8px;
+      flex-wrap: wrap;
     }
 
     .sheet-input-row input {
       flex: 1;
+      min-width: 280px;
       padding: 10px 14px;
       border-radius: 8px;
       border: 1px solid #86efac;
@@ -710,21 +712,18 @@
       }
 
       if (wipeB) {
-        wipeB.onclick = async () => {
+        wipeB.onclick = () => {
           if (confirm('🚨 Bạn có chắc chắn muốn XÓA TRẮNG TOÀN BỘ MÃ VIP & HỌC VIÊN trên cả Google Sheet và Hệ Thống? Hành động này không thể hoàn tác!')) {
-            wipeB.disabled = true;
-            wipeB.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang xóa trắng...';
-            await pushCloudData([], []);
-            showToast('🧹 Đã xóa trắng toàn bộ dữ liệu hệ thống!');
+            saveLocalData([], []);
             renderDashboard();
+            pushCloudData([], []);
+            showToast('🧹 Đã xóa trắng toàn bộ dữ liệu hệ thống!');
           }
         };
       }
 
       if (genB) {
-        genB.onclick = async () => {
-          genB.disabled = true;
-          genB.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo...';
+        genB.onclick = () => {
           const newCode = 'MAC-' + Math.random().toString(36).substring(2, 8).toUpperCase();
           const { keys: curKeys, users: curUsers } = getLocalData();
           curKeys.push({
@@ -733,9 +732,12 @@
             deviceId: null,
             createdAt: new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN')
           });
-          await pushCloudData(curKeys, curUsers);
+          // 1. Save and render INSTANTLY (0ms)
+          saveLocalData(curKeys, curUsers);
           showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
           renderDashboard();
+          // 2. Background push to Google Sheet
+          pushCloudData(curKeys, curUsers);
         };
       }
     }
@@ -746,7 +748,7 @@
       showToast(`📋 Đã copy mã VIP: ${key}`);
     };
 
-    window.deleteKey = async function(key) {
+    window.deleteKey = function(key) {
       if (confirm(`Bạn có chắc muốn xóa mã VIP ${key}?`)) {
         const { keys, users } = getLocalData();
         const newKeys = keys.filter(k => k.key.toUpperCase() !== key.toUpperCase());
@@ -756,25 +758,27 @@
             u.activatedKey = 'N/A';
           }
         });
-        await pushCloudData(newKeys, users);
+        saveLocalData(newKeys, users);
         showToast(`🗑️ Đã xóa mã VIP ${key}`);
         renderDashboard();
+        pushCloudData(newKeys, users);
       }
     };
 
-    window.setUserRoleAdmin = async function(devId, newRole) {
+    window.setUserRoleAdmin = function(devId, newRole) {
       const { keys, users } = getLocalData();
       const u = users.find(x => x.deviceId === devId);
       if (u) {
         u.role = newRole;
         if (newRole === 'guest') u.activatedKey = 'N/A';
-        await pushCloudData(keys, users);
+        saveLocalData(keys, users);
         showToast(`⚡ Đã chuyển học viên ${devId} sang ${newRole.toUpperCase()}`);
         renderDashboard();
+        pushCloudData(keys, users);
       }
     };
 
-    window.deleteUserAdmin = async function(devId) {
+    window.deleteUserAdmin = function(devId) {
       if (confirm(`Bạn có chắc muốn xóa học viên ${devId}?`)) {
         const { keys, users } = getLocalData();
         const newUsers = users.filter(u => u.deviceId !== devId);
@@ -784,9 +788,10 @@
             k.deviceId = null;
           }
         });
-        await pushCloudData(keys, newUsers);
+        saveLocalData(keys, newUsers);
         showToast(`🗑️ Đã xóa học viên ${devId}`);
         renderDashboard();
+        pushCloudData(keys, newUsers);
       }
     };
 
