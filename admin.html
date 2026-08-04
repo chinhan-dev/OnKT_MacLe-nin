@@ -287,6 +287,18 @@
       cursor: pointer;
     }
 
+    .btn-wipe-all {
+      padding: 10px 16px;
+      background: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fca5a5;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .btn-wipe-all:hover { background: #fee2e2; }
+
     /* Tabs */
     .tab-bar {
       display: flex;
@@ -627,7 +639,7 @@
                 </tr>
               </thead>
               <tbody>
-                ${rows || '<tr><td colspan="5" style="text-align: center; padding: 24px; color: #64748b;">Chưa có dữ liệu học viên.</td></tr>'}
+                ${rows || '<tr><td colspan="5" style="text-align: center; padding: 24px; color: #64748b;">Chưa có dữ liệu học viên nào.</td></tr>'}
               </tbody>
             </table>
           </div>
@@ -659,6 +671,7 @@
             <div class="sheet-input-row">
               <input type="text" id="sheetUrlInput" value="${getSheetUrl()}" placeholder="Google Apps Script Web App URL...">
               <button id="saveSheetUrlBtn"><i class="fa-solid fa-floppy-disk"></i> Lưu URL</button>
+              <button class="btn-wipe-all" id="wipeAllBtn"><i class="fa-solid fa-trash"></i> Xóa Trắng Toàn Bộ DB</button>
             </div>
           </div>
 
@@ -680,6 +693,7 @@
       const tabU = document.getElementById('tabUsers');
       const genB = document.getElementById('genKeyBtn');
       const saveUrlB = document.getElementById('saveSheetUrlBtn');
+      const wipeB = document.getElementById('wipeAllBtn');
       const urlInput = document.getElementById('sheetUrlInput');
 
       if (tabK) tabK.onclick = () => { currentTab = 'keys'; renderDashboardUI(app, keys, users); };
@@ -691,6 +705,18 @@
           if (val) {
             localStorage.setItem('lms_gg_sheet_script_url', val);
             showToast('✅ Đã lưu kết nối Google Sheet!');
+          }
+        };
+      }
+
+      if (wipeB) {
+        wipeB.onclick = async () => {
+          if (confirm('🚨 Bạn có chắc chắn muốn XÓA TRẮNG TOÀN BỘ MÃ VIP & HỌC VIÊN trên cả Google Sheet và Hệ Thống? Hành động này không thể hoàn tác!')) {
+            wipeB.disabled = true;
+            wipeB.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang xóa trắng...';
+            await pushCloudData([], []);
+            showToast('🧹 Đã xóa trắng toàn bộ dữ liệu hệ thống!');
+            renderDashboard();
           }
         };
       }

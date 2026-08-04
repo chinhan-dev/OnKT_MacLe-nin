@@ -95,36 +95,10 @@ async function fetchCloudData() {
         const cloudKeys = Array.isArray(dbObj.keys) ? dbObj.keys : [];
         const cloudUsers = Array.isArray(dbObj.users) ? dbObj.users : [];
 
-        // Merge Keys
-        const localKeysData = localStorage.getItem(VIP_KEYS_STORAGE);
-        let localKeys = localKeysData ? JSON.parse(localKeysData) : [];
-        const mergedKeys = [...cloudKeys];
-        for (const lk of localKeys) {
-          if (!mergedKeys.some(ck => ck.key.toUpperCase() === lk.key.toUpperCase())) {
-            mergedKeys.push(lk);
-          }
-        }
+        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(cloudKeys));
+        localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(cloudUsers));
 
-        // Merge Users
-        const localUsersData = localStorage.getItem(USERS_DB_STORAGE);
-        let localUsers = localUsersData ? JSON.parse(localUsersData) : [];
-        let mergedUsers = [...cloudUsers];
-        for (const lu of localUsers) {
-          const idx = mergedUsers.findIndex(cu => cu.deviceId === lu.deviceId);
-          if (idx >= 0) {
-            mergedUsers[idx] = lu;
-          } else {
-            mergedUsers.push(lu);
-          }
-        }
-
-        // Auto-aggregate
-        mergedUsers = aggregateUsersFromKeys(mergedKeys, mergedUsers);
-
-        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(mergedKeys));
-        localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(mergedUsers));
-
-        return { keys: mergedKeys, users: mergedUsers };
+        return { keys: cloudKeys, users: cloudUsers };
       }
     }
   } catch (e) {
@@ -192,22 +166,7 @@ async function trackCurrentDeviceUser() {
 
 function getUsersDB() {
   const data = localStorage.getItem(USERS_DB_STORAGE);
-  if (!data) {
-    const currentDevId = getDeviceId();
-    const initUsers = [
-      {
-        deviceId: currentDevId,
-        name: `Học viên (Máy này)`,
-        role: (typeof getUserRole === 'function' ? getUserRole() : localStorage.getItem('lms_user_role')) || 'guest',
-        activatedKey: localStorage.getItem(ACTIVATED_KEY_STORAGE) || 'N/A',
-        deviceType: navigator.userAgent.includes('Mobile') ? '📱 Điện thoại' : '💻 Máy tính',
-        createdAt: new Date().toLocaleDateString('vi-VN'),
-        lastActive: new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN')
-      }
-    ];
-    localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(initUsers));
-    return initUsers;
-  }
+  if (!data) return [];
   return JSON.parse(data);
 }
 
@@ -218,11 +177,7 @@ function saveUsersDB(users) {
 // Keys DB
 function getVipKeysDB() {
   const data = localStorage.getItem(VIP_KEYS_STORAGE);
-  if (!data) {
-    const initialKeys = [];
-    localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(initialKeys));
-    return initialKeys;
-  }
+  if (!data) return [];
   return JSON.parse(data);
 }
 
