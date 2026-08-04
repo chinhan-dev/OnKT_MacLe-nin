@@ -76,11 +76,9 @@ function aggregateUsersFromKeys(keys, users) {
   return mergedUsers;
 }
 
-// Fetch Both Keys & Users from Cloud DB / Google Sheets Proxy & Merge Cleanly
+// Fetch Both Keys & Users from Cloud DB / Google Sheets Proxy Direct Sync
 async function fetchCloudData() {
   const endpoint = getCloudEndpoint();
-  const lKeys = getVipKeysDB();
-  const lUsers = getUsersDB();
 
   try {
     const controller = new AbortController();
@@ -96,32 +94,23 @@ async function fetchCloudData() {
         const cloudKeys = Array.isArray(dbObj.keys) ? dbObj.keys : [];
         const cloudUsers = Array.isArray(dbObj.users) ? dbObj.users : [];
 
-        // Map-based Smart Merge
-        const keyMap = new Map();
-        lKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
-        cloudKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
+        // Direct overwrite so deleted users/keys NEVER reappear
+        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(cloudKeys));
+        localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(cloudUsers));
 
-        const userMap = new Map();
-        lUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
-        cloudUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
-
-        const finalKeys = Array.from(keyMap.values());
-        const finalUsers = Array.from(userMap.values());
-
-        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(finalKeys));
-        localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(finalUsers));
-
-        return { keys: finalKeys, users: finalUsers, fromCloud: true };
+        return { keys: cloudKeys, users: cloudUsers, fromCloud: true };
       }
     }
   } catch (e) {
     console.warn('Cloud DB / Google Sheet fetch offline/timeout, using local storage.', e);
   }
 
-  return { keys: lKeys, users: aggregateUsersFromKeys(lKeys, lUsers), fromCloud: false };
+  const lKeys = getVipKeysDB();
+  const lUsers = getUsersDB();
+  return { keys: lKeys, users: lUsers, fromCloud: false };
 }
 
-// Push Both Keys & Users to Cloud DB Safely with Merge
+// Push Both Keys & Users to Cloud DB Safely
 async function pushCloudData(keysToPush, usersToPush) {
   const keys = keysToPush || getVipKeysDB();
   const users = usersToPush || getUsersDB();
@@ -148,6 +137,8 @@ function getDeviceId() {
 async function trackCurrentDeviceUser() {
   const devId = getDeviceId();
   const role = typeof getUserRole === 'function' ? getUserRole() || 'guest' : localStorage.getItem('lms_user_role') || 'guest';
+  if (role !== 'vip') return; // Do not auto-track guest users
+
   const activatedKey = localStorage.getItem(ACTIVATED_KEY_STORAGE) || 'N/A';
   const userAgent = navigator.userAgent.includes('Mobile') ? '📱 Điện thoại' : '💻 Máy tính';
   const lastActive = new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN');

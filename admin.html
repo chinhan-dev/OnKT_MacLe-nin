@@ -205,7 +205,7 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
       margin-bottom: 24px;
     }
@@ -477,7 +477,6 @@
     }
 
     async function fetchCloudData() {
-      const { keys: localKeys, users: localUsers } = getLocalData();
       try {
         const url = getSheetUrl();
         const res = await fetch(url, { cache: 'no-store' });
@@ -487,26 +486,9 @@
             const cloudKeys = Array.isArray(json.keys) ? json.keys : [];
             const cloudUsers = Array.isArray(json.users) ? json.users : [];
             
-            // Map-based Smart Merge: Never drop local keys if cloud returns empty
-            const keyMap = new Map();
-            localKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
-            cloudKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
-
-            const userMap = new Map();
-            localUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
-            cloudUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
-
-            const finalKeys = Array.from(keyMap.values());
-            const finalUsers = Array.from(userMap.values());
-
-            saveLocalData(finalKeys, finalUsers);
-
-            // Re-push to cloud to guarantee Google Sheet stays in sync
-            if (finalKeys.length > cloudKeys.length || finalUsers.length > cloudUsers.length) {
-              pushCloudData(finalKeys, finalUsers);
-            }
-
-            return { keys: finalKeys, users: finalUsers };
+            // Sync directly with Cloud DB so deleted users/keys NEVER reappear
+            saveLocalData(cloudKeys, cloudUsers);
+            return { keys: cloudKeys, users: cloudUsers };
           }
         }
       } catch (e) {
@@ -589,8 +571,8 @@
 
     function renderDashboardUI(app, keys, users) {
       const vipCount = users.filter(u => u.role === 'vip').length;
-      const guestCount = users.filter(u => u.role === 'guest').length;
-      const totalUsers = users.length;
+      const usedKeysCount = keys.filter(k => k.status === 'used').length;
+      const totalKeys = keys.length;
 
       let tableHtml = '';
 
@@ -677,16 +659,16 @@
         <div class="dashboard-card">
           <div class="stats-grid">
             <div class="stat-box">
-              <div class="num">${totalUsers}</div>
-              <div class="lbl">Tổng Học Viên</div>
+              <div class="num">${totalKeys}</div>
+              <div class="lbl">Tổng Mã VIP</div>
+            </div>
+            <div class="stat-box">
+              <div class="num" style="color: #dc2626;">${usedKeysCount}</div>
+              <div class="lbl">Mã Đã Kích Hoạt</div>
             </div>
             <div class="stat-box">
               <div class="num" style="color: #059669;">${vipCount}</div>
               <div class="lbl">Học Viên VIP</div>
-            </div>
-            <div class="stat-box">
-              <div class="num" style="color: #c2410c;">${guestCount}</div>
-              <div class="lbl">Khách Dùng Thử</div>
             </div>
           </div>
 
@@ -751,7 +733,7 @@
       }
 
       if (genB) {
-        genB.onclick = () => {
+        genB.onclick = async () => {
           const newCode = 'MAC-' + Math.random().toString(36).substring(2, 8).toUpperCase();
           const { keys: curKeys, users: curUsers } = getLocalData();
           curKeys.push({
@@ -816,7 +798,7 @@
             k.deviceId = null;
           }
         });
-        saveLocalData(newUsers, newUsers);
+        saveLocalData(keys, newUsers);
         showToast(`🗑️ Đã xóa học viên ${devId}`);
         renderDashboard();
         pushCloudData(keys, newUsers);
