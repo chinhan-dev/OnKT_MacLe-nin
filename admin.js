@@ -1,5 +1,29 @@
 
-const CLOUD_DB_ENDPOINT = 'https://api.restful-api.dev/objects/ff8081819f7e10ae019fcafb3a556dde';
+const CLOUD_DB_ENDPOINT = 'https://jsonblob.com/api/jsonBlob/019fcb1f-708b-750f-948f-caa9398416e8';
+
+function aggregateUsersFromKeys(keys, users) {
+  const mergedUsers = [...users];
+  for (const k of keys) {
+    if (k.status === 'used' && k.deviceId) {
+      let uObj = mergedUsers.find(u => u.deviceId === k.deviceId);
+      if (!uObj) {
+        mergedUsers.push({
+          deviceId: k.deviceId,
+          name: `Học viên ${k.deviceId}`,
+          role: 'vip',
+          activatedKey: k.key,
+          deviceType: k.deviceId.includes('IPHO') || k.deviceId.includes('MOBI') ? '📱 Điện thoại' : '💻 Thiết bị',
+          createdAt: k.activatedAt || k.createdAt || 'Đã dùng mã',
+          lastActive: k.activatedAt || 'Đã dùng mã'
+        });
+      } else {
+        uObj.role = 'vip';
+        uObj.activatedKey = k.key;
+      }
+    }
+  }
+  return mergedUsers;
+}
 
 // Fetch Both Keys & Users from Cloud DB & Merge Cleanly
 async function fetchCloudData() {
@@ -24,7 +48,7 @@ async function fetchCloudData() {
         // Merge Users
         const localUsersData = localStorage.getItem(USERS_DB_STORAGE);
         let localUsers = localUsersData ? JSON.parse(localUsersData) : [];
-        const mergedUsers = [...cloudUsers];
+        let mergedUsers = [...cloudUsers];
         for (const lu of localUsers) {
           const idx = mergedUsers.findIndex(cu => cu.deviceId === lu.deviceId);
           if (idx >= 0) {
@@ -34,26 +58,8 @@ async function fetchCloudData() {
           }
         }
 
-        // AUTO-AGGREGATE: Ensure every device that used a VIP key is listed as a VIP User
-        for (const k of mergedKeys) {
-          if (k.status === 'used' && k.deviceId) {
-            let uObj = mergedUsers.find(u => u.deviceId === k.deviceId);
-            if (!uObj) {
-              mergedUsers.push({
-                deviceId: k.deviceId,
-                name: `Học viên ${k.deviceId}`,
-                role: 'vip',
-                activatedKey: k.key,
-                deviceType: '📱/💻 Thiết bị',
-                createdAt: k.activatedAt || k.createdAt || 'Đã dùng mã',
-                lastActive: k.activatedAt || 'Đã dùng mã'
-              });
-            } else {
-              uObj.role = 'vip';
-              uObj.activatedKey = k.key;
-            }
-          }
-        }
+        // Auto-aggregate
+        mergedUsers = aggregateUsersFromKeys(mergedKeys, mergedUsers);
 
         localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(mergedKeys));
         localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(mergedUsers));
@@ -65,35 +71,9 @@ async function fetchCloudData() {
     console.warn('Cloud DB fetch offline, using local storage.', e);
   }
 
-  // Local fallback with auto-aggregation
   const lKeys = getVipKeysDB();
-  const lUsers = getUsersDB();
-  for (const k of lKeys) {
-    if (k.status === 'used' && k.deviceId) {
-      let uObj = lUsers.find(u => u.deviceId === k.deviceId);
-      if (!uObj) {
-        lUsers.push({
-          deviceId: k.deviceId,
-          name: `Học viên ${k.deviceId}`,
-          role: 'vip',
-          activatedKey: k.key,
-          deviceType: '📱/💻 Thiết bị',
-          createdAt: k.activatedAt || k.createdAt || 'Đã dùng mã',
-          lastActive: k.activatedAt || 'Đã dùng mã'
-        });
-      } else {
-        uObj.role = 'vip';
-        uObj.activatedKey = k.key;
-      }
-    }
-  }
+  const lUsers = aggregateUsersFromKeys(lKeys, getUsersDB());
   return { keys: lKeys, users: lUsers };
-}
-
-// Alias for backward compatibility
-async function fetchCloudKeysDB() {
-  const d = await fetchCloudData();
-  return d.keys;
 }
 
 // Push Both Keys & Users to Cloud DB Safely with Merge
@@ -116,11 +96,14 @@ async function pushCloudData(keysToPush, usersToPush) {
       if (idx >= 0) mergedKeys[idx] = k; else mergedKeys.push(k);
     }
 
-    const mergedUsers = [...cloudUsers];
+    let mergedUsers = [...cloudUsers];
     for (const u of (usersToPush || getUsersDB())) {
       const idx = mergedUsers.findIndex(cu => cu.deviceId === u.deviceId);
       if (idx >= 0) mergedUsers[idx] = u; else mergedUsers.push(u);
     }
+
+    // Auto-aggregate
+    mergedUsers = aggregateUsersFromKeys(mergedKeys, mergedUsers);
 
     localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(mergedKeys));
     localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(mergedUsers));
@@ -140,11 +123,6 @@ async function pushCloudData(keysToPush, usersToPush) {
   } catch (e) {
     console.warn('Failed to push to Cloud DB:', e);
   }
-}
-
-// Alias for backward compatibility
-async function pushCloudKeysDB(keysToPush) {
-  await pushCloudData(keysToPush, getUsersDB());
 }
 
 /* ==========================================================================
