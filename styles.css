@@ -1222,3 +1222,27 @@ input:checked + .slider:before {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
+
+
+/* Logout Header Button */
+.btn-logout-header {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: #fef2f2;
+  color: #ef4444;
+  border: 1px solid #fca5a5;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  margin-left: 6px;
+}
+
+.btn-logout-header:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+}

@@ -139,21 +139,40 @@ function renderUserBadge(role) {
   let controls = document.querySelector('.controls') || document.querySelector('.top-nav');
   if (!controls) return;
 
-  let badge = document.getElementById('userAuthBadge');
-  if (!badge) {
-    badge = document.createElement('div');
-    badge.id = 'userAuthBadge';
-    controls.insertBefore(badge, controls.firstChild);
+  let badgeWrapper = document.getElementById('userAuthWrapper');
+  if (!badgeWrapper) {
+    badgeWrapper = document.createElement('div');
+    badgeWrapper.id = 'userAuthWrapper';
+    badgeWrapper.style.display = 'inline-flex';
+    badgeWrapper.style.alignItems = 'center';
+    badgeWrapper.style.gap = '8px';
+    controls.insertBefore(badgeWrapper, controls.firstChild);
   }
 
+  let badgeContent = '';
   if (role === 'vip') {
-    badge.className = 'user-auth-status vip';
-    badge.innerHTML = `<i class="fa-solid fa-circle-check"></i> Đã có quyền (VIP)`;
+    badgeContent = `<div class="user-auth-status vip"><i class="fa-solid fa-circle-check"></i> Đã có quyền (VIP)</div>`;
   } else if (role === 'guest') {
     const remaining = getGuestTimeRemaining();
-    badge.className = 'user-auth-status guest';
-    badge.innerHTML = `<i class="fa-solid fa-clock"></i> Khách: <span class="timer-count" id="guestCountdown">${formatTime(remaining)}</span>`;
+    badgeContent = `<div class="user-auth-status guest"><i class="fa-solid fa-clock"></i> Khách: <span class="timer-count" id="guestCountdown">${formatTime(remaining)}</span></div>`;
   }
+
+  badgeWrapper.innerHTML = `
+    ${badgeContent}
+    <button class="btn-logout-header" id="logoutBtn" title="Đăng xuất khỏi hệ thống">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span>Đăng xuất</span>
+    </button>
+  `;
+
+  document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+}
+
+function handleLogout() {
+  localStorage.removeItem(AUTH_KEY);
+  localStorage.removeItem(GUEST_TIMER_KEY);
+  if (guestInterval) clearInterval(guestInterval);
+  location.reload();
 }
 
 function startGuestTimer() {
