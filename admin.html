@@ -170,83 +170,7 @@
   <script>
     let currentAdminTab = 'keys';
 
-    async function renderAdminStandalonePage() {
-      const container = document.getElementById('adminMainContainer');
-      if (!container) {
-        setTimeout(renderAdminStandalonePage, 50);
-        return;
-      }
-
-      const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
-
-      if (!isAdmin) {
-        // Password Prompt Card
-        container.innerHTML = `
-          <div class="admin-pass-form-card">
-            <div class="login-header" style="margin-bottom: 20px;">
-              <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95); width: 64px; height: 64px; font-size: 28px; margin: 0 auto 14px auto;">
-                <i class="fa-solid fa-user-shield"></i>
-              </div>
-              <h2 style="font-size: 1.3rem; color: #581c87; margin: 0 0 6px 0;">ĐĂNG NHẬP ADMIN</h2>
-              <p style="font-size: 0.88rem; color: #64748b; margin: 0;">Vui lòng nhập mật khẩu Admin để quản lý mã VIP & Học viên</p>
-            </div>
-
-            <div style="display: flex; gap: 8px; margin-top: 16px;">
-              <input type="password" id="adminPassInputPage" placeholder="Nhập mật khẩu Admin..." style="flex: 1; padding: 14px 16px; border-radius: 12px; border: 2px solid #7c3aed; font-size: 1rem; outline: none;">
-              <button id="adminPassSubmitPage" style="padding: 14px 20px; background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; border: none; border-radius: 12px; font-weight: 800; cursor: pointer;">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-
-            <p class="pass-error" id="adminPassErrPage" style="display: none; color: #dc2626; font-size: 0.85rem; font-weight: 700; margin-top: 10px;">❌ Mật khẩu Admin không đúng!</p>
-          </div>
-        `;
-
-        const passInput = document.getElementById('adminPassInputPage');
-        const passSubmit = document.getElementById('adminPassSubmitPage');
-        const passErr = document.getElementById('adminPassErrPage');
-
-        if (passInput) passInput.focus();
-
-        function checkPass() {
-          if (passInput && passInput.value.trim() === 'chinhanxt') {
-            localStorage.setItem('lms_is_admin', 'true');
-            if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
-            renderAdminStandalonePage();
-          } else {
-            if (passErr) passErr.style.display = 'block';
-          }
-        }
-
-        if (passSubmit) passSubmit.addEventListener('click', checkPass);
-        if (passInput) passInput.addEventListener('keypress', (e) => {
-          if (e.key === 'Enter') checkPass();
-        });
-        return;
-      }
-
-      // Render Loading UI first
-      container.innerHTML = `
-        <div class="admin-standalone-card" style="text-align: center; padding: 60px;">
-          <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95); width: 60px; height: 60px; font-size: 26px; margin: 0 auto;"><i class="fa-solid fa-spinner fa-spin"></i></div>
-          <h3 style="font-size: 1.2rem; color: #581c87; margin-top: 16px;">Đang nạp dữ liệu Real-time từ Cloud...</h3>
-          <p style="font-size: 0.88rem; color: #64748b;">Vui lòng chờ trong giây lát</p>
-        </div>
-      `;
-
-      // Fetch Real-time Cloud Data with local fallback
-      let cloudData = { keys: [], users: [] };
-      try {
-        if (typeof fetchCloudData === 'function') {
-          cloudData = await fetchCloudData();
-        }
-      } catch (err) {
-        console.warn('Could not fetch cloud data, using local storage fallback:', err);
-      }
-
-      const keys = Array.isArray(cloudData && cloudData.keys) ? cloudData.keys : (typeof getVipKeysDB === 'function' ? getVipKeysDB() : []);
-      const users = Array.isArray(cloudData && cloudData.users) ? cloudData.users : (typeof getUsersDB === 'function' ? getUsersDB() : []);
-
+    function renderAdminDashboardUI(container, keys, users) {
       const vipCount = users.filter(u => u && u.role === 'vip').length;
       const guestCount = users.filter(u => u && u.role === 'guest').length;
       const totalUsers = users.length;
@@ -356,15 +280,15 @@
           <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 14px; padding: 16px; margin-top: 20px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
               <span style="font-weight: 800; color: #166534; font-size: 0.95rem;">
-                <i class="fa-solid fa-file-excel" style="color: #15803d;"></i> Quản lý Database bằng Google Sheet
+                <i class="fa-solid fa-file-excel" style="color: #15803d;"></i> Quản lý Database bằng Google Sheet (Đã kết nối LIVE)
               </span>
               <a href="https://docs.google.com/spreadsheets/d/1Zq8figZJxwLqEd7QlAEhBI6XXLilQ01vyU6JfuQxKvY/edit" target="_blank" style="font-size: 0.82rem; font-weight: 700; color: #15803d; text-decoration: none;">
                 <i class="fa-solid fa-external-link"></i> Mở Google Sheet
               </a>
             </div>
             <div style="display: flex; gap: 8px;">
-              <input type="text" id="ggSheetUrlInput" placeholder="Nhập Google Apps Script Web App URL (VD: https://script.google.com/macros/s/.../exec)..." 
-                value="${localStorage.getItem('lms_gg_sheet_script_url') || ''}"
+              <input type="text" id="ggSheetUrlInput" placeholder="URL Google Apps Script Web App..." 
+                value="${localStorage.getItem('lms_gg_sheet_script_url') || (typeof DEFAULT_GG_SHEET_URL !== 'undefined' ? DEFAULT_GG_SHEET_URL : '')}"
                 style="flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid #86efac; font-size: 0.85rem;">
               <button id="saveGgSheetUrlBtn" style="padding: 10px 16px; background: #166534; color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
                 <i class="fa-solid fa-floppy-disk"></i> Lưu URL Google Sheet
@@ -405,8 +329,8 @@
         });
       }
 
-      if (tabKeys) tabKeys.addEventListener('click', () => { currentAdminTab = 'keys'; renderAdminStandalonePage(); });
-      if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; renderAdminStandalonePage(); });
+      if (tabKeys) tabKeys.addEventListener('click', () => { currentAdminTab = 'keys'; renderAdminDashboardUI(container, keys, users); });
+      if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; renderAdminDashboardUI(container, keys, users); });
       if (genBtn) genBtn.addEventListener('click', async () => {
         genBtn.disabled = true;
         genBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo mã...';
@@ -414,6 +338,79 @@
         if (typeof showToast === 'function') showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`, 'success'); else alert(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
         await renderAdminStandalonePage();
       });
+    }
+
+    async function renderAdminStandalonePage() {
+      const container = document.getElementById('adminMainContainer');
+      if (!container) {
+        setTimeout(renderAdminStandalonePage, 50);
+        return;
+      }
+
+      const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
+
+      if (!isAdmin) {
+        // Password Prompt Card
+        container.innerHTML = `
+          <div class="admin-pass-form-card">
+            <div class="login-header" style="margin-bottom: 20px;">
+              <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95); width: 64px; height: 64px; font-size: 28px; margin: 0 auto 14px auto;">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <h2 style="font-size: 1.3rem; color: #581c87; margin: 0 0 6px 0;">ĐĂNG NHẬP ADMIN</h2>
+              <p style="font-size: 0.88rem; color: #64748b; margin: 0;">Vui lòng nhập mật khẩu Admin để quản lý mã VIP & Học viên</p>
+            </div>
+
+            <div style="display: flex; gap: 8px; margin-top: 16px;">
+              <input type="password" id="adminPassInputPage" placeholder="Nhập mật khẩu Admin..." style="flex: 1; padding: 14px 16px; border-radius: 12px; border: 2px solid #7c3aed; font-size: 1rem; outline: none;">
+              <button id="adminPassSubmitPage" style="padding: 14px 20px; background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; border: none; border-radius: 12px; font-weight: 800; cursor: pointer;">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <p class="pass-error" id="adminPassErrPage" style="display: none; color: #dc2626; font-size: 0.85rem; font-weight: 700; margin-top: 10px;">❌ Mật khẩu Admin không đúng!</p>
+          </div>
+        `;
+
+        const passInput = document.getElementById('adminPassInputPage');
+        const passSubmit = document.getElementById('adminPassSubmitPage');
+        const passErr = document.getElementById('adminPassErrPage');
+
+        if (passInput) passInput.focus();
+
+        function checkPass() {
+          if (passInput && passInput.value.trim() === 'chinhanxt') {
+            localStorage.setItem('lms_is_admin', 'true');
+            if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
+            renderAdminStandalonePage();
+          } else {
+            if (passErr) passErr.style.display = 'block';
+          }
+        }
+
+        if (passSubmit) passSubmit.addEventListener('click', checkPass);
+        if (passInput) passInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') checkPass();
+        });
+        return;
+      }
+
+      // 1. Render INSTANTLY using local DB (0ms loading delay)
+      const localKeys = typeof getVipKeysDB === 'function' ? getVipKeysDB() : [];
+      const localUsers = typeof getUsersDB === 'function' ? getUsersDB() : [];
+      renderAdminDashboardUI(container, localKeys, localUsers);
+
+      // 2. Fetch live data from Google Sheet in background & re-render
+      try {
+        if (typeof fetchCloudData === 'function') {
+          const cloudData = await fetchCloudData();
+          if (cloudData && cloudData.keys) {
+            renderAdminDashboardUI(container, cloudData.keys, cloudData.users);
+          }
+        }
+      } catch (err) {
+        console.warn('Background Google Sheet sync warning:', err);
+      }
     }
 
     function initAdminPage() {

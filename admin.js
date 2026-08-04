@@ -14,11 +14,11 @@ const VIP_KEYS_STORAGE = 'lms_vip_keys_db';
 const USERS_DB_STORAGE = 'lms_users_db';
 const DEVICE_ID_KEY = 'lms_device_fingerprint';
 const ACTIVATED_KEY_STORAGE = 'lms_activated_vip_key';
-const CLOUD_DB_ENDPOINT = 'https://jsonblob.com/api/jsonBlob/019fcb1f-708b-750f-948f-caa9398416e8';
+const DEFAULT_GG_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxao38I7sKqWtCHOHMB4TzHZRSa42v7OXoOFSdLdse5SsLdEedfO2oib5wD64XdDErTnw/exec';
 const GG_SHEET_URL_STORAGE = 'lms_gg_sheet_script_url';
 
 function getCloudEndpoint() {
-  return localStorage.getItem(GG_SHEET_URL_STORAGE) || CLOUD_DB_ENDPOINT;
+  return localStorage.getItem(GG_SHEET_URL_STORAGE) || DEFAULT_GG_SHEET_URL;
 }
 
 // Save & Overwrite Cloud DB / Google Sheets Directly
