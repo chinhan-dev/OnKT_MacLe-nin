@@ -1,38 +1,70 @@
 
 const CLOUD_DB_ENDPOINT = 'https://api.restful-api.dev/objects/ff8081819f7e10ae019fcafb3a556dde';
 
-// Fetch Keys from Cloud DB asynchronously
+// Fetch Keys from Cloud DB & Merge cleanly
 async function fetchCloudKeysDB() {
   try {
     const res = await fetch(CLOUD_DB_ENDPOINT);
     if (res.ok) {
       const json = await res.json();
       if (json && json.data && Array.isArray(json.data.keys)) {
-        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(json.data.keys));
-        return json.data.keys;
+        const cloudKeys = json.data.keys;
+        const localData = localStorage.getItem(VIP_KEYS_STORAGE);
+        let localKeys = localData ? JSON.parse(localData) : [];
+
+        // Merge: keep all Cloud keys, plus any unique local keys
+        const mergedKeys = [...cloudKeys];
+        for (const lk of localKeys) {
+          if (!mergedKeys.some(ck => ck.key.toUpperCase() === lk.key.toUpperCase())) {
+            mergedKeys.push(lk);
+          }
+        }
+
+        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(mergedKeys));
+        return mergedKeys;
       }
     }
   } catch (e) {
-    console.warn('Cloud DB offline, using local storage.');
+    console.warn('Cloud DB fetch offline, falling back to local storage.', e);
   }
   return getVipKeysDB();
 }
 
-// Push Keys to Cloud DB asynchronously
-async function pushCloudKeysDB(keys) {
-  localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(keys));
+// Push Keys to Cloud DB safely with Merge
+async function pushCloudKeysDB(keysToPush) {
   try {
-    const users = getUsersDB();
+    const res = await fetch(CLOUD_DB_ENDPOINT);
+    let cloudKeys = [];
+    if (res.ok) {
+      const json = await res.json();
+      if (json && json.data && Array.isArray(json.data.keys)) {
+        cloudKeys = json.data.keys;
+      }
+    }
+
+    const merged = [...cloudKeys];
+    for (const k of keysToPush) {
+      const idx = merged.findIndex(ck => ck.key.toUpperCase() === k.key.toUpperCase());
+      if (idx >= 0) {
+        merged[idx] = k;
+      } else {
+        merged.push(k);
+      }
+    }
+
+    localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(merged));
+
     await fetch(CLOUD_DB_ENDPOINT, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name: 'LMS_VIP_KEYS',
-        data: { keys: keys, users: users }
+        data: { keys: merged, users: getUsersDB() }
       })
     });
   } catch (e) {
-    console.warn('Failed to push to Cloud DB.');
+    console.warn('Failed to push to Cloud DB:', e);
+    localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(keysToPush));
   }
 }
 
