@@ -105,7 +105,7 @@ function showLoginModal(expiredMsg = false) {
 
   function handleVipSubmit() {
     const entered = passInput.value.trim();
-    if (entered === 'onluyenthi') {
+    if (entered === 'chinhanxt') {
       setUserRole('vip');
       modal.style.display = 'none';
       location.reload();
