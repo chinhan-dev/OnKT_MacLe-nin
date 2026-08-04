@@ -229,13 +229,21 @@
         </div>
       `;
 
-      // Fetch Real-time Cloud Data
-      const cloudData = await fetchCloudData();
-      const keys = cloudData.keys;
-      const users = cloudData.users;
+      // Fetch Real-time Cloud Data with local fallback
+      let cloudData = { keys: [], users: [] };
+      try {
+        if (typeof fetchCloudData === 'function') {
+          cloudData = await fetchCloudData();
+        }
+      } catch (err) {
+        console.warn('Could not fetch cloud data, using local storage fallback:', err);
+      }
 
-      const vipCount = users.filter(u => u.role === 'vip').length;
-      const guestCount = users.filter(u => u.role === 'guest').length;
+      const keys = Array.isArray(cloudData && cloudData.keys) ? cloudData.keys : (typeof getVipKeysDB === 'function' ? getVipKeysDB() : []);
+      const users = Array.isArray(cloudData && cloudData.users) ? cloudData.users : (typeof getUsersDB === 'function' ? getUsersDB() : []);
+
+      const vipCount = users.filter(u => u && u.role === 'vip').length;
+      const guestCount = users.filter(u => u && u.role === 'guest').length;
       const totalUsers = users.length;
 
       let contentHtml = '';

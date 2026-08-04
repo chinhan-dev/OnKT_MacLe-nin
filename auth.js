@@ -19,9 +19,11 @@ function setUserRole(role) {
   if (role === 'guest') {
     localStorage.setItem(GUEST_TIMER_KEY, GUEST_MAX_TIME.toString());
     localStorage.removeItem('lms_guest_expired');
+    localStorage.removeItem('lms_is_admin'); // Clear lms_is_admin so guest is never treated as admin!
   } else {
     localStorage.removeItem(GUEST_TIMER_KEY);
     localStorage.removeItem('lms_guest_expired');
+    localStorage.removeItem('lms_is_admin'); // Clear lms_is_admin unless admin explicitly logged in!
   }
 }
 
@@ -67,25 +69,6 @@ async function initAuthSystem() {
     applyRolePermissions('vip');
     if (isLoginPage) window.location.href = 'index.html';
     return;
-  }
-
-  // Check Cloud DB for VIP device activation status verification
-  if (role === 'vip' && typeof fetchCloudData === 'function') {
-    try {
-      const cloudData = await fetchCloudData();
-      const devId = typeof getDeviceId === 'function' ? getDeviceId() : null;
-      if (devId) {
-        const u = cloudData.users.find(x => x.deviceId === devId);
-        if (!u || u.role !== 'vip') {
-          // Device is not VIP in Cloud DB -> revoke local VIP
-          localStorage.removeItem(AUTH_KEY);
-          localStorage.removeItem(ACTIVATED_KEY_STORAGE);
-          role = null;
-        }
-      }
-    } catch (e) {
-      console.warn('Could not verify VIP role with Cloud DB:', e);
-    }
   }
 
   if (!role) {
@@ -180,7 +163,7 @@ function showLoginModal(expiredMsg = false) {
 
     passErr.style.display = 'none';
 
-    if (entered === 'chinhanxt') {
+    if (entered.toLowerCase() === 'chinhanxt') {
       localStorage.setItem('lms_is_admin', 'true');
       setUserRole('vip');
       modal.style.display = 'none';
@@ -320,6 +303,9 @@ function startGuestTimer() {
 
 function restrictGuestPage() {
   if (window.location.pathname.includes('meo_hoc.html')) {
+    const isGuest = getUserRole() === 'guest' && localStorage.getItem('lms_is_admin') !== 'true';
+    if (!isGuest) return;
+
     const tabItems = document.querySelectorAll('.tab-item');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -341,7 +327,7 @@ function restrictGuestPage() {
             <div class="locked-icon"><i class="fa-solid fa-lock"></i></div>
             <h3>TÍNH NĂNG BỊ KHÓA DÀNH CHO KHÁCH</h3>
             <p>Trang Mẹo Học phần này chỉ dành riêng cho <strong>Tài khoản VIP đã kích hoạt</strong>.<br>Vui lòng nhập Mã VIP 1 thiết bị để mở khóa trọn bộ!</p>
-            <button class="btn-unlock-vip" onclick="showLoginModal()"><i class="fa-solid fa-key"></i> Đăng nhập / Kích hoạt Mã VIP</button>
+            <button class="btn-unlock-vip" onclick="showLoginModal()"><i class="fa-solid fa-key"></i> Kích hoạt Mã VIP</button>
           </div>
         `;
       }
