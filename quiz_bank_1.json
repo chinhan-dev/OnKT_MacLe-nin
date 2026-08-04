@@ -1,0 +1,2012 @@
+{
+  "title": "Bài 1: Triết học và vai trò của triết học trong đời sống xã hội",
+  "total_questions": 59,
+  "questions": [
+    {
+      "question_id": 1,
+      "question": "1.  Xác định phương án đúng theo quan điểm của triết học duy vật biện chứng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy vật thường là thế giới quan của các giai cấp và các lực lượng xã hội tiến bộ.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy vật luôn có mối liên hệ với khoa học, đề cao lao động trí óc hơn lao động chân tay.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa duy vật luôn có mối liên hệ với khoa học, đề cao lao động chân tay hơn lao động trí óc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa duy vật là một sự phát triển phiến diện của một trong những mặt, một trong những khía cạnh của nhận thức.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Chủ nghĩa duy vật thường là thế giới quan của các giai cấp và các lực lượng xã hội tiến bộ.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 2,
+      "question": "2.   Nhiệm vụ của triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giải thích thế giới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Cải tạo thế giới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Giải thích và cải tạo thế giới.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Là khoa học của các khoa học.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Giải thích và cải tạo thế giới.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 3,
+      "question": "3.  Có quan niệm cho rằng: Thế giới bao gồm trần gian, thiên đường và địa ngục. Theo quan điểm của chủ nghĩa duy vật biện chứng quan niệm đó đúng hay sai:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Đúng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sai.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Vừa đúng vừa sai.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tất cả đều sai.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Sai.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 4,
+      "question": "4. Khi giải quyết mặt thứ hai trong vấn đề cơ bản của triết học, những triết gia cho rằng con người không có khả năng nhận thức được thế giới, thì thuộc trường phái triết học:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy vật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy tâm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Trường phái khả tri.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Trường phái bất khả tri.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Trường phái bất khả tri.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 5,
+      "question": "5. Câu nói: “Có thực mới vực được đạo” là quan điểm:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Duy vật.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Duy tâm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Vừa duy vật vừa duy tâm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Không nên gọi là duy vật hay duy tâm.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Duy vật.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 6,
+      "question": "6. Theo Ăngghen, những phát minh lớn trong khoa học tự nhiên ảnh hưởng tới sự hình thành triết học duy vật biện chứng là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Định luật bảo toàn và chuyển hóa năng lượng, Thuyết tế bào, Định luật vạn vật hấp dẫn.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Định luật bảo toàn và chuyển hóa năng lượng, Thuyết tế bào, Thuyết tiến hóa của Đácuyn.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Định luật bảo toàn và chuyển hóa năng lượng, Định luật vạn vật hấp dẫn, Thuyết nhật tâm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phát hiện ra nguyên tử, Phát hiện ra điện tử, Định luật bảo toàn và chuyển hoá năng lượng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Định luật bảo toàn và chuyển hóa năng lượng, Thuyết tế bào, Thuyết tiến hóa của Đácuyn.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 7,
+      "question": "7. V.I. Lênin bổ sung và phát triển triết học Mác trong hoàn cảnh:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa tư bản thế giới chưa ra đời.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa tư bản độc quyền ra đời.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa tư bản ở giai đoạn tự do cạnh tranh.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa tư bản hiện đại.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Chủ nghĩa tư bản độc quyền ra đời.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 8,
+      "question": "8. Nhận xét nào sau đây là sai:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phương pháp siêu hình nhận thức đối tượng ở trạng thái tĩnh, đồng nhất đối tượng với trạng thái tĩnh nhất thời đó.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Phương pháp siêu hình chỉ nhìn thấy những sự vật riêng biệt mà không nhìn thấy mối liên hệ qua lại giữa những sự vật ấy, chỉ nhìn thấy cây mà không thấy rừng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Phương pháp siêu hình có công lớn trong việc giải quyết các vấn đề có liên quan đến cơ học cổ điển.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phương pháp siêu hình không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp biện chứng.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Phương pháp siêu hình không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp biện chứng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 9,
+      "question": "9. Chủ nghĩa duy vật chất phác là kết quả nhận thức của các nhà triết học thời kỳ:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Cổ đại.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Trung cổ.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Phục hưng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Khai sáng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Cổ đại.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 10,
+      "question": "10. Triết học ra đời vào khoảng thời gian là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Từ thế kỷ VIII - VI trước công nguyên.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Thế kỷ III trước công nguyên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Thế kỷ thứ II trước công nguyên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Thế kỷ thứ I sau công nguyên.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Từ thế kỷ VIII - VI trước công nguyên.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 11,
+      "question": "11. Triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "là hệ thống tri thức lý luận chung nhất của con người về thế giới và vị trí của con người trong thế giới.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "là khoa học nghiên cứu về khả năng tư duy của con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "là khoa học về chính trị.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "là khoa học nghiên cứu về đấu tranh giai cấp và cách mạnh xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (là hệ thống tri thức lý luận chung nhất của con người về thế giới và vị trí của con người trong thế giới.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 12,
+      "question": "12. Triết học Mác ra đời trong điều kiện kinh tế - xã hội:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phương thức sản xuất tư bản chủ nghĩa đã trở thành phương thức sản xuất thống trị.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Phương thức sản xuất tư bản chủ nghĩa mới xuất hiện.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa tư bản đã trở thành chủ nghĩa đế quốc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa tư bản đã ở giai đoạn chủ nghĩa tư bản độc quyền nhà nước.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Phương thức sản xuất tư bản chủ nghĩa đã trở thành phương thức sản xuất thống trị.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 13,
+      "question": "13. Triết học Mác - Lênin có chức năng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chức năng thế giới quan và phương pháp luận.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Chức năng hoàn thiện lý trí và nâng cao phẩm chất đạo đức cách mạng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chức năng khoa học của mọi khoa học.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chức năng chỉ đạo mọi hoạt động thực tiễn.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Chức năng thế giới quan và phương pháp luận.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 14,
+      "question": "14. Nguồn gốc lý luận của Triết học Mác là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Triết học cổ điển Đức.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Kinh tế chính trị hiện đại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phép biện chứng tự phát.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Triết học cổ điển Đức.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 15,
+      "question": "15. Chủ nghĩa duy vật và chủ nghĩa duy tâm đối lập nhau về phương diện:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bản thể luận.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Nhận thức luận.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Nhân sinh quan.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phương pháp luận.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Bản thể luận.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 16,
+      "question": "16. Phương pháp tư duy coi nguyên nhân của sự biến đổi nằm ngoài đối tượng là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phương pháp tư duy biện chứng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Phương pháp tư duy trừu tượng hóa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Phương pháp tư duy logic-lịch sử.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phương pháp tư duy siêu hình.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Phương pháp tư duy siêu hình.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 17,
+      "question": "17. Sự khác nhau giữa chủ nghĩa duy vật và chủ nghĩa duy tâm khi giải quyết mặt thứ hai của vấn đề cơ bản của triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy vật cho rằng nhận thức là nhận thức của con người về thế giới. Chủ nghĩa duy tâm cho rằng nhận thức là ý thức tự nhận thức về chính bản thân mình.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy vật cho rằng con người có khả năng nhận thức về thế giới. Chủ nghĩa duy tâm cho rằng con người không có khả năng nhận thức thế giới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa duy vật cho rằng chỉ có một thế giới duy nhất tồn tại là thế giới vật chất. Chủ nghĩa duy tâm cho rằng chỉ có ý thức tồn tại, sinh ra vật chất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa duy vật cho rằng vật chất có trước, vật chất quyết định ý thức. Chủ nghĩa duy tâm cho rằng ý thức có trước, ý thức quyết định vật chất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Chủ nghĩa duy vật cho rằng nhận thức là nhận thức của con người về thế giới. Chủ nghĩa duy tâm cho rằng nhận thức là ý thức tự nhận thức về chính bản thân mình.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 18,
+      "question": "18. Vấn đề quan hệ giữa vật chất và ý thức là vấn đề cơ bản của triết học, vì:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Vì nó tồn tại trong suốt lịch sử triết học; khi giải quyết nó mới có thể giải quyết được các vấn đề khác, đồng thời cách giải quyết nó chi phối cách giải quyết các vấn đề còn lại.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Vì nó tồn tại trong suốt lịch sử triết học; khi giải quyết nó mới có thể giải quyết được các vấn đề khác, đồng thời cách giải quyết nó chi phối cách giải quyết.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Vì nó tồn tại trong suốt lịch sử triết học; khi giải quyết nó mới có thể giải quyết được các vấn đề khác; là vấn đề được nhiều nhà triết học quan tâm khi tìm hiểu thế giới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Vì qua giải quyết vấn đề này sẽ phân định được chủ nghĩa duy tâm và chủ nghĩa duy vật; nó được các nhà triết học đưa ra và thừa nhận như vậy.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Vì nó tồn tại trong suốt lịch sử triết học; khi giải quyết nó mới có thể giải quyết được các vấn đề khác, đồng thời cách giải quyết nó chi phối cách giải quyết các vấn đề còn lại.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 19,
+      "question": "19. Sắp xếp theo trình tự xuất hiện từ sớm nhất đến muộn nhất các hình thức thế giới quan sau:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Triết học - tôn giáo - thần thoại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Thần thoại - tôn giáo - triết học.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Thần thoại - triết học - tôn giáo.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tôn giáo - thần thoại - triết học.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Thần thoại - tôn giáo - triết học.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 20,
+      "question": "20. Triết học ra đời do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Từ sự vận động của ý muốn chủ quan của con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Từ thực tiễn, do nhu cầu của thực tiễn.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Từ sự suy tư của con người về bản thân mình.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Từ sự sáng tạo của nhà tư tưởng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Từ thực tiễn, do nhu cầu của thực tiễn.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 21,
+      "question": "21. Triết học nghiên cứu thế giới:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Như một đối tượng vật chất cụ thể.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Như một hệ đối tượng vật chất nhất định.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Như một chỉnh thể thống nhất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Như một thực thể tồn tại cụ thể.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Như một chỉnh thể thống nhất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 22,
+      "question": "22. Hình thức nào của chủ nghĩa duy vật đã không còn đồng nhất vật chất với những dạng cụ thể của vật chất, và nó đã xác định rõ vật chất là thực tại khách quan:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy vật chất phác thời cổ đại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy vật siêu hình.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa duy vật biện chứng.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa duy vật nói chung.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Chủ nghĩa duy vật biện chứng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 23,
+      "question": "23. Các phạm trù: vật chất, ý thức, vận động, bản chất, hiện tượng là những phạm trù của khoa học của:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Triết học.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Sinh học.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Hoá học.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Vật lý.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Triết học.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 24,
+      "question": "24. Quan điểm “Vừa thấy cây vừa thấy rừng” thuộc về phương pháp nhận thức:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phương pháp biện chứng.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Phương pháp siêu hình.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Phương pháp tư duy trừu tượng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phương pháp logic - lịch sử.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Phương pháp biện chứng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 25,
+      "question": "25. Quan điểm cho rằng: “Vẻ đẹp không nằm ở đôi má hồng của người thiếu nữ mà ở trong đôi mắt của kẻ si tình”, thuộc trường phái triết học:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Duy tâm khách quan.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Duy tâm chủ quan.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa duy lý.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Duy vật tự phát.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Duy tâm chủ quan.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 26,
+      "question": "26. Chủ nghĩa duy tâm có hai hình thức cơ bản là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy tâm tuyệt đối và chủ nghĩa duy tâm tương đối",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy tâm cảm tính và chủ nghĩa duy tâm lý tính.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa duy tâm chủ quan và chủ nghĩa duy tâm khách quan.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa duy tâm nhất nguyên và chủ nghĩa duy tâm nhị nguyên.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Chủ nghĩa duy tâm chủ quan và chủ nghĩa duy tâm khách quan.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 27,
+      "question": "27. Theo triết học Mác- Lênin, biện chứng bao gồm:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Biện chứng khách quan và biện chứng chủ quan.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Biện chứng tự nhiên và biện chứng xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Biện chứng duy tâm và biện chứng duy vật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Biện chứng vật chất và biện chứng ý thức.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Biện chứng khách quan và biện chứng chủ quan.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 28,
+      "question": "28. Chủ nghĩa duy vật phát triển qua các hình thức:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy vật cổ đại, chủ nghĩa duy vật siêu hình, chủ nghĩa duy vật máy móc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy vật cổ đại, chủ nghĩa duy vật siêu hình, chủ nghĩa duy vật biện chứng.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa duy vật nhân bản, chủ nghĩa duy vật siêu hình, chủ nghĩa duy vật biện chứng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa duy vật siêu hình, chủ nghĩa duy vật biện chứng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Chủ nghĩa duy vật cổ đại, chủ nghĩa duy vật siêu hình, chủ nghĩa duy vật biện chứng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 29,
+      "question": "29. Vấn đề cơ bản của triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Vấn đề mối quan hệ giữa Trời và Đất, người và vật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Vấn đề mối quan hệ giữa vật chất và ý thức.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Vấn đề mối quan hệ giữa tri thức và tình cảm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Vấn đề mối quan hệ giữa vật chất và vật thể",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Vấn đề mối quan hệ giữa vật chất và ý thức.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 30,
+      "question": "30. Vấn đề cơ bản của triết học có hai mặt là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giữa tự nhiên và xã hội: cái nào có trước, cái nào có sau; cái nào quyết định cái nào; Và con người có nhận thức được xã hội không?",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Giữa ý thức và vật chất: cái nào có trước cái nào có sau; cái nào quyết định cái nào; Và con người có khả năng nhân thức được thế giới không?",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Giữa ý thức và vật thể: cái nào có trước cái nào có sau? cái nào quyết định cái nao?; Và con người có nhận biết được các vật thể không?",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Giữa vật chất và ý thức: cái nào có trước, cái nào có sau? cái nào lệ thuộc cái nào?; Và con người có khả năng nhận biết được chính mình không?",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Giữa ý thức và vật chất: cái nào có trước cái nào có sau; cái nào quyết định cái nào; Và con người có khả năng nhân thức được thế giới không?) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 31,
+      "question": "31. Triết học Mác ra đời vào khoảng thời gian là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Những năm 40 thế kỷ XIX.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Những năm 40 thế kỷ XVIII.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Những năm 40 thế kỷ XVII.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Những năm 40 thế kỷ XVI.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Những năm 40 thế kỷ XIX.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 32,
+      "question": "32.  Những tiền đề lý luận dẫn đến sự ra đời của triết học Mác:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Triết học cổ điển Đức, Kinh tế Chính trị và Chủ nghĩa Xã hội không tưởng Pháp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Triết học hiện sinh, Kinh tế chính trị và Chủ nghĩa xã hội không tưởng Pháp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Triết học cổ điển Đức, Kinh tế Chính trị học cổ điển Anh và Chủ nghĩa Xã hội không tưởng ở Pháp.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Triết học cổ điển Đức, Kinh tế Chính trị và Chủ nghĩa Xã hội không tưởng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Triết học cổ điển Đức, Kinh tế Chính trị học cổ điển Anh và Chủ nghĩa Xã hội không tưởng ở Pháp.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 33,
+      "question": "33. Những tiền đề khoa học tự nhiên dẫn đến sự ra đời của triết học Mác:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Học thuyết tế bào, học thuyết tiến hóa, học thuyết giá trị thặng dư.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Học thuyết tế bào, học thuyết tiến hóa, định luật bảo toàn và chuyển hóa năng lượng.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Học thuyết tế bào, học thuyết tiến hóa, học thuyết đấu tranh giai cấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Định luật bảo toàn và chuyển hóa năng lượng, học thuyết tiến hóa, học thuyết giá trị thặng dư.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Học thuyết tế bào, học thuyết tiến hóa, định luật bảo toàn và chuyển hóa năng lượng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 34,
+      "question": "34. Các nhà triết học thuộc trường phái chủ nghĩa duy vật cho rằng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bản chất của thế giới là ý thức.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Bản chất của thế giới là các vật thể.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Bản chất của thế giới là vật chất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Bản chất của thế giới là ý niệm",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Bản chất của thế giới là vật chất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 35,
+      "question": "35. Các hình thức cơ bản của phép biện chứng là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phép biện chứng chất phác thời cổ đại; phép biện chứng duy tâm cổ điển Đức và phép biện chứng duy vật tầm thường.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Phép biện chứng chất phác thời cổ đại; phép biện chứng duy tâm cổ điển Đức và phép biện chứng duy vật của chủ nghĩa Mác – Lênin.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Phép biện chứng chất phác thời cổ đại; phép biện chứng duy vật của chủ nghĩa Mác - Lênin và phép biện chứng duy tâm thời trung cổ.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phép biện chứng duy tâm cổ điển Đức; phép biện chứng duy vật của chủ nghĩa Mác - Lênin và phép biện chứng chủ nghĩa xã hội không tưởng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Phép biện chứng chất phác thời cổ đại; phép biện chứng duy tâm cổ điển Đức và phép biện chứng duy vật của chủ nghĩa Mác – Lênin.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 36,
+      "question": "36. Về mặt triết học, định luật bảo toàn và chuyển hoá năng lượng chứng minh cho quan điểm:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan điểm siêu hình phủ nhận sự vận động, phát triển của thế giới vật chất",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Quan điểm duy tâm phủ nhận sự vận động là khách quan của thế giới vật chất",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quan điểm biện chứng duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Quan điểm biện chứng duy vật thừa nhận thế giới không có sự chuyển hóa của giới tự nhiên vô cơ.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Quan điểm biện chứng duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 37,
+      "question": "37. Thực chất bước chuyển cách mạng trong triết học do Mác và Ăngghen thực hiện là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thống nhất giữa thế giới quan duy vật và phép biện chứng trong một hệ thống triết học.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Thống nhất giữa triết học của Hêghen và triết học của Phoi-ơ-bắc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Phê phán chủ nghĩa duy vật siêu hình của Phoi-ơ-bắc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phê phán triết học duy tâm của Hêghen.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Thống nhất giữa thế giới quan duy vật và phép biện chứng trong một hệ thống triết học.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 38,
+      "question": "38.  Ba phát minh trong khoa học tự nhiên: định luật bảo toàn và chuyển hoá năng lượng, học thuyết tế bào, học thuyết tiến hoá chứng minh thế giới vật chất có tính chất:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tính chất tách rời tĩnh tại của thế giới vật chất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tính chất biện chứng của sự vận động và phát triển của thế giới vật chất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Tính chất không tồn tại thực của thế giới vật chất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tính chất vô tận của thế giới vật chất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Tính chất biện chứng của sự vận động và phát triển của thế giới vật chất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 39,
+      "question": "39.  Tác phẩm được coi là “văn kiện có tính chất cương lĩnh đầu tiên của chủ nghĩa Mác” là tác phẩm:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự khốn cùng của triết học.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Gia đình thần thánh.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tuyên ngôn của Đảng Cộng sản.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Tư bản",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Tuyên ngôn của Đảng Cộng sản.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 40,
+      "question": "40.  Đối tượng nghiên cứu của triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Những quy luật vận động, phát triển chung nhất của tự nhiên, xã hội và tư duy.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Những quy luật vận động của tự nhiên, xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Những quy luật hình thành của xã hội và tư duy.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Những quy luật vận động, phát triển của tự nhiên, xã hội và tư duy.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Những quy luật vận động, phát triển chung nhất của tự nhiên, xã hội và tư duy.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 41,
+      "question": "41.  Vai trò của Triết học Mác-Lênin trong sự nghiệp đổi mới ở Việt Nam hiện nay là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là thế giới quan, phương pháp luận khoa học cho đổi mới tư duy lý luận, xác định mô hình chủ nghĩa xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Là công cụ để cải tạo xã hội cũ.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Là kim chỉ nam cho mọi hoạt động thực tiễn của Đảng, Nhà nước và toàn thể nhân dân.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Là phương pháp luận cho việc xây dựng mô hình xã hội mới.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Là thế giới quan, phương pháp luận khoa học cho đổi mới tư duy lý luận, xác định mô hình chủ nghĩa xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 42,
+      "question": "45.  Thế giới quan và phương pháp luận mà triết học Mác – Lênin trang bị cho con người tính chất cơ bản:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tính sáng tạo và tiến bộ.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tính cách mạng và khoa học.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Tính kế thừa và cụ thể.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tính lịch sử và tính đảng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Tính cách mạng và khoa học.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 43,
+      "question": "46.  Triết học đóng vai trò là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Toàn bộ thế giới quan.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Toàn bộ thế giới quan, nhân sinh quan và phương pháp luận.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Hạt nhân lý luận của thế giới quan.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Một loại hình thế giới quan giống như các loại hình thế giới quan khác.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Hạt nhân lý luận của thế giới quan.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 44,
+      "question": "47. Trong các trả lời sau đây, câu nào diễn đạt chưa chuẩn xác:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa Mác là học thuyết do C.Mác sáng lập.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa Mác là học thuyết về sự nghiệp giải phóng giai cấp vô sản và nhân dân lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa Mác là khoa học của mọi khoa học, là thế giới quan và phương pháp luận chung của mọi nhận thức và thực tiễn.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa Mác là học thuyết được xây dựng trên cơ sở kế thừa những tinh hoa của lịch sử tư tưởng nhân loại và thực tiễn cách mạng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Chủ nghĩa Mác là khoa học của mọi khoa học, là thế giới quan và phương pháp luận chung của mọi nhận thức và thực tiễn.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 45,
+      "question": "48.  Thực chất bước chuyển cách mạng trong triết học do C.Mác và Ph.Ăngghen thực hiện là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thống nhất phép biện chứng và thế giới quan duy vật trong một hệ thống triết học; xây dựng được chủ nghĩa duy vật lịch sử.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Thống nhất phép siêu hình và thế giới quan duy vật trong một hệ thống triết học; xây dựng được chủ nghĩa duy vật lịch sử.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Thống nhất phép siêu hình và thế giới quan duy tâm trong một hệ thống triết học; xây dựng được chủ nghĩa duy vật lịch sử.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Thống nhất phép siêu hình và thế giới quan duy tâm trong một hệ thống triết học; phát hiện sứ mệnh lịch sử của giai cấp công nhân.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Thống nhất phép biện chứng và thế giới quan duy vật trong một hệ thống triết học; xây dựng được chủ nghĩa duy vật lịch sử.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 46,
+      "question": "49.  Cống hiến vĩ đại nhất của C.Mác về triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy vật biện chứng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy vật lịch sử.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Coi thực tiễn là trung tâm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phép biện chứng duy vật.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Chủ nghĩa duy vật lịch sử.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 47,
+      "question": "50. Triết học duy tâm có vai trò:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chẳng những không đóng góp mà còn làm suy đồi tư duy nhân loại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Không đóng góp cho sự phát triển tư duy con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Kiềm hãm phát triển tư duy con người, xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Đóng góp cho sự phát triển tư duy con người, xã hội",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Đóng góp cho sự phát triển tư duy con người, xã hội) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 48,
+      "question": "51.  Hạn chế lớn nhất của các quan niệm duy vật ở phương Tây thời cổ đại là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tính tự phát, ngây thơ.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Tính siêu hình.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tính chủ quan.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tính tư biện.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Tính tự phát, ngây thơ.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 49,
+      "question": "52.  Hạn chế lớn nhất của các quan niệm duy vật ở phương Tây vào thế kỷ 17-18 là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tính tự phát, ngây thơ.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tính siêu hình.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Tính chủ quan.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tính nguỵ biện.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Tính siêu hình.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 50,
+      "question": "53.  Tác phẩm được xem là văn kiện có tính chất cương lĩnh đầu tiên của chủ nghĩa Mác là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bản thảo kinh tế - triết học năm 1844",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tuyên ngôn của Đảng Cộng sản.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Tuyên ngôn độc lập.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Hệ tư tưởng Đức.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Tuyên ngôn của Đảng Cộng sản.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 51,
+      "question": "56. Xét về lịch sử hình thành và giá trị tư tưởng thì chủ nghĩa Ph.Ăngghen ở giai đoạn 1844 - 1848 nhằm mục đích là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tiếp tục hoàn thành các tác phẩm triết học nhằm phê phán tôn giáo.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Hình thành những nguyên lý triết học duy vật biện chứng, duy vật lịch sử và chủ nghĩa xã hội khoa học.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Nghiên cứu về vai trò của hoạt động thực tiễn đối với nhận thức.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Hoàn thành bộ “Tư Bản”.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Hình thành những nguyên lý triết học duy vật biện chứng, duy vật lịch sử và chủ nghĩa xã hội khoa học.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 52,
+      "question": "57. Các nhà triết học thuộc trường phái chủ nghĩa duy tâm cho rằng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bản chất của thế giới là nguyên tử.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Bản chất của thế giới là những vật thể.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Bản chất của thế giới là ý thức.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Bản chất của thế giới là vật chất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Bản chất của thế giới là ý thức.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 53,
+      "question": "58.  Chủ nghĩa duy vật có phương pháp nhìn thế giới như một cổ máy khổng lồ mà mỗi bộ phận tạo nên thế giới đó về cơ bản là ở trạng thái biệt lập và tĩnh tại là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy vật chất phác thời cổ đại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy vật siêu hình.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa duy vật biện chứng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa duy vật nói chung.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Chủ nghĩa duy vật siêu hình.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 54,
+      "question": "59.  Nguồn gốc dẫn đến sự ra đời của triết học:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Xã hội phân chia thành giai cấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Khi xuất hiện tầng lớp trí thức biết ngạc nhiên, hoài nghi, hụt hẫng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tư duy của con người đạt trình độ khái quát cao và xuất hiện tầng lớp trí thức.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Khi con người biết ngạc nhiên, hoài nghi, hụt hẫng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Tư duy của con người đạt trình độ khái quát cao và xuất hiện tầng lớp trí thức.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 55,
+      "question": "60.  Đối tượng của triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nghiên cứu những quy luật của khoa học cụ thể.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Nghiên cứu những quy luật của tự nhiên, xã hội và tư duy con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Nghiên cứu những hiện tượng xảy ra trong tự nhiên, xã hội và tư duy.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Nghiên cứu những vấn đề chung nhất của tự nhiên, của xã hội và con người.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Nghiên cứu những vấn đề chung nhất của tự nhiên, của xã hội và con người.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 56,
+      "question": "61.  Vấn đề cơ bản của triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giữa tự nhiên và xã hội: cái nào có trước, cái nào có sau; cái nào quyết định cái nào; Và con người có nhận thức được xã hội không?",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Giữa ý thức và vật chất: cái nào có trước cái nào có sau; cái nào quyết định cái nào; Và con người có khả năng nhân thức được thế giới không?",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Giữa ý thức và vật thể: cái nào có trước cái nào có sau? cái nào quyết định cái nao?; Và con người có nhận biết được các vật thể không?",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Giữa vật chất và ý thức: cái nào có trước, cái nào có sau? cái nào lệ thuộc cái nào?; Và con người có khả năng nhận biết được chính mình không?",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Giữa ý thức và vật chất: cái nào có trước cái nào có sau; cái nào quyết định cái nào; Và con người có khả năng nhân thức được thế giới không?) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 57,
+      "question": "62.  Cơ sở phân chia các trường phái triết học: chủ nghĩa duy vật và chủ nghĩa duy tâm là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan niệm về thế giới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Giải quyết vấn đề vật chất và thế giới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Giải quyết vấn đề cơ bản của triết học.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Quan niệm về con người trong thế giới.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Giải quyết vấn đề cơ bản của triết học.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 58,
+      "question": "63.  Các nhà triết học thuộc trường phái chủ nghĩa duy vật cho rằng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bản chất của thế giới là vật chất; vật chất là tính thứ nhất; vật thể là tính thứ hai; vật thể là cái có trước và quyết định ý thức của con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Bản chất của thế giới là các vật thể; Vật thể là tính thứ nhất, ý thức là tính thứ hai; vật thể là cái có trước và cấu thành ý thức của con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Bản chất của thế giới là vật chất; vật chất là tính thứ nhất, ý thức là tính thứ hai; vật chất là cái có trước và quyết định ý thức của con người.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Bản chất của thế giới là ý thức; ý thức là cái có trước và quyết định, vất chất là cái có sau và bị quyết định.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Bản chất của thế giới là vật chất; vật chất là tính thứ nhất, ý thức là tính thứ hai; vật chất là cái có trước và quyết định ý thức của con người.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 59,
+      "question": "64.  Các nhà triết học thuộc trường phái chủ nghĩa duy tâm cho rằng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bản chất của thế giới là vật chất tạo nên ý thức và là tính thứ nhất còn ý thức tạo nên con người và là tính thứ hai.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Bản chất của thế giới là những vật thể; Vật thể là tính thứ nhất, ý thức là tính thứ hai; vật chất là cái có trước và quyết định ý thức của con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Bản chất của thế giới là ý thức, ý thức là tính thứ nhất, vật chất là tính thứ hai; ý thức là cái có trước và quyết định vật chất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Bản chất của thế giới là vật chất, tạo nên các vật thể là tính thứ hai; vật thể là cái có trước và quyết định vật chất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Bản chất của thế giới là ý thức, ý thức là tính thứ nhất, vật chất là tính thứ hai; ý thức là cái có trước và quyết định vật chất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    }
+  ]
+}

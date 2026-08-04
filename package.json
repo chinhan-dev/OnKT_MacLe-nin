@@ -1,0 +1,13 @@
+{
+  "name": "lms-onluyen-mac",
+  "version": "1.0.0",
+  "description": "LMS Ôn Luyện & Chữa Bài Trắc Nghiệm Triết Học Mác - Lênin",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "dev": "npx -y serve -l 8080 ."
+  },
+  "keywords": ["lms", "quiz", "marxism-leninism"],
+  "author": "Antigravity",
+  "license": "MIT"
+}

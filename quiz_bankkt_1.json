@@ -1,0 +1,346 @@
+{
+  "title": "Bài Kiểm Tra 1",
+  "total_questions": 10,
+  "questions": [
+    {
+      "question_id": 1,
+      "question": "Triết học Mác ra đời vào thời gian nào?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Những năm 40 của thế kỷ XVII",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Những năm 40 của thế kỷ XVIII",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Những năm 40 của thế kỷ XIX",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Những năm 40 của thế kỷ XX",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Những năm 40 của thế kỷ XIX) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 2,
+      "question": "Thế giới quan triết học của Hêghen là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy tâm khách quan",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy vật",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chủ nghĩa duy tâm chủ quan",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa duy vật chất phát",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Chủ nghĩa duy tâm khách quan) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 3,
+      "question": "Chủ nghĩa duy tâm có những nguồn gốc chính nào?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nguồn gốc nhận thức và nguồn gốc xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Nguồn gốc tự nhiên và nguồn gốc xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Nguồn gốc nhận thức và nguồn gốc tự nhiên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Nguồn gốc tâm lý và nguồn gốc kinh tế.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Nguồn gốc nhận thức và nguồn gốc xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 4,
+      "question": "Tiền đề lý luận trực tiếp cho sự ra đời của triết học Mác là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Triết học cổ điển La Mã.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Triết học cổ điển Hy Lạp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Triết học cổ điển Đức.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Triết học cổ điển Pháp.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Triết học cổ điển Đức.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 5,
+      "question": "Mác và Ăngghen đã kế thừa yếu tố hạt nhân hợp lý nào trong triết học của Hêghen?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan điểm duy vật trong lĩnh vực tự nhiên",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Quan điểm duy vật trong lĩnh vực xã hội",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Phép biện chứng",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Tất cả các phương án trên đều sai",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Phép biện chứng) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 6,
+      "question": "Chọn khẳng định SAI khi nói về sự ra đời của triết học Mác:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Triết học Mác là sự kết hợp phép biện chứng của Hêghen và chủ nghĩa duy vật của Phoi-ơ-bắc",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Triết học Mác có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Triết học Mác kế thừa và cải tạo phép biện chứng của Hêghen trên cơ sở duy vật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Triết học Mác là hệ thống quan điểm duy vật biện chứng về tự nhiên, xã hội, tư duy.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Triết học Mác là sự kết hợp phép biện chứng của Hêghen và chủ nghĩa duy vật của Phoi-ơ-bắc) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 7,
+      "question": "Thế giới quan triết học của Phoi-ơ-bắc (L.Feuerbach) là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Duy vật",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Duy tâm",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Vừa duy vật vừa duy tâm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Không nên gọi là duy vật hay duy tâm",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Duy vật) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 8,
+      "question": "Chủ nghĩa duy vật biện chứng do ai sáng lập / xây dựng?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mác và Ph. Ăngghen xây dựng",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Mác xây dựng",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Ph. Ăngghen xây dựng",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Mác và Ph. Ăngghen và Lênin xây dựng",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Mác và Ph. Ăngghen xây dựng) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 9,
+      "question": "29. Vấn đề cơ bản của triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Vấn đề mối quan hệ giữa Trời và Đất, người và vật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Vấn đề mối quan hệ giữa vật chất và ý thức.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Vấn đề mối quan hệ giữa tri thức và tình cảm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Mối quan hệ giữa con người và tự nhiên",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Vấn đề mối quan hệ giữa vật chất và ý thức.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 10,
+      "question": "Hình thức triết học thống trị ở Châu Âu thời Trung cổ là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Triết học kinh viện",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Triết học tự nhiên",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Triết học siêu hình",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Triết học duy vật biện chứng",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Triết học kinh viện) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    }
+  ]
+}

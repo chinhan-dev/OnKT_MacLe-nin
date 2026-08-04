@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS Ôn Luyện Triết Học Mác - Lênin</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <h1>LMS Triết Học Mác - Lênin</h1>
+          <p>Hệ thống Ôn luyện & Chữa bài Trắc nghiệm</p>
+        </div>
+      </div>
+
+      <!-- Master Answer Toggle & Control Panel -->
+      <div class="controls">
+        <div class="toggle-wrapper" id="masterToggleWrapper">
+          <span class="toggle-label">
+            <i class="fa-solid fa-eye-slash" id="toggleIcon"></i>
+            <span id="toggleText">Chế độ Ôn Luyện (Ẩn đáp án)</span>
+          </span>
+          <label class="switch">
+            <input type="checkbox" id="masterAnswerToggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <!-- Mẹo Học Button -->
+        <a href="meo_hoc.html" target="_blank" class="btn-meohoc-header" title="Mẹo học & Quy tắc khoanh nhanh">
+          <i class="fa-solid fa-lightbulb"></i>
+          <span>Mẹo học</span>
+        </a>
+
+        <!-- Single Clean Reset Button at the Top -->
+        <button class="btn-reset-header" id="resetCurrentTabBtn" title="Làm lại bài này">
+          <i class="fa-solid fa-rotate-left"></i>
+          <span>Làm lại bài này</span>
+        </button>
+
+        <button class="btn-theme" id="themeToggleBtn" title="Đổi giao diện Sáng / Tối">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main App Layout -->
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation & Filter Grid -->
+    <aside class="sidebar">
+      
+      <!-- Statistics Widget -->
+      <div class="stats-card">
+        <div class="stats-header">
+          <h3><i class="fa-solid fa-chart-pie"></i> Tiến độ làm bài</h3>
+          <span class="score-badge" id="overallScoreBadge">0 / 0</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="overallProgressFill" style="width: 0%;"></div>
+        </div>
+        <div class="stats-details">
+          <div class="stat-item correct">
+            <span class="stat-num" id="statCorrectCount">0</span>
+            <span class="stat-lbl">Đúng</span>
+          </div>
+          <div class="stat-item wrong">
+            <span class="stat-num" id="statWrongCount">0</span>
+            <span class="stat-lbl">Sai</span>
+          </div>
+          <div class="stat-item unanswered">
+            <span class="stat-num" id="statUnansweredCount">0</span>
+            <span class="stat-lbl">Chưa chọn</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters & Search -->
+      <div class="filter-section">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Tìm từ khóa câu hỏi...">
+          <button id="clearSearchBtn" class="clear-btn" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Tất cả (<span id="filterAllCount">0</span>)</button>
+          <button class="filter-btn" data-filter="wrong">Làm sai (<span id="filterWrongCount">0</span>)</button>
+          <button class="filter-btn" data-filter="correct">Đã đúng (<span id="filterCorrectCount">0</span>)</button>
+          <button class="filter-btn" data-filter="unanswered">Chưa làm (<span id="filterUnansweredCount">0</span>)</button>
+        </div>
+      </div>
+
+      <!-- Question Grid Navigator -->
+      <div class="grid-section">
+        <div class="grid-header">
+          <h4><i class="fa-solid fa-table-cells"></i> Danh sách câu hỏi</h4>
+        </div>
+        <div class="question-grid" id="questionGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+
+      <!-- Navigation Tabs (4 Main Tabs) -->
+      <nav class="main-tabs">
+        <button class="tab-btn active" data-tab="bai1">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Bài 1</span>
+          <small>59 câu</small>
+        </button>
+        <button class="tab-btn" data-tab="bai2">
+          <i class="fa-solid fa-atom"></i>
+          <span>Bài 2</span>
+          <small>132 câu</small>
+        </button>
+        <button class="tab-btn" data-tab="bai3">
+          <i class="fa-solid fa-earth-americas"></i>
+          <span>Bài 3</span>
+          <small>120 câu</small>
+        </button>
+        <button class="tab-btn" data-tab="kt">
+          <i class="fa-solid fa-file-pen"></i>
+          <span>Bài Kiểm Tra</span>
+          <small>20 câu (KT 1,2,3)</small>
+        </button>
+      </nav>
+
+      <!-- Sub-tabs selector for Tab 4 (Kiểm Tra) -->
+      <div class="sub-tabs-container" id="ktSubTabs" style="display: none;">
+        <span class="sub-tabs-label"><i class="fa-solid fa-layer-group"></i> Chọn Đề Kiểm Tra:</span>
+        <div class="sub-tabs-list">
+          <button class="sub-tab-btn active" data-subtab="kt_all">Tất cả (20 câu)</button>
+          <button class="sub-tab-btn" data-subtab="kt1">Đề KT 1 (10 câu)</button>
+          <button class="sub-tab-btn" data-subtab="kt2">Đề KT 2 (5 câu)</button>
+          <button class="sub-tab-btn" data-subtab="kt3">Đề KT 3 (5 câu)</button>
+        </div>
+      </div>
+
+      <!-- Questions List Container -->
+      <div class="questions-container" id="questionsContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Đã đặt lại bài làm!</span>
+  </div>
+
+  <!-- Load Data and Main Script -->
+  <script src="quiz_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

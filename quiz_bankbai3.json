@@ -1,0 +1,4086 @@
+{
+  "title": "Bài 3: Chủ nghĩa duy vật lịch sử",
+  "total_questions": 120,
+  "questions": [
+    {
+      "question_id": 1,
+      "question": "1. Theo Triết học Mác – Lênin để phân chia trình độ tiến bộ của xã hội ở từng giai đoạn phát triển của lịch sử căn cứ vào:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trình độ phát triển của khoa học kĩ thuật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Trình độ dân trí và mức sống cao của xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Trình độ phát triển của lực lượng sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Trình độ phát triển của đạo đức, pháp luật, tôn giáo.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Trình độ phát triển của lực lượng sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 2,
+      "question": "2. Phương thức sản xuất là thể thống nhất của những nhân tố:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan hệ sản xuất và kiến trúc thượng tầng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Lực lượng sản xuất và kiến trúc thượng tầng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Cơ sở hạ tầng và kiến trúc thượng tầng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Lực lượng sản xuất và quan hệ sản xuất.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Lực lượng sản xuất và quan hệ sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 3,
+      "question": "3. Chọn câu của C.Mác về bản chất con người trong các phương án sau:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trong tính hiện thực, bản chất con người là tổng hòa các mối quan hệ xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Bản chất con người là sự thống nhất giữa mặt sinh học và mặt xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Bản chất con người không phải là cái trừu tượng cố hữu của cá nhân riêng biệt. Trong tính hiện thực của nó, bản chất con người là tổng hòa những quan hệ xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Con người là vừa là chủ thể của lịch sử vừa là sản phẩm của lịch sử.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Bản chất con người không phải là cái trừu tượng cố hữu của cá nhân riêng biệt. Trong tính hiện thực của nó, bản chất con người là tổng hòa những quan hệ xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 4,
+      "question": "4. Bản chất của con người được quyết định bởi:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Các mối quan hệ xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Nỗ lực của mỗi cá nhân.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Giáo dục của gia đình và nhà trường.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Hoàn cảnh xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Các mối quan hệ xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 5,
+      "question": "5. Con người là thể thống nhất của các mặt cơ bản:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sinh học và xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Xã hội và tâm lý.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tâm lý và xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phẩm chất đạo đức.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Sinh học và xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 6,
+      "question": "6. Hạt nhân cơ bản trong cộng đồng quần chúng nhân dân là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Các giai cấp, tầng lớp thúc đẩy sự tiến bộ của xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Những người lao động sản xuất ra của cải vật chất và các giá trị tinh thần.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Những người chống lại giai cấp thống trị phản động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Những người nghèo khổ.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Những người lao động sản xuất ra của cải vật chất và các giá trị tinh thần.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 7,
+      "question": "7. Nội dung quy luật quan hệ sản xuất (QHSX) phải phù hợp với trình độ lực lượng sản xuất (LLSX) là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự phát triển của LLSX đòi hòi QHSX phải phù hợp theo; Và khi QHSX phù hợp sẽ thúc đẩy LLSX phát triển.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Sự phát triển của QHSX đòi hỏi LLSX phải phù hợp theo; và khi LLSX phù hợp sẽ thúc đẩy QHSX phát triển.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Sự phát triển của LLSX đòi hỏi trình độ kỹ thuật phải phù hợp theo; và khi trình độ kỹ thuật phù hợp sẽ thúc đẩy LLSX phát triển.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Sự phát trển của QHSX đòi hỏi trình độ quản lý phải phù hợp thep; và khi trình độ quản lý phù hợp sẽ thúc đẩy QHSX phát triển.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Sự phát triển của LLSX đòi hòi QHSX phải phù hợp theo; Và khi QHSX phù hợp sẽ thúc đẩy LLSX phát triển.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 8,
+      "question": "8. Yếu tố được coi là cánh tay, bắp thịt, hệ thần kinh thứ hai của con người:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tư liệu lao động.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Đối tượng lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Khoa học kỹ thuật.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Tư liệu lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 9,
+      "question": "9. Chỉ rõ quan điểm sai về đấu tranh giai cấp sau đây:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Đấu tranh giai cấp là đấu tranh của các tập đoàn người có quan điểm trái ngược nhau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Đấu tranh giai cấp là đấu tranh của những tập đoàn người có lợi ích căn bản đối lập nhau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Đấu tranh giai cấp là động lực trực tiếp của lịch sử các xã hội có giai cấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Đấu tranh giai cấp là cuộc đấu tranh của quần chúng nhân dân lao động chống lại giai cấp thống trị.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Đấu tranh giai cấp là cuộc đấu tranh của quần chúng nhân dân lao động chống lại giai cấp thống trị.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 10,
+      "question": "10. Cơ sở hạ tầng của một xã hội cụ thể bao gồm:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan hệ sản xuất thống trị; Quan hệ sản xuất tàn dư; Quan hệ sản xuất mầm mống.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Quan hệ sản xuất; Quan hệ tôn giáo; Quan hệ chính trị; Quan hệ sản xuất tàn dư.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quan hệ kinh tế; Quan hệ tôn giáo; Quan hệ chính trị; Quan hệ văn hóa; Quan hệ sản xuất tàn dư.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Quan hệ sản xuất thống trị; Quan hệ sản xuất tàn dư; Quan hệ chính trị.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Quan hệ sản xuất thống trị; Quan hệ sản xuất tàn dư; Quan hệ sản xuất mầm mống.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 11,
+      "question": "11. Kiến trúc thượng tầng của xã hội bao gồm:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Toàn bộ những quan điểm, tư tưởng và những thiết chế xã hội tương ứng được hình thành trên cơ sở hạ tầng nhất định.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Toàn bộ các tư tưởng xã hội và các tổ chức tương ứng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Toàn bộ các quan hệ xã hội được hình thành trong quá trình lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Toàn bộ hoạt động thực tiễn của con người.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Toàn bộ những quan điểm, tư tưởng và những thiết chế xã hội tương ứng được hình thành trên cơ sở hạ tầng nhất định.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 12,
+      "question": "12. Phạm trù thể hiện mối quan hệ giữa con người với tự nhiên trong quá trình sản xuất là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Lực lượng sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Quan hệ sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Cơ sở hạ tầng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tồn tại xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Lực lượng sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 13,
+      "question": "13. Nguyên nhân trực tiếp của sự ra đời giai cấp trong xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Do sự xuất hiện chế đội tư hữu về tư liệu sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Do sự chênh lệch về khả năng giữa các tập đoàn người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Do sự phân hóa giữa giàu và nghèo trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Do sự phát triển lực lượng sản xuất làm xuất hiện “của dư” tương đối.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Do sự xuất hiện chế đội tư hữu về tư liệu sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 14,
+      "question": "14. Yếu tố giữ vai trò quan trọng nhất trong lực lượng sản xuất là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tư liệu sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Người lao động.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Khoa học kỹ thuật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Công cụ lao động.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Người lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 15,
+      "question": "15. Quá trình sản xuất vật chất bao gồm những yếu tố cơ bản:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Người lao động, công cụ lao động, đối tượng lao động.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Sức lao động, công cụ lao động, khoa học kỹ thuật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Người lao động, đối tượng lao động, khoa học kỹ thuật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Người lao động, khoa học kỹ thuật.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Người lao động, công cụ lao động, đối tượng lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 16,
+      "question": "16. Tư liệu sản xuất bao gồm:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Người lao động và công cụ lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Người lao động, công cụ lao động và đối tượng lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tư liệu lao động và đối tượng lao động.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Công cụ lao động và tư liệu lao động.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Tư liệu lao động và đối tượng lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 17,
+      "question": "17. Tìm đáp án sai:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Lực lượng sản xuất là nội dung còn quan hệ sản xuất là hình thức của phương thức sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Lực lượng sản xuất là yếu tố động, cách mạng trong phương thức sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Lực lượng sản xuất quyết định sự phân công lao động xã hội, do đó, quyết định quan hệ giữa các tập đoàn người về mặt sở hữu tư liệu sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Sự phát triển của lực lượng sản xuất là do sự thay đổi của quan hệ sản xuất quy định.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Sự phát triển của lực lượng sản xuất là do sự thay đổi của quan hệ sản xuất quy định.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 18,
+      "question": "18. Tiêu chuẩn khách quan để phân biệt các chế độ xã hội trong lịch sử là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan hệ sản xuất đặc trưng.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Chính trị tư tưởng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Lực lượng sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phương thức sản xuất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Quan hệ sản xuất đặc trưng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 19,
+      "question": "19. Trong quan hệ sản xuất, quan hệ giữ vai trò quyết định là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan hệ sở hữu tư liệu sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Quan hệ tổ chức quản lý quá trình sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quan hệ phân phối sản phẩm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Quan hệ sở hữu tư nhân về tư liệu sản xuất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Quan hệ sở hữu tư liệu sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 20,
+      "question": "20. Khuynh hướng của sản xuất là không ngừng biến đổi phát triển. Sự biến đổi đó bao giờ cũng bắt đầu từ:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự  biến đổi, phát triển của cách thức sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sự biến đổi, phát triển của lực lượng sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Sự biến đổi, phát triển của kĩ thuật sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Sự phát triển của cách thức tổ chức sản xuất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Sự biến đổi, phát triển của lực lượng sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 21,
+      "question": "21. Quy luật xã hội giữ vai trò quyết định đối với sự vận động, phát triển của xã hội:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quy luật về sự phù hợp của quan hệ sản xuất với trình độ phát triển của lực lượng sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Quy luật cơ sở hạ tầng quyết định kiến trúc thượng tầng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quy luật tồn tại xã hội quyết định ý thức xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Quy luật từ những sự biến đổi về lượng dẫn đến sự biến đổi về chất và ngược lại.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Quy luật về sự phù hợp của quan hệ sản xuất với trình độ phát triển của lực lượng sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 22,
+      "question": "“Trong tính hiện thực của nó, bản chất con người là…”",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tổng hoà các quan hệ kinh tế/ V.I. Lênin.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Toàn bộ các quan hệ xã hội/ Ph. Ăngghen.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tổng hoà những quan hệ xã hội/ C. Mác.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Tổng hoà các quan hệ tự nhiên và xã hội/ C. Mác.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Tổng hoà những quan hệ xã hội/ C. Mác.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 23,
+      "question": "23. Con người là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thực thể vật chất tự nhiên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Thực thể chính trị và đạo đức.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Thực thể chính trị, có tư duy và văn hoá.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Thực thể tự nhiên và xã hội.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Thực thể tự nhiên và xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 24,
+      "question": "24. Vai trò của đấu tranh giai cấp trong các xã hội có giai cấp đối kháng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là con đường tiến bộ xã hội; hình thành chế độ mới, phát triển hơn.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Là phương thức vận động của lịch sử; hình thành xu hướng phát triển nhân loại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Là động lực tiến bộ lịch sử; hình thành xã hội mới, tiến bộ hơn.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Là điều kiện tiến bộ lịch sử; hình thành nền văn minh nhân loại.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Là động lực tiến bộ lịch sử; hình thành xã hội mới, tiến bộ hơn.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 25,
+      "question": "25. Tiến trình phát triển các hình thái kinh tế - xã hội nói chung của xã hội loài người đã và đang lần lượt trải qua các hình thái kinh tế - xã hội:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Công xã nguyên thủy, chiếm hữu nô lệ, tư bản chủ nghĩa, cộng sản chủ nghĩa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Công xã nguyên thủy, chiếm hữu nô lệ, phong kiến, tư bản chủ nghĩa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Công xã nguyên thủy, chiếm hữu nô lệ, phong kiến, tư bản chủ nghĩa, cộng sản chủ nghĩa.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Công xã nguyên thủy, chiếm hữu nô lệ, phong kiến, tư bản chủ nghĩa, xã hội chủ nghĩa.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Công xã nguyên thủy, chiếm hữu nô lệ, phong kiến, tư bản chủ nghĩa, cộng sản chủ nghĩa.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 26,
+      "question": "26. Cơ sở hạ tầng của xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Đường xá, cầu cống, bến cảng, bưu điện…",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tổng hợp của quan hệ sản xuất hợp thành cơ cấu kinh tế của xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Toàn bộ cơ sở vật chất - kỹ thuật của xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Đời sống vật chất của xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Tổng hợp của quan hệ sản xuất hợp thành cơ cấu kinh tế của xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 27,
+      "question": "27. Trong chủ nghĩa duy vật lịch sử, khái niệm “phương thức sản xuất” dùng để chỉ:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Cách thức tiến hành quá trình sản xuất ra của cải vật chất trong một giai đoạn lịch sử nhất định.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Quá trình sản xuất ra của cải vật chất trong một giai đoạn lịch sử nhất định.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Cơ chế vận hành kinh tế trong các điều kiện cụ thể của xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Quá trình sản xuất ra của cải vật chất với một cơ chế kinh tế nhất định.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Cách thức tiến hành quá trình sản xuất ra của cải vật chất trong một giai đoạn lịch sử nhất định.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 28,
+      "question": "28. Vai trò của cách mạng xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phương thức, động lực của phát triển xã hội, tạo nên các nấc thang của tiến bộ lịch sử nhân loại.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Con đường, biện pháp của phát triển xã hôi, tạo nên các cột mốc ghi dấu tiến bộ của lịch sử nhân loại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Hình thức, xu hướng của phát triển xã hội, tạo nên các điều kiện hình thành tiến bộ lich sử nhân loại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Xu thế và cơ sở của phát triển xã hội, tạo nên các tiền đề của tiến bộ lịch sử nhân loại.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Phương thức, động lực của phát triển xã hội, tạo nên các nấc thang của tiến bộ lịch sử nhân loại.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 29,
+      "question": "29. Chọn đáp án sai.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Lực lượng sản xuất là quan hệ giữa con người với tự nhiên trong quá trình sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Lực lượng sản xuất thể hiện năng lực chinh phục tự nhiên của con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Lực lượng sản xuất là nội dung, quan hệ sản xuất là hình thức.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Lực lượng sản xuất thường biến đổi chậm hơn so với quan hệ sản xuất.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Lực lượng sản xuất thường biến đổi chậm hơn so với quan hệ sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 30,
+      "question": "30. Nguyên nhân sâu xa của cách mạng xã hội là do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mâu thuẫn giữa lực lượng sản xuất và quan hệ sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Mâu thuẫn giữa hai giai cấp đối kháng nhau về lợi ích.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Mâu thuẫn giữa giàu và nghèo.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Mâu thuẫn giữa những người vô sản và những người hữu sản.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Mâu thuẫn giữa lực lượng sản xuất và quan hệ sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 31,
+      "question": "31. Mâu thuẫn đối kháng giữa các giai cấp là do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự khác nhau về tư tưởng, lối sống.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sự đối lập về lợi ích cơ bản – lợi ích kinh tế.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Sự đối lập giữa giàu và nghèo.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Sự khác nhau về mức thu nhập.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Sự đối lập về lợi ích cơ bản – lợi ích kinh tế.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 32,
+      "question": "32. C.Mác viết: “Tôi coi sự phát triển của những hình thái kinh tế - xã hội là một quá trình lịch sử -  tự nhiên”, theo nghĩa:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự phát triển của các hình thái kinh tế - xã hội cũng giống như sự phát triển của tự nhiên không phụ thuộc vào nhân tố chủ quan của con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sự phát triển của các hình thái kinh tế - xã hội tuân theo quy luật khách quan của xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Sự phát triển của các hình thái kinh tế - xã hội ngoài tuân theo các quy luật chung còn bị chi phối bởi điều kiện lịch sử cụ thể của mỗi quốc gia dân tộc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Sự phát triển của các hình thái kinh tế - xã hội tuân theo các quy luật chung.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Sự phát triển của các hình thái kinh tế - xã hội tuân theo quy luật khách quan của xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 33,
+      "question": "33. Quan hệ cơ bản quy định địa vị của giai cấp thường là do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sở hữu tư liệu sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Pháp luật quy định và thừa nhận.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Hình thành một cách tự nhiên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Định mệnh.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Sở hữu tư liệu sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 34,
+      "question": "34. Cái quy định hành vi ứng xử đầu tiên và cũng là động lực thúc đẩy con người hoạt động trong suốt lịch sử của mình là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mục tiêu, lý tưởng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Khát vọng quyền lực về kinh tế, chính trị.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Nhu cầu và lợi ích.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Lý tưởng sống.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Nhu cầu và lợi ích.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 35,
+      "question": "35. Sự biến đổi có tính chất cách mạng của kiến trúc thượng tầng là do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thay đổi chính quyền nhà nước.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Thay đổi lực lượng sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Thay đổi quan hệ sản xuất thống trị.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Sự thống trị của cơ sở hạ tầng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Thay đổi quan hệ sản xuất thống trị.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 36,
+      "question": "36. Yếu tố của kiến trúc thượng tầng được coi là có tác động trực tiếp nhất và mạnh mẽ nhất tới cơ sở hạ tầng kinh tế của xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chính trị.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Đảng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Nhà nước.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Triết học.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Nhà nước.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 37,
+      "question": "37. Muốn nhận thức bản chất con người nói chung thì phải:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thông qua cách ứng xử của con người trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Thông qua phẩm chất và năng lực của con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Thông qua các quan hệ hiện thực của con người.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Thông qua phẩm chất và hình dạng của con người.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Thông qua các quan hệ hiện thực của con người.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 38,
+      "question": "38. Hiểu vấn đề “bỏ qua” chế độ tư bản chủ nghĩa ở Việt Nam là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là sự “bỏ qua” việc xác lập địa vị thống trị của quan hệ sản xuất tư bản chủ nghĩa.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Là “bỏ qua” sự phát triển của lực lượng sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Là sự phát triển tuần tự.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Bỏ qua kiến trúc thượng tầng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Là sự “bỏ qua” việc xác lập địa vị thống trị của quan hệ sản xuất tư bản chủ nghĩa.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 39,
+      "question": "39. Về cấu trúc, hình thái kinh tế - xã hội bao gồm những bộ phận cơ bản:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giai cấp cơ bản và giai cấp không cơ bản.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Lực lượng sản xuất, quan hệ sản xuất và kiến trúc thượng tầng.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Nhà nước, chính đảng, đoàn thể.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Các quan hệ sản xuất của xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Lực lượng sản xuất, quan hệ sản xuất và kiến trúc thượng tầng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 40,
+      "question": "40. Định nghĩa về giai cấp của Lênin: Giai cấp là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Những tập đoàn người khác nhau về địa vị chính trị - xã hội. Nguồn gốc của giai cấp là ở quyền lực thống trị trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Những tập đoàn người khác nhau về địa vị kinh tế - xã hội. Nguồn gốc của giai cấp là ở quan hệ về tư liệu sản xuất và lợi ích kinh tế.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Những tập đoàn người khác nhau về trình độ phát triển về kinh tế và văn hóa. Nguồn gốc của giai cấp là vai trò quản lý xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Những tập đoàn người khác nhau về điều kiện sinh sống trong xã hội. Nguồn gốc của giai cấp là ở quan hệ về lợi ích kinh tế.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Những tập đoàn người khác nhau về địa vị kinh tế - xã hội. Nguồn gốc của giai cấp là ở quan hệ về tư liệu sản xuất và lợi ích kinh tế.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 41,
+      "question": "41. Quy luật xã hội giữ vai trò quyết định đối với sự vận động và phát triển của xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quy luật về mối quan hệ biện chứng giữa cơ sở hạ tầng quyết định kiến trúc thượng tầng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Quy luật tồn tại xã hội quyết định ý thức xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quy luật về sự phù hợp của quan hệ sản xuất với trình độ phát triển của lực lượng sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Quy luật đấu tranh giai cấp",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Quy luật về sự phù hợp của quan hệ sản xuất với trình độ phát triển của lực lượng sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 42,
+      "question": "42. Nhà nước có những chức năng cơ bản:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tính giai cấp và tính xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Trấn áp kẻ thù, bảo vệ lợi ích giai cấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Thu thuế và ba hành pháp luật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Có quyền lực công cộng đặc biệt.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Tính giai cấp và tính xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 43,
+      "question": "43. Quần chúng nhân dân là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là những người sản xuất ra của cải vật chất, những bộ phận dân cư chống lại giai cấp thống trị, những bộ phận thúc đẩy sự tiến bộ xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Chỉ những người thuộc giai cấp bị trị và tầng lớp trí thức.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tất cả các giai cấp, tầng lớp trong một xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chỉ những bộ phận nghèo khổ, thất học trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Là những người sản xuất ra của cải vật chất, những bộ phận dân cư chống lại giai cấp thống trị, những bộ phận thúc đẩy sự tiến bộ xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 44,
+      "question": "44. Vai trò cá nhân người lãnh đạo của quần chúng nhân dân là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Có ý nghĩa thúc đẩy tiến bộ lịch sử, văn minh nhân loại trong mọi thời đại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Có ý nghĩa quyết định toàn bộ lịch sử tiến hóa nhân loại, làm nên thắng lợi của các cuộc cách mạng  xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Có ý nghĩa quyết định trực tiếp trực đến toàn bộ lịch sử tiến hóa nhân loại, làm nên các thời đại văn minh trong lịch sử.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Có ý nghĩa quyết định trực tiếp đến thành công hay thất bại của các phong trào cách mạng trong từng hoàn cảnh cụ thể.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Có ý nghĩa quyết định trực tiếp đến thành công hay thất bại của các phong trào cách mạng trong từng hoàn cảnh cụ thể.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 45,
+      "question": "45.  Những phẩm chất cơ bản mà người lãnh tụ của quần chúng nhân dân cần có là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trí tuệ uyên bác vượt trội; Năng lực tổ chức, tập hợp quần chúng; Phẩm chất đạo đức, ý chí phục vụ nhân dân.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Trí tuệ thông minh, sáng suốt; Được quần chúng tín nhiệm, bầu lên; Phẩm chất đạo đức hiền lành, trung thực.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Trí tuệ năng động, sáng tạo; Thương yêu quần chúng, nhân dân; Phẩm chất trong sáng, hòa đồng với giai cấp và dân tộc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Trí tuệ nhìn xa, trông rộng; Năng lực chuyên môn vững vàng; Phẩm chất thẳng thắn, trung thực.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Trí tuệ uyên bác vượt trội; Năng lực tổ chức, tập hợp quần chúng; Phẩm chất đạo đức, ý chí phục vụ nhân dân.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 46,
+      "question": "46. Tuyệt đối hóa vai trò của cá nhân, lãnh tụ sẽ dẫn đến:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tệ coi thường lãnh tụ, làm cho phong trào quần chúng không có sự đoàn kết, nhất trí.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tăng thêm sức mạnh cho phong trào cách mạng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tệ sùng bái cá nhân, làm hạn chế tính năng động, sáng tạo của quần chúng.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Nhận thức đúng về vai trò của lãnh tụ.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Tệ sùng bái cá nhân, làm hạn chế tính năng động, sáng tạo của quần chúng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 47,
+      "question": "47. Những đặc trưng cơ bản của sản xuất vật chất là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tính khách quan; Tính tự giác; Tính xã hôi; Tính lịch sử; Tính sáng tạo.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Tính khách quan; Tính thực tiễn; Tính đa dạng; Tính sáng tạo; Tính cụ thể.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tính phổ biến, Tính tự giác; Tính lịch sử; Tính năng động; Tính kế thừa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tính phát triển; Tính cụ thể; Tính sáng tạo; Tính chủ động; Tính liên tục.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Tính khách quan; Tính tự giác; Tính xã hôi; Tính lịch sử; Tính sáng tạo.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 48,
+      "question": "48. Đặc điểm lớn nhất của thời kì quá độ lên chủ nghĩa xã hội ở Việt Nam là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nhiều thành phần xã hội đan xen tồn tại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Lực lượng sản xuất chưa phát triển.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Năng xuất lao động thấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Từ một nền sản xuất nhỏ là phổ biến quá độ lên chủ nghĩa xã hội không qua chế độ tư bản chủ nghĩa.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Từ một nền sản xuất nhỏ là phổ biến quá độ lên chủ nghĩa xã hội không qua chế độ tư bản chủ nghĩa.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 49,
+      "question": "49. Hai mặt cơ bản của phương thức sản xuất là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mặt tự nhiên và mặt xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Mặt vật chất và mặt tinh thần.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Mặt vật chất và mặt ý thức.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Mặt kỹ thuật và mặt xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Mặt tự nhiên và mặt xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 50,
+      "question": "50. Cách mạng xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là sự thay đổi chủ yếu vế chất, từ hình thái kinh tế - xã hội cũ, lên hình thái kinh tế -xã hội mới; Là thời cơ, bước ngoặt giải quyết mâu thuẫn và lợi ích giai cấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Là sự thay đổi to lớn về chất, từ hình thái kinh tế - xã hội này, sang hình thái kinh tế - xã hội khác; Là bước tiến quyết định trong giải quyết mâu thuẫn, đối kháng giai cấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Sự thay đổi căn bản về chất, từ hình thái kinh tế - xã hội này, lên hình thái kinh tế - xã hội cao hơn; Là đỉnh cao, điểm nút giải quyết mâu thuẫn, đối kháng giai cấp.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Là sự thay đổi thật sự về chất, từ hình thái kinh tế - xã hội thấp lên hình thái kinh tế - xã hội cao; Là thời điểm quyết định giải quyết mâu thuẫn và đối kháng giai cấp.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Sự thay đổi căn bản về chất, từ hình thái kinh tế - xã hội này, lên hình thái kinh tế - xã hội cao hơn; Là đỉnh cao, điểm nút giải quyết mâu thuẫn, đối kháng giai cấp.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 51,
+      "question": "51. Ý nghĩa phương pháp luận của việc nghiên cứu vai trò của quần chúng nhân dân (QCND) và người lãnh đạo (NLĐ) trong thực hiện các phong trào cách mạng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quán triệt vai trò quan trọng của QCND, huy động nhân dân cùng những người lãnh đạo thực hiện tốt các phong trào cách mạng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Quán triết vai trò to lớn của QCND, giáo dục nhân dân ý chí cách mạng; Đồng thời, phải quan tâm bồi dưỡng cán bộ lãnh đạo nhân dân.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quán triệt vai trò sáng tạo lịch sử của QCND, tin tưởng và biết huy động sức mạnh to lơn cùa QCND; Đồng thời, phát hiện và bầu người có tài, có đức làm NLĐ.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Quán triệt vai trò quyết định lịch sử của QCND, tin tưởng và động viên mọi tầng lớp nhân dân làm cách mạng; Đồng thời, bầu ra người yêu nước, thương dân làm NLĐ.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Quán triệt vai trò sáng tạo lịch sử của QCND, tin tưởng và biết huy động sức mạnh to lơn cùa QCND; Đồng thời, phát hiện và bầu người có tài, có đức làm NLĐ.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 52,
+      "question": "52. Để xoá bỏ giai cấp trước hết phải xoá bỏ chế độ:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chế độ người bóc lột người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chế độ tư hữu.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Chế độ tư bản chủ nghĩa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chế độ xã hội có phân chia thành đẳng cấp.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Chế độ tư hữu.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 53,
+      "question": "53. Khác biệt cơ bản nhất của nhà nước vô sản (NNVS) so với các nhà nước trước đó là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "NNVS không củng cố sự thống trị về chính trị, mà chỉ lo xây dựng kinh tế nhằm tăng năng xuất lao động xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "NNVS chỉ chăm lo đến đời sống kinh tế và quyền lực chính trị mà không quan tâm đời sống tinh thần của xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "NNVS chỉ bảo vệ quyền lợi của người lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "NNVS không chỉ bảo vệ lợi ích của người lao động mà còn bảo vệ lợi ích hợp pháp của cả giai cấp khác trong xã hội.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (NNVS không chỉ bảo vệ lợi ích của người lao động mà còn bảo vệ lợi ích hợp pháp của cả giai cấp khác trong xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 54,
+      "question": "54. Trong nền sản xuất hiện đại, xu hướng đối với người lao động là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thể lực lao động không ngừng được nâng cao.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Năng lực lao động ngang nhau, cơ hội có việc làm như nhau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Trí lực lao động không ngừng được nâng cao.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Năng lực cạnh tranh trong công việc được nâng cao.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Trí lực lao động không ngừng được nâng cao.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 55,
+      "question": "55. Sản xuất bao gồm các hình thức:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sản xuất vật chất; sản xuất tinh thần và sản xuất của cải.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sản xuất của cải; sản xuất ra tư liệu sản xuất và sản xuất ra vật phẩm tiêu dùng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Sản xuất vật chất, sản xuất tinh thần và sản xuất ra bản thân con người.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Sản xuất vật chất, sản xuất văn hóa và sản xuất môi trường sinh thái.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Sản xuất vật chất, sản xuất tinh thần và sản xuất ra bản thân con người.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 56,
+      "question": "56. Các nhân tố cơ bản của quá trình sản xuất là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Công cụ lao động và đối tượng lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Người lao động và môi trường lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tư liệu lao động và người lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tư liệu sản xuất và người lao động.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Tư liệu sản xuất và người lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 57,
+      "question": "57. Lực lượng sản xuất biểu hiện mối quan hệ:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mối quan hệ giữa các vật chất và tinh thần sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Mối quan hệ giữa con người với con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Mối quan hệ giữa con người với tự nhiên.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Mối quan hệ giữa con người với tự nhiên và với nhau.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Mối quan hệ giữa con người với tự nhiên.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 58,
+      "question": "58. Lực lượng sản xuất bao gồm các yếu tố:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tư liệu sản xuất và người lao động.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Tư liệu sản xuất, công cụ lao động và người lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tư liệu sản xuất, công cụ lao động, người lao động và phương tiện lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tư liệu sản xuất, công cụ lao động, phương tiện lao động và đối tượng lao động.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Tư liệu sản xuất và người lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 59,
+      "question": "59. Yếu tố cơ bản nhất của lực lượng sản xuất là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Người lao động.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Tư liệu sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Công cụ lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tư liệu lao động.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Người lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 60,
+      "question": "60. Yếu tố mang tính cách mạng nhất trong lực lượng sản xuất là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Người lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Công cụ lao động.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Phương tiện lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tư liệu lao động.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Công cụ lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 61,
+      "question": "61.  Yếu tố nào quyết định sự tồn tại và phát triển của xã hội loài người là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Vị trí địa lý của mỗi dân tộc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Điều kiện dân số.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Phương thức sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Điều kiện môi trường.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Phương thức sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 62,
+      "question": "62. Trong mối quan hệ biện chứng giữa cơ sở hạ tầng (CSHT) và kiến trúc thượng tầng (KTTT) thì:",
+      "options": [
+        {
+          "label": "A",
+          "text": "CSHT quyết định KTTT.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "KTTT quyết định CSHT.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tuỳ thuộc vào thời đại kinh tế cụ thể mà xác định CSHT quyết định KTTT, hay KTTT quyết định CSHT.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Không cái nào quyết định cái nào.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (CSHT quyết định KTTT.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 63,
+      "question": "63.  Nguồn gốc vận động và phát triển của hình thái kinh tế - xã hội là do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự tăng lên không ngừng của năng xuất lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sự phát triển liên tục của lực lượng sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Quần chúng nhân dân không ngừng nổi dậy đấu tranh chống các thế lực phản động trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Mâu thuẫn giai - tầng trong xã hội, sự thay đổi của quan hệ sản xuất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Sự phát triển liên tục của lực lượng sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 64,
+      "question": "64.  Nguyên nhân dẫn đến sự xuất hiện giai cấp là do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Từ chế độ chiếm hữu nô lệ và phân công lao động xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Phân công lao động xã hội và xuất hiện chế độ tư hữu.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Từ chế độ người bóc lột người và phân công lao động xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Từ chế độ lao động làm thuê và xuất hiện chế độ tư hữu.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Phân công lao động xã hội và xuất hiện chế độ tư hữu.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 65,
+      "question": "65. Để xoá bỏ giai cấp trước hết phải xoá bỏ chế độ:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chế độ người bóc lột người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chế độ tư hữu.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Chế độ tư bản chủ nghĩa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chế độ xã hội có phân chia thành đẳng cấp.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Chế độ tư hữu.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 66,
+      "question": "66. Đấu tranh giai cấp, xét đến cùng, nhằm vào mục đích:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phát triển sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Giải quyết mâu thuẫn giai cấp, giành lấy lợi ích kinh tế.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Lật đổ sự áp bức của giai cấp thống trị phản động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Xóa bỏ chế độ tư hữu, thủ tiêu xã hội có giai cấp.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Phát triển sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 67,
+      "question": "67. Vai trò của đấu tranh giai cấp trong các xã hội có gia cấp đối kháng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là con đường tiến bộ xã hội. Hình thành chế độ mới, phát triển hơn.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Là phương thức vận động của lịch sử. Hình thành xu hướng phát triển nhân loại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Là động lực tiến bộ lịch sử. Hình thành xã hội mới, tiến bộ hơn.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Là điều kiện tiến bộ lịch sử. Hình thành nền văn minh nhân loại.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Là động lực tiến bộ lịch sử. Hình thành xã hội mới, tiến bộ hơn.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 68,
+      "question": "68. Cuộc đấu tranh của những người bị áp bức, bị bóc lột, bị trị chống lại kẻ áp bức, bóc lột, thống trị về thực chất là cuộc đấu tranh:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giành chính quyền.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Giải phóng nhân loại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Giai cấp.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Tự do.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Giai cấp.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 69,
+      "question": "69. Cơ sở ra đời của nhà nước là do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Yêu cầu tổ chức, tập hợp lực lượng chống thiên tai, địch họa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Yêu cầu tập hợp lực lượng đấu tranh bảo vệ tổ quốc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Yêu cầu của đấu tranh giai cấp, là công cụ của giai cấp cầm quyền.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Yêu cầu của quản lý xã hội, mở rộng hợp tác quốc tế.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Yêu cầu của đấu tranh giai cấp, là công cụ của giai cấp cầm quyền.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 70,
+      "question": "70.  Kiểu nhà nước đầu tiên trong lịch sử là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nhà nước phong kiến.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Nhà nước chủ nô.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Nhà nước tư sản.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Nhà nước vô sản.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Nhà nước chủ nô.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 71,
+      "question": "71. Nguyên nhân trực tiếp làm xuất hiện nhà nước là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự thỏa thuận của mọi tầng lớp trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Những mâu thuẫn giai cấp không thể điều hòa được.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Lý tưởng cao đẹp của các lãnh tụ cách mạng kết hợp các giai tầng lại với nhau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Do sự xung đột của các thế lực tôn giáo trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Những mâu thuẫn giai cấp không thể điều hòa được.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 72,
+      "question": "72. Nhà nước có những chức năng cơ bản:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thống trị chính trị, xã hội, đối nội và đối ngoại.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Trấn áp kẻ thù, bảo vệ lợi ích giai cấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Bảo vệ lợi ích giai cấp và đối ngoại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Đối ngoại và trấn áp kể thù.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Thống trị chính trị, xã hội, đối nội và đối ngoại.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 73,
+      "question": "73. Cách mạng xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là sự thay đổi chủ yếu vế chất, từ hình thái kinh tế - xã hội cũ, lên hình thái kinh tế -xã hội mới; Là thời cơ, bước ngoặt giải quyết mâu thuẫn và lợi ích giai cấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Là sự thay đổi to lớn về chất, từ hình thái kinh tế - xã hội này, sang hình thái kinh tế - xã hội khác; Là bước tiến quyết định trong giải quyết mâu thuẫn, đối kháng giai cấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Sự thay đổi căn bản về chất, từ hình thái kinh tế - xã hội này, lên hình thái kinh tế - xã hội cao hơn; Là đỉnh cao, điểm nút giải quyết mâu thuẫn, đối kháng giai cấp.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Là sự thay đổi thật sự về chất, từ hình thái kinh tế - xã hội thấp lên hình thái kinh tế - xã hội cao; Là thời điểm quyết định giải quyết mâu thuẫn và đối kháng giai cấp.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Sự thay đổi căn bản về chất, từ hình thái kinh tế - xã hội này, lên hình thái kinh tế - xã hội cao hơn; Là đỉnh cao, điểm nút giải quyết mâu thuẫn, đối kháng giai cấp.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 74,
+      "question": "74. Vai trò của cách mạng xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phương thức, động lực của phát triển xã hội, tạo nên các nấc thang của tiến bộ lịch sử nhân loại.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Con đường, biện pháp của phát triển xã hôi, tạo nên các cột mốc ghi dấu tiến bộ của lịch sử nhân loại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Hình thức, xu hướng của phát triển xã hội, tạo nên các điều kiện hình thành tiến bộ lich sử nhân loại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Xu thế và cơ sở của phát triển xã hội, tạo nên các tiền đề của tiến bộ lịch sử nhân loại.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Phương thức, động lực của phát triển xã hội, tạo nên các nấc thang của tiến bộ lịch sử nhân loại.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 75,
+      "question": "75. Nguyên nhân sâu xa dẫn đến cách mạng xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mâu thuẫn về quan điểm chính trị giữa những lực lượng xã hội khác nhau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Mâu thuẫn giữa giai cấp cách mạng và giai cấp phản cách mạng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Mâu thuẫn giữa lực lượng sản xuất và quan hệ sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Mâu thuẫn giữa nhân dân nghèo khổ với giới quan chức giàu có.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Mâu thuẫn giữa lực lượng sản xuất và quan hệ sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 76,
+      "question": "76. Quan điểm của chủ nghĩa duy vật lịch sử, con người là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Một thực thể tự nhiên mang đặc tính xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Một loài động vật bậc cao có lý trí.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Một thực thể tự nhiên thoát khỏi loài động vật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Một bộ phận của giới tự nhiên biết sản xuất vật chất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Một thực thể tự nhiên mang đặc tính xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 77,
+      "question": "77. Theo C.Mác: Trong tính hiện thực của nó, bản chất con người là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tổng hòa các mặt thiện và ác.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tổng hòa các yếu tố tự nhiên và xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tổng hòa các tính chất di truyền và rèn luyện.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tổng hòa những quan hệ xã hội.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Tổng hòa những quan hệ xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 78,
+      "question": "78. Con người sẽ bộc lộ được bản chất xã hội của mình khi:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Khi tồn tại trong các quan hệ xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Khi thoát ly khỏi điều kiện lịch sử nhất định.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Khi tồn tại trong các quan hệ của tự nhiên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Khi hoạt tách rời quan hệ xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Khi tồn tại trong các quan hệ xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 79,
+      "question": "79. Các cá nhân không hòa tan với nhau trong tập thể là do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Do có nhu cầu khác nhau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Do có lợi ích và mục đích khác nhau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Do có nhân cách khác nhau.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Do có hoàn cảnh khác nhau.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Do có nhân cách khác nhau.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 80,
+      "question": "80. Vai trò của quần chúng nhân dân trong lịch sử:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là chủ thể sáng tạo ra của cải vật chất cho xã hội tồn tại, phát triển.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Là chủ thế sáng tạo chân chính ra lịch sử, quyết định sự phát triển của lịch sử.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Là chủ thể của các cuộc cách mạng xã hội, đưa xã hội phát triển.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Là chủ thể đấu tranh giai cấp, là động lực phát triển của lịch sử.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Là chủ thế sáng tạo chân chính ra lịch sử, quyết định sự phát triển của lịch sử.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 81,
+      "question": "81. Vai trò sáng tạo lịch sử của quần chúng nhân dân biểu hiện:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là lực lượng sản xuất vật chất cơ bản của mọi xã hôi; cải tạo thế giới tự nhiên; cải tạo chính bản thân con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Là lực lượng sản xuất vật chất cơ bản của xã hội; thực hiện đấu trang giai cấp trong xã hội; tiến hành các cuộc chiến tranh trong lịch sử.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Là lực lượng sản xuất vất chất cơ bản của mọi xã hôi; sáng tạo ra các giá trị tinh thần của xã hôi; động lực cơ bản của mọi cuộc cách mạng trong lịch sử.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Là lực lượng sản xuất vật chất cơ bản của xã hội; thực hiện các cuộc đấu tranh giải phóng dân tộc; gìn giữ hòa bình thề giới.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Là lực lượng sản xuất vất chất cơ bản của mọi xã hôi; sáng tạo ra các giá trị tinh thần của xã hôi; động lực cơ bản của mọi cuộc cách mạng trong lịch sử.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 82,
+      "question": "82. Lãnh tụ là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Người giầu nhất, có tài năng và đạo đức nhất trong giai cấp bị trị.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Người nghèo nhất, cách mạng nhất trong giai cấp bị trị.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Cá nhân năng lực và phẩm chất kiệt xuất về một lĩnh vực hoạt động nhất định.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Cá nhân kiệt xuất do phong trào cách mạng của quần chúng nhân dân tạo ra.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Cá nhân kiệt xuất do phong trào cách mạng của quần chúng nhân dân tạo ra.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 83,
+      "question": "83. Theo quan điểm triết học Mác – Lênin, vai trò quyết định lịch sử thuộc về:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Các lãnh tụ, vĩ nhân kiệt xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Quần chúng nhân dân.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Các giai cấp bị trị có tinh thần cách mạng triệt để nhất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Các chính đảng cách mạng, có sự ủng hộ đông đảo của quần chúng nhân dân trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Quần chúng nhân dân.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 84,
+      "question": "84. Những phẩm chất cơ bản mà người lãnh tụ của quần chúng nhân dân cần có là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trí tuệ uyên bác vượt trội; Năng lực tổ chức, tập hợp quần chúng; Phẩm chất đạo đức, ý chí phục vụ nhân dân.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Trí tuệ thông minh, sáng suốt; Được quần chúng tín nhiệm, bầu lên; Phẩm chất đạo đức hiền lành, trung thực.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Trí tuệ năng động, sáng tạo; Thương yêu quần chúng, nhân dân; Phẩm chất trong sáng, hòa đồng với giai cấp và dân tộc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Trí tuệ nhìn xa, trông rộng; Năng lực chuyên môn vững vàng; Phẩm chất thẳng thắn, trung thực.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Trí tuệ uyên bác vượt trội; Năng lực tổ chức, tập hợp quần chúng; Phẩm chất đạo đức, ý chí phục vụ nhân dân.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 85,
+      "question": "85. Thực chất của cuộc đấu tranh giai cấp là nhằm giải quyết mâu thuẫn về lợi ích giữa các giai cấp:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giữa giai cấp bóc lột và giai cấp bị bóc lột.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Giữa giai cấp thống trị và giai cấp bị trị.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Giữa giai cấp cơ bản và giai cấp không cơ bản.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Giữa giai cấp bóc lột và giai cấp không cơ bản.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Giữa giai cấp bóc lột và giai cấp bị bóc lột.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 86,
+      "question": "86.  Đấu tranh giai cấp xảy ra có nguyên nhân sâu xa từ sự xung đột lợi ích trong lĩnh vực:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tôn giáo.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Kinh tế.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Chính trị.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Văn hóa.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Kinh tế.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 87,
+      "question": "87.  Mục đích cuối cùng của cuộc đấu tranh giai cấp của giai cấp vô sản là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thực hiện chuyên chính vô sản.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Xóa bỏ chế độ người bóc lột người.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Lật đổ chế độ tư bản chủ nghĩa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Thiết lập quyền thống trị của giai cấp vô sản trên toàn thế giới.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Xóa bỏ chế độ người bóc lột người.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 88,
+      "question": "88. Nét khác biệt cơ bản nhất của nhà nước vô sản (NNVS) so với các nhà nước trước đó là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "NNVS không củng cố sự thống trị về chính trị, mà chỉ lo xây dựng kinh tế nhằm tăng năng xuất lao động xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "NNVS chỉ chăm lo đến đời sống kinh tế và quyền lực chính trị mà không quan tâm đời sống tinh thần của xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "NNVS chỉ bảo vệ quyền lợi của người lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "NNVS không chỉ bảo vệ lợi ích của người lao động mà còn bảo vệ lợi ích hợp pháp của cả giai cấp khác trong xã hội.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (NNVS không chỉ bảo vệ lợi ích của người lao động mà còn bảo vệ lợi ích hợp pháp của cả giai cấp khác trong xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 89,
+      "question": "89. Thành tựu to lớn mà một cuộc cách mạng xã hội mang lại là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Xóa bỏ quan hệ sản xuất cũ, thiết lập quan hệ sản xuất mới phù hợp với sự phát triển của lực lượng sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Xóa bỏ chế độ người bóc lột người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Đưa nhân dân lao động lên nắm chính quyền.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Buộc giai cấp thống trị phải có những cải cách tiến bộ.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Xóa bỏ quan hệ sản xuất cũ, thiết lập quan hệ sản xuất mới phù hợp với sự phát triển của lực lượng sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 90,
+      "question": "90. Cách mạng vô sản là một cuộc cách mạng xã hội mới về chất, vì:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Vì nó lôi kéo được đông đảo quần chúng cần lao tham gia giành chính quyền.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Vì nó do giai cấp vô sản lãnh đạo.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Vì nó sử dụng bạo lực cách mạng để giành lấy chính quyền.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Vì nó sẽ xóa bỏ hoàn toàn chế độ người bóc lột người.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Vì nó sẽ xóa bỏ hoàn toàn chế độ người bóc lột người.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 91,
+      "question": "91. Quan niệm “Hiền dữ phải đâu là tính sẵn, phần nhiều do giáo dục mà nên”, nhằm khẳng định bản chất con người do:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Yếu tố sinh học.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Yếu tố xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Yếu tố sinh học và xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Không phải yếu tố sinh học và xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Yếu tố xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 92,
+      "question": "92. Quan niệm truyền thống “ở bầu thì tròn, ở ống thì dài” là nhằm khẳng định:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Hình dạng của các loài sinh vật phụ thuộc vào nơi nó ở.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Vai trò của các quan hệ xã hội đối với việc hình thành bản chất mỗi người.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Vai trò chủ thể của con người trong lịch sử.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Quy luật sinh học là quy luật duy nhất chi phối vạn vật trong vũ trụ.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Vai trò của các quan hệ xã hội đối với việc hình thành bản chất mỗi người.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 93,
+      "question": "93. Cơ sở lí luận nền tảng của đường lối xây dựng chủ nghĩa xã hội của Đảng Cộng sản Việt Nam là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Học thuyết về giai cấp và đấu tranh giai cấp của triết học Mác-Lênin.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Phép biện chứng duy vật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Học thuyết về hình thái kinh tế-xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa duy vật lịch sử.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Học thuyết về hình thái kinh tế-xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 94,
+      "question": "94.  Hiểu vấn đề “bỏ qua” chế độ tư bản chủ nghĩa ở Việt Nam là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Là sự “bỏ qua” việc xác lập địa vị thống trị của quan hệ sản xuất tư bản chủ nghĩa.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Là “bỏ qua” sự phát triển của lực lượng sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Là sự phát triển tuần tự.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Bỏ qua kiến trúc thượng tầng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Là sự “bỏ qua” việc xác lập địa vị thống trị của quan hệ sản xuất tư bản chủ nghĩa.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 95,
+      "question": "95.  Đặc điểm lớn nhất của thời kì quá độ lên chủ nghĩa xã hội ở Việt Nam là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nhiều thành phần xã hội đan xen tồn tại.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Lực lượng sản xuất chưa phát triển.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Năng xuất lao động thấp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Từ một nền sản xuất nhỏ là phổ biến quá độ lên chủ nghĩa xã hội không qua chế độ tư bản chủ nghĩa.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Từ một nền sản xuất nhỏ là phổ biến quá độ lên chủ nghĩa xã hội không qua chế độ tư bản chủ nghĩa.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 96,
+      "question": "96.  Tiêu chí cơ bản để đánh giá tiến bộ xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự phát triển đồng bộ về kinh tế, chính trị, văn hóa và xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sự phát triển của sản xuất vật chất và sản xuất tinh thần.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Sự phát triển toàn diện con người.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Sự phát triển của lực lượng sản xuất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Sự phát triển toàn diện con người.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 97,
+      "question": "97. Bài học kinh nghiệm mà Đảng Cộng sản Việt Nam đã rút ra trong công cuộc đổi mới là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Đổi mới kinh tế trước, đổi mới chính trị sau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Đổi mới chính trị trước, đổi mới kinh tế sau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Kết hợp đổi mới kinh tế và đổi mới chính trị.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Chỉ cần đổi mới chính trị.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Kết hợp đổi mới kinh tế và đổi mới chính trị.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 98,
+      "question": "98. Trình độ của lực lượng sản xuất thể hiện ở:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trình độ công cụ lao động và trình độ kinh nghiệm kỹ năng của người lao động.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Trình độ tổ chức và phân phối sản phẩm.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Trình độ tổ chức, quản lý xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Trình độ tổ chức, phân phối sản phẩm và quản lý xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Trình độ công cụ lao động và trình độ kinh nghiệm kỹ năng của người lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 99,
+      "question": "99. Tiến lên chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phù hợp với quá trình lịch sử - tự nhiên.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Không phù hợp với quá trình lịch sử - tự nhiên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Vận dụng sáng tạo của Đảng Cộng sản Việt Nam.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Đi theo mô hình một số nước trên thế giới.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Phù hợp với quá trình lịch sử - tự nhiên.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 100,
+      "question": "100. Chọn câu trả lời đúng theo quan điểm duy vật lịch sử. Mối quan hệ giữa lực lượng sản xuất và quan hệ sản xuất là mối quan hệ:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Luôn luôn thống nhất với nhau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Luôn luôn đối lập loại trừ nhau.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Thống nhất và đấu tranh của các mặt đối lập.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Có lúc hoàn toàn đối lập nhau, có khi hoàn toàn thống nhất với nhau.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Thống nhất và đấu tranh của các mặt đối lập.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 101,
+      "question": "101. Trong mối quan hệ giữa “lực lượng sản xuất và quan hệ sản xuất” thì:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Lực lượng sản xuất là nội dung- quan hệ sản xuất là hình thức.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Quan hệ sản xuất là nội dung- lực lượng sản xuất là hình thức.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Lực lượng sản xuất và quan hệ sản xuất đều là nội dung.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Lực lượng sản xuất và quan hệ sản xuất đều là hình thức.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Lực lượng sản xuất là nội dung- quan hệ sản xuất là hình thức.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 102,
+      "question": "102. Trong sự nghiệp xây dựng chủ nghĩa xã hội ở Việt Nam, chúng ta cần phải tiến hành:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phát triển lực lượng sản xuất đạt trình độ tiên tiến để tạo cơ sở cho việc xây dựng quan hệ sản xuất mới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ động xây dựng quan hệ sản xuất mới để tạo cơ sở thúc đẩy lực lượng sản xuất phát triển.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Kết hợp đồng thời phát triển lực lượng sản xuất với từng bước xây dựng quan hệ sản xuất mới phù hợp.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Củng cố xây dựng kiến trúc thượng tầng mới cho phù hợp với cơ sở hạ tầng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Kết hợp đồng thời phát triển lực lượng sản xuất với từng bước xây dựng quan hệ sản xuất mới phù hợp.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 103,
+      "question": "103. Thực chất của quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan hệ giữa kinh tế và văn hóa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Quan hệ giữa kinh tế và chính trị.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Quan hệ giữa vật chất và tinh thần.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Quan hệ giữa tồn tại xã hội với ý thức xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Quan hệ giữa kinh tế và chính trị.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 104,
+      "question": "104. Phạm trù hình thái kinh tế - xã hội là phạm trù được áp dụng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Cho mọi xã hội trong lịch sử.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Cho một xã hội cụ thể.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Cho xã hội tư bản chủ nghĩa.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Cho xã hội cộng sản chủ nghĩa.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Cho mọi xã hội trong lịch sử.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 105,
+      "question": "105.  Chủ trương thực hiện nhất quán cơ cấu kinh tế nhiều thành phần ở Việt Nam hiện nay là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự vận dụng đúng đắn quy luật về sự phù hợp của quan hệ sản xuất với trình độ của lực lượng sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Nhằm đáp ứng yêu cầu hội nhập kinh tế thế giới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Nhằm thúc đẩy sự phát triển kinh tế.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Nhằm phát triển quan hệ sản xuất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Sự vận dụng đúng đắn quy luật về sự phù hợp của quan hệ sản xuất với trình độ của lực lượng sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 106,
+      "question": "106.  Lý luận hình thái kinh tế – xã hội là cơ sở khoa học để:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giải thích đầy đủ mọi hiện tượng xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Giải thích chính xác và đầy đủ mọi hiện tượng xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Xác lập phương pháp luận khoa học chung nhất để giải thích các hiện tượng xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Xác lập phương pháp luận chung ở tầm “duy nhất khoa học” cho mọi quá trình nghiên cứu.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Xác lập phương pháp luận khoa học chung nhất để giải thích các hiện tượng xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 107,
+      "question": "107. Hãy chỉ ra luận điểm thể hiện quan điểm duy vật lịch sử:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chỉ dựa vào các quan hệ kinh tế cũng có thể giải thích đầy đủ bất kỳ học thuyết chính trị nào.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chỉ dựa vào các quan hệ kinh tế hiện có cũng có thể giải thích đầy đủ bất kỳ tư tưởng pháp quyền nào.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Mọi học thuyết đạo đức có từ trước đến nay, xét đến cùng, đều là sản phẩm của tình hình kinh tế lúc bấy giờ.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Hoạt động của con người khác với động vật là có ý thức, vì thế ý thức của con người quyết định sự tồn tại của họ.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Mọi học thuyết đạo đức có từ trước đến nay, xét đến cùng, đều là sản phẩm của tình hình kinh tế lúc bấy giờ.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 108,
+      "question": "108.  Xét đến cùng, nhân tố có ý nghĩa quyết định sự thắng lợi của một trật tự xã hội mới là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Năng xuất lao động.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Sức mạnh của luật pháp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Hiệu quả hoạt động của hệ thống chính trị.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Sự điều hành và quản lý xã hội của Nhà nước.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Năng xuất lao động.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 109,
+      "question": "109. Trong tư tưởng truyền thống Việt Nam, vấn đề về con người được quan tâm nhiều nhất:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Vấn đề bản chất con người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Vấn đề đạo lý làm người.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Vấn đề quan hệ giữa linh hồn và thể xác.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Vấn đề bản chất cuộc sống.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Vấn đề đạo lý làm người.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 110,
+      "question": "110. Thuật ngữ “Quan hệ sản xuất” lúc đầu được C.Mác gọi là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan hệ lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Quan hệ xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quan hệ giao tiếp.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Hình thức giao tiếp.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Hình thức giao tiếp.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 111,
+      "question": "111. Nhân tố bảo đảm cho sự thắng lợi cuối cùng của một chế độ xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Có nền khoa học tiên tiến.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Có nhân tố chính trị tiến bộ.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Có nền văn hoá tiên tiến, đậm đà bản sắc dân tộc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Có thể tạo ra năng suất lao động cao hơn.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Có thể tạo ra năng suất lao động cao hơn.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 112,
+      "question": "112. Trong thời kỳ quá độ lên chủ nghĩa xã hội ở nước ta, tất yếu phải xây dựng một nền kinh tế nhiều thành phần dựa trên cơ sở nhiều loại hình sở hữu khác nhau, vì:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Các thành phần đều cần cho sự phát triển kinh tế.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Không thể ngay lập tức xoá bỏ được các thành phần kinh tế ngoài công hữu.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Kinh nghiệm các nước trên thế giới cho thấy sự tồn tại của nền kinh tế nhiều thành phần là tất yếu.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Thực tế phát triển lực lượng sản xuất ở nước ta còn đang ở nhiều trình độ khác nhau.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Thực tế phát triển lực lượng sản xuất ở nước ta còn đang ở nhiều trình độ khác nhau.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 113,
+      "question": "113. Giá trị khoa học của học thuyết hình thái kinh tế - xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giúp hiểu bản chất con người và xã hội loài người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chỉ ra quy luật vận động của tự nhiên và xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Giúp hiểu đầy đủ, cụ thể từng thời đại lịch sử, từng quốc gia dân tộc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chỉ ra sự phát triển của lịch sử nhân loại là một quá trình lịch sử - tự nhiên.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Chỉ ra sự phát triển của lịch sử nhân loại là một quá trình lịch sử - tự nhiên.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 114,
+      "question": "114. Bổ sung để được một câu đúng theo quan điểm triết học mácxít: “Phương thức sản xuất là cách thức con người . . .”",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quan hệ với tự nhiên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tái sản xuất giống loài.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quan hệ với nhau trong sản xuất.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Thực hiện sản xuất vật chất ở mỗi giai đoạn lịch sử.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Thực hiện sản xuất vật chất ở mỗi giai đoạn lịch sử.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 115,
+      "question": "115. Lực lượng sản xuất có vai trò như thế nào trong một hình thái kinh tế - xã hội?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nền tảng vật chất - kỹ thuật của xã hội.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Bảo vệ trật tự kinh tế của xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quy định thái độ và hành vi của con người trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Quy định mọi quan hệ xã hội.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Nền tảng vật chất - kỹ thuật của xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 116,
+      "question": "116. Vai trò của quan hệ sản xuất trong một hình thái kinh tế - xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Quy định cơ sở vật chất - kỹ thuật.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Duy trì và bảo vệ cơ sở hạ tầng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Quy định trình độ (tính chất) của lực lượng sản xuất và kiến trúc thượng tầng của xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Quy định mọi quan hệ xã hội, nói lên thực chất của hình thái kinh tế - xã hội.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Quy định mọi quan hệ xã hội, nói lên thực chất của hình thái kinh tế - xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 117,
+      "question": "117. Vai trò của kiến trúc thượng tầng có trong một hình thái kinh tế - xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Duy trì, bảo vệ cho cơ sở hạ tầng sinh ra nó.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Luôn kìm hãm sự phát triển cơ sở hạ tầng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Luôn thúc đẩy sự phát triển cơ sở hạ tầng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phát triển kinh tế",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Duy trì, bảo vệ cho cơ sở hạ tầng sinh ra nó.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 118,
+      "question": "118. Cơ sở phân chia lịch sử của nhân loại trong Triết học Mác là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Hình thức nhà nước.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Hình thức tôn giáo.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Hình thái ý thức xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Hình thái kinh tế - xã hội.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Hình thái kinh tế - xã hội.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 119,
+      "question": "119. Nguồn gốc vận động và phát triển của hình thái kinh tế - xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sự tăng lên không ngừng của năng xuất lao động.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sự phát triển liên tục của lực lượng sản xuất.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Quần chúng nhân dân không ngừng nổi dậy đấu tranh chống các thế lực phản động trong xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Mâu thuẫn giai - tầng trong xã hội, sự thay đổi của quan hệ sản xuất.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Sự phát triển liên tục của lực lượng sản xuất.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 120,
+      "question": "120 Giá trị khoa học của học thuyết hình thái kinh tế - xã hội là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giúp hiểu bản chất con người và xã hội loài người.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chỉ ra quy luật vận động của tự nhiên và xã hội.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Giúp hiểu đầy đủ, cụ thể từng thời đại lịch sử, từng quốc gia dân tộc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chỉ ra sự phát triển của lịch sử nhân loại là một quá trình lịch sử - tự nhiên.",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Chỉ ra sự phát triển của lịch sử nhân loại là một quá trình lịch sử - tự nhiên.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    }
+  ]
+}

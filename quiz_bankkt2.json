@@ -1,0 +1,176 @@
+{
+  "title": "Bài Kiểm Tra 2",
+  "total_questions": 5,
+  "questions": [
+    {
+      "question_id": 1,
+      "question": "Khẳng định nào sau đây biểu hiện quan điểm của phương pháp biện chứng?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Coi sự phát triển chỉ là sự thay đổi về số lượng, do những lực lượng bên ngòai chi phối.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Coi sự phát triển chỉ là sự thay đổi chất lượng, xảy ra một cách gián đọan, do những mâu thuẫn gây ra.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Coi sự vật tồn tại trong mối liên hệ với những sự vật khác, trong sự vận động và biến đổi của chính nó.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Tất cả đều đúng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Coi sự vật tồn tại trong mối liên hệ với những sự vật khác, trong sự vận động và biến đổi của chính nó.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 2,
+      "question": "Triết học Mác ra đời trong điều kiện phương thức sản xuất nào đã trở thành phương thức sản xuất thống trị?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chiếm hữu nô lệ",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Phong kiến",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tư bản chủ nghĩa",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Chủ nghĩa cộng sản",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Tư bản chủ nghĩa) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 3,
+      "question": "Tính chất đặc trưng nổi bật của triết học Mác - Lênin là gì?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tính sáng tạo và tiến bộ",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tính cách mạng và khoa học",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Tính kế thừa và cụ thể",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Tính lịch sử và tính đảng",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Tính cách mạng và khoa học) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 4,
+      "question": "Học thuyết triết học phủ nhận khả năng nhận thức thế giới của con người được gọi là gì?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chủ nghĩa duy vật",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Chủ nghĩa duy tâm",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Trường phái khả tri",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Trường phái bất khả tri",
+          "selected": true,
+          "is_correct": true
+        }
+      ],
+      "selected_option": "D",
+      "correct_option": "D",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **D** (Trường phái bất khả tri) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 5,
+      "question": "2. Nhiệm vụ của triết học là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Giải thích thế giới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Cải tạo thế giới.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Giải thích và cải tạo thế giới.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Là khoa học của các khoa học.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Giải thích và cải tạo thế giới.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    }
+  ]
+}

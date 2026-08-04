@@ -1,0 +1,176 @@
+{
+  "title": "Bài Kiểm Tra 3",
+  "total_questions": 5,
+  "questions": [
+    {
+      "question_id": 1,
+      "question": "Sự sáng tạo triết học của Mác và Ăngghen thể hiện ở việc xây dựng:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phép biện chứng duy tâm - chủ nghĩa duy vật biện chứng.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Phép biện chứng duy vật - chủ nghĩa duy vật biện chứng.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Phép biện chứng duy tâm - chủ nghĩa duy vật siêu hình.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Phép biện chứng duy vật - chủ nghĩa duy vật siêu hình.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Phép biện chứng duy vật - chủ nghĩa duy vật biện chứng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 2,
+      "question": "Triết học giữ vai trò gì trong thế giới quan?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trung tâm",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Hạt nhân lý luận",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Chủ thể",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Khoa học",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "B",
+      "correct_option": "B",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **B** (Hạt nhân lý luận) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 3,
+      "question": "Ba phát minh khoa học tự nhiên làm tiền đề khoa học tự nhiên cho sự ra đời của Triết học Mác là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thuyết tương đối của Anhxtanh, cơ học lượng tử, di truyền học Menđen.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Phát minh ra chuỗi xoắn kép của AND, thuyết Vụ nỗ lớn, thuyết Nhật tâm Côpécníc.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Học thuyết tiến hóa của Đácuyn, thuyết tế bào, định luật bảo tòan và chuyển hóa năng lượng.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "A , B , C  đều đúng.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Học thuyết tiến hóa của Đácuyn, thuyết tế bào, định luật bảo tòan và chuyển hóa năng lượng.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 4,
+      "question": "Phương pháp tư duy xem xét sự vật ở trạng thái cô lập, tĩnh tại, không vận động, không phát triển là:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Duy tâm chủ quan",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Duy tâm khách quan",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Siêu hình",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Biện chứng",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "C",
+      "correct_option": "C",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **C** (Siêu hình) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    },
+    {
+      "question_id": 5,
+      "question": "Triết học ra đời vào thời gian nào và ở đâu?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ở cả phương Đông và phương Tây, khoảng từ thế kỷ VIII đến thế kỷ VI trước Công nguyên.",
+          "selected": true,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Ở cả phương Đông và phương Tây, khoảng từ thế kỷ VI đến thế kỷ V trước Công nguyên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Ở cả Ấn Độ và Trung Quốc , khoảng từ thế kỷ VIII đến thế kỷ VI trước Công nguyên.",
+          "selected": false,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Ở cả Ấn Độ và Trung Quốc, Hy Lạp, khoảng từ thế kỷ VI đến thế kỷ V trước Công nguyên.",
+          "selected": false,
+          "is_correct": false
+        }
+      ],
+      "selected_option": "A",
+      "correct_option": "A",
+      "explanation": "✅ **Chính xác!** Theo chuẩn kiến thức Triết học Mác - Lênin, đáp án **A** (Ở cả phương Đông và phương Tây, khoảng từ thế kỷ VIII đến thế kỷ VI trước Công nguyên.) là câu trả lời chuẩn xác nhất cho câu hỏi này.",
+      "is_user_correct": true
+    }
+  ]
+}
