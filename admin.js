@@ -37,25 +37,29 @@ async function saveAndPushCloudData(keys, users) {
 
 function aggregateUsersFromKeys(keys, users) {
   const mergedUsers = [...users];
+
+  // 1. Sync used keys to users
   for (const k of keys) {
     if (k.status === 'used' && k.deviceId) {
       let uObj = mergedUsers.find(u => u.deviceId === k.deviceId);
-      if (!uObj) {
-        mergedUsers.push({
-          deviceId: k.deviceId,
-          name: `Học viên ${k.deviceId}`,
-          role: 'vip',
-          activatedKey: k.key,
-          deviceType: k.deviceId.includes('IPHO') || k.deviceId.includes('MOBI') ? '📱 Điện thoại' : '💻 Thiết bị',
-          createdAt: k.activatedAt || k.createdAt || 'Đã dùng mã',
-          lastActive: k.activatedAt || 'Đã dùng mã'
-        });
-      } else {
+      if (uObj) {
         uObj.role = 'vip';
         uObj.activatedKey = k.key;
       }
     }
   }
+
+  // 2. Sync user key activations to keys array
+  for (const u of mergedUsers) {
+    if (u.role === 'vip' && u.activatedKey && u.activatedKey.startsWith('MAC-')) {
+      let kObj = keys.find(k => k.key.toUpperCase() === u.activatedKey.toUpperCase());
+      if (kObj) {
+        kObj.status = 'used';
+        kObj.deviceId = u.deviceId;
+      }
+    }
+  }
+
   return mergedUsers;
 }
 
@@ -277,7 +281,9 @@ async function generateNewVipKey() {
 
 async function redeemVipKeyAsync(enteredKey) {
   const cleanKey = enteredKey.trim().toUpperCase();
-  let keys = await fetchCloudKeysDB();
+  let cloudData = await fetchCloudData();
+  let keys = cloudData.keys;
+  let users = cloudData.users;
   const currentDevId = getDeviceId();
 
   const keyObj = keys.find(k => k.key.toUpperCase() === cleanKey);
@@ -293,16 +299,37 @@ async function redeemVipKeyAsync(enteredKey) {
     };
   }
 
+  const nowStr = new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN');
+
+  // Update Key
   keyObj.status = 'used';
   keyObj.deviceId = currentDevId;
-  keyObj.activatedAt = new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN');
+  keyObj.activatedAt = nowStr;
 
-  await pushCloudKeysDB(keys);
+  // Update User
+  let u = users.find(x => x.deviceId === currentDevId);
+  if (u) {
+    u.role = 'vip';
+    u.activatedKey = cleanKey;
+    u.lastActive = nowStr;
+  } else {
+    users.push({
+      deviceId: currentDevId,
+      name: `Học viên ${currentDevId}`,
+      role: 'vip',
+      activatedKey: cleanKey,
+      deviceType: currentDevId.includes('IPHO') || currentDevId.includes('MOBI') ? '📱 Điện thoại' : '💻 Thiết bị',
+      createdAt: nowStr,
+      lastActive: nowStr
+    });
+  }
 
-  localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
+  // Save both local & cloud
   setUserRole('vip');
-  trackCurrentDeviceUser();
-  return { success: true, msg: '🎉 Kích hoạt VIP thành công trên thiết bị này!' };
+  localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
+  await saveAndPushCloudData(keys, users);
+
+  return { success: true, msg: `🎉 Kích hoạt VIP thành công với mã ${cleanKey}!` };
 }
 
 function redeemVipKey(enteredKey) {
@@ -522,6 +549,15 @@ function deleteVipKey(key) {
       let cloudData = await fetchCloudData();
       let keys = cloudData.keys.filter(k => k.key.toUpperCase() !== key.toUpperCase());
       let users = cloudData.users;
+
+      // Demote any user that was using this deleted key
+      for (let u of users) {
+        if (u.activatedKey && u.activatedKey.toUpperCase() === key.toUpperCase()) {
+          u.role = 'guest';
+          u.activatedKey = 'N/A';
+        }
+      }
+
       await saveAndPushCloudData(keys, users);
       if (typeof showToast === 'function') showToast(`🗑️ Đã xóa mã VIP ${key}`, 'info');
       await openAdminPanelModal();
@@ -569,6 +605,15 @@ function deleteUserRecord(devId) {
       let cloudData = await fetchCloudData();
       let keys = cloudData.keys;
       let users = cloudData.users.filter(u => u.deviceId !== devId);
+
+      # Free up any VIP key bound to this deleted user
+      for (let k of keys) {
+        if (k.deviceId === devId) {
+          k.status = 'unused';
+          k.deviceId = null;
+        }
+      }
+
       await saveAndPushCloudData(keys, users);
       if (typeof showToast === 'function') showToast(`🗑️ Đã xóa học viên ${devId}`, 'info');
       await openAdminPanelModal();
