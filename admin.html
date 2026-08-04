@@ -472,6 +472,7 @@
     }
 
     async function fetchCloudData() {
+      const { keys: localKeys, users: localUsers } = getLocalData();
       try {
         const url = getSheetUrl();
         const res = await fetch(url, { cache: 'no-store' });
@@ -481,9 +482,26 @@
             const cloudKeys = Array.isArray(json.keys) ? json.keys : [];
             const cloudUsers = Array.isArray(json.users) ? json.users : [];
             
-            // Google Sheet is Authoritative Master DB
-            saveLocalData(cloudKeys, cloudUsers);
-            return { keys: cloudKeys, users: cloudUsers };
+            // Map-based Smart Merge: Never drop local keys if cloud returns empty
+            const keyMap = new Map();
+            localKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
+            cloudKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
+
+            const userMap = new Map();
+            localUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
+            cloudUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
+
+            const finalKeys = Array.from(keyMap.values());
+            const finalUsers = Array.from(userMap.values());
+
+            saveLocalData(finalKeys, finalUsers);
+
+            // Re-push to cloud to guarantee Google Sheet stays in sync
+            if (finalKeys.length > cloudKeys.length || finalUsers.length > cloudUsers.length) {
+              pushCloudData(finalKeys, finalUsers);
+            }
+
+            return { keys: finalKeys, users: finalUsers };
           }
         }
       } catch (e) {
@@ -793,7 +811,7 @@
             k.deviceId = null;
           }
         });
-        saveLocalData(keys, newUsers);
+        saveLocalData(newUsers, newUsers);
         showToast(`🗑️ Đã xóa học viên ${devId}`);
         renderDashboard();
         pushCloudData(keys, newUsers);
