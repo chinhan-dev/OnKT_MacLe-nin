@@ -4,7 +4,7 @@ const CLOUD_DB_ENDPOINT = 'https://api.restful-api.dev/objects/ff8081819f7e10ae0
 // Fetch Keys from Cloud DB & Merge cleanly
 async function fetchCloudKeysDB() {
   try {
-    const res = await fetch(CLOUD_DB_ENDPOINT);
+    const res = await fetch(CLOUD_DB_ENDPOINT, { cache: 'no-store' });
     if (res.ok) {
       const json = await res.json();
       if (json && json.data && Array.isArray(json.data.keys)) {
@@ -33,15 +33,17 @@ async function fetchCloudKeysDB() {
 // Push Keys to Cloud DB safely with Merge
 async function pushCloudKeysDB(keysToPush) {
   try {
-    const res = await fetch(CLOUD_DB_ENDPOINT);
+    // 1. Fetch latest Cloud Keys
+    const getRes = await fetch(CLOUD_DB_ENDPOINT, { cache: 'no-store' });
     let cloudKeys = [];
-    if (res.ok) {
-      const json = await res.json();
+    if (getRes.ok) {
+      const json = await getRes.json();
       if (json && json.data && Array.isArray(json.data.keys)) {
         cloudKeys = json.data.keys;
       }
     }
 
+    // 2. Merge provided keys into cloud keys
     const merged = [...cloudKeys];
     for (const k of keysToPush) {
       const idx = merged.findIndex(ck => ck.key.toUpperCase() === k.key.toUpperCase());
@@ -54,7 +56,8 @@ async function pushCloudKeysDB(keysToPush) {
 
     localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(merged));
 
-    await fetch(CLOUD_DB_ENDPOINT, {
+    // 3. PUT update to Cloud DB & MUST AWAIT RESPONSE COMPLETELY
+    const putRes = await fetch(CLOUD_DB_ENDPOINT, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -62,6 +65,11 @@ async function pushCloudKeysDB(keysToPush) {
         data: { keys: merged, users: getUsersDB() }
       })
     });
+
+    if (putRes.ok) {
+      await putRes.json(); // Ensure full body is consumed before proceeding
+      console.log('Successfully pushed and confirmed Cloud DB update.');
+    }
   } catch (e) {
     console.warn('Failed to push to Cloud DB:', e);
     localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(keysToPush));

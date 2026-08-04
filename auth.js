@@ -134,7 +134,7 @@ function showLoginModal(expiredMsg = false) {
     if (res.success) {
       if (typeof showToast === 'function') showToast(res.msg, 'success'); else alert(res.msg);
       modal.style.display = 'none';
-      location.reload();
+      setTimeout(() => { location.reload(); }, 600);
     } else {
       passErr.textContent = res.msg;
       passErr.style.display = 'block';
