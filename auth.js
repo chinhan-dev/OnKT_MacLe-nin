@@ -70,18 +70,24 @@ function showLoginModal(expiredMsg = false) {
       <div class="login-options">
         <div class="option-box">
           <button class="btn-login-vip" id="loginVipBtn">
-            <i class="fa-solid fa-key"></i> Đã Có Quyền (Nhập Mật Khẩu)
+            <i class="fa-solid fa-key"></i> Đã Có Quyền (Nhập Mã VIP 1 Thiết Bị)
           </button>
           <div class="pass-input-group" id="passGroup" style="display: none;">
-            <input type="password" id="vipPasswordInput" placeholder="Nhập mật khẩu...">
-            <button id="submitVipPassBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            <input type="text" id="vipPasswordInput" placeholder="Nhập mã VIP (VD: MAC-VIP888)..." style="text-transform: uppercase;">
+            <button id="submitVipPassBtn"><i class="fa-solid fa-arrow-right"></i> Kích hoạt</button>
           </div>
-          <p class="pass-error" id="passErrorMsg" style="display: none;">❌ Mật khẩu không chính xác!</p>
+          <p class="pass-error" id="passErrorMsg" style="display: none;">❌ Mã không hợp lệ hoặc đã dùng trên máy khác!</p>
         </div>
 
         <div class="option-box">
           <button class="btn-login-guest" id="loginGuestBtn">
-            <i class="fa-solid fa-user-clock"></i> Khách (Thao tác 5 phút)
+            <i class="fa-solid fa-user-clock"></i> Khách (Dùng thử 5 phút)
+          </button>
+        </div>
+
+        <div style="margin-top: 10px; border-top: 1px solid #e2e8f0; padding-top: 12px;">
+          <button class="btn-admin-header" onclick="promptAdminLogin()">
+            <i class="fa-solid fa-user-gear"></i> Đăng nhập Admin Quản Lý Mã (chinhanxt)
           </button>
         </div>
       </div>
@@ -105,11 +111,24 @@ function showLoginModal(expiredMsg = false) {
 
   function handleVipSubmit() {
     const entered = passInput.value.trim();
+    if (!entered) return;
+
+    // Check if master admin pass entered directly
     if (entered === 'chinhanxt') {
       setUserRole('vip');
       modal.style.display = 'none';
       location.reload();
+      return;
+    }
+
+    // Check device-bound VIP key
+    const res = redeemVipKey(entered);
+    if (res.success) {
+      alert(res.msg);
+      modal.style.display = 'none';
+      location.reload();
     } else {
+      passErr.textContent = res.msg;
       passErr.style.display = 'block';
     }
   }
@@ -157,6 +176,9 @@ function renderUserBadge(role) {
 
   badgeWrapper.innerHTML = `
     ${badgeContent}
+    <button class="btn-admin-header" onclick="promptAdminLogin()" title="Trang Quản Trị Admin (chinhanxt)">
+      <i class="fa-solid fa-user-gear"></i> Admin
+    </button>
     <button class="btn-logout-header" id="logoutBtn" title="Đăng xuất khỏi hệ thống">
       <i class="fa-solid fa-right-from-bracket"></i>
       <span>Đăng xuất</span>

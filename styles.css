@@ -1292,3 +1292,93 @@ input:checked + .slider:before {
   color: #ffffff;
   border-color: #ef4444;
 }
+
+
+/* Admin Panel Styles */
+.admin-card {
+  max-width: 600px !important;
+}
+
+.admin-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.keys-table-container {
+  max-height: 280px;
+  overflow-y: auto;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.admin-keys-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.admin-keys-table th, .admin-keys-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-keys-table th {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  font-weight: 800;
+  position: sticky;
+  top: 0;
+}
+
+.badge-status-unused {
+  background-color: #ecfdf5;
+  color: #047857;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.badge-status-used {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.btn-copy-key, .btn-delete-key {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-right: 4px;
+}
+
+.btn-copy-key { background-color: #eff6ff; color: #2563eb; }
+.btn-delete-key { background-color: #fef2f2; color: #ef4444; }
+
+.btn-admin-header {
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background-color: #f3e8ff;
+  color: #7e22ce;
+  border: 1px solid #d8b4fe;
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-admin-header:hover {
+  background-color: #7e22ce;
+  color: #ffffff;
+}
