@@ -325,7 +325,7 @@ async function redeemVipKeyAsync(enteredKey) {
   }
 
   // Save both local & cloud
-  setUserRole('vip');
+  localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
   await saveAndPushCloudData(keys, users);
 
@@ -356,7 +356,7 @@ function redeemVipKey(enteredKey) {
   pushCloudKeysDB(keys);
 
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
-  setUserRole('vip');
+  localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
   trackCurrentDeviceUser();
   return { success: true, msg: '🎉 Kích hoạt VIP thành công trên thiết bị này!' };
 }
@@ -574,7 +574,7 @@ function promoteUserToVip(devId) {
     pushCloudKeysDB(getVipKeysDB());
 
     if (devId === getDeviceId()) {
-      setUserRole('vip');
+      localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
       location.reload();
     } else {
       openAdminPanelModal();
@@ -666,7 +666,7 @@ function promptAdminLogin() {
     const entered = input.value.trim();
     if (entered === ADMIN_PASS) {
       modal.style.display = 'none';
-      setUserRole('vip');
+      localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
       openAdminPanelModal();
     } else {
       err.style.display = 'block';

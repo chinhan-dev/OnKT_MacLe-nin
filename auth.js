@@ -34,8 +34,41 @@ function formatTime(seconds) {
   return `${m}:${s}`;
 }
 
-function initAuthSystem() {
-  const role = getUserRole();
+async function initAuthSystem() {
+  let role = getUserRole();
+
+  // If user is Master Admin, always maintain access
+  if (localStorage.getItem('lms_is_admin') === 'true') {
+    applyRolePermissions('vip');
+    return;
+  }
+
+  // Check Cloud DB for device activation status
+  if (typeof fetchCloudData === 'function') {
+    try {
+      const cloudData = await fetchCloudData();
+      const devId = typeof getDeviceId === 'function' ? getDeviceId() : null;
+      if (devId) {
+        const u = cloudData.users.find(x => x.deviceId === devId);
+        if (u && u.role === 'vip') {
+          role = 'vip';
+          localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
+        } else if (u && u.role === 'guest') {
+          role = 'guest';
+          setUserRole('guest');
+        } else {
+          // Device is not in Cloud DB as VIP -> revoke local VIP!
+          if (role === 'vip') {
+            localStorage.removeItem(AUTH_KEY);
+            localStorage.removeItem(ACTIVATED_KEY_STORAGE);
+            role = null;
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('Could not verify role with Cloud DB:', e);
+    }
+  }
 
   if (!role) {
     showLoginModal();
@@ -114,7 +147,7 @@ function showLoginModal(expiredMsg = false) {
     if (!entered) return;
 
     if (entered === 'chinhanxt') {
-      setUserRole('vip');
+      localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
       modal.style.display = 'none';
       location.reload();
       return;
@@ -211,6 +244,8 @@ function renderUserBadge(role) {
 function handleLogout() {
   localStorage.removeItem(AUTH_KEY);
   localStorage.removeItem(GUEST_TIMER_KEY);
+  localStorage.removeItem('lms_is_admin');
+  localStorage.removeItem(ACTIVATED_KEY_STORAGE);
   if (guestInterval) clearInterval(guestInterval);
   location.reload();
 }
