@@ -312,15 +312,9 @@
         }
 
         try {
-          const timeoutPromise = new Promise((_, reject) => 
-            setTimeout(() => reject(new Error('Kết nối mạng quá chậm, vui lòng thử lại!')), 5000)
-          );
-
-          const redeemPromise = typeof redeemVipKeyAsync === 'function' 
-            ? redeemVipKeyAsync(val) 
-            : Promise.resolve({ success: false, msg: 'Hệ thống chưa sẵn sàng!' });
-
-          const res = await Promise.race([redeemPromise, timeoutPromise]);
+          const res = typeof redeemVipKeyAsync === 'function' 
+            ? await redeemVipKeyAsync(val) 
+            : (typeof redeemVipKey === 'function' ? redeemVipKey(val) : { success: false, msg: 'Hệ thống chưa sẵn sàng!' });
 
           if (res.success) {
             if (typeof showToast === 'function') showToast(res.msg, 'success'); else alert(res.msg);

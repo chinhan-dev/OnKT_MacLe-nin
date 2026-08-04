@@ -209,39 +209,53 @@ async function redeemVipKeyAsync(enteredKey) {
     return { success: true, msg: '🎉 Đăng nhập Admin thành công!' };
   }
 
-  let cloudData = await fetchCloudData();
-  let keys = cloudData.keys;
-  let users = cloudData.users;
   const currentDevId = getDeviceId();
 
-  const keyObj = keys.find(k => k.key.toUpperCase() === cleanKey);
+  // 1. Check local keys DB first (Instant 0ms lookup)
+  let localKeys = getVipKeysDB();
+  let localUsers = getUsersDB();
 
+  let keyObj = localKeys.find(k => k.key.toUpperCase() === cleanKey);
+
+  // 2. If not found in local DB, fetch from Cloud DB / Google Sheets
   if (!keyObj) {
-    return { success: false, msg: '❌ Mã kích hoạt không tồn tại! Kiểm tra lại mã.' };
+    try {
+      let cloudData = await fetchCloudData();
+      localKeys = cloudData.keys || [];
+      localUsers = cloudData.users || [];
+      keyObj = localKeys.find(k => k.key.toUpperCase() === cleanKey);
+    } catch (e) {
+      console.warn('Background cloud fetch error on redeem:', e);
+    }
   }
 
-  if (keyObj.status === 'used' && keyObj.deviceId !== currentDevId) {
+  if (!keyObj) {
+    return { success: false, msg: `❌ Mã "${cleanKey}" không tồn tại trên hệ thống! Vui lòng kiểm tra lại.` };
+  }
+
+  // 3. Strict 1 Key = 1 Device Check
+  if (keyObj.status === 'used' && keyObj.deviceId && keyObj.deviceId !== currentDevId) {
     return { 
       success: false, 
-      msg: `❌ Mã ${cleanKey} đã được sử dụng trên thiết bị khác (${keyObj.deviceId})! Key chỉ dùng cho 1 thiết bị.` 
+      msg: `❌ Mã ${cleanKey} đã được kích hoạt trên thiết bị khác (${keyObj.deviceId})! Key chỉ dùng cho 1 thiết bị.` 
     };
   }
 
   const nowStr = new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN');
 
-  // Update Key
+  // Update Key Status
   keyObj.status = 'used';
   keyObj.deviceId = currentDevId;
   keyObj.activatedAt = nowStr;
 
-  // Update User
-  let u = users.find(x => x.deviceId === currentDevId);
+  // Update User Status
+  let u = localUsers.find(x => x.deviceId === currentDevId);
   if (u) {
     u.role = 'vip';
     u.activatedKey = cleanKey;
     u.lastActive = nowStr;
   } else {
-    users.push({
+    localUsers.push({
       deviceId: currentDevId,
       name: `Học viên ${currentDevId}`,
       role: 'vip',
@@ -252,10 +266,12 @@ async function redeemVipKeyAsync(enteredKey) {
     });
   }
 
-  // Set VIP role locally (DO NOT set lms_is_admin)
+  // Set VIP role locally
   if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
-  await saveAndPushCloudData(keys, users);
+  
+  // Save local & push to Cloud in background
+  saveAndPushCloudData(localKeys, localUsers);
 
   return { success: true, msg: `🎉 Kích hoạt VIP thành công với mã ${cleanKey}!` };
 }
@@ -275,10 +291,10 @@ function redeemVipKey(enteredKey) {
   const keyObj = keys.find(k => k.key.toUpperCase() === cleanKey);
 
   if (!keyObj) {
-    return { success: false, msg: '❌ Mã kích hoạt không tồn tại!' };
+    return { success: false, msg: `❌ Mã "${cleanKey}" không tồn tại!` };
   }
 
-  if (keyObj.status === 'used' && keyObj.deviceId !== currentDevId) {
+  if (keyObj.status === 'used' && keyObj.deviceId && keyObj.deviceId !== currentDevId) {
     return { 
       success: false, 
       msg: `❌ Mã ${cleanKey} đã được dùng trên máy khác (${keyObj.deviceId})! Key chỉ dùng cho 1 thiết bị.` 
