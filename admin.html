@@ -440,7 +440,7 @@
 
   <script>
     // Configuration
-    const DEFAULT_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxao38I7sKqWtCHOHMB4TzHZRSa42v7OXoOFSdLdse5SsLdEedfO2oib5wD64XdDErTnw/exec';
+    const DEFAULT_SHEET_URL = '/api/sheet';
     const SHEETS_DOC_URL = 'https://docs.google.com/spreadsheets/d/1Zq8figZJxwLqEd7QlAEhBI6XXLilQ01vyU6JfuQxKvY';
     const PASS_KEY = 'chinhanxt';
 
@@ -457,7 +457,12 @@
     }
 
     function getSheetUrl() {
-      return localStorage.getItem('lms_gg_sheet_script_url') || DEFAULT_SHEET_URL;
+      const custom = localStorage.getItem('lms_gg_sheet_script_url');
+      if (custom && custom.includes('script.google.com')) {
+        localStorage.removeItem('lms_gg_sheet_script_url');
+        return '/api/sheet';
+      }
+      return custom || DEFAULT_SHEET_URL;
     }
 
     function getLocalData() {
@@ -478,7 +483,7 @@
         const res = await fetch(url, { cache: 'no-store' });
         if (res.ok) {
           const json = await res.json();
-          if (json && json.status === 'success') {
+          if (json && (json.status === 'success' || json.keys)) {
             const cloudKeys = Array.isArray(json.keys) ? json.keys : [];
             const cloudUsers = Array.isArray(json.users) ? json.users : [];
             
@@ -516,7 +521,7 @@
         const url = getSheetUrl();
         await fetch(url, {
           method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ keys: keys, users: users })
         });
         console.log('Push to Google Sheet confirmed.');

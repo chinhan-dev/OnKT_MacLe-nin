@@ -14,39 +14,37 @@ const VIP_KEYS_STORAGE = 'lms_vip_keys_db';
 const USERS_DB_STORAGE = 'lms_users_db';
 const DEVICE_ID_KEY = 'lms_device_fingerprint';
 const ACTIVATED_KEY_STORAGE = 'lms_activated_vip_key';
-const DEFAULT_GG_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxao38I7sKqWtCHOHMB4TzHZRSa42v7OXoOFSdLdse5SsLdEedfO2oib5wD64XdDErTnw/exec';
+const DEFAULT_GG_SHEET_URL = '/api/sheet';
 const GG_SHEET_URL_STORAGE = 'lms_gg_sheet_script_url';
 
 function getCloudEndpoint() {
-  return localStorage.getItem(GG_SHEET_URL_STORAGE) || DEFAULT_GG_SHEET_URL;
+  const custom = localStorage.getItem(GG_SHEET_URL_STORAGE);
+  if (custom && custom.includes('script.google.com')) {
+    localStorage.removeItem(GG_SHEET_URL_STORAGE);
+    return '/api/sheet';
+  }
+  return custom || DEFAULT_GG_SHEET_URL;
 }
 
-// Save & Overwrite Cloud DB / Google Sheets Directly
+// Save & Overwrite Cloud DB / Google Sheets Directly via /api/sheet Proxy
 async function saveAndPushCloudData(keys, users) {
   localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(keys));
   localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(users));
 
   const endpoint = getCloudEndpoint();
   try {
-    const isGoogleSheet = endpoint.includes('script.google.com');
-    const fetchOptions = isGoogleSheet
-      ? {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({ keys: keys, users: users })
-        }
-      : {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ keys: keys, users: users })
-        };
+    const fetchOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ keys: keys, users: users })
+    };
 
     const putRes = await fetch(endpoint, fetchOptions);
     if (putRes.ok) {
-      console.log('Cloud DB / Google Sheet save confirmed.');
+      console.log('Cloud DB / Google Sheet proxy save confirmed.');
     }
   } catch (e) {
-    console.warn('Cloud DB / Google Sheet save error:', e);
+    console.warn('Cloud DB / Google Sheet proxy save error:', e);
   }
 }
 
@@ -78,7 +76,7 @@ function aggregateUsersFromKeys(keys, users) {
   return mergedUsers;
 }
 
-// Fetch Both Keys & Users from Cloud DB / Google Sheets & Merge Cleanly
+// Fetch Both Keys & Users from Cloud DB / Google Sheets Proxy & Merge Cleanly
 async function fetchCloudData() {
   const endpoint = getCloudEndpoint();
   const lKeys = getVipKeysDB();
@@ -224,7 +222,7 @@ async function redeemVipKeyAsync(enteredKey) {
 
   const currentDevId = getDeviceId();
 
-  // 1. Fetch Cloud DB / Google Sheets to get latest keys from all devices
+  // 1. Fetch Cloud DB / Google Sheets Proxy to get latest keys from all devices
   let cloudFetchRes = await fetchCloudData();
   let keys = cloudFetchRes.keys || [];
   let users = cloudFetchRes.users || [];
@@ -233,7 +231,7 @@ async function redeemVipKeyAsync(enteredKey) {
 
   if (!keyObj) {
     if (!cloudFetchRes.fromCloud && keys.length === 0) {
-      return { success: false, msg: `❌ Không kết nối được Google Sheet để xác minh mã "${cleanKey}". Vui lòng kiểm tra lại mạng!` };
+      return { success: false, msg: `❌ Không kết nối được hệ thống xác minh mã "${cleanKey}". Vui lòng kiểm tra lại mạng!` };
     }
     return { success: false, msg: `❌ Mã "${cleanKey}" không tồn tại trên hệ thống! Vui lòng kiểm tra lại.` };
   }
@@ -275,7 +273,7 @@ async function redeemVipKeyAsync(enteredKey) {
   if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
   
-  // Save local & push to Cloud in background
+  // Save local & push to Cloud Proxy
   saveAndPushCloudData(keys, users);
 
   return { success: true, msg: `🎉 Kích hoạt VIP thành công với mã ${cleanKey}!` };
