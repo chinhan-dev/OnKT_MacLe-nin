@@ -233,14 +233,14 @@ async function redeemVipKeyAsync(enteredKey) {
     if (!cloudFetchRes.fromCloud && keys.length === 0) {
       return { success: false, msg: `❌ Không kết nối được hệ thống xác minh mã "${cleanKey}". Vui lòng kiểm tra lại mạng!` };
     }
-    return { success: false, msg: `❌ Mã "${cleanKey}" không tồn tại trên hệ thống! Vui lòng kiểm tra lại.` };
+    return { success: false, msg: `🚫 Không được phép truy cập! Mã VIP "${cleanKey}" không tồn tại hoặc chưa được khởi tạo.` };
   }
 
   // 2. Strict 1 Key = 1 Device Check
   if (keyObj.status === 'used' && keyObj.deviceId && keyObj.deviceId !== currentDevId) {
     return { 
       success: false, 
-      msg: `❌ Mã ${cleanKey} đã được kích hoạt trên thiết bị khác (${keyObj.deviceId})! Key chỉ dùng cho 1 thiết bị.` 
+      msg: `🚫 Không được phép truy cập! Mã VIP "${cleanKey}" đã được kích hoạt sử dụng trên một thiết bị khác (${keyObj.deviceId}). Mỗi mã chỉ dùng được trên 1 thiết bị duy nhất.` 
     };
   }
 
@@ -294,13 +294,13 @@ function redeemVipKey(enteredKey) {
   const keyObj = keys.find(k => k.key.toUpperCase() === cleanKey);
 
   if (!keyObj) {
-    return { success: false, msg: `❌ Mã "${cleanKey}" không tồn tại!` };
+    return { success: false, msg: `🚫 Không được phép truy cập! Mã VIP "${cleanKey}" không tồn tại!` };
   }
 
   if (keyObj.status === 'used' && keyObj.deviceId && keyObj.deviceId !== currentDevId) {
     return { 
       success: false, 
-      msg: `❌ Mã ${cleanKey} đã được dùng trên máy khác (${keyObj.deviceId})! Key chỉ dùng cho 1 thiết bị.` 
+      msg: `🚫 Không được phép truy cập! Mã VIP "${cleanKey}" đã được kích hoạt sử dụng trên một thiết bị khác (${keyObj.deviceId}). Mỗi mã chỉ dùng được trên 1 thiết bị duy nhất.` 
     };
   }
 
