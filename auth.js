@@ -253,9 +253,6 @@ function renderUserBadge(role) {
 
   badgeWrapper.innerHTML = `
     ${badgeContent}
-    <button class="btn-admin-header" onclick="promptAdminLogin()" title="Trang Quản Trị Admin">
-      <i class="fa-solid fa-user-gear"></i> Admin
-    </button>
     <button class="btn-logout-header" id="logoutBtn" title="Đăng xuất khỏi hệ thống">
       <i class="fa-solid fa-right-from-bracket"></i>
       <span>Đăng xuất</span>
