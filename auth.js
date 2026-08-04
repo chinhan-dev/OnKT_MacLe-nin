@@ -13,6 +13,7 @@ function getUserRole() {
 }
 
 function setUserRole(role) {
+  localStorage.removeItem('lms_user_logged_out');
   localStorage.setItem(AUTH_KEY, role);
   if (role === 'guest') {
     if (!localStorage.getItem(GUEST_TIMER_KEY)) {
@@ -35,6 +36,12 @@ function formatTime(seconds) {
 }
 
 async function initAuthSystem() {
+  // If user explicitly clicked Logout, respect logout and show login modal!
+  if (localStorage.getItem('lms_user_logged_out') === 'true') {
+    showLoginModal();
+    return;
+  }
+
   let role = getUserRole();
 
   // If user is Master Admin, always maintain access
@@ -52,7 +59,7 @@ async function initAuthSystem() {
         const u = cloudData.users.find(x => x.deviceId === devId);
         if (u && u.role === 'vip') {
           role = 'vip';
-          localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
+          setUserRole('vip');
         } else if (u && u.role === 'guest') {
           role = 'guest';
           setUserRole('guest');
@@ -242,6 +249,7 @@ function renderUserBadge(role) {
 }
 
 function handleLogout() {
+  localStorage.setItem('lms_user_logged_out', 'true');
   localStorage.removeItem(AUTH_KEY);
   localStorage.removeItem(GUEST_TIMER_KEY);
   localStorage.removeItem('lms_is_admin');
