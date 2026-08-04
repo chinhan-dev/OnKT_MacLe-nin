@@ -622,6 +622,9 @@ function deleteUserRecord(devId) {
 }
 
 function promptAdminLogin() {
+  const loginModal = document.getElementById('loginModal');
+  if (loginModal) loginModal.style.display = 'none';
+
   let modal = document.getElementById('adminPassModal');
   if (!modal) {
     modal = document.createElement('div');
@@ -629,6 +632,7 @@ function promptAdminLogin() {
     modal.className = 'login-overlay';
     document.body.appendChild(modal);
   }
+  modal.style.zIndex = '99999';
 
   modal.innerHTML = `
     <div class="login-card" style="max-width: 400px; padding: 32px 28px;">
@@ -666,7 +670,8 @@ function promptAdminLogin() {
     const entered = input.value.trim();
     if (entered === ADMIN_PASS) {
       modal.style.display = 'none';
-      localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
+      localStorage.setItem('lms_is_admin', 'true');
+      setUserRole('vip');
       openAdminPanelModal();
     } else {
       err.style.display = 'block';
@@ -679,6 +684,11 @@ function promptAdminLogin() {
   });
   closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
+    const role = typeof getUserRole === 'function' ? getUserRole() : null;
+    if (!role) {
+      const lm = document.getElementById('loginModal');
+      if (lm) lm.style.display = 'flex';
+    }
   });
 }
 
