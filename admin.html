@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="light">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,32 +10,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      background: #f8fafc;
-      min-height: 100vh;
+    :root {
+      --primary: #7c3aed;
+      --primary-dark: #6d28d9;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --success: #10b981;
+      --danger: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Navbar */
     .admin-navbar {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
       padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .admin-nav-brand {
+    .nav-brand {
       display: flex;
       align-items: center;
       gap: 12px;
     }
 
-    .admin-nav-brand .icon {
+    .nav-brand .logo-icon {
       width: 42px;
       height: 42px;
       background: linear-gradient(135deg, #7c3aed, #4c1d95);
@@ -45,32 +68,28 @@
       align-items: center;
       justify-content: center;
       font-size: 20px;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
     }
 
-    .admin-nav-brand h1 {
+    .nav-brand h1 {
       font-size: 1.15rem;
       font-weight: 800;
       color: #0f172a;
-      margin: 0;
     }
 
-    .admin-nav-brand p {
+    .nav-brand p {
       font-size: 0.78rem;
       color: #64748b;
-      margin: 0;
     }
 
-    .admin-nav-controls {
+    .nav-actions {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .btn-nav-home {
+    .btn-action {
       padding: 9px 16px;
-      background: #eff6ff;
-      color: #1d4ed8;
-      border: 1px solid #bfdbfe;
       border-radius: 10px;
       font-weight: 700;
       font-size: 0.88rem;
@@ -80,54 +99,295 @@
       gap: 6px;
       text-decoration: none;
       transition: all 0.2s ease;
+      border: none;
     }
 
-    .btn-nav-home:hover {
-      background: #dbeafe;
+    .btn-home {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
     }
+    .btn-home:hover { background: #dbeafe; }
 
-    .btn-nav-logout {
-      padding: 9px 16px;
+    .btn-logout {
       background: #fef2f2;
       color: #dc2626;
       border: 1px solid #fca5a5;
-      border-radius: 10px;
-      font-weight: 700;
+    }
+    .btn-logout:hover { background: #fee2e2; }
+
+    /* Layout Main */
+    .main-container {
+      max-width: 1050px;
+      width: 100%;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    /* Password Card */
+    .pass-card {
+      max-width: 420px;
+      margin: 50px auto;
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+      padding: 36px 28px;
+      text-align: center;
+    }
+
+    .pass-card .icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #7c3aed, #4c1d95);
+      color: white;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 16px auto;
+    }
+
+    .pass-card h2 {
+      font-size: 1.3rem;
+      color: #581c87;
+      margin-bottom: 6px;
+    }
+
+    .pass-card p {
       font-size: 0.88rem;
+      color: #64748b;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 2px solid #7c3aed;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .input-group button {
+      padding: 14px 20px;
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .error-msg {
+      color: #dc2626;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 12px;
+      display: none;
+    }
+
+    /* Dashboard UI */
+    .dashboard-card {
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      padding: 28px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .stat-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .stat-box .num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .stat-box .lbl {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .sheet-connect-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .sheet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .sheet-header span {
+      font-weight: 800;
+      color: #166534;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sheet-header a {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #15803d;
+      text-decoration: none;
+    }
+
+    .sheet-input-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .sheet-input-row input {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #86efac;
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .sheet-input-row button {
+      padding: 10px 16px;
+      background: #166534;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    /* Tabs */
+    .tab-bar {
+      display: flex;
+      gap: 8px;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 20px;
+    }
+
+    .tab-btn {
+      padding: 12px 20px;
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid transparent;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--text-muted);
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 6px;
-      transition: all 0.2s ease;
+      gap: 8px;
+      margin-bottom: -2px;
     }
 
-    .btn-nav-logout:hover {
-      background: #fee2e2;
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
     }
 
-    .admin-page-container {
-      max-width: 1000px;
-      margin: 32px auto;
-      padding: 0 20px;
+    /* Table */
+    .table-container {
+      overflow-x: auto;
     }
 
-    .admin-standalone-card {
-      background: white;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: #475569;
+      font-weight: 800;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge-used {
+      background: #fef2f2;
+      color: #dc2626;
+      padding: 4px 10px;
       border-radius: 20px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-      padding: 32px;
+      font-weight: 800;
+      font-size: 0.78rem;
     }
 
-    .admin-pass-form-card {
-      max-width: 420px;
-      margin: 60px auto;
-      background: white;
+    .badge-unused {
+      background: #ecfdf5;
+      color: #059669;
+      padding: 4px 10px;
       border-radius: 20px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
-      padding: 36px 28px;
-      text-align: center;
+      font-weight: 800;
+      font-size: 0.78rem;
+    }
+
+    .btn-icon {
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+      margin-right: 4px;
+    }
+    .btn-copy { background: #eff6ff; color: #1d4ed8; }
+    .btn-del { background: #fef2f2; color: #dc2626; }
+    .btn-promote { background: #ecfdf5; color: #059669; }
+    .btn-demote { background: #fff7ed; color: #c2410c; }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0f172a;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      display: none;
+      align-items: center;
+      gap: 10px;
+      z-index: 1000;
     }
   </style>
 </head>
@@ -135,134 +395,248 @@
 
   <!-- Top Navbar -->
   <header class="admin-navbar">
-    <div class="admin-nav-brand">
-      <div class="icon"><i class="fa-solid fa-user-shield"></i></div>
+    <div class="nav-brand">
+      <div class="logo-icon"><i class="fa-solid fa-user-shield"></i></div>
       <div>
         <h1>Trang Quản Trị Admin</h1>
         <p>LMS Ôn Luyện Triết Học Mác - Lênin</p>
       </div>
     </div>
 
-    <div class="admin-nav-controls">
-      <a href="index.html" class="btn-nav-home">
+    <div class="nav-actions">
+      <a href="index.html" class="btn-action btn-home">
         <i class="fa-solid fa-arrow-left"></i> Về trang Ôn Luyện
       </a>
-      <button class="btn-nav-logout" id="adminLogoutNavBtn">
+      <button class="btn-action btn-logout" id="logoutAdminBtn" style="display: none;">
         <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất Admin
       </button>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <main class="admin-page-container" id="adminMainContainer">
+  <!-- Main Content -->
+  <main class="main-container" id="adminApp">
     <!-- Rendered dynamically -->
   </main>
 
-  <!-- Toast Notification -->
-  <div class="toast-notification" id="toast">
-    <i class="fa-solid fa-circle-check"></i>
-    <span id="toastMessage"></span>
+  <!-- Toast -->
+  <div class="toast" id="adminToast">
+    <i class="fa-solid fa-circle-check" style="color: #10b981;"></i>
+    <span id="adminToastMsg">Thông báo</span>
   </div>
 
-  <script src="toast_helper.js"></script>
-  <script src="admin.js"></script>
-  <script src="auth.js"></script>
   <script>
-    let currentAdminTab = 'keys';
+    // Configuration
+    const DEFAULT_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxao38I7sKqWtCHOHMB4TzHZRSa42v7OXoOFSdLdse5SsLdEedfO2oib5wD64XdDErTnw/exec';
+    const SHEETS_DOC_URL = 'https://docs.google.com/spreadsheets/d/1Zq8figZJxwLqEd7QlAEhBI6XXLilQ01vyU6JfuQxKvY';
+    const PASS_KEY = 'chinhanxt';
 
-    function renderAdminDashboardUI(container, keys, users) {
-      const vipCount = users.filter(u => u && u.role === 'vip').length;
-      const guestCount = users.filter(u => u && u.role === 'guest').length;
+    let currentTab = 'keys';
+
+    function showToast(msg) {
+      const toast = document.getElementById('adminToast');
+      const toastMsg = document.getElementById('adminToastMsg');
+      if (toast && toastMsg) {
+        toastMsg.textContent = msg;
+        toast.style.display = 'flex';
+        setTimeout(() => { toast.style.display = 'none'; }, 3000);
+      }
+    }
+
+    function getSheetUrl() {
+      return localStorage.getItem('lms_gg_sheet_script_url') || DEFAULT_SHEET_URL;
+    }
+
+    function getLocalData() {
+      const keys = JSON.parse(localStorage.getItem('lms_vip_keys_db') || '[]');
+      const users = JSON.parse(localStorage.getItem('lms_users_db') || '[]');
+      return { keys, users };
+    }
+
+    function saveLocalData(keys, users) {
+      localStorage.setItem('lms_vip_keys_db', JSON.stringify(keys));
+      localStorage.setItem('lms_users_db', JSON.stringify(users));
+    }
+
+    async function fetchCloudData() {
+      try {
+        const url = getSheetUrl();
+        const res = await fetch(url, { cache: 'no-store' });
+        if (res.ok) {
+          const json = await res.json();
+          if (json && json.status === 'success') {
+            const cloudKeys = Array.isArray(json.keys) ? json.keys : [];
+            const cloudUsers = Array.isArray(json.users) ? json.users : [];
+            saveLocalData(cloudKeys, cloudUsers);
+            return { keys: cloudKeys, users: cloudUsers };
+          }
+        }
+      } catch (e) {
+        console.warn('Fetch Google Sheet background sync error:', e);
+      }
+      return getLocalData();
+    }
+
+    async function pushCloudData(keys, users) {
+      saveLocalData(keys, users);
+      try {
+        const url = getSheetUrl();
+        await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ keys: keys, users: users })
+        });
+        console.log('Push to Google Sheet confirmed.');
+      } catch (e) {
+        console.warn('Push Google Sheet error:', e);
+      }
+    }
+
+    function renderPassForm() {
+      const app = document.getElementById('adminApp');
+      const logoutBtn = document.getElementById('logoutAdminBtn');
+      if (logoutBtn) logoutBtn.style.display = 'none';
+
+      app.innerHTML = `
+        <div class="pass-card">
+          <div class="icon"><i class="fa-solid fa-lock"></i></div>
+          <h2>ĐĂNG NHẬP ADMIN</h2>
+          <p>Nhập mật khẩu Admin để quản lý hệ thống</p>
+          <div class="input-group">
+            <input type="password" id="passInput" placeholder="Nhập mật khẩu Admin...">
+            <button id="passSubmit"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="error-msg" id="passErr">❌ Mật khẩu không đúng! Vui lòng thử lại.</div>
+        </div>
+      `;
+
+      const input = document.getElementById('passInput');
+      const submit = document.getElementById('passSubmit');
+      const err = document.getElementById('passErr');
+
+      input.focus();
+
+      function verifyPass() {
+        if (input.value.trim() === PASS_KEY) {
+          localStorage.setItem('lms_is_admin', 'true');
+          renderDashboard();
+        } else {
+          err.style.display = 'block';
+        }
+      }
+
+      submit.addEventListener('click', verifyPass);
+      input.addEventListener('keypress', (e) => { if (e.key === 'Enter') verifyPass(); });
+    }
+
+    function renderDashboard() {
+      const app = document.getElementById('adminApp');
+      const logoutBtn = document.getElementById('logoutAdminBtn');
+      if (logoutBtn) {
+        logoutBtn.style.display = 'flex';
+        logoutBtn.onclick = () => {
+          localStorage.removeItem('lms_is_admin');
+          renderPassForm();
+        };
+      }
+
+      const { keys, users } = getLocalData();
+      renderDashboardUI(app, keys, users);
+
+      // Async background sync with Google Sheet
+      fetchCloudData().then(({ keys: cKeys, users: cUsers }) => {
+        renderDashboardUI(app, cKeys, cUsers);
+      });
+    }
+
+    function renderDashboardUI(app, keys, users) {
+      const vipCount = users.filter(u => u.role === 'vip').length;
+      const guestCount = users.filter(u => u.role === 'guest').length;
       const totalUsers = users.length;
 
-      let contentHtml = '';
+      let tableHtml = '';
 
-      if (currentAdminTab === 'keys') {
-        let keysRows = keys.map((k) => `
+      if (currentTab === 'keys') {
+        const rows = keys.map((k, i) => `
           <tr>
             <td style="font-weight: 800; color: #1d4ed8;">${k.key}</td>
             <td>
               ${k.status === 'used' 
-                ? `<span class="badge-status-used">🔴 Đã dùng (${k.deviceId || ''})</span>` 
-                : `<span class="badge-status-unused">🟢 Chưa dùng</span>`}
+                ? `<span class="badge-used">🔴 Đã dùng (${k.deviceId || ''})</span>` 
+                : `<span class="badge-unused">🟢 Chưa dùng</span>`}
             </td>
-            <td style="font-size: 0.78rem; color: #64748b;">${k.createdAt || ''}</td>
+            <td style="color: #64748b; font-size: 0.8rem;">${k.createdAt || ''}</td>
             <td>
-              <button class="btn-copy-key" onclick="copyKeyToClipboard('${k.key}')" title="Copy mã"><i class="fa-solid fa-copy"></i></button>
-              <button class="btn-delete-key" onclick="deleteVipKey('${k.key}')" title="Xóa mã"><i class="fa-solid fa-trash"></i></button>
+              <button class="btn-icon btn-copy" onclick="copyKey('${k.key}')"><i class="fa-solid fa-copy"></i> Copy</button>
+              <button class="btn-icon btn-del" onclick="deleteKey('${k.key}')"><i class="fa-solid fa-trash"></i> Xóa</button>
             </td>
           </tr>
         `).join('');
 
-        contentHtml = `
-          <div class="admin-actions" style="margin-bottom: 16px;">
-            <button class="btn-login-vip" id="btnGenKeyPage" style="background: linear-gradient(135deg, #10b981, #059669); padding: 12px 20px; font-size: 0.95rem;">
+        tableHtml = `
+          <div style="margin-bottom: 16px;">
+            <button id="genKeyBtn" style="padding: 12px 20px; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 10px; font-weight: 800; cursor: pointer;">
               <i class="fa-solid fa-plus-circle"></i> + Tạo Mã VIP Mới
             </button>
           </div>
-
-          <div class="keys-table-container">
-            <table class="admin-keys-table">
+          <div class="table-container">
+            <table>
               <thead>
                 <tr>
                   <th>Mã VIP</th>
-                  <th>Trạng thái</th>
-                  <th>Ngày tạo</th>
-                  <th>Thao tác</th>
+                  <th>Trạng Thái</th>
+                  <th>Ngày Tạo</th>
+                  <th>Thao Tác</th>
                 </tr>
               </thead>
               <tbody>
-                ${keysRows || '<tr><td colspan="4" style="text-align: center; padding: 24px; color: #64748b;">Chưa có mã nào. Bấm "+ Tạo Mã VIP Mới" để tạo!</td></tr>'}
+                ${rows || '<tr><td colspan="4" style="text-align: center; padding: 24px; color: #64748b;">Chưa có mã VIP nào. Bấm nút "+ Tạo Mã VIP Mới" để tạo!</td></tr>'}
               </tbody>
             </table>
           </div>
         `;
       } else {
-        let usersRows = users.map((u) => `
+        const rows = users.map((u, i) => `
           <tr>
-            <td style="font-weight: 800; color: #1e3a8a;">
-              ${u.deviceId}
-              ${u.deviceId === (typeof getDeviceId === 'function' ? getDeviceId() : '') ? '<span style="font-size: 0.7rem; color: #2563eb;">(Máy này)</span>' : ''}
-            </td>
+            <td style="font-weight: 800; color: #1e3a8a;">${u.deviceId}</td>
             <td>
               ${u.role === 'vip' 
-                ? `<span class="badge-status-unused">👑 VIP</span>` 
-                : `<span class="badge-status-used" style="background: #fff7ed; color: #c2410c;">⏱️ Khách</span>`}
+                ? `<span class="badge-unused">👑 VIP</span>` 
+                : `<span class="badge-used" style="background: #fff7ed; color: #c2410c;">⏱️ Khách 5p</span>`}
             </td>
-            <td style="font-size: 0.8rem; font-weight: 700;">${u.activatedKey || 'Không'}</td>
-            <td style="font-size: 0.78rem; color: #64748b;">${u.lastActive || ''}</td>
+            <td style="font-weight: 700; font-size: 0.82rem;">${u.activatedKey || 'Không'}</td>
+            <td style="color: #64748b; font-size: 0.8rem;">${u.lastActive || ''}</td>
             <td>
               ${u.role !== 'vip' 
-                ? `<button class="btn-promote-user" onclick="promoteUserToVip('${u.deviceId}')"><i class="fa-solid fa-crown"></i> Cấp VIP</button>` 
-                : `<button class="btn-block-user" onclick="demoteUserToGuest('${u.deviceId}')"><i class="fa-solid fa-lock"></i> Hạ Khách</button>`}
-              <button class="btn-delete-key" onclick="deleteUserRecord('${u.deviceId}')" title="Xóa User"><i class="fa-solid fa-trash"></i></button>
+                ? `<button class="btn-icon btn-promote" onclick="setUserRoleAdmin('${u.deviceId}', 'vip')"><i class="fa-solid fa-crown"></i> Cấp VIP</button>` 
+                : `<button class="btn-icon btn-demote" onclick="setUserRoleAdmin('${u.deviceId}', 'guest')"><i class="fa-solid fa-lock"></i> Hạ Khách</button>`}
+              <button class="btn-icon btn-del" onclick="deleteUserAdmin('${u.deviceId}')"><i class="fa-solid fa-trash"></i> Xóa</button>
             </td>
           </tr>
         `).join('');
 
-        contentHtml = `
-          <div class="keys-table-container">
-            <table class="admin-keys-table">
+        tableHtml = `
+          <div class="table-container">
+            <table>
               <thead>
                 <tr>
-                  <th>Thiết Bị / User ID</th>
+                  <th>Thiết Bị ID</th>
                   <th>Quyền</th>
                   <th>Mã Kích Hoạt</th>
-                  <th>Hoạt động cuối</th>
-                  <th>Thao tác</th>
+                  <th>Hoạt Động Cuối</th>
+                  <th>Thao Tác</th>
                 </tr>
               </thead>
               <tbody>
-                ${usersRows || '<tr><td colspan="5" style="text-align: center; padding: 24px; color: #64748b;">Chưa có dữ liệu học viên.</td></tr>'}
+                ${rows || '<tr><td colspan="5" style="text-align: center; padding: 24px; color: #64748b;">Chưa có dữ liệu học viên.</td></tr>'}
               </tbody>
             </table>
           </div>
         `;
       }
 
-      container.innerHTML = `
-        <div class="admin-standalone-card">
-          <div class="admin-stats-row">
+      app.innerHTML = `
+        <div class="dashboard-card">
+          <div class="stats-grid">
             <div class="stat-box">
               <div class="num">${totalUsers}</div>
               <div class="lbl">Tổng Học Viên</div>
@@ -277,161 +651,133 @@
             </div>
           </div>
 
-          <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 14px; padding: 16px; margin-top: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-weight: 800; color: #166534; font-size: 0.95rem;">
-                <i class="fa-solid fa-file-excel" style="color: #15803d;"></i> Quản lý Database bằng Google Sheet (Đã kết nối LIVE)
-              </span>
-              <a href="https://docs.google.com/spreadsheets/d/1Zq8figZJxwLqEd7QlAEhBI6XXLilQ01vyU6JfuQxKvY/edit" target="_blank" style="font-size: 0.82rem; font-weight: 700; color: #15803d; text-decoration: none;">
-                <i class="fa-solid fa-external-link"></i> Mở Google Sheet
-              </a>
+          <div class="sheet-connect-box">
+            <div class="sheet-header">
+              <span><i class="fa-solid fa-file-excel" style="color: #15803d; font-size: 1.1rem;"></i> Database Google Sheet (Đã kết nối LIVE)</span>
+              <a href="${SHEETS_DOC_URL}" target="_blank"><i class="fa-solid fa-external-link"></i> Mở Google Sheet</a>
             </div>
-            <div style="display: flex; gap: 8px;">
-              <input type="text" id="ggSheetUrlInput" placeholder="URL Google Apps Script Web App..." 
-                value="${localStorage.getItem('lms_gg_sheet_script_url') || (typeof DEFAULT_GG_SHEET_URL !== 'undefined' ? DEFAULT_GG_SHEET_URL : '')}"
-                style="flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid #86efac; font-size: 0.85rem;">
-              <button id="saveGgSheetUrlBtn" style="padding: 10px 16px; background: #166534; color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
-                <i class="fa-solid fa-floppy-disk"></i> Lưu URL Google Sheet
-              </button>
+            <div class="sheet-input-row">
+              <input type="text" id="sheetUrlInput" value="${getSheetUrl()}" placeholder="Google Apps Script Web App URL...">
+              <button id="saveSheetUrlBtn"><i class="fa-solid fa-floppy-disk"></i> Lưu URL</button>
             </div>
           </div>
 
-          <div class="admin-tab-bar" style="margin-top: 20px;">
-            <button class="admin-tab-btn ${currentAdminTab === 'keys' ? 'active' : ''}" id="adminTabKeysPage">
+          <div class="tab-bar">
+            <button class="tab-btn ${currentTab === 'keys' ? 'active' : ''}" id="tabKeys">
               <i class="fa-solid fa-key"></i> Quản Lý Mã VIP (${keys.length})
             </button>
-            <button class="admin-tab-btn ${currentAdminTab === 'users' ? 'active' : ''}" id="adminTabUsersPage">
+            <button class="tab-btn ${currentTab === 'users' ? 'active' : ''}" id="tabUsers">
               <i class="fa-solid fa-users"></i> Quản Lý Học Viên (${users.length})
             </button>
           </div>
 
-          ${contentHtml}
+          ${tableHtml}
         </div>
       `;
 
-      const tabKeys = document.getElementById('adminTabKeysPage');
-      const tabUsers = document.getElementById('adminTabUsersPage');
-      const genBtn = document.getElementById('btnGenKeyPage');
-      const saveSheetBtn = document.getElementById('saveGgSheetUrlBtn');
-      const sheetUrlInput = document.getElementById('ggSheetUrlInput');
+      // Event Listeners
+      const tabK = document.getElementById('tabKeys');
+      const tabU = document.getElementById('tabUsers');
+      const genB = document.getElementById('genKeyBtn');
+      const saveUrlB = document.getElementById('saveSheetUrlBtn');
+      const urlInput = document.getElementById('sheetUrlInput');
 
-      if (saveSheetBtn && sheetUrlInput) {
-        saveSheetBtn.addEventListener('click', async () => {
-          const val = sheetUrlInput.value.trim();
+      if (tabK) tabK.onclick = () => { currentTab = 'keys'; renderDashboardUI(app, keys, users); };
+      if (tabU) tabU.onclick = () => { currentTab = 'users'; renderDashboardUI(app, keys, users); };
+
+      if (saveUrlB && urlInput) {
+        saveUrlB.onclick = () => {
+          const val = urlInput.value.trim();
           if (val) {
             localStorage.setItem('lms_gg_sheet_script_url', val);
-            if (typeof showToast === 'function') showToast('✅ Đã lưu kết nối Google Sheet Web App!', 'success'); else alert('✅ Đã lưu kết nối Google Sheet Web App!');
-          } else {
-            localStorage.removeItem('lms_gg_sheet_script_url');
-            if (typeof showToast === 'function') showToast('ℹ️ Đã xóa URL kết nối Google Sheet', 'info');
+            showToast('✅ Đã lưu kết nối Google Sheet!');
           }
-          await renderAdminStandalonePage();
-        });
+        };
       }
 
-      if (tabKeys) tabKeys.addEventListener('click', () => { currentAdminTab = 'keys'; renderAdminDashboardUI(container, keys, users); });
-      if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; renderAdminDashboardUI(container, keys, users); });
-      if (genBtn) genBtn.addEventListener('click', async () => {
-        genBtn.disabled = true;
-        genBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo mã...';
-        const newCode = await generateNewVipKey();
-        if (typeof showToast === 'function') showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`, 'success'); else alert(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
-        await renderAdminStandalonePage();
-      });
+      if (genB) {
+        genB.onclick = async () => {
+          genB.disabled = true;
+          genB.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo...';
+          const newCode = 'MAC-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+          const { keys: curKeys, users: curUsers } = getLocalData();
+          curKeys.push({
+            key: newCode,
+            status: 'unused',
+            deviceId: null,
+            createdAt: new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN')
+          });
+          await pushCloudData(curKeys, curUsers);
+          showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
+          renderDashboard();
+        };
+      }
     }
 
-    async function renderAdminStandalonePage() {
-      const container = document.getElementById('adminMainContainer');
-      if (!container) {
-        setTimeout(renderAdminStandalonePage, 50);
-        return;
-      }
+    // Window global functions for inline onclick handlers
+    window.copyKey = function(key) {
+      navigator.clipboard.writeText(key);
+      showToast(`📋 Đã copy mã VIP: ${key}`);
+    };
 
+    window.deleteKey = async function(key) {
+      if (confirm(`Bạn có chắc muốn xóa mã VIP ${key}?`)) {
+        const { keys, users } = getLocalData();
+        const newKeys = keys.filter(k => k.key.toUpperCase() !== key.toUpperCase());
+        users.forEach(u => {
+          if (u.activatedKey && u.activatedKey.toUpperCase() === key.toUpperCase()) {
+            u.role = 'guest';
+            u.activatedKey = 'N/A';
+          }
+        });
+        await pushCloudData(newKeys, users);
+        showToast(`🗑️ Đã xóa mã VIP ${key}`);
+        renderDashboard();
+      }
+    };
+
+    window.setUserRoleAdmin = async function(devId, newRole) {
+      const { keys, users } = getLocalData();
+      const u = users.find(x => x.deviceId === devId);
+      if (u) {
+        u.role = newRole;
+        if (newRole === 'guest') u.activatedKey = 'N/A';
+        await pushCloudData(keys, users);
+        showToast(`⚡ Đã chuyển học viên ${devId} sang ${newRole.toUpperCase()}`);
+        renderDashboard();
+      }
+    };
+
+    window.deleteUserAdmin = async function(devId) {
+      if (confirm(`Bạn có chắc muốn xóa học viên ${devId}?`)) {
+        const { keys, users } = getLocalData();
+        const newUsers = users.filter(u => u.deviceId !== devId);
+        keys.forEach(k => {
+          if (k.deviceId === devId) {
+            k.status = 'unused';
+            k.deviceId = null;
+          }
+        });
+        await pushCloudData(keys, newUsers);
+        showToast(`🗑️ Đã xóa học viên ${devId}`);
+        renderDashboard();
+      }
+    };
+
+    // Entry point
+    function initApp() {
       const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
-
-      if (!isAdmin) {
-        // Password Prompt Card
-        container.innerHTML = `
-          <div class="admin-pass-form-card">
-            <div class="login-header" style="margin-bottom: 20px;">
-              <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95); width: 64px; height: 64px; font-size: 28px; margin: 0 auto 14px auto;">
-                <i class="fa-solid fa-user-shield"></i>
-              </div>
-              <h2 style="font-size: 1.3rem; color: #581c87; margin: 0 0 6px 0;">ĐĂNG NHẬP ADMIN</h2>
-              <p style="font-size: 0.88rem; color: #64748b; margin: 0;">Vui lòng nhập mật khẩu Admin để quản lý mã VIP & Học viên</p>
-            </div>
-
-            <div style="display: flex; gap: 8px; margin-top: 16px;">
-              <input type="password" id="adminPassInputPage" placeholder="Nhập mật khẩu Admin..." style="flex: 1; padding: 14px 16px; border-radius: 12px; border: 2px solid #7c3aed; font-size: 1rem; outline: none;">
-              <button id="adminPassSubmitPage" style="padding: 14px 20px; background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; border: none; border-radius: 12px; font-weight: 800; cursor: pointer;">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-
-            <p class="pass-error" id="adminPassErrPage" style="display: none; color: #dc2626; font-size: 0.85rem; font-weight: 700; margin-top: 10px;">❌ Mật khẩu Admin không đúng!</p>
-          </div>
-        `;
-
-        const passInput = document.getElementById('adminPassInputPage');
-        const passSubmit = document.getElementById('adminPassSubmitPage');
-        const passErr = document.getElementById('adminPassErrPage');
-
-        if (passInput) passInput.focus();
-
-        function checkPass() {
-          if (passInput && passInput.value.trim() === 'chinhanxt') {
-            localStorage.setItem('lms_is_admin', 'true');
-            if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
-            renderAdminStandalonePage();
-          } else {
-            if (passErr) passErr.style.display = 'block';
-          }
-        }
-
-        if (passSubmit) passSubmit.addEventListener('click', checkPass);
-        if (passInput) passInput.addEventListener('keypress', (e) => {
-          if (e.key === 'Enter') checkPass();
-        });
-        return;
+      if (isAdmin) {
+        renderDashboard();
+      } else {
+        renderPassForm();
       }
-
-      // 1. Render INSTANTLY using local DB (0ms loading delay)
-      const localKeys = typeof getVipKeysDB === 'function' ? getVipKeysDB() : [];
-      const localUsers = typeof getUsersDB === 'function' ? getUsersDB() : [];
-      renderAdminDashboardUI(container, localKeys, localUsers);
-
-      // 2. Fetch live data from Google Sheet in background & re-render
-      try {
-        if (typeof fetchCloudData === 'function') {
-          const cloudData = await fetchCloudData();
-          if (cloudData && cloudData.keys) {
-            renderAdminDashboardUI(container, cloudData.keys, cloudData.users);
-          }
-        }
-      } catch (err) {
-        console.warn('Background Google Sheet sync warning:', err);
-      }
-    }
-
-    function initAdminPage() {
-      const logoutBtn = document.getElementById('adminLogoutNavBtn');
-      if (logoutBtn) {
-        logoutBtn.addEventListener('click', () => {
-          localStorage.removeItem('lms_is_admin');
-          if (typeof handleLogout === 'function') {
-            handleLogout();
-          } else {
-            window.location.href = 'login.html';
-          }
-        });
-      }
-      renderAdminStandalonePage();
     }
 
     if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      initAdminPage();
+      initApp();
     } else {
-      document.addEventListener('DOMContentLoaded', initAdminPage);
+      document.addEventListener('DOMContentLoaded', initApp);
     }
   </script>
 </body>
