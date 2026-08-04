@@ -359,8 +359,9 @@ function deleteUserRecord(devId) {
 }
 
 function promptAdminLogin() {
-  const pass = prompt('🔑 Nhập Mật Khẩu Admin (chinhanxt):');
+  const pass = prompt('🔑 Nhập Mật Khẩu Admin:');
   if (pass === ADMIN_PASS) {
+    setUserRole('vip');
     openAdminPanelModal();
   } else if (pass !== null) {
     alert('❌ Mật khẩu Admin không đúng!');
