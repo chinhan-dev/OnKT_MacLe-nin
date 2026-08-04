@@ -1,79 +1,105 @@
 
 const CLOUD_DB_ENDPOINT = 'https://api.restful-api.dev/objects/ff8081819f7e10ae019fcafb3a556dde';
 
-// Fetch Keys from Cloud DB & Merge cleanly
-async function fetchCloudKeysDB() {
+// Fetch Both Keys & Users from Cloud DB & Merge Cleanly
+async function fetchCloudData() {
   try {
     const res = await fetch(CLOUD_DB_ENDPOINT, { cache: 'no-store' });
     if (res.ok) {
       const json = await res.json();
-      if (json && json.data && Array.isArray(json.data.keys)) {
-        const cloudKeys = json.data.keys;
-        const localData = localStorage.getItem(VIP_KEYS_STORAGE);
-        let localKeys = localData ? JSON.parse(localData) : [];
+      if (json && json.data) {
+        const cloudKeys = json.data.keys || [];
+        const cloudUsers = json.data.users || [];
 
-        // Merge: keep all Cloud keys, plus any unique local keys
+        // Merge Keys
+        const localKeysData = localStorage.getItem(VIP_KEYS_STORAGE);
+        let localKeys = localKeysData ? JSON.parse(localKeysData) : [];
         const mergedKeys = [...cloudKeys];
         for (const lk of localKeys) {
           if (!mergedKeys.some(ck => ck.key.toUpperCase() === lk.key.toUpperCase())) {
             mergedKeys.push(lk);
           }
         }
-
         localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(mergedKeys));
-        return mergedKeys;
+
+        // Merge Users
+        const localUsersData = localStorage.getItem(USERS_DB_STORAGE);
+        let localUsers = localUsersData ? JSON.parse(localUsersData) : [];
+        const mergedUsers = [...cloudUsers];
+        for (const lu of localUsers) {
+          const idx = mergedUsers.findIndex(cu => cu.deviceId === lu.deviceId);
+          if (idx >= 0) {
+            mergedUsers[idx] = lu;
+          } else {
+            mergedUsers.push(lu);
+          }
+        }
+        localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(mergedUsers));
+
+        return { keys: mergedKeys, users: mergedUsers };
       }
     }
   } catch (e) {
-    console.warn('Cloud DB fetch offline, falling back to local storage.', e);
+    console.warn('Cloud DB fetch offline, using local storage.', e);
   }
-  return getVipKeysDB();
+  return { keys: getVipKeysDB(), users: getUsersDB() };
 }
 
-// Push Keys to Cloud DB safely with Merge
-async function pushCloudKeysDB(keysToPush) {
+// Alias for backward compatibility
+async function fetchCloudKeysDB() {
+  const d = await fetchCloudData();
+  return d.keys;
+}
+
+// Push Both Keys & Users to Cloud DB Safely with Merge
+async function pushCloudData(keysToPush, usersToPush) {
   try {
-    // 1. Fetch latest Cloud Keys
     const getRes = await fetch(CLOUD_DB_ENDPOINT, { cache: 'no-store' });
     let cloudKeys = [];
+    let cloudUsers = [];
     if (getRes.ok) {
       const json = await getRes.json();
-      if (json && json.data && Array.isArray(json.data.keys)) {
-        cloudKeys = json.data.keys;
+      if (json && json.data) {
+        cloudKeys = json.data.keys || [];
+        cloudUsers = json.data.users || [];
       }
     }
 
-    // 2. Merge provided keys into cloud keys
-    const merged = [...cloudKeys];
-    for (const k of keysToPush) {
-      const idx = merged.findIndex(ck => ck.key.toUpperCase() === k.key.toUpperCase());
-      if (idx >= 0) {
-        merged[idx] = k;
-      } else {
-        merged.push(k);
-      }
+    const mergedKeys = [...cloudKeys];
+    for (const k of (keysToPush || getVipKeysDB())) {
+      const idx = mergedKeys.findIndex(ck => ck.key.toUpperCase() === k.key.toUpperCase());
+      if (idx >= 0) mergedKeys[idx] = k; else mergedKeys.push(k);
     }
 
-    localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(merged));
+    const mergedUsers = [...cloudUsers];
+    for (const u of (usersToPush || getUsersDB())) {
+      const idx = mergedUsers.findIndex(cu => cu.deviceId === u.deviceId);
+      if (idx >= 0) mergedUsers[idx] = u; else mergedUsers.push(u);
+    }
 
-    // 3. PUT update to Cloud DB & MUST AWAIT RESPONSE COMPLETELY
+    localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(mergedKeys));
+    localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(mergedUsers));
+
     const putRes = await fetch(CLOUD_DB_ENDPOINT, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name: 'LMS_VIP_KEYS',
-        data: { keys: merged, users: getUsersDB() }
+        data: { keys: mergedKeys, users: mergedUsers }
       })
     });
 
     if (putRes.ok) {
-      await putRes.json(); // Ensure full body is consumed before proceeding
-      console.log('Successfully pushed and confirmed Cloud DB update.');
+      await putRes.json();
     }
   } catch (e) {
     console.warn('Failed to push to Cloud DB:', e);
-    localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(keysToPush));
   }
+}
+
+// Alias for backward compatibility
+async function pushCloudKeysDB(keysToPush) {
+  await pushCloudData(keysToPush, getUsersDB());
 }
 
 /* ==========================================================================
@@ -99,7 +125,7 @@ function getDeviceId() {
 }
 
 // Track/Register user access in Users DB
-function trackCurrentDeviceUser() {
+async function trackCurrentDeviceUser() {
   const devId = getDeviceId();
   const role = getUserRole() || 'guest';
   const activatedKey = localStorage.getItem(ACTIVATED_KEY_STORAGE) || 'N/A';
@@ -248,7 +274,7 @@ function redeemVipKey(enteredKey) {
 let currentAdminTab = 'keys';
 
 async function openAdminPanelModal() {
-  trackCurrentDeviceUser();
+  await trackCurrentDeviceUser();
 
   let modal = document.getElementById('adminModal');
   if (!modal) {
@@ -258,9 +284,10 @@ async function openAdminPanelModal() {
     document.body.appendChild(modal);
   }
 
-  // Fetch latest real-time data from Cloud DB
-  const keys = typeof fetchCloudKeysDB === 'function' ? await fetchCloudKeysDB() : getVipKeysDB();
-  const users = getUsersDB();
+  // Fetch real-time Cloud Data for BOTH Keys & Users!
+  const cloudData = typeof fetchCloudData === 'function' ? await fetchCloudData() : { keys: getVipKeysDB(), users: getUsersDB() };
+  const keys = cloudData.keys;
+  const users = cloudData.users;
 
   const vipCount = users.filter(u => u.role === 'vip').length;
   const guestCount = users.filter(u => u.role === 'guest').length;
