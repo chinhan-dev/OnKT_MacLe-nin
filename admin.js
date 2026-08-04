@@ -81,33 +81,46 @@ function aggregateUsersFromKeys(keys, users) {
 // Fetch Both Keys & Users from Cloud DB / Google Sheets & Merge Cleanly
 async function fetchCloudData() {
   const endpoint = getCloudEndpoint();
+  const lKeys = getVipKeysDB();
+  const lUsers = getUsersDB();
+
   try {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 4000);
+    const timer = setTimeout(() => controller.abort(), 10000);
 
     const res = await fetch(endpoint, { cache: 'no-store', signal: controller.signal });
     clearTimeout(timer);
 
     if (res.ok) {
       const json = await res.json();
-      if (json) {
+      if (json && (json.status === 'success' || json.keys)) {
         const dbObj = json.data || json;
         const cloudKeys = Array.isArray(dbObj.keys) ? dbObj.keys : [];
         const cloudUsers = Array.isArray(dbObj.users) ? dbObj.users : [];
 
-        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(cloudKeys));
-        localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(cloudUsers));
+        // Map-based Smart Merge
+        const keyMap = new Map();
+        lKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
+        cloudKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
 
-        return { keys: cloudKeys, users: cloudUsers };
+        const userMap = new Map();
+        lUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
+        cloudUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
+
+        const finalKeys = Array.from(keyMap.values());
+        const finalUsers = Array.from(userMap.values());
+
+        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(finalKeys));
+        localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(finalUsers));
+
+        return { keys: finalKeys, users: finalUsers, fromCloud: true };
       }
     }
   } catch (e) {
     console.warn('Cloud DB / Google Sheet fetch offline/timeout, using local storage.', e);
   }
 
-  const lKeys = getVipKeysDB();
-  const lUsers = aggregateUsersFromKeys(lKeys, getUsersDB());
-  return { keys: lKeys, users: lUsers };
+  return { keys: lKeys, users: aggregateUsersFromKeys(lKeys, lUsers), fromCloud: false };
 }
 
 // Push Both Keys & Users to Cloud DB Safely with Merge
@@ -211,29 +224,21 @@ async function redeemVipKeyAsync(enteredKey) {
 
   const currentDevId = getDeviceId();
 
-  // 1. Check local keys DB first (Instant 0ms lookup)
-  let localKeys = getVipKeysDB();
-  let localUsers = getUsersDB();
+  // 1. Fetch Cloud DB / Google Sheets to get latest keys from all devices
+  let cloudFetchRes = await fetchCloudData();
+  let keys = cloudFetchRes.keys || [];
+  let users = cloudFetchRes.users || [];
 
-  let keyObj = localKeys.find(k => k.key.toUpperCase() === cleanKey);
+  let keyObj = keys.find(k => k.key.toUpperCase() === cleanKey);
 
-  // 2. If not found in local DB, fetch from Cloud DB / Google Sheets
   if (!keyObj) {
-    try {
-      let cloudData = await fetchCloudData();
-      localKeys = cloudData.keys || [];
-      localUsers = cloudData.users || [];
-      keyObj = localKeys.find(k => k.key.toUpperCase() === cleanKey);
-    } catch (e) {
-      console.warn('Background cloud fetch error on redeem:', e);
+    if (!cloudFetchRes.fromCloud && keys.length === 0) {
+      return { success: false, msg: `❌ Không kết nối được Google Sheet để xác minh mã "${cleanKey}". Vui lòng kiểm tra lại mạng!` };
     }
-  }
-
-  if (!keyObj) {
     return { success: false, msg: `❌ Mã "${cleanKey}" không tồn tại trên hệ thống! Vui lòng kiểm tra lại.` };
   }
 
-  // 3. Strict 1 Key = 1 Device Check
+  // 2. Strict 1 Key = 1 Device Check
   if (keyObj.status === 'used' && keyObj.deviceId && keyObj.deviceId !== currentDevId) {
     return { 
       success: false, 
@@ -249,13 +254,13 @@ async function redeemVipKeyAsync(enteredKey) {
   keyObj.activatedAt = nowStr;
 
   // Update User Status
-  let u = localUsers.find(x => x.deviceId === currentDevId);
+  let u = users.find(x => x.deviceId === currentDevId);
   if (u) {
     u.role = 'vip';
     u.activatedKey = cleanKey;
     u.lastActive = nowStr;
   } else {
-    localUsers.push({
+    users.push({
       deviceId: currentDevId,
       name: `Học viên ${currentDevId}`,
       role: 'vip',
@@ -271,7 +276,7 @@ async function redeemVipKeyAsync(enteredKey) {
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
   
   // Save local & push to Cloud in background
-  saveAndPushCloudData(localKeys, localUsers);
+  saveAndPushCloudData(keys, users);
 
   return { success: true, msg: `🎉 Kích hoạt VIP thành công với mã ${cleanKey}!` };
 }
