@@ -295,7 +295,7 @@ function openAdminPanelModal() {
   if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; openAdminPanelModal(); });
   if (genBtn) genBtn.addEventListener('click', () => {
     const newCode = generateNewVipKey();
-    alert(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
+    if (typeof showToast === 'function') showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`, 'success'); else alert(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
     openAdminPanelModal();
   });
   if (closeBtn) closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
@@ -303,15 +303,25 @@ function openAdminPanelModal() {
 
 function copyKeyToClipboard(text) {
   navigator.clipboard.writeText(text);
-  alert(`📋 Đã copy mã VIP: ${text}`);
+  if (typeof showToast === 'function') showToast(`📋 Đã copy mã VIP: ${text}`, 'info'); else alert(`📋 Đã copy mã VIP: ${text}`);
 }
 
 function deleteVipKey(key) {
-  if (confirm(`Bạn có chắc muốn xóa mã VIP ${key}?`)) {
-    let keys = getVipKeysDB();
-    keys = keys.filter(k => k.key !== key);
-    saveVipKeysDB(keys);
-    openAdminPanelModal();
+  if (typeof showConfirmModal === 'function') {
+    showConfirmModal('Xóa Mã VIP', `Bạn có chắc chắn muốn xóa mã VIP <strong>${key}</strong> khỏi hệ thống?`, () => {
+      let keys = getVipKeysDB();
+      keys = keys.filter(k => k.key !== key);
+      saveVipKeysDB(keys);
+      openAdminPanelModal();
+      showToast(`🗑️ Đã xóa mã VIP ${key}`, 'info');
+    });
+  } else {
+    if (confirm(`Xóa mã ${key}?`)) {
+      let keys = getVipKeysDB();
+      keys = keys.filter(k => k.key !== key);
+      saveVipKeysDB(keys);
+      openAdminPanelModal();
+    }
   }
 }
 
@@ -350,11 +360,21 @@ function demoteUserToGuest(devId) {
 }
 
 function deleteUserRecord(devId) {
-  if (confirm(`Bạn có chắc muốn xóa dữ liệu học viên ${devId}?`)) {
-    let users = getUsersDB();
-    users = users.filter(x => x.deviceId !== devId);
-    saveUsersDB(users);
-    openAdminPanelModal();
+  if (typeof showConfirmModal === 'function') {
+    showConfirmModal('Xóa Học Viên', `Bạn có chắc chắn muốn xóa dữ liệu học viên <strong>${devId}</strong>?`, () => {
+      let users = getUsersDB();
+      users = users.filter(x => x.deviceId !== devId);
+      saveUsersDB(users);
+      openAdminPanelModal();
+      showToast(`🗑️ Đã xóa học viên ${devId}`, 'info');
+    });
+  } else {
+    if (confirm(`Xóa học viên ${devId}?`)) {
+      let users = getUsersDB();
+      users = users.filter(x => x.deviceId !== devId);
+      saveUsersDB(users);
+      openAdminPanelModal();
+    }
   }
 }
 

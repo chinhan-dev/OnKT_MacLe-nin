@@ -124,7 +124,7 @@ function showLoginModal(expiredMsg = false) {
     // Check device-bound VIP key
     const res = redeemVipKey(entered);
     if (res.success) {
-      alert(res.msg);
+      if (typeof showToast === 'function') showToast(res.msg, 'success'); else alert(res.msg);
       modal.style.display = 'none';
       location.reload();
     } else {
