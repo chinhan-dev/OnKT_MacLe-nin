@@ -239,7 +239,7 @@ function redeemVipKey(enteredKey) {
 // Render Complete Admin Panel with User Management
 let currentAdminTab = 'keys';
 
-function openAdminPanelModal() {
+async function openAdminPanelModal() {
   trackCurrentDeviceUser();
 
   let modal = document.getElementById('adminModal');
@@ -250,7 +250,8 @@ function openAdminPanelModal() {
     document.body.appendChild(modal);
   }
 
-  const keys = getVipKeysDB();
+  // Fetch latest real-time data from Cloud DB
+  const keys = typeof fetchCloudKeysDB === 'function' ? await fetchCloudKeysDB() : getVipKeysDB();
   const users = getUsersDB();
 
   const vipCount = users.filter(u => u.role === 'vip').length;
