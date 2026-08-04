@@ -267,24 +267,26 @@
   <script src="auth.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const errBox = document.getElementById('standaloneError');
+
       // Check if redirected due to 5-minute guest timer expiration
       if (localStorage.getItem('lms_guest_expired') === 'true') {
-        const errBox = document.getElementById('standaloneError');
         if (errBox) {
-          errBox.innerHTML = '⚠️ <strong>HẾT THỜI GIAN 5 PHÚT DÙNG THỬ CHO KHÁCH!</strong><br>Vui lòng nhập Mã VIP để tiếp tục sử dụng hệ thống.';
+          errBox.innerHTML = '⚠️ <strong>HẾT THỜI GIAN 5 PHÚT DÙNG THỬ CHO KHÁCH!</strong><br>Vui lòng nhập Mã VIP 1 Thiết Bị để tiếp tục sử dụng hệ thống.';
           errBox.style.display = 'block';
         }
       }
+
       const vipInput = document.getElementById('standaloneVipInput');
       const vipBtn = document.getElementById('standaloneVipBtn');
       const guestBtn = document.getElementById('standaloneGuestBtn');
       const adminBtn = document.getElementById('standaloneAdminBtn');
-      const errBox = document.getElementById('standaloneError');
 
-      // If user is already authenticated, redirect to index.html
+      // If user is already authenticated and not logged out or expired, redirect to index.html
       const role = getUserRole();
-      const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
-      if (role && localStorage.getItem('lms_user_logged_out') !== 'true') {
+      const isLoggedOut = localStorage.getItem('lms_user_logged_out') === 'true';
+      const isExpired = localStorage.getItem('lms_guest_expired') === 'true';
+      if (role && !isLoggedOut && !isExpired) {
         window.location.href = 'index.html';
         return;
       }
@@ -321,6 +323,7 @@
           if (res.success) {
             showToast(res.msg, 'success');
             localStorage.removeItem('lms_user_logged_out');
+            localStorage.removeItem('lms_guest_expired');
             setTimeout(() => {
               window.location.href = 'index.html';
             }, 500);
@@ -343,7 +346,6 @@
       });
 
       guestBtn.addEventListener('click', () => {
-        localStorage.removeItem('lms_user_logged_out');
         setUserRole('guest');
         window.location.href = 'index.html';
       });
@@ -351,6 +353,8 @@
       adminBtn.addEventListener('click', () => {
         if (typeof promptAdminLogin === 'function') {
           promptAdminLogin();
+        } else {
+          window.location.href = 'admin.html';
         }
       });
     });

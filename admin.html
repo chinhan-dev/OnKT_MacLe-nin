@@ -325,7 +325,6 @@
 
       container.innerHTML = `
         <div class="admin-standalone-card">
-          <!-- Stats Bar -->
           <div class="admin-stats-row">
             <div class="stat-box">
               <div class="num">${totalUsers}</div>
@@ -341,7 +340,6 @@
             </div>
           </div>
 
-          <!-- Admin Tabs -->
           <div class="admin-tab-bar" style="margin-top: 24px;">
             <button class="admin-tab-btn ${currentAdminTab === 'keys' ? 'active' : ''}" id="adminTabKeysPage">
               <i class="fa-solid fa-key"></i> Quản Lý Mã VIP (${keys.length})
@@ -355,7 +353,6 @@
         </div>
       `;
 
-      // Event Listeners
       const tabKeys = document.getElementById('adminTabKeysPage');
       const tabUsers = document.getElementById('adminTabUsersPage');
       const genBtn = document.getElementById('btnGenKeyPage');

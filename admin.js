@@ -2,9 +2,10 @@ async function refreshAdminUI() {
   if (window.location.pathname.endsWith('admin.html') && typeof renderAdminStandalonePage === 'function') {
     await renderAdminStandalonePage();
   } else if (typeof openAdminPanelModal === 'function') {
-    await refreshAdminUI();
+    await openAdminPanelModal();
   }
 }
+
 /* ==========================================================================
    GLOBAL CONSTANTS & CONFIGURATION
    ========================================================================== */
@@ -38,9 +39,6 @@ async function saveAndPushCloudData(keys, users) {
     console.warn('Cloud DB save error:', e);
   }
 }
-
-
-
 
 function aggregateUsersFromKeys(keys, users) {
   const mergedUsers = [...users];
@@ -181,12 +179,6 @@ async function pushCloudData(keysToPush, usersToPush) {
    ADMIN PANEL & USER MANAGEMENT SYSTEM (Pass: chinhanxt)
    ========================================================================== */
 
-
-
-
-
-
-
 // Generate or retrieve unique device fingerprint
 function getDeviceId() {
   let devId = localStorage.getItem(DEVICE_ID_KEY);
@@ -259,10 +251,7 @@ function saveUsersDB(users) {
 function getVipKeysDB() {
   const data = localStorage.getItem(VIP_KEYS_STORAGE);
   if (!data) {
-    const initialKeys = [
-     
-      
-    ];
+    const initialKeys = [];
     localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(initialKeys));
     return initialKeys;
   }
@@ -274,6 +263,7 @@ function saveVipKeysDB(keys) {
 }
 
 async function generateNewVipKey() {
+  if (localStorage.getItem('lms_is_admin') !== 'true') return null;
   const code = 'MAC-' + Math.random().toString(36).substring(2, 8).toUpperCase();
   let keys = await fetchCloudKeysDB();
   keys.push({
@@ -288,6 +278,14 @@ async function generateNewVipKey() {
 
 async function redeemVipKeyAsync(enteredKey) {
   const cleanKey = enteredKey.trim().toUpperCase();
+  
+  // Admin Password Shortcut
+  if (cleanKey === 'CHINHANXT') {
+    localStorage.setItem('lms_is_admin', 'true');
+    setUserRole('vip');
+    return { success: true, msg: '🎉 Đăng nhập Admin thành công!' };
+  }
+
   let cloudData = await fetchCloudData();
   let keys = cloudData.keys;
   let users = cloudData.users;
@@ -302,7 +300,7 @@ async function redeemVipKeyAsync(enteredKey) {
   if (keyObj.status === 'used' && keyObj.deviceId !== currentDevId) {
     return { 
       success: false, 
-      msg: `❌ Mã ${cleanKey} đã được kích hoạt trên máy khác (${keyObj.deviceId})!` 
+      msg: `❌ Mã ${cleanKey} đã được sử dụng trên thiết bị khác (${keyObj.deviceId})! Key chỉ dùng cho 1 thiết bị.` 
     };
   }
 
@@ -331,8 +329,8 @@ async function redeemVipKeyAsync(enteredKey) {
     });
   }
 
-  // Save both local & cloud
-  localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
+  // Set VIP role locally (DO NOT set lms_is_admin)
+  setUserRole('vip');
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
   await saveAndPushCloudData(keys, users);
 
@@ -341,6 +339,13 @@ async function redeemVipKeyAsync(enteredKey) {
 
 function redeemVipKey(enteredKey) {
   const cleanKey = enteredKey.trim().toUpperCase();
+
+  if (cleanKey === 'CHINHANXT') {
+    localStorage.setItem('lms_is_admin', 'true');
+    setUserRole('vip');
+    return { success: true, msg: '🎉 Đăng nhập Admin thành công!' };
+  }
+
   const keys = getVipKeysDB();
   const currentDevId = getDeviceId();
 
@@ -353,7 +358,7 @@ function redeemVipKey(enteredKey) {
   if (keyObj.status === 'used' && keyObj.deviceId !== currentDevId) {
     return { 
       success: false, 
-      msg: `❌ Mã ${cleanKey} đã được dùng trên máy khác (${keyObj.deviceId})!` 
+      msg: `❌ Mã ${cleanKey} đã được dùng trên máy khác (${keyObj.deviceId})! Key chỉ dùng cho 1 thiết bị.` 
     };
   }
 
@@ -363,15 +368,19 @@ function redeemVipKey(enteredKey) {
   pushCloudKeysDB(keys);
 
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
-  localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
+  setUserRole('vip');
   trackCurrentDeviceUser();
   return { success: true, msg: '🎉 Kích hoạt VIP thành công trên thiết bị này!' };
 }
 
-// Render Complete Admin Panel with User Management
 let currentAdminTab = 'keys';
 
 async function openAdminPanelModal() {
+  if (localStorage.getItem('lms_is_admin') !== 'true') {
+    window.location.href = 'admin.html';
+    return;
+  }
+
   let modal = document.getElementById('adminModal');
   if (!modal) {
     modal = document.createElement('div');
@@ -380,7 +389,6 @@ async function openAdminPanelModal() {
     document.body.appendChild(modal);
   }
 
-  // Render initial loading UI instantly!
   modal.innerHTML = `
     <div class="login-card admin-card" style="text-align: center; padding: 48px 32px;">
       <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95);"><i class="fa-solid fa-spinner fa-spin"></i></div>
@@ -390,7 +398,6 @@ async function openAdminPanelModal() {
   `;
   modal.style.display = 'flex';
 
-  // Fetch real-time Cloud Data asynchronously
   const cloudData = typeof fetchCloudData === 'function' ? await fetchCloudData() : { keys: getVipKeysDB(), users: getUsersDB() };
   const keys = cloudData.keys;
   const users = cloudData.users;
@@ -442,7 +449,6 @@ async function openAdminPanelModal() {
       </div>
     `;
   } else {
-    // Users Management Tab
     let usersRows = users.map((u) => `
       <tr>
         <td style="font-weight: 800; color: #1e3a8a;">
@@ -493,7 +499,6 @@ async function openAdminPanelModal() {
         <p>Quản lý Mã VIP & Danh sách Học viên / Thiết bị</p>
       </div>
 
-      <!-- Stats Bar -->
       <div class="admin-stats-row">
         <div class="stat-box">
           <div class="num">${totalUsers}</div>
@@ -509,7 +514,6 @@ async function openAdminPanelModal() {
         </div>
       </div>
 
-      <!-- Admin Tabs -->
       <div class="admin-tab-bar">
         <button class="admin-tab-btn ${currentAdminTab === 'keys' ? 'active' : ''}" id="adminTabKeys">
           <i class="fa-solid fa-key"></i> Quản Lý Mã VIP (${keys.length})
@@ -527,7 +531,6 @@ async function openAdminPanelModal() {
 
   modal.style.display = 'flex';
 
-  // Event Listeners
   const tabKeys = document.getElementById('adminTabKeys');
   const tabUsers = document.getElementById('adminTabUsers');
   const genBtn = document.getElementById('btnGenKey');
@@ -551,13 +554,13 @@ function copyKeyToClipboard(text) {
 }
 
 function deleteVipKey(key) {
+  if (localStorage.getItem('lms_is_admin') !== 'true') return;
   if (typeof showConfirmModal === 'function') {
     showConfirmModal('Xóa Mã VIP', `Bạn có chắc chắn muốn xóa mã VIP <strong>${key}</strong> khỏi hệ thống?`, async () => {
       let cloudData = await fetchCloudData();
       let keys = cloudData.keys.filter(k => k.key.toUpperCase() !== key.toUpperCase());
       let users = cloudData.users;
 
-      // Demote any user that was using this deleted key
       for (let u of users) {
         if (u.activatedKey && u.activatedKey.toUpperCase() === key.toUpperCase()) {
           u.role = 'guest';
@@ -573,6 +576,7 @@ function deleteVipKey(key) {
 }
 
 function promoteUserToVip(devId) {
+  if (localStorage.getItem('lms_is_admin') !== 'true') return;
   let users = getUsersDB();
   let u = users.find(x => x.deviceId === devId);
   if (u) {
@@ -581,7 +585,7 @@ function promoteUserToVip(devId) {
     pushCloudKeysDB(getVipKeysDB());
 
     if (devId === getDeviceId()) {
-      localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
+      setUserRole('vip');
       location.reload();
     } else {
       refreshAdminUI();
@@ -590,6 +594,7 @@ function promoteUserToVip(devId) {
 }
 
 function demoteUserToGuest(devId) {
+  if (localStorage.getItem('lms_is_admin') !== 'true') return;
   let users = getUsersDB();
   let u = users.find(x => x.deviceId === devId);
   if (u) {
@@ -607,13 +612,13 @@ function demoteUserToGuest(devId) {
 }
 
 function deleteUserRecord(devId) {
+  if (localStorage.getItem('lms_is_admin') !== 'true') return;
   if (typeof showConfirmModal === 'function') {
     showConfirmModal('Xóa Học Viên', `Bạn có chắc chắn muốn xóa dữ liệu học viên <strong>${devId}</strong>?`, async () => {
       let cloudData = await fetchCloudData();
       let keys = cloudData.keys;
       let users = cloudData.users.filter(u => u.deviceId !== devId);
 
-      // Free up any VIP key bound to this deleted user
       for (let k of keys) {
         if (k.deviceId === devId) {
           k.status = 'unused';
@@ -639,7 +644,6 @@ document.addEventListener('DOMContentLoaded', () => {
     refreshAdminUI();
   }
 });
-
 
 async function fetchCloudKeysDB() {
   const d = await fetchCloudData();
