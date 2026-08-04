@@ -1246,3 +1246,49 @@ input:checked + .slider:before {
   color: #ffffff;
   border-color: #ef4444;
 }
+
+
+/* Header User Auth Layout */
+.user-auth-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  border-left: 1px solid var(--border-color);
+  padding-left: 14px;
+}
+
+.user-auth-status {
+  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.btn-logout-header {
+  white-space: nowrap !important;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: #fef2f2;
+  color: #ef4444;
+  border: 1px solid #fca5a5;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.btn-logout-header:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+}

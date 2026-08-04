@@ -143,10 +143,8 @@ function renderUserBadge(role) {
   if (!badgeWrapper) {
     badgeWrapper = document.createElement('div');
     badgeWrapper.id = 'userAuthWrapper';
-    badgeWrapper.style.display = 'inline-flex';
-    badgeWrapper.style.alignItems = 'center';
-    badgeWrapper.style.gap = '8px';
-    controls.insertBefore(badgeWrapper, controls.firstChild);
+    badgeWrapper.className = 'user-auth-wrapper';
+    controls.appendChild(badgeWrapper);
   }
 
   let badgeContent = '';
