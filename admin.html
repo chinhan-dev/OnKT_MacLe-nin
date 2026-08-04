@@ -172,6 +172,11 @@
 
     async function renderAdminStandalonePage() {
       const container = document.getElementById('adminMainContainer');
+      if (!container) {
+        setTimeout(renderAdminStandalonePage, 50);
+        return;
+      }
+
       const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
 
       if (!isAdmin) {
@@ -201,20 +206,20 @@
         const passSubmit = document.getElementById('adminPassSubmitPage');
         const passErr = document.getElementById('adminPassErrPage');
 
-        passInput.focus();
+        if (passInput) passInput.focus();
 
         function checkPass() {
-          if (passInput.value.trim() === 'chinhanxt') {
+          if (passInput && passInput.value.trim() === 'chinhanxt') {
             localStorage.setItem('lms_is_admin', 'true');
-            setUserRole('vip');
+            if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
             renderAdminStandalonePage();
           } else {
-            passErr.style.display = 'block';
+            if (passErr) passErr.style.display = 'block';
           }
         }
 
-        passSubmit.addEventListener('click', checkPass);
-        passInput.addEventListener('keypress', (e) => {
+        if (passSubmit) passSubmit.addEventListener('click', checkPass);
+        if (passInput) passInput.addEventListener('keypress', (e) => {
           if (e.key === 'Enter') checkPass();
         });
         return;
@@ -293,7 +298,7 @@
           <tr>
             <td style="font-weight: 800; color: #1e3a8a;">
               ${u.deviceId}
-              ${u.deviceId === getDeviceId() ? '<span style="font-size: 0.7rem; color: #2563eb;">(Máy này)</span>' : ''}
+              ${u.deviceId === (typeof getDeviceId === 'function' ? getDeviceId() : '') ? '<span style="font-size: 0.7rem; color: #2563eb;">(Máy này)</span>' : ''}
             </td>
             <td>
               ${u.role === 'vip' 
@@ -371,7 +376,7 @@
         genBtn.disabled = true;
         genBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo mã...';
         const newCode = await generateNewVipKey();
-        showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`, 'success');
+        if (typeof showToast === 'function') showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`, 'success'); else alert(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
         await renderAdminStandalonePage();
       });
     }

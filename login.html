@@ -357,7 +357,11 @@
 
       if (guestBtn) {
         guestBtn.addEventListener('click', () => {
-          if (typeof setUserRole === 'function') setUserRole('guest'); else localStorage.setItem('lms_user_role', 'guest');
+          localStorage.setItem('lms_user_role', 'guest');
+          localStorage.setItem('lms_guest_timer_secs', '300');
+          localStorage.removeItem('lms_guest_expired');
+          localStorage.removeItem('lms_user_logged_out');
+          localStorage.removeItem('lms_is_admin');
           window.location.href = 'index.html';
         });
       }
