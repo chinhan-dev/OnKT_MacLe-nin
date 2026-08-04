@@ -1,0 +1,394 @@
+admin_html_content = """<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Quản Trị Admin - LMS Triết Học Mác - Lênin</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: #f8fafc;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .admin-navbar {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .admin-nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .admin-nav-brand .icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, #7c3aed, #4c1d95);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .admin-nav-brand h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0;
+    }
+
+    .admin-nav-brand p {
+      font-size: 0.78rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .admin-nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-nav-home {
+      padding: 9px 16px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav-home:hover {
+      background: #dbeafe;
+    }
+
+    .btn-nav-logout {
+      padding: 9px 16px;
+      background: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fca5a5;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav-logout:hover {
+      background: #fee2e2;
+    }
+
+    .admin-page-container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+    }
+
+    .admin-standalone-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      padding: 32px;
+    }
+
+    .admin-pass-form-card {
+      max-width: 420px;
+      margin: 60px auto;
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+      padding: 36px 28px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="admin-navbar">
+    <div class="admin-nav-brand">
+      <div class="icon"><i class="fa-solid fa-user-shield"></i></div>
+      <div>
+        <h1>Trang Quản Trị Admin</h1>
+        <p>LMS Ôn Luyện Triết Học Mác - Lênin</p>
+      </div>
+    </div>
+
+    <div class="admin-nav-controls">
+      <a href="index.html" class="btn-nav-home">
+        <i class="fa-solid fa-arrow-left"></i> Về trang Ôn Luyện
+      </a>
+      <button class="btn-nav-logout" id="adminLogoutNavBtn">
+        <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất Admin
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="admin-page-container" id="adminMainContainer">
+    <!-- Rendered dynamically -->
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="toast_helper.js"></script>
+  <script src="admin.js"></script>
+  <script src="auth.js"></script>
+  <script>
+    let currentAdminTab = 'keys';
+
+    async function renderAdminStandalonePage() {
+      const container = document.getElementById('adminMainContainer');
+      const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
+
+      if (!isAdmin) {
+        // Password Prompt Card
+        container.innerHTML = `
+          <div class="admin-pass-form-card">
+            <div class="login-header" style="margin-bottom: 20px;">
+              <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95); width: 64px; height: 64px; font-size: 28px; margin: 0 auto 14px auto;">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <h2 style="font-size: 1.3rem; color: #581c87; margin: 0 0 6px 0;">ĐĂNG NHẬP ADMIN</h2>
+              <p style="font-size: 0.88rem; color: #64748b; margin: 0;">Vui lòng nhập mật khẩu Admin để quản lý mã VIP & Học viên</p>
+            </div>
+
+            <div style="display: flex; gap: 8px; margin-top: 16px;">
+              <input type="password" id="adminPassInputPage" placeholder="Nhập mật khẩu Admin..." style="flex: 1; padding: 14px 16px; border-radius: 12px; border: 2px solid #7c3aed; font-size: 1rem; outline: none;">
+              <button id="adminPassSubmitPage" style="padding: 14px 20px; background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; border: none; border-radius: 12px; font-weight: 800; cursor: pointer;">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <p class="pass-error" id="adminPassErrPage" style="display: none; color: #dc2626; font-size: 0.85rem; font-weight: 700; margin-top: 10px;">❌ Mật khẩu Admin không đúng!</p>
+          </div>
+        `;
+
+        const passInput = document.getElementById('adminPassInputPage');
+        const passSubmit = document.getElementById('adminPassSubmitPage');
+        const passErr = document.getElementById('adminPassErrPage');
+
+        passInput.focus();
+
+        function checkPass() {
+          if (passInput.value.trim() === 'chinhanxt') {
+            localStorage.setItem('lms_is_admin', 'true');
+            setUserRole('vip');
+            renderAdminStandalonePage();
+          } else {
+            passErr.style.display = 'block';
+          }
+        }
+
+        passSubmit.addEventListener('click', checkPass);
+        passInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') checkPass();
+        });
+        return;
+      }
+
+      // Render Loading UI first
+      container.innerHTML = `
+        <div class="admin-standalone-card" style="text-align: center; padding: 60px;">
+          <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95); width: 60px; height: 60px; font-size: 26px; margin: 0 auto;"><i class="fa-solid fa-spinner fa-spin"></i></div>
+          <h3 style="font-size: 1.2rem; color: #581c87; margin-top: 16px;">Đang nạp dữ liệu Real-time từ Cloud...</h3>
+          <p style="font-size: 0.88rem; color: #64748b;">Vui lòng chờ trong giây lát</p>
+        </div>
+      `;
+
+      // Fetch Real-time Cloud Data
+      const cloudData = await fetchCloudData();
+      const keys = cloudData.keys;
+      const users = cloudData.users;
+
+      const vipCount = users.filter(u => u.role === 'vip').length;
+      const guestCount = users.filter(u => u.role === 'guest').length;
+      const totalUsers = users.length;
+
+      let contentHtml = '';
+
+      if (currentAdminTab === 'keys') {
+        let keysRows = keys.map((k) => `
+          <tr>
+            <td style="font-weight: 800; color: #1d4ed8;">${k.key}</td>
+            <td>
+              ${k.status === 'used' 
+                ? `<span class="badge-status-used">🔴 Đã dùng (${k.deviceId || ''})</span>` 
+                : `<span class="badge-status-unused">🟢 Chưa dùng</span>`}
+            </td>
+            <td style="font-size: 0.78rem; color: #64748b;">${k.createdAt || ''}</td>
+            <td>
+              <button class="btn-copy-key" onclick="copyKeyToClipboard('${k.key}')" title="Copy mã"><i class="fa-solid fa-copy"></i></button>
+              <button class="btn-delete-key" onclick="deleteVipKey('${k.key}')" title="Xóa mã"><i class="fa-solid fa-trash"></i></button>
+            </td>
+          </tr>
+        `).join('');
+
+        contentHtml = `
+          <div class="admin-actions" style="margin-bottom: 16px;">
+            <button class="btn-login-vip" id="btnGenKeyPage" style="background: linear-gradient(135deg, #10b981, #059669); padding: 12px 20px; font-size: 0.95rem;">
+              <i class="fa-solid fa-plus-circle"></i> + Tạo Mã VIP Mới
+            </button>
+          </div>
+
+          <div class="keys-table-container">
+            <table class="admin-keys-table">
+              <thead>
+                <tr>
+                  <th>Mã VIP</th>
+                  <th>Trạng thái</th>
+                  <th>Ngày tạo</th>
+                  <th>Thao tác</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${keysRows || '<tr><td colspan="4" style="text-align: center; padding: 24px; color: #64748b;">Chưa có mã nào. Bấm "+ Tạo Mã VIP Mới" để tạo!</td></tr>'}
+              </tbody>
+            </table>
+          </div>
+        `;
+      } else {
+        let usersRows = users.map((u) => `
+          <tr>
+            <td style="font-weight: 800; color: #1e3a8a;">
+              ${u.deviceId}
+              ${u.deviceId === getDeviceId() ? '<span style="font-size: 0.7rem; color: #2563eb;">(Máy này)</span>' : ''}
+            </td>
+            <td>
+              ${u.role === 'vip' 
+                ? `<span class="badge-status-unused">👑 VIP</span>` 
+                : `<span class="badge-status-used" style="background: #fff7ed; color: #c2410c;">⏱️ Khách</span>`}
+            </td>
+            <td style="font-size: 0.8rem; font-weight: 700;">${u.activatedKey || 'Không'}</td>
+            <td style="font-size: 0.78rem; color: #64748b;">${u.lastActive || ''}</td>
+            <td>
+              ${u.role !== 'vip' 
+                ? `<button class="btn-promote-user" onclick="promoteUserToVip('${u.deviceId}')"><i class="fa-solid fa-crown"></i> Cấp VIP</button>` 
+                : `<button class="btn-block-user" onclick="demoteUserToGuest('${u.deviceId}')"><i class="fa-solid fa-lock"></i> Hạ Khách</button>`}
+              <button class="btn-delete-key" onclick="deleteUserRecord('${u.deviceId}')" title="Xóa User"><i class="fa-solid fa-trash"></i></button>
+            </td>
+          </tr>
+        `).join('');
+
+        contentHtml = `
+          <div class="keys-table-container">
+            <table class="admin-keys-table">
+              <thead>
+                <tr>
+                  <th>Thiết Bị / User ID</th>
+                  <th>Quyền</th>
+                  <th>Mã Kích Hoạt</th>
+                  <th>Hoạt động cuối</th>
+                  <th>Thao tác</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${usersRows || '<tr><td colspan="5" style="text-align: center; padding: 24px; color: #64748b;">Chưa có dữ liệu học viên.</td></tr>'}
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+
+      container.innerHTML = `
+        <div class="admin-standalone-card">
+          <!-- Stats Bar -->
+          <div class="admin-stats-row">
+            <div class="stat-box">
+              <div class="num">${totalUsers}</div>
+              <div class="lbl">Tổng Học Viên</div>
+            </div>
+            <div class="stat-box">
+              <div class="num" style="color: #059669;">${vipCount}</div>
+              <div class="lbl">Học Viên VIP</div>
+            </div>
+            <div class="stat-box">
+              <div class="num" style="color: #c2410c;">${guestCount}</div>
+              <div class="lbl">Khách Dùng Thử</div>
+            </div>
+          </div>
+
+          <!-- Admin Tabs -->
+          <div class="admin-tab-bar" style="margin-top: 24px;">
+            <button class="admin-tab-btn ${currentAdminTab === 'keys' ? 'active' : ''}" id="adminTabKeysPage">
+              <i class="fa-solid fa-key"></i> Quản Lý Mã VIP (${keys.length})
+            </button>
+            <button class="admin-tab-btn ${currentAdminTab === 'users' ? 'active' : ''}" id="adminTabUsersPage">
+              <i class="fa-solid fa-users"></i> Quản Lý Học Viên (${users.length})
+            </button>
+          </div>
+
+          ${contentHtml}
+        </div>
+      `;
+
+      // Event Listeners
+      const tabKeys = document.getElementById('adminTabKeysPage');
+      const tabUsers = document.getElementById('adminTabUsersPage');
+      const genBtn = document.getElementById('btnGenKeyPage');
+
+      if (tabKeys) tabKeys.addEventListener('click', () => { currentAdminTab = 'keys'; renderAdminStandalonePage(); });
+      if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; renderAdminStandalonePage(); });
+      if (genBtn) genBtn.addEventListener('click', async () => {
+        genBtn.disabled = true;
+        genBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo mã...';
+        const newCode = await generateNewVipKey();
+        showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`, 'success');
+        await renderAdminStandalonePage();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('adminLogoutNavBtn').addEventListener('click', () => {
+        localStorage.removeItem('lms_is_admin');
+        if (typeof handleLogout === 'function') {
+          handleLogout();
+        } else {
+          window.location.href = 'login.html';
+        }
+      });
+
+      renderAdminStandalonePage();
+    });
+  </script>
+</body>
+</html>
+"""
+
+with open('admin.html', 'w', encoding='utf-8') as f:
+    f.write(admin_html_content)
+
+print("Created standalone admin.html page.")

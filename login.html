@@ -267,6 +267,14 @@
   <script src="auth.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Check if redirected due to 5-minute guest timer expiration
+      if (localStorage.getItem('lms_guest_expired') === 'true') {
+        const errBox = document.getElementById('standaloneError');
+        if (errBox) {
+          errBox.innerHTML = '⚠️ <strong>HẾT THỜI GIAN 5 PHÚT DÙNG THỬ CHO KHÁCH!</strong><br>Vui lòng nhập Mã VIP để tiếp tục sử dụng hệ thống.';
+          errBox.style.display = 'block';
+        }
+      }
       const vipInput = document.getElementById('standaloneVipInput');
       const vipBtn = document.getElementById('standaloneVipBtn');
       const guestBtn = document.getElementById('standaloneGuestBtn');

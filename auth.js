@@ -280,7 +280,8 @@ function startGuestTimer() {
       clearInterval(guestInterval);
       localStorage.setItem(GUEST_TIMER_KEY, '0');
       localStorage.removeItem(AUTH_KEY);
-      showLoginModal(true);
+      localStorage.setItem('lms_guest_expired', 'true');
+      window.location.href = 'login.html';
     } else {
       localStorage.setItem(GUEST_TIMER_KEY, remaining.toString());
       const el = document.getElementById('guestCountdown');

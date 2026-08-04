@@ -1,3 +1,10 @@
+async function refreshAdminUI() {
+  if (window.location.pathname.endsWith('admin.html') && typeof renderAdminStandalonePage === 'function') {
+    await renderAdminStandalonePage();
+  } else if (typeof openAdminPanelModal === 'function') {
+    await refreshAdminUI();
+  }
+}
 /* ==========================================================================
    GLOBAL CONSTANTS & CONFIGURATION
    ========================================================================== */
@@ -526,14 +533,14 @@ async function openAdminPanelModal() {
   const genBtn = document.getElementById('btnGenKey');
   const closeBtn = document.getElementById('btnCloseAdmin');
 
-  if (tabKeys) tabKeys.addEventListener('click', () => { currentAdminTab = 'keys'; openAdminPanelModal(); });
-  if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; openAdminPanelModal(); });
+  if (tabKeys) tabKeys.addEventListener('click', () => { currentAdminTab = 'keys'; refreshAdminUI(); });
+  if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; refreshAdminUI(); });
   if (genBtn) genBtn.addEventListener('click', async () => {
     genBtn.disabled = true;
     genBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo mã...';
     const newCode = await generateNewVipKey();
     if (typeof showToast === 'function') showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`, 'success'); else alert(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
-    await openAdminPanelModal();
+    await refreshAdminUI();
   });
   if (closeBtn) closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
 }
@@ -560,7 +567,7 @@ function deleteVipKey(key) {
 
       await saveAndPushCloudData(keys, users);
       if (typeof showToast === 'function') showToast(`🗑️ Đã xóa mã VIP ${key}`, 'info');
-      await openAdminPanelModal();
+      await refreshAdminUI();
     });
   }
 }
@@ -577,7 +584,7 @@ function promoteUserToVip(devId) {
       localStorage.setItem('lms_is_admin', 'true'); setUserRole('vip');
       location.reload();
     } else {
-      openAdminPanelModal();
+      refreshAdminUI();
     }
   }
 }
@@ -594,7 +601,7 @@ function demoteUserToGuest(devId) {
       setUserRole('guest');
       location.reload();
     } else {
-      openAdminPanelModal();
+      refreshAdminUI();
     }
   }
 }
@@ -616,91 +623,20 @@ function deleteUserRecord(devId) {
 
       await saveAndPushCloudData(keys, users);
       if (typeof showToast === 'function') showToast(`🗑️ Đã xóa học viên ${devId}`, 'info');
-      await openAdminPanelModal();
+      await refreshAdminUI();
     });
   }
 }
 
 function promptAdminLogin() {
-  const loginModal = document.getElementById('loginModal');
-  if (loginModal) loginModal.style.display = 'none';
-
-  let modal = document.getElementById('adminPassModal');
-  if (!modal) {
-    modal = document.createElement('div');
-    modal.id = 'adminPassModal';
-    modal.className = 'login-overlay';
-    document.body.appendChild(modal);
-  }
-  modal.style.zIndex = '99999';
-
-  modal.innerHTML = `
-    <div class="login-card" style="max-width: 400px; padding: 32px 28px;">
-      <div class="login-header">
-        <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95); width: 60px; height: 60px; font-size: 26px;">
-          <i class="fa-solid fa-user-shield"></i>
-        </div>
-        <h2 style="font-size: 1.25rem; color: #581c87;">ĐĂNG NHẬP QUẢN TRỊ ADMIN</h2>
-        <p style="font-size: 0.85rem; color: #64748b;">Vui lòng nhập mật khẩu Admin để truy cập Dashboard</p>
-      </div>
-
-      <div class="pass-input-group" style="display: flex; gap: 8px; margin-top: 8px;">
-        <input type="password" id="adminPassInputModal" placeholder="Nhập mật khẩu Admin..." style="flex: 1; padding: 12px 14px; border-radius: 12px; border: 2px solid #7c3aed; font-size: 0.95rem; outline: none;">
-        <button id="adminPassSubmitModal" style="padding: 12px 18px; background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; border: none; border-radius: 12px; font-weight: 800; cursor: pointer;">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-
-      <p class="pass-error" id="adminPassErrorModal" style="display: none; color: #dc2626; font-size: 0.85rem; font-weight: 700; margin-top: 6px;">❌ Mật khẩu Admin không đúng!</p>
-
-      <button id="adminPassCloseModal" class="btn-login-guest" style="margin-top: 12px; padding: 10px; border-radius: 10px; font-size: 0.88rem;">Hủy bỏ</button>
-    </div>
-  `;
-
-  modal.style.display = 'flex';
-
-  const input = document.getElementById('adminPassInputModal');
-  const submitBtn = document.getElementById('adminPassSubmitModal');
-  const closeBtn = document.getElementById('adminPassCloseModal');
-  const err = document.getElementById('adminPassErrorModal');
-
-  input.focus();
-
-  function verifyAdminPass() {
-    const entered = input.value.trim();
-    if (entered === ADMIN_PASS) {
-      modal.style.display = 'none';
-      localStorage.setItem('lms_is_admin', 'true');
-      setUserRole('vip');
-      if (window.location.pathname.endsWith('login.html')) {
-        window.location.href = 'index.html?openAdmin=true';
-      } else {
-        openAdminPanelModal();
-      }
-    } else {
-      err.style.display = 'block';
-    }
-  }
-
-  submitBtn.addEventListener('click', verifyAdminPass);
-  input.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') verifyAdminPass();
-  });
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    const role = typeof getUserRole === 'function' ? getUserRole() : null;
-    if (!role) {
-      const lm = document.getElementById('loginModal');
-      if (lm) lm.style.display = 'flex';
-    }
-  });
+  window.location.href = 'admin.html';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   trackCurrentDeviceUser();
   if (window.location.search.includes('openAdmin=true')) {
     history.replaceState(null, '', window.location.pathname);
-    openAdminPanelModal();
+    refreshAdminUI();
   }
 });
 
