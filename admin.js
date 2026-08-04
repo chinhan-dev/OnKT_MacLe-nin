@@ -53,7 +53,12 @@ function aggregateUsersFromKeys(keys, users) {
 // Fetch Both Keys & Users from Cloud DB & Merge Cleanly
 async function fetchCloudData() {
   try {
-    const res = await fetch(CLOUD_DB_ENDPOINT, { cache: 'no-store' });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 3500);
+
+    const res = await fetch(CLOUD_DB_ENDPOINT, { cache: 'no-store', signal: controller.signal });
+    clearTimeout(timer);
+
     if (res.ok) {
       const json = await res.json();
       if (json) {
@@ -94,7 +99,7 @@ async function fetchCloudData() {
       }
     }
   } catch (e) {
-    console.warn('Cloud DB fetch offline, using local storage.', e);
+    console.warn('Cloud DB fetch offline/timeout, using local storage.', e);
   }
 
   const lKeys = getVipKeysDB();

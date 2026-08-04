@@ -122,22 +122,34 @@ function showLoginModal(expiredMsg = false) {
 
     passErr.style.display = 'none';
     submitPass.disabled = true;
-    submitPass.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+    submitPass.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Kích hoạt...';
 
-    const res = typeof redeemVipKeyAsync === 'function' 
-      ? await redeemVipKeyAsync(entered) 
-      : redeemVipKey(entered);
+    try {
+      // 5-second max timeout limit
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Mạng quá chậm, vui lòng thử lại!')), 5000)
+      );
 
-    submitPass.disabled = false;
-    submitPass.innerHTML = '<i class="fa-solid fa-arrow-right"></i> Kích hoạt';
+      const redeemPromise = typeof redeemVipKeyAsync === 'function' 
+        ? redeemVipKeyAsync(entered) 
+        : Promise.resolve(redeemVipKey(entered));
 
-    if (res.success) {
-      if (typeof showToast === 'function') showToast(res.msg, 'success'); else alert(res.msg);
-      modal.style.display = 'none';
-      setTimeout(() => { location.reload(); }, 600);
-    } else {
-      passErr.textContent = res.msg;
+      const res = await Promise.race([redeemPromise, timeoutPromise]);
+
+      if (res.success) {
+        if (typeof showToast === 'function') showToast(res.msg, 'success'); else alert(res.msg);
+        modal.style.display = 'none';
+        setTimeout(() => { location.reload(); }, 400);
+      } else {
+        passErr.textContent = res.msg;
+        passErr.style.display = 'block';
+      }
+    } catch (err) {
+      passErr.textContent = '❌ ' + (err.message || 'Lỗi kết nối, vui lòng thử lại!');
       passErr.style.display = 'block';
+    } finally {
+      submitPass.disabled = false;
+      submitPass.innerHTML = '<i class="fa-solid fa-arrow-right"></i> Kích hoạt';
     }
   }
 
