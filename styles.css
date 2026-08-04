@@ -1296,7 +1296,9 @@ input:checked + .slider:before {
 
 /* Admin Panel Styles */
 .admin-card {
-  max-width: 600px !important;
+  max-width: 950px !important;
+  width: 92vw !important;
+  padding: 36px 40px !important;
 }
 
 .admin-actions {
@@ -1306,7 +1308,7 @@ input:checked + .slider:before {
 }
 
 .keys-table-container {
-  max-height: 280px;
+  max-height: 420px;
   overflow-y: auto;
   border: 1px solid #cbd5e1;
   border-radius: 12px;
