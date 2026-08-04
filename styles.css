@@ -976,8 +976,10 @@ input:checked + .slider:before {
 }
 
 
+/* ===
+
 /* ==========================================================================
-   AUTHENTICATION & GUEST TIMER STYLES
+   HIGH-END AUTHENTICATION & GUEST TIMER STYLES
    ========================================================================== */
 .login-overlay {
   position: fixed;
@@ -985,8 +987,9 @@ input:checked + .slider:before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -995,97 +998,99 @@ input:checked + .slider:before {
 }
 
 .login-card {
-  background-color: #ffffff;
-  border-radius: 20px;
+  background: #ffffff;
+  border-radius: 24px;
   border: 1px solid #cbd5e1;
   width: 100%;
-  max-width: 480px;
-  padding: 32px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  max-width: 440px;
+  padding: 36px 32px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   gap: 24px;
   text-align: center;
-  animation: modalScale 0.3s ease-out;
+  animation: modalPop 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes modalScale {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+@keyframes modalPop {
+  from { transform: scale(0.92) translateY(10px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
 }
 
 .login-logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #ffffff;
-  font-size: 28px;
+  font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 12px auto;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  margin: 0 auto 8px auto;
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
 }
 
 .login-header h2 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #1e3a8a;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
 }
 
 .login-header p {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #64748b;
+  line-height: 1.5;
 }
 
 .login-options {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .btn-login-vip, .btn-login-guest {
   width: 100%;
   padding: 14px 20px;
-  border-radius: 12px;
+  border-radius: 14px;
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: all 0.2s ease;
-
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-login-vip {
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #ffffff;
   border: none;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
 }
 
 .btn-login-vip:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
 
 .btn-login-guest {
-  background-color: #f1f5f9;
+  background-color: #f8fafc;
   color: #334155;
   border: 1px solid #cbd5e1;
 }
 
 .btn-login-guest:hover {
-  background-color: #e2e8f0;
+  background-color: #f1f5f9;
   color: #0f172a;
+  border-color: #94a3b8;
 }
 
 .pass-input-group {
-  margin-top: 10px;
+  margin-top: 12px;
   display: flex;
   gap: 8px;
 }
@@ -1093,28 +1098,35 @@ input:checked + .slider:before {
 .pass-input-group input {
   flex: 1;
   padding: 12px 16px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 2px solid #2563eb;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   outline: none;
   font-weight: 600;
+  background-color: #ffffff;
+  color: #0f172a;
 }
 
 .pass-input-group button {
   padding: 12px 18px;
   background-color: #2563eb;
-  color: white;
+  color: #ffffff;
   border: none;
-  border-radius: 10px;
-  font-weight: 700;
+  border-radius: 12px;
+  font-weight: 800;
   cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pass-input-group button:hover {
+  background-color: #1d4ed8;
 }
 
 .pass-error {
   color: #dc2626;
   font-size: 0.85rem;
   font-weight: 700;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 /* User Badge in Header */
@@ -1122,7 +1134,7 @@ input:checked + .slider:before {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: 9999px;
   font-size: 0.82rem;
   font-weight: 800;
@@ -1138,55 +1150,56 @@ input:checked + .slider:before {
   background-color: #fff7ed;
   color: #c2410c;
   border: 1px solid #ffedd5;
-
 }
 
 .timer-count {
   font-family: monospace;
-  font-size: 0.95rem;
-  background-color: #ffebd5;
-  padding: 2px 6px;
-  border-radius: 4px;
+  font-size: 0.92rem;
+  background-color: rgba(194, 65, 12, 0.1);
+  padding: 2px 8px;
+  border-radius: 6px;
 }
 
-/* Locked Tab Overlay on meo_hoc.html */
+/* Locked Tab Banner on meo_hoc.html */
 .locked-tab-banner {
   background-color: #ffffff;
   border: 2px dashed #cbd5e1;
-  border-radius: 16px;
-  padding: 48px 32px;
+  border-radius: 20px;
+  padding: 48px 36px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  max-width: 600px;
+  max-width: 560px;
   margin: 40px auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
 }
 
 .locked-icon {
   width: 64px;
   height: 64px;
-  border-radius: 50%;
+  border-radius: 20px;
   background-color: #fef2f2;
   color: #ef4444;
   font-size: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
 }
 
 .locked-tab-banner h3 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #1e3a8a;
+  margin-top: 4px;
 }
 
 .locked-tab-banner p {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: #64748b;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .btn-unlock-vip {
@@ -1198,6 +1211,14 @@ input:checked + .slider:before {
   font-weight: 800;
   font-size: 0.9rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
+.btn-unlock-vip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}

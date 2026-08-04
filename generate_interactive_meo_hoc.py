@@ -669,6 +669,7 @@ html = f"""<!DOCTYPE html>
       gap: 8px;
     }}
   </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
