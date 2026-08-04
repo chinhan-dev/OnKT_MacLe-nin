@@ -1,3 +1,12 @@
+/* ==========================================================================
+   GLOBAL CONSTANTS & CONFIGURATION
+   ========================================================================== */
+const ADMIN_PASS = 'chinhanxt';
+const VIP_KEYS_STORAGE = 'lms_vip_keys_db';
+const USERS_DB_STORAGE = 'lms_users_db';
+const DEVICE_ID_KEY = 'lms_device_fingerprint';
+const ACTIVATED_KEY_STORAGE = 'lms_activated_vip_key';
+const CLOUD_DB_ENDPOINT = 'https://jsonblob.com/api/jsonBlob/019fcb1f-708b-750f-948f-caa9398416e8';
 
 // Save & Overwrite Cloud DB Directly for Delete & Modify Actions
 async function saveAndPushCloudData(keys, users) {
@@ -24,7 +33,7 @@ async function saveAndPushCloudData(keys, users) {
 }
 
 
-const CLOUD_DB_ENDPOINT = 'https://jsonblob.com/api/jsonBlob/019fcb1f-708b-750f-948f-caa9398416e8';
+
 
 function aggregateUsersFromKeys(keys, users) {
   const mergedUsers = [...users];
@@ -161,11 +170,11 @@ async function pushCloudData(keysToPush, usersToPush) {
    ADMIN PANEL & USER MANAGEMENT SYSTEM (Pass: chinhanxt)
    ========================================================================== */
 
-const ADMIN_PASS = 'chinhanxt';
-const VIP_KEYS_STORAGE = 'lms_vip_keys_db';
-const USERS_DB_STORAGE = 'lms_users_db';
-const DEVICE_ID_KEY = 'lms_device_fingerprint';
-const ACTIVATED_KEY_STORAGE = 'lms_activated_vip_key';
+
+
+
+
+
 
 // Generate or retrieve unique device fingerprint
 function getDeviceId() {
@@ -629,3 +638,13 @@ function promptAdminLogin() {
 }
 
 document.addEventListener('DOMContentLoaded', trackCurrentDeviceUser);
+
+
+async function fetchCloudKeysDB() {
+  const d = await fetchCloudData();
+  return d.keys;
+}
+
+async function pushCloudKeysDB(keysToPush) {
+  await pushCloudData(keysToPush, getUsersDB());
+}
