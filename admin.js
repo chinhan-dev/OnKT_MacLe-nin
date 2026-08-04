@@ -151,19 +151,8 @@ async function trackCurrentDeviceUser() {
     user.activatedKey = activatedKey;
     user.lastActive = lastActive;
     user.deviceType = userAgent;
-  } else {
-    users.push({
-      deviceId: devId,
-      name: `Học viên ${devId}`,
-      role: role,
-      activatedKey: activatedKey,
-      deviceType: userAgent,
-      createdAt: lastActive,
-      lastActive: lastActive
-    });
+    saveUsersDB(users);
   }
-
-  pushCloudKeysDB(getVipKeysDB());
 }
 
 function getUsersDB() {
