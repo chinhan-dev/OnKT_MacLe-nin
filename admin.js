@@ -79,6 +79,8 @@ function aggregateUsersFromKeys(keys, users) {
 // Fetch Both Keys & Users from Cloud DB / Google Sheets Proxy Direct Sync
 async function fetchCloudData() {
   const endpoint = getCloudEndpoint();
+  const lKeys = getVipKeysDB();
+  const lUsers = getUsersDB();
 
   try {
     const controller = new AbortController();
@@ -94,19 +96,28 @@ async function fetchCloudData() {
         const cloudKeys = Array.isArray(dbObj.keys) ? dbObj.keys : [];
         const cloudUsers = Array.isArray(dbObj.users) ? dbObj.users : [];
 
-        // Direct overwrite so deleted users/keys NEVER reappear
-        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(cloudKeys));
-        localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(cloudUsers));
+        // Smart Map Merge: Combine cloud and local keys so fast-created keys are NEVER lost
+        const keyMap = new Map();
+        cloudKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
+        lKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
 
-        return { keys: cloudKeys, users: cloudUsers, fromCloud: true };
+        const userMap = new Map();
+        cloudUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
+        lUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
+
+        const finalKeys = Array.from(keyMap.values());
+        const finalUsers = Array.from(userMap.values());
+
+        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(finalKeys));
+        localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(finalUsers));
+
+        return { keys: finalKeys, users: finalUsers, fromCloud: true };
       }
     }
   } catch (e) {
     console.warn('Cloud DB / Google Sheet fetch offline/timeout, using local storage.', e);
   }
 
-  const lKeys = getVipKeysDB();
-  const lUsers = getUsersDB();
   return { keys: lKeys, users: lUsers, fromCloud: false };
 }
 

@@ -477,6 +477,7 @@
     }
 
     async function fetchCloudData() {
+      const { keys: localKeys, users: localUsers } = getLocalData();
       try {
         const url = getSheetUrl();
         const res = await fetch(url, { cache: 'no-store' });
@@ -486,9 +487,26 @@
             const cloudKeys = Array.isArray(json.keys) ? json.keys : [];
             const cloudUsers = Array.isArray(json.users) ? json.users : [];
             
-            // Sync directly with Cloud DB so deleted users/keys NEVER reappear
-            saveLocalData(cloudKeys, cloudUsers);
-            return { keys: cloudKeys, users: cloudUsers };
+            // Smart Map Merge: Combine cloud and local keys so fast-created keys are NEVER lost
+            const keyMap = new Map();
+            cloudKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
+            localKeys.forEach(k => { if (k && k.key) keyMap.set(k.key.toUpperCase(), k); });
+
+            const userMap = new Map();
+            cloudUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
+            localUsers.forEach(u => { if (u && u.deviceId) userMap.set(u.deviceId, u); });
+
+            const mergedKeys = Array.from(keyMap.values());
+            const mergedUsers = Array.from(userMap.values());
+
+            saveLocalData(mergedKeys, mergedUsers);
+
+            // Re-push merged state to cloud if cloud was missing any key
+            if (mergedKeys.length > cloudKeys.length || mergedUsers.length > cloudUsers.length) {
+              pushCloudData(mergedKeys, mergedUsers);
+            }
+
+            return { keys: mergedKeys, users: mergedUsers };
           }
         }
       } catch (e) {
@@ -745,9 +763,9 @@
           // 1. Save and render INSTANTLY (0ms)
           saveLocalData(curKeys, curUsers);
           showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
-          renderDashboard();
-          // 2. Background push to Google Sheet
-          pushCloudData(curKeys, curUsers);
+          renderDashboardUI(app, curKeys, curUsers);
+          // 2. Background push to Google Sheet & await confirmation
+          await pushCloudData(curKeys, curUsers);
         };
       }
     }
@@ -758,7 +776,7 @@
       showToast(`📋 Đã copy mã VIP: ${key}`);
     };
 
-    window.deleteKey = function(key) {
+    window.deleteKey = async function(key) {
       if (confirm(`Bạn có chắc muốn xóa mã VIP ${key}?`)) {
         const { keys, users } = getLocalData();
         const newKeys = keys.filter(k => k.key.toUpperCase() !== key.toUpperCase());
@@ -770,12 +788,13 @@
         });
         saveLocalData(newKeys, users);
         showToast(`🗑️ Đã xóa mã VIP ${key}`);
-        renderDashboard();
-        pushCloudData(newKeys, users);
+        const app = document.getElementById('adminApp');
+        if (app) renderDashboardUI(app, newKeys, users);
+        await pushCloudData(newKeys, users);
       }
     };
 
-    window.setUserRoleAdmin = function(devId, newRole) {
+    window.setUserRoleAdmin = async function(devId, newRole) {
       const { keys, users } = getLocalData();
       const u = users.find(x => x.deviceId === devId);
       if (u) {
@@ -783,12 +802,13 @@
         if (newRole === 'guest') u.activatedKey = 'N/A';
         saveLocalData(keys, users);
         showToast(`⚡ Đã chuyển học viên ${devId} sang ${newRole.toUpperCase()}`);
-        renderDashboard();
-        pushCloudData(keys, users);
+        const app = document.getElementById('adminApp');
+        if (app) renderDashboardUI(app, keys, users);
+        await pushCloudData(keys, users);
       }
     };
 
-    window.deleteUserAdmin = function(devId) {
+    window.deleteUserAdmin = async function(devId) {
       if (confirm(`Bạn có chắc muốn xóa học viên ${devId}?`)) {
         const { keys, users } = getLocalData();
         const newUsers = users.filter(u => u.deviceId !== devId);
@@ -800,8 +820,9 @@
         });
         saveLocalData(keys, newUsers);
         showToast(`🗑️ Đã xóa học viên ${devId}`);
-        renderDashboard();
-        pushCloudData(keys, newUsers);
+        const app = document.getElementById('adminApp');
+        if (app) renderDashboardUI(app, keys, newUsers);
+        await pushCloudData(keys, newUsers);
       }
     };
 
