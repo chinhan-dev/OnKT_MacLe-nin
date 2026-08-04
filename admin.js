@@ -31,9 +31,10 @@ async function fetchCloudData() {
     const res = await fetch(CLOUD_DB_ENDPOINT, { cache: 'no-store' });
     if (res.ok) {
       const json = await res.json();
-      if (json && json.data) {
-        const cloudKeys = json.data.keys || [];
-        const cloudUsers = json.data.users || [];
+      if (json) {
+        const dbObj = json.data || json;
+        const cloudKeys = Array.isArray(dbObj.keys) ? dbObj.keys : [];
+        const cloudUsers = Array.isArray(dbObj.users) ? dbObj.users : [];
 
         // Merge Keys
         const localKeysData = localStorage.getItem(VIP_KEYS_STORAGE);
@@ -84,9 +85,10 @@ async function pushCloudData(keysToPush, usersToPush) {
     let cloudUsers = [];
     if (getRes.ok) {
       const json = await getRes.json();
-      if (json && json.data) {
-        cloudKeys = json.data.keys || [];
-        cloudUsers = json.data.users || [];
+      if (json) {
+        const dbObj = json.data || json;
+        cloudKeys = Array.isArray(dbObj.keys) ? dbObj.keys : [];
+        cloudUsers = Array.isArray(dbObj.users) ? dbObj.users : [];
       }
     }
 
@@ -221,16 +223,16 @@ function saveVipKeysDB(keys) {
   localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(keys));
 }
 
-function generateNewVipKey() {
+async function generateNewVipKey() {
   const code = 'MAC-' + Math.random().toString(36).substring(2, 8).toUpperCase();
-  const keys = getVipKeysDB();
+  let keys = await fetchCloudKeysDB();
   keys.push({
     key: code,
     status: 'unused',
     deviceId: null,
     createdAt: new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN')
   });
-  pushCloudKeysDB(keys);
+  await pushCloudKeysDB(keys);
   return code;
 }
 
@@ -460,10 +462,12 @@ async function openAdminPanelModal() {
 
   if (tabKeys) tabKeys.addEventListener('click', () => { currentAdminTab = 'keys'; openAdminPanelModal(); });
   if (tabUsers) tabUsers.addEventListener('click', () => { currentAdminTab = 'users'; openAdminPanelModal(); });
-  if (genBtn) genBtn.addEventListener('click', () => {
-    const newCode = generateNewVipKey();
+  if (genBtn) genBtn.addEventListener('click', async () => {
+    genBtn.disabled = true;
+    genBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo mã...';
+    const newCode = await generateNewVipKey();
     if (typeof showToast === 'function') showToast(`🎉 Đã tạo Mã VIP mới: ${newCode}`, 'success'); else alert(`🎉 Đã tạo Mã VIP mới: ${newCode}`);
-    openAdminPanelModal();
+    await openAdminPanelModal();
   });
   if (closeBtn) closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
 }
