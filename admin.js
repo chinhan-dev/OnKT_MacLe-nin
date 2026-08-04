@@ -637,13 +637,19 @@ function promptAdminLogin() {
   window.location.href = 'admin.html';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAdminScript() {
   trackCurrentDeviceUser();
   if (window.location.search.includes('openAdmin=true')) {
     history.replaceState(null, '', window.location.pathname);
     refreshAdminUI();
   }
-});
+}
+
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+  initAdminScript();
+} else {
+  document.addEventListener('DOMContentLoaded', initAdminScript);
+}
 
 async function fetchCloudKeysDB() {
   const d = await fetchCloudData();

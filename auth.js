@@ -349,4 +349,8 @@ function restrictGuestPage() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', initAuthSystem);
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+  initAuthSystem();
+} else {
+  document.addEventListener('DOMContentLoaded', initAuthSystem);
+}

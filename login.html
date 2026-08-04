@@ -266,7 +266,7 @@
   <script src="admin.js"></script>
   <script src="auth.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    function initLoginPage() {
       const errBox = document.getElementById('standaloneError');
 
       // Check if redirected due to 5-minute guest timer expiration
@@ -283,7 +283,7 @@
       const adminBtn = document.getElementById('standaloneAdminBtn');
 
       // If user is already authenticated and not logged out or expired, redirect to index.html
-      const role = getUserRole();
+      const role = typeof getUserRole === 'function' ? getUserRole() : localStorage.getItem('lms_user_role');
       const isLoggedOut = localStorage.getItem('lms_user_logged_out') === 'true';
       const isExpired = localStorage.getItem('lms_guest_expired') === 'true';
       if (role && !isLoggedOut && !isExpired) {
@@ -291,23 +291,25 @@
         return;
       }
 
-      vipInput.focus();
+      if (vipInput) vipInput.focus();
 
       async function handleStandaloneVip() {
-        const val = vipInput.value.trim();
+        const val = vipInput ? vipInput.value.trim() : '';
         if (!val) return;
 
-        errBox.style.display = 'none';
+        if (errBox) errBox.style.display = 'none';
 
-        if (val === 'chinhanxt') {
+        if (val.toLowerCase() === 'chinhanxt') {
           localStorage.setItem('lms_is_admin', 'true');
-          setUserRole('vip');
+          if (typeof setUserRole === 'function') setUserRole('vip'); else localStorage.setItem('lms_user_role', 'vip');
           window.location.href = 'index.html';
           return;
         }
 
-        vipBtn.disabled = true;
-        vipBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Kích hoạt...';
+        if (vipBtn) {
+          vipBtn.disabled = true;
+          vipBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Kích hoạt...';
+        }
 
         try {
           const timeoutPromise = new Promise((_, reject) => 
@@ -321,43 +323,61 @@
           const res = await Promise.race([redeemPromise, timeoutPromise]);
 
           if (res.success) {
-            showToast(res.msg, 'success');
+            if (typeof showToast === 'function') showToast(res.msg, 'success'); else alert(res.msg);
             localStorage.removeItem('lms_user_logged_out');
             localStorage.removeItem('lms_guest_expired');
             setTimeout(() => {
               window.location.href = 'index.html';
             }, 500);
           } else {
-            errBox.textContent = res.msg;
-            errBox.style.display = 'block';
+            if (errBox) {
+              errBox.textContent = res.msg;
+              errBox.style.display = 'block';
+            }
           }
         } catch (err) {
-          errBox.textContent = '❌ ' + (err.message || 'Lỗi kết nối, vui lòng thử lại!');
-          errBox.style.display = 'block';
+          if (errBox) {
+            errBox.textContent = '❌ ' + (err.message || 'Lỗi kết nối, vui lòng thử lại!');
+            errBox.style.display = 'block';
+          }
         } finally {
-          vipBtn.disabled = false;
-          vipBtn.innerHTML = '<i class="fa-solid fa-arrow-right"></i> Kích hoạt';
+          if (vipBtn) {
+            vipBtn.disabled = false;
+            vipBtn.innerHTML = '<i class="fa-solid fa-arrow-right"></i> Kích hoạt';
+          }
         }
       }
 
-      vipBtn.addEventListener('click', handleStandaloneVip);
-      vipInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') handleStandaloneVip();
-      });
+      if (vipBtn) vipBtn.addEventListener('click', handleStandaloneVip);
+      if (vipInput) {
+        vipInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') handleStandaloneVip();
+        });
+      }
 
-      guestBtn.addEventListener('click', () => {
-        setUserRole('guest');
-        window.location.href = 'index.html';
-      });
+      if (guestBtn) {
+        guestBtn.addEventListener('click', () => {
+          if (typeof setUserRole === 'function') setUserRole('guest'); else localStorage.setItem('lms_user_role', 'guest');
+          window.location.href = 'index.html';
+        });
+      }
 
-      adminBtn.addEventListener('click', () => {
-        if (typeof promptAdminLogin === 'function') {
-          promptAdminLogin();
-        } else {
-          window.location.href = 'admin.html';
-        }
-      });
-    });
+      if (adminBtn) {
+        adminBtn.addEventListener('click', () => {
+          if (typeof promptAdminLogin === 'function') {
+            promptAdminLogin();
+          } else {
+            window.location.href = 'admin.html';
+          }
+        });
+      }
+    }
+
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      initLoginPage();
+    } else {
+      document.addEventListener('DOMContentLoaded', initLoginPage);
+    }
   </script>
 </body>
 </html>

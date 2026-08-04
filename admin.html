@@ -368,18 +368,26 @@
       });
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('adminLogoutNavBtn').addEventListener('click', () => {
-        localStorage.removeItem('lms_is_admin');
-        if (typeof handleLogout === 'function') {
-          handleLogout();
-        } else {
-          window.location.href = 'login.html';
-        }
-      });
-
+    function initAdminPage() {
+      const logoutBtn = document.getElementById('adminLogoutNavBtn');
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+          localStorage.removeItem('lms_is_admin');
+          if (typeof handleLogout === 'function') {
+            handleLogout();
+          } else {
+            window.location.href = 'login.html';
+          }
+        });
+      }
       renderAdminStandalonePage();
-    });
+    }
+
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      initAdminPage();
+    } else {
+      document.addEventListener('DOMContentLoaded', initAdminPage);
+    }
   </script>
 </body>
 </html>
