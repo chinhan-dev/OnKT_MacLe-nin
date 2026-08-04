@@ -87,7 +87,7 @@ function showLoginModal(expiredMsg = false) {
 
         <div style="margin-top: 10px; border-top: 1px solid #e2e8f0; padding-top: 12px;">
           <button class="btn-admin-header" onclick="promptAdminLogin()">
-            <i class="fa-solid fa-user-gear"></i> Đăng nhập Admin Quản Lý Mã (chinhanxt)
+            <i class="fa-solid fa-user-gear"></i> Đăng nhập Admin Quản Lý Mã
           </button>
         </div>
       </div>
@@ -176,7 +176,7 @@ function renderUserBadge(role) {
 
   badgeWrapper.innerHTML = `
     ${badgeContent}
-    <button class="btn-admin-header" onclick="promptAdminLogin()" title="Trang Quản Trị Admin (chinhanxt)">
+    <button class="btn-admin-header" onclick="promptAdminLogin()" title="Trang Quản Trị Admin ">
       <i class="fa-solid fa-user-gear"></i> Admin
     </button>
     <button class="btn-logout-header" id="logoutBtn" title="Đăng xuất khỏi hệ thống">

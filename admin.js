@@ -247,7 +247,7 @@ function openAdminPanelModal() {
     <div class="login-card admin-card">
       <div class="login-header">
         <div class="login-logo" style="background: linear-gradient(135deg, #7c3aed, #4c1d95);"><i class="fa-solid fa-user-shield"></i></div>
-        <h2>TRANG QUẢN TRỊ ADMIN (CHỈNH AN)</h2>
+        <h2>TRANG QUẢN TRỊ ADMIN</h2>
         <p>Quản lý Mã VIP & Danh sách Học viên / Thiết bị</p>
       </div>
 
