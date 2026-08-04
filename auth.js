@@ -73,7 +73,7 @@ function showLoginModal(expiredMsg = false) {
             <i class="fa-solid fa-key"></i> Đã Có Quyền (Nhập Mã VIP 1 Thiết Bị)
           </button>
           <div class="pass-input-group" id="passGroup" style="display: none;">
-            <input type="text" id="vipPasswordInput" placeholder="Nhập mã VIP (VD: MAC-VIP888)..." style="text-transform: uppercase;">
+            <input type="text" id="vipPasswordInput" placeholder="Nhập mã VIP kích hoạt..." style="text-transform: uppercase;">
             <button id="submitVipPassBtn"><i class="fa-solid fa-arrow-right"></i> Kích hoạt</button>
           </div>
           <p class="pass-error" id="passErrorMsg" style="display: none;">❌ Mã không hợp lệ hoặc đã dùng trên máy khác!</p>

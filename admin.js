@@ -81,8 +81,8 @@ function getVipKeysDB() {
   const data = localStorage.getItem(VIP_KEYS_STORAGE);
   if (!data) {
     const initialKeys = [
-      { key: 'MAC-VIP888', status: 'unused', deviceId: null, createdAt: new Date().toLocaleDateString('vi-VN') },
-      { key: 'MAC-VIP999', status: 'unused', deviceId: null, createdAt: new Date().toLocaleDateString('vi-VN') }
+     
+      
     ];
     localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(initialKeys));
     return initialKeys;
