@@ -36,9 +36,13 @@ function formatTime(seconds) {
 }
 
 async function initAuthSystem() {
-  // If user explicitly clicked Logout, respect logout and show login modal!
-  if (localStorage.getItem('lms_user_logged_out') === 'true') {
-    showLoginModal();
+  const isLoginPage = window.location.pathname.endsWith('login.html');
+  const isLoggedOut = localStorage.getItem('lms_user_logged_out') === 'true';
+
+  if (isLoggedOut) {
+    if (!isLoginPage) {
+      window.location.href = 'login.html';
+    }
     return;
   }
 
@@ -47,6 +51,7 @@ async function initAuthSystem() {
   // If user is Master Admin, always maintain access
   if (localStorage.getItem('lms_is_admin') === 'true') {
     applyRolePermissions('vip');
+    if (isLoginPage) window.location.href = 'index.html';
     return;
   }
 
@@ -78,9 +83,15 @@ async function initAuthSystem() {
   }
 
   if (!role) {
-    showLoginModal();
+    if (!isLoginPage) {
+      window.location.href = 'login.html';
+    }
   } else {
-    applyRolePermissions(role);
+    if (isLoginPage) {
+      window.location.href = 'index.html';
+    } else {
+      applyRolePermissions(role);
+    }
   }
 }
 
@@ -255,7 +266,7 @@ function handleLogout() {
   localStorage.removeItem('lms_is_admin');
   localStorage.removeItem(ACTIVATED_KEY_STORAGE);
   if (guestInterval) clearInterval(guestInterval);
-  location.reload();
+  window.location.href = 'login.html';
 }
 
 function startGuestTimer() {

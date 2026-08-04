@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập - LMS Ôn Luyện Triết Học Mác - Lênin</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .standalone-login-card {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2);
+      width: 100%;
+      max-width: 460px;
+      padding: 40px 32px;
+      animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.94) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .login-brand-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .login-brand-icon {
+      width: 68px;
+      height: 68px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.5);
+      margin-bottom: 14px;
+    }
+
+    .login-brand-header h1 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .login-brand-header p {
+      font-size: 0.88rem;
+      color: #64748b;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .login-section-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .vip-input-box {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .vip-input-box input {
+      flex: 1;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 2px solid #cbd5e1;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      outline: none;
+      transition: all 0.2s ease;
+      letter-spacing: 0.05em;
+    }
+
+    .vip-input-box input:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15);
+    }
+
+    .btn-activate-vip {
+      padding: 14px 20px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-activate-vip:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-activate-vip:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .error-msg {
+      background: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fca5a5;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: -4px;
+      margin-bottom: 16px;
+      display: none;
+    }
+
+    .divider-line {
+      height: 1px;
+      background: #e2e8f0;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .divider-line span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 0 12px;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .btn-option-guest {
+      width: 100%;
+      padding: 14px;
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      color: #334155;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-option-guest:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+
+    .btn-option-admin {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #ede9fe, #f3e8ff);
+      border: 1.5px solid #c4b5fd;
+      color: #6b21a8;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-option-admin:hover {
+      background: linear-gradient(135deg, #ddd6fe, #e9d5ff);
+      color: #581c87;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="standalone-login-card">
+    <div class="login-brand-header">
+      <div class="login-brand-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <h1>LMS Triết Học Mác - Lênin</h1>
+      <p>Chọn phương thức kích hoạt để bắt đầu ôn luyện</p>
+    </div>
+
+    <!-- Section 1: VIP Key Activation -->
+    <div class="login-section-title">
+      <i class="fa-solid fa-key" style="color: #7c3aed;"></i> Nhập Mã Kích Hoạt VIP (1 Thiết Bị)
+    </div>
+
+    <div class="vip-input-box">
+      <input type="text" id="standaloneVipInput" placeholder="VD: MAC-XXXXXX" autocomplete="off" spellcheck="false">
+      <button class="btn-activate-vip" id="standaloneVipBtn">
+        <i class="fa-solid fa-arrow-right"></i> Kích hoạt
+      </button>
+    </div>
+    <div class="error-msg" id="standaloneError"></div>
+
+    <div class="divider-line">
+      <span>Hoặc</span>
+    </div>
+
+    <!-- Section 2: Guest Trial -->
+    <button class="btn-option-guest" id="standaloneGuestBtn">
+      <i class="fa-solid fa-user-clock" style="color: #ea580c;"></i> Học Viên Khách (Dùng thử 5 phút)
+    </button>
+
+    <!-- Section 3: Admin Login -->
+    <button class="btn-option-admin" id="standaloneAdminBtn">
+      <i class="fa-solid fa-user-gear"></i> Đăng Nhập Quản Trị Admin
+    </button>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="toast_helper.js"></script>
+  <script src="admin.js"></script>
+  <script src="auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const vipInput = document.getElementById('standaloneVipInput');
+      const vipBtn = document.getElementById('standaloneVipBtn');
+      const guestBtn = document.getElementById('standaloneGuestBtn');
+      const adminBtn = document.getElementById('standaloneAdminBtn');
+      const errBox = document.getElementById('standaloneError');
+
+      // If user is already authenticated, redirect to index.html
+      const role = getUserRole();
+      const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
+      if (role && localStorage.getItem('lms_user_logged_out') !== 'true') {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      vipInput.focus();
+
+      async function handleStandaloneVip() {
+        const val = vipInput.value.trim();
+        if (!val) return;
+
+        errBox.style.display = 'none';
+
+        if (val === 'chinhanxt') {
+          localStorage.setItem('lms_is_admin', 'true');
+          setUserRole('vip');
+          window.location.href = 'index.html';
+          return;
+        }
+
+        vipBtn.disabled = true;
+        vipBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Kích hoạt...';
+
+        try {
+          const timeoutPromise = new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('Kết nối mạng quá chậm, vui lòng thử lại!')), 5000)
+          );
+
+          const redeemPromise = typeof redeemVipKeyAsync === 'function' 
+            ? redeemVipKeyAsync(val) 
+            : Promise.resolve({ success: false, msg: 'Hệ thống chưa sẵn sàng!' });
+
+          const res = await Promise.race([redeemPromise, timeoutPromise]);
+
+          if (res.success) {
+            showToast(res.msg, 'success');
+            localStorage.removeItem('lms_user_logged_out');
+            setTimeout(() => {
+              window.location.href = 'index.html';
+            }, 500);
+          } else {
+            errBox.textContent = res.msg;
+            errBox.style.display = 'block';
+          }
+        } catch (err) {
+          errBox.textContent = '❌ ' + (err.message || 'Lỗi kết nối, vui lòng thử lại!');
+          errBox.style.display = 'block';
+        } finally {
+          vipBtn.disabled = false;
+          vipBtn.innerHTML = '<i class="fa-solid fa-arrow-right"></i> Kích hoạt';
+        }
+      }
+
+      vipBtn.addEventListener('click', handleStandaloneVip);
+      vipInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleStandaloneVip();
+      });
+
+      guestBtn.addEventListener('click', () => {
+        localStorage.removeItem('lms_user_logged_out');
+        setUserRole('guest');
+        window.location.href = 'index.html';
+      });
+
+      adminBtn.addEventListener('click', () => {
+        if (typeof promptAdminLogin === 'function') {
+          promptAdminLogin();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

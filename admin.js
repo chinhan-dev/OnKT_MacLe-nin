@@ -606,7 +606,7 @@ function deleteUserRecord(devId) {
       let keys = cloudData.keys;
       let users = cloudData.users.filter(u => u.deviceId !== devId);
 
-      # Free up any VIP key bound to this deleted user
+      // Free up any VIP key bound to this deleted user
       for (let k of keys) {
         if (k.deviceId === devId) {
           k.status = 'unused';
@@ -672,7 +672,11 @@ function promptAdminLogin() {
       modal.style.display = 'none';
       localStorage.setItem('lms_is_admin', 'true');
       setUserRole('vip');
-      openAdminPanelModal();
+      if (window.location.pathname.endsWith('login.html')) {
+        window.location.href = 'index.html?openAdmin=true';
+      } else {
+        openAdminPanelModal();
+      }
     } else {
       err.style.display = 'block';
     }
@@ -692,7 +696,13 @@ function promptAdminLogin() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', trackCurrentDeviceUser);
+document.addEventListener('DOMContentLoaded', () => {
+  trackCurrentDeviceUser();
+  if (window.location.search.includes('openAdmin=true')) {
+    history.replaceState(null, '', window.location.pathname);
+    openAdminPanelModal();
+  }
+});
 
 
 async function fetchCloudKeysDB() {
