@@ -20,7 +20,6 @@ async function fetchCloudData() {
             mergedKeys.push(lk);
           }
         }
-        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(mergedKeys));
 
         // Merge Users
         const localUsersData = localStorage.getItem(USERS_DB_STORAGE);
@@ -34,6 +33,29 @@ async function fetchCloudData() {
             mergedUsers.push(lu);
           }
         }
+
+        // AUTO-AGGREGATE: Ensure every device that used a VIP key is listed as a VIP User
+        for (const k of mergedKeys) {
+          if (k.status === 'used' && k.deviceId) {
+            let uObj = mergedUsers.find(u => u.deviceId === k.deviceId);
+            if (!uObj) {
+              mergedUsers.push({
+                deviceId: k.deviceId,
+                name: `Học viên ${k.deviceId}`,
+                role: 'vip',
+                activatedKey: k.key,
+                deviceType: '📱/💻 Thiết bị',
+                createdAt: k.activatedAt || k.createdAt || 'Đã dùng mã',
+                lastActive: k.activatedAt || 'Đã dùng mã'
+              });
+            } else {
+              uObj.role = 'vip';
+              uObj.activatedKey = k.key;
+            }
+          }
+        }
+
+        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(mergedKeys));
         localStorage.setItem(USERS_DB_STORAGE, JSON.stringify(mergedUsers));
 
         return { keys: mergedKeys, users: mergedUsers };
@@ -42,7 +64,30 @@ async function fetchCloudData() {
   } catch (e) {
     console.warn('Cloud DB fetch offline, using local storage.', e);
   }
-  return { keys: getVipKeysDB(), users: getUsersDB() };
+
+  // Local fallback with auto-aggregation
+  const lKeys = getVipKeysDB();
+  const lUsers = getUsersDB();
+  for (const k of lKeys) {
+    if (k.status === 'used' && k.deviceId) {
+      let uObj = lUsers.find(u => u.deviceId === k.deviceId);
+      if (!uObj) {
+        lUsers.push({
+          deviceId: k.deviceId,
+          name: `Học viên ${k.deviceId}`,
+          role: 'vip',
+          activatedKey: k.key,
+          deviceType: '📱/💻 Thiết bị',
+          createdAt: k.activatedAt || k.createdAt || 'Đã dùng mã',
+          lastActive: k.activatedAt || 'Đã dùng mã'
+        });
+      } else {
+        uObj.role = 'vip';
+        uObj.activatedKey = k.key;
+      }
+    }
+  }
+  return { keys: lKeys, users: lUsers };
 }
 
 // Alias for backward compatibility
