@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LMS Ôn Luyện Triết Học Mác - Lênin</title>
+
+  <!-- Instant Authentication Guard -->
+  <script>
+    (function() {
+      const isLoggedOut = localStorage.getItem('lms_user_logged_out') === 'true';
+      const isGuestExpired = localStorage.getItem('lms_guest_expired') === 'true';
+      const role = localStorage.getItem('lms_user_role');
+      const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
+
+      if ((!role && !isAdmin) || isLoggedOut || isGuestExpired) {
+        window.location.replace('login.html');
+      }
+    })();
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -171,9 +186,9 @@
 
   <!-- Load Data and Main Script -->
   <script src="quiz_data.js"></script>
-  <script src="app.js"></script>
   <script src="toast_helper.js"></script>
-  <script src="admin.js"></script>
   <script src="auth.js"></script>
+  <script src="admin.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

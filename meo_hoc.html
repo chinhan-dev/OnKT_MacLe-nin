@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mẹo Học & Quy Tắc Khoanh Trắc Nghiệm Triết Học Mác - Lênin (Chuẩn Xác 100%)</title>
 
+  <!-- Instant Authentication Guard -->
+  <script>
+    (function() {
+      const isLoggedOut = localStorage.getItem('lms_user_logged_out') === 'true';
+      const isGuestExpired = localStorage.getItem('lms_guest_expired') === 'true';
+      const role = localStorage.getItem('lms_user_role');
+      const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
+
+      if ((!role && !isAdmin) || isLoggedOut || isGuestExpired) {
+        window.location.replace('login.html');
+      }
+    })();
+  </script>
+
   <!-- Clean typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
