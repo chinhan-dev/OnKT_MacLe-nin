@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AUTH & GUEST TIMER MANAGER (Pass: onluyenthi)
+   AUTH & GUEST TIMER MANAGER (Secret VIP Pass)
    ========================================================================== */
 
 const AUTH_KEY = 'lms_user_role';
@@ -55,7 +55,7 @@ function showLoginModal(expiredMsg = false) {
 
   const msgHtml = expiredMsg 
     ? `<p style="color: #dc2626; font-weight: 800; background: #fef2f2; padding: 10px; border-radius: 8px; border: 1px solid #fca5a5; margin-bottom: 10px;">
-        ⚠️ HẾT THỜI GIAN 5 PHÚT THAO TÁC CHO KHÁCH!<br>Vui lòng nhập mật khẩu "onluyenthi" để dùng không giới hạn.
+        ⚠️ HẾT THỜI GIAN 5 PHÚT THAO TÁC CHO KHÁCH!<br>Vui lòng nhập mật khẩu tài khoản VIP để tiếp tục sử dụng.
        </p>` 
     : '<p>Chọn phương thức đăng nhập để bắt đầu ôn luyện</p>';
 
@@ -73,10 +73,10 @@ function showLoginModal(expiredMsg = false) {
             <i class="fa-solid fa-key"></i> Đã Có Quyền (Nhập Mật Khẩu)
           </button>
           <div class="pass-input-group" id="passGroup" style="display: none;">
-            <input type="password" id="vipPasswordInput" placeholder="Nhập pass: onluyenthi">
+            <input type="password" id="vipPasswordInput" placeholder="Nhập mật khẩu...">
             <button id="submitVipPassBtn"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
-          <p class="pass-error" id="passErrorMsg" style="display: none;">❌ Mật khẩu không đúng! Thử lại "onluyenthi"</p>
+          <p class="pass-error" id="passErrorMsg" style="display: none;">❌ Mật khẩu không chính xác!</p>
         </div>
 
         <div class="option-box">
@@ -198,7 +198,7 @@ function restrictGuestPage() {
           <div class="locked-tab-banner">
             <div class="locked-icon"><i class="fa-solid fa-lock"></i></div>
             <h3>TÍNH NĂNG BỊ KHÓA DÀNH CHO KHÁCH</h3>
-            <p>Trang Mẹo Học phần này chỉ dành riêng cho <strong>Tài khoản đã có quyền</strong>.<br>Vui lòng nhập mật khẩu <strong>"onluyenthi"</strong> để mở khóa trọn bộ!</p>
+            <p>Trang Mẹo Học phần này chỉ dành riêng cho <strong>Tài khoản đã có quyền</strong>.<br>Vui lòng đăng nhập với mật khẩu VIP để mở khóa trọn bộ!</p>
             <button class="btn-unlock-vip" onclick="showLoginModal()"><i class="fa-solid fa-key"></i> Đăng nhập Mật Khẩu VIP</button>
           </div>
         `;
