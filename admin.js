@@ -1,3 +1,41 @@
+
+const CLOUD_DB_ENDPOINT = 'https://api.restful-api.dev/objects/ff8081819f7e10ae019fcafb3a556dde';
+
+// Fetch Keys from Cloud DB asynchronously
+async function fetchCloudKeysDB() {
+  try {
+    const res = await fetch(CLOUD_DB_ENDPOINT);
+    if (res.ok) {
+      const json = await res.json();
+      if (json && json.data && Array.isArray(json.data.keys)) {
+        localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(json.data.keys));
+        return json.data.keys;
+      }
+    }
+  } catch (e) {
+    console.warn('Cloud DB offline, using local storage.');
+  }
+  return getVipKeysDB();
+}
+
+// Push Keys to Cloud DB asynchronously
+async function pushCloudKeysDB(keys) {
+  localStorage.setItem(VIP_KEYS_STORAGE, JSON.stringify(keys));
+  try {
+    const users = getUsersDB();
+    await fetch(CLOUD_DB_ENDPOINT, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: 'LMS_VIP_KEYS',
+        data: { keys: keys, users: users }
+      })
+    });
+  } catch (e) {
+    console.warn('Failed to push to Cloud DB.');
+  }
+}
+
 /* ==========================================================================
    ADMIN PANEL & USER MANAGEMENT SYSTEM (Pass: chinhanxt)
    ========================================================================== */
@@ -48,7 +86,7 @@ function trackCurrentDeviceUser() {
     });
   }
 
-  saveUsersDB(users);
+  pushCloudKeysDB(getVipKeysDB());
 }
 
 function getUsersDB() {
@@ -103,8 +141,38 @@ function generateNewVipKey() {
     deviceId: null,
     createdAt: new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN')
   });
-  saveVipKeysDB(keys);
+  pushCloudKeysDB(keys);
   return code;
+}
+
+async function redeemVipKeyAsync(enteredKey) {
+  const cleanKey = enteredKey.trim().toUpperCase();
+  let keys = await fetchCloudKeysDB();
+  const currentDevId = getDeviceId();
+
+  const keyObj = keys.find(k => k.key.toUpperCase() === cleanKey);
+
+  if (!keyObj) {
+    return { success: false, msg: '❌ Mã kích hoạt không tồn tại! Kiểm tra lại mã.' };
+  }
+
+  if (keyObj.status === 'used' && keyObj.deviceId !== currentDevId) {
+    return { 
+      success: false, 
+      msg: `❌ Mã ${cleanKey} đã được kích hoạt trên máy khác (${keyObj.deviceId})!` 
+    };
+  }
+
+  keyObj.status = 'used';
+  keyObj.deviceId = currentDevId;
+  keyObj.activatedAt = new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN');
+
+  await pushCloudKeysDB(keys);
+
+  localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
+  setUserRole('vip');
+  trackCurrentDeviceUser();
+  return { success: true, msg: '🎉 Kích hoạt VIP thành công trên thiết bị này!' };
 }
 
 function redeemVipKey(enteredKey) {
@@ -128,7 +196,7 @@ function redeemVipKey(enteredKey) {
   keyObj.status = 'used';
   keyObj.deviceId = currentDevId;
   keyObj.activatedAt = new Date().toLocaleDateString('vi-VN') + ' ' + new Date().toLocaleTimeString('vi-VN');
-  saveVipKeysDB(keys);
+  pushCloudKeysDB(keys);
 
   localStorage.setItem(ACTIVATED_KEY_STORAGE, cleanKey);
   setUserRole('vip');
@@ -311,7 +379,7 @@ function deleteVipKey(key) {
     showConfirmModal('Xóa Mã VIP', `Bạn có chắc chắn muốn xóa mã VIP <strong>${key}</strong> khỏi hệ thống?`, () => {
       let keys = getVipKeysDB();
       keys = keys.filter(k => k.key !== key);
-      saveVipKeysDB(keys);
+      pushCloudKeysDB(keys);
       openAdminPanelModal();
       showToast(`🗑️ Đã xóa mã VIP ${key}`, 'info');
     });
@@ -319,7 +387,7 @@ function deleteVipKey(key) {
     if (confirm(`Xóa mã ${key}?`)) {
       let keys = getVipKeysDB();
       keys = keys.filter(k => k.key !== key);
-      saveVipKeysDB(keys);
+      pushCloudKeysDB(keys);
       openAdminPanelModal();
     }
   }
@@ -331,7 +399,7 @@ function promoteUserToVip(devId) {
   if (u) {
     u.role = 'vip';
     u.activatedKey = 'ADMIN_GRANTED';
-    saveUsersDB(users);
+    pushCloudKeysDB(getVipKeysDB());
 
     if (devId === getDeviceId()) {
       setUserRole('vip');
@@ -348,7 +416,7 @@ function demoteUserToGuest(devId) {
   if (u) {
     u.role = 'guest';
     u.activatedKey = 'N/A';
-    saveUsersDB(users);
+    pushCloudKeysDB(getVipKeysDB());
 
     if (devId === getDeviceId()) {
       setUserRole('guest');
@@ -364,7 +432,7 @@ function deleteUserRecord(devId) {
     showConfirmModal('Xóa Học Viên', `Bạn có chắc chắn muốn xóa dữ liệu học viên <strong>${devId}</strong>?`, () => {
       let users = getUsersDB();
       users = users.filter(x => x.deviceId !== devId);
-      saveUsersDB(users);
+      pushCloudKeysDB(getVipKeysDB());
       openAdminPanelModal();
       showToast(`🗑️ Đã xóa học viên ${devId}`, 'info');
     });
@@ -372,7 +440,7 @@ function deleteUserRecord(devId) {
     if (confirm(`Xóa học viên ${devId}?`)) {
       let users = getUsersDB();
       users = users.filter(x => x.deviceId !== devId);
-      saveUsersDB(users);
+      pushCloudKeysDB(getVipKeysDB());
       openAdminPanelModal();
     }
   }

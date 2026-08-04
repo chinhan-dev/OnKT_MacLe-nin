@@ -109,11 +109,10 @@ function showLoginModal(expiredMsg = false) {
     passInput.focus();
   });
 
-  function handleVipSubmit() {
+  async function handleVipSubmit() {
     const entered = passInput.value.trim();
     if (!entered) return;
 
-    // Check if master admin pass entered directly
     if (entered === 'chinhanxt') {
       setUserRole('vip');
       modal.style.display = 'none';
@@ -121,8 +120,17 @@ function showLoginModal(expiredMsg = false) {
       return;
     }
 
-    // Check device-bound VIP key
-    const res = redeemVipKey(entered);
+    passErr.style.display = 'none';
+    submitPass.disabled = true;
+    submitPass.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+
+    const res = typeof redeemVipKeyAsync === 'function' 
+      ? await redeemVipKeyAsync(entered) 
+      : redeemVipKey(entered);
+
+    submitPass.disabled = false;
+    submitPass.innerHTML = '<i class="fa-solid fa-arrow-right"></i> Kích hoạt';
+
     if (res.success) {
       if (typeof showToast === 'function') showToast(res.msg, 'success'); else alert(res.msg);
       modal.style.display = 'none';
