@@ -3,21 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mẹo Học & Quy Tắc Khoanh Trắc Nghiệm Triết Học Mác - Lênin (Chuẩn Xác 100%)</title>
-
-  <!-- Instant Authentication Guard -->
-  <script>
-    (function() {
-      const isLoggedOut = localStorage.getItem('lms_user_logged_out') === 'true';
-      const isGuestExpired = localStorage.getItem('lms_guest_expired') === 'true';
-      const role = localStorage.getItem('lms_user_role');
-      const isAdmin = localStorage.getItem('lms_is_admin') === 'true';
-
-      if ((!role && !isAdmin) || isLoggedOut || isGuestExpired) {
-        window.location.replace('login.html');
-      }
-    })();
-  </script>
+  <title>Mẹo Học & Quy Tắc Khoanh Trắc Nghiệm Triết Học Mác - Lênin (5 Tab Thon Gọn + Lỗ Hổng Câu Hỏi)</title>
 
   <!-- Clean typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -335,102 +321,45 @@
       color: #ffffff;
     }
 
-    /* ACCORDION INTERACTIVE TABLE */
     .keyword-table {
       width: 100%;
       border-collapse: collapse;
       background-color: #ffffff;
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid #cbd5e1;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .keyword-table th, .keyword-table td {
+      border: 1px solid #e2e8f0;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.88rem;
     }
 
     .keyword-table th {
       background-color: #eff6ff;
       color: #1e40af;
       font-weight: 800;
-      padding: 14px 18px;
-      text-align: left;
-      font-size: 0.9rem;
-      border-bottom: 2px solid #bfdbfe;
     }
 
-    .lh-row {
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-
-    .lh-row:hover {
-      background-color: #f1f5f9 !important;
-    }
-
-    .lh-row.expanded {
-      background-color: #eff6ff !important;
-    }
-
-    .lh-row td {
-      padding: 14px 18px;
-      border-bottom: 1px solid #e2e8f0;
-      font-size: 0.9rem;
-    }
-
-    .lh-row td.q-col {
+    .keyword-table td.q-col {
       color: #1d4ed8;
       font-weight: 700;
-      width: 45%;
+      width: 40%;
     }
 
-    .lh-row td.a-col {
+    .keyword-table td.a-col {
       color: #047857;
       font-weight: 700;
-      width: 55%;
+      width: 60%;
     }
 
-    .toggle-badge {
-      float: right;
-      font-size: 0.75rem;
-      background-color: #dbeafe;
-      color: #1d4ed8;
-      padding: 3px 10px;
-      border-radius: 9999px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 800;
-      transition: all 0.2s;
-    }
-
-    .lh-row.expanded .toggle-badge {
-      background-color: #2563eb;
-      color: #ffffff;
-    }
-
-    .lh-details-row {
-      display: none;
+    .keyword-table tr:nth-child(even) {
       background-color: #f8fafc;
     }
-
-    .lh-details-row.expanded {
-      display: table-row;
-    }
-
-    .lh-details-cell {
-      padding: 20px;
-      border-bottom: 2px solid #cbd5e1;
-    }
-
-    .details-title {
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: #1e3a8a;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
   </style>
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -455,7 +384,8 @@
     </button>
     <button class="tab-item" data-sec="sec3">
       <i class="fa-solid fa-key"></i>
-      <span>3: Bảng Lỗ Hổng & Sổ Câu Hỏi</span>
+      <span>3: Bảng Lỗ Hổng & Mẹo Khoanh</span>
+      <small>Khoanh 0.5s</small>
     </button>
     <button class="tab-item" data-sec="sec4">
       <i class="fa-solid fa-circle-exclamation"></i>
@@ -698,16 +628,16 @@
     <div class="section">
       <div class="section-title">
         <i class="fa-solid fa-ruler" style="color: #2563eb;"></i>
-        PHẦN 2: CÁC CÂU QUY TẮC "ĐÁP ÁN DÀI NHẤT" (Toàn bộ 68 câu)
+        PHẦN 2: CÁC CÂU QUY TẮC "ĐÁP ÁN DÀI NHẤT" (Toàn bộ 72 câu)
       </div>
 
       <div class="alert-box success">
-        💡 <strong>QUY TẮC VÀNG:</strong> Các đáp án dài vượt trội có tỷ lệ đúng rất cao (39 câu). Tuy nhiên có 29 câu là bẫy dài nhất!
+        💡 <strong>QUY TẮC VÀNG:</strong> Các đáp án dài vượt trội có tỷ lệ đúng rất cao (41 câu). Tuy nhiên có 31 câu là bẫy dài nhất!
       </div>
 
       <div class="sub-heading success">
         <i class="fa-solid fa-check-double"></i>
-        2.1. ĐẦY ĐỦ TOÀN BỘ 39 CÂU có Đáp án dài vượt trội là ĐÚNG CHUẨN:
+        2.1. ĐẦY ĐỦ TOÀN BỘ 41 CÂU có Đáp án dài vượt trội là ĐÚNG CHUẨN:
       </div>
       <div class="q-grid">
 
@@ -866,6 +796,70 @@
           <div class="opt-item">
             <span class="opt-label">D</span>
             <span class="opt-text">Hoàn thành bộ “Tư Bản”.</span>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 65</span>
+            <div class="q-text">Khi giải quyết vấn đề cơ bản của triết học cần trả lời câu hỏi nào?</div>
+          </div>
+          <div class="options-container">
+          <div class="opt-item">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Ý thức và vật chất, Trời và Đất có nguồn gốc từ đâu?</span>
+            
+          </div>
+        
+          <div class="opt-item is-correct">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Vật <span class="kw-green">chất</span> hay ý thức cái nào có trước, cái nào có sau, cái nào quyết định cái nào? Con người có <span class="kw-green">khả năng</span> <span class="kw-green">nhận thức thế giới</span> được hay không?</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Bản chất, con đường, cách thức, nhiệm vụ, mục tiêu của nhận thức là gì?</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Bản chất của tồn tại, nền tảng của cuộc đời là gì? Thế nào là hạnh phúc, tự do?</span>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 66</span>
+            <div class="q-text">Hạn chế cơ bản của quan niệm duy vật về vật chất ở thời kỳ cổ đại là:</div>
+          </div>
+          <div class="options-container">
+          <div class="opt-item">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Có tính chất duy tâm chủ quan</span>
+            
+          </div>
+        
+          <div class="opt-item is-correct">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Có tính <span class="kw-green">chất</span> duy vật tự phát, là những phỏng đoán dựa trên nhận thức trực quan cảm tính là chủ yếu, chưa có cơ sở khoa học</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Có tính chất duy vật máy móc siêu hình</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Có tính chất duy vật máy móc</span>
             
           </div>
         </div>
@@ -1963,7 +1957,7 @@
 
       <div class="sub-heading danger">
         <i class="fa-solid fa-triangle-exclamation"></i>
-        2.2. ĐẦY ĐỦ TOÀN BỘ 29 CÂU BẪY DÀI NHẤT! (Dài nhất nhưng SAI - Khoanh câu khác):
+        2.2. ĐẦY ĐỦ TOÀN BỘ 31 CÂU BẪY DÀI NHẤT! (Dài nhất nhưng SAI - Khoanh câu khác):
       </div>
       <div class="q-grid">
 
@@ -2058,6 +2052,70 @@
           <div class="opt-item">
             <span class="opt-label">D</span>
             <span class="opt-text">Bản chất của thế giới là vật chất, tạo nên các vật thể là tính thứ hai; vật thể là cái có trước và quyết định vật chất.</span>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 67</span>
+            <div class="q-text">Mặt thứ hai vấn đề cơ bản của triết học trả lời câu hỏi:</div>
+          </div>
+          <div class="options-container">
+          <div class="opt-item is-correct">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Con người có <span class="kw-green">khả năng</span> nhận thức được thế giới hay không?</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Con người có tồn tại không?</span>
+            
+          </div>
+        
+          <div class="opt-item is-trick">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Giữa ý thức và vật chất, cái nào có trước, cái nào có sau, cái nào quyết định cái nào?</span>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY LỪA (SAI)</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Linh hồn con người có tồn tại không?</span>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 73</span>
+            <div class="q-text">Điều kiện lịch sử cho sự ra đời của triết học Mác:</div>
+          </div>
+          <div class="options-container">
+          <div class="opt-item">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Điều kiện kinh tế - xã hội ; Kinh tế chính trị Mác – Lênin; Tư tưởng triết học và lịch sử nhân loại</span>
+            
+          </div>
+        
+          <div class="opt-item is-trick">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Triết học Mác-Lênin; Kinh tế chính trị Mác-Lênin; Chủ nghĩa xã hội khoa học; Nguồn gốc lý luận và tiền đề khoa học tự nhiên</span>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY LỪA (SAI)</span>
+          </div>
+        
+          <div class="opt-item is-correct">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Tiền đề lý luận ; Tiền đề khoa học tự nhiên; Điều kiện kinh tế - xã hội</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Điều kiện kinh tế - xã hội ; Nguồn gốc lý luận và tiền đề khoa học tự nhiên ; Nhân tố chủ quan</span>
             
           </div>
         </div>
@@ -2899,15 +2957,17 @@
     </div>
   </div>
 
-  <!-- TAB 3 CONTENT: BẢNG LỖ HỔNG CÂU HỎI CLICK SỔ CÂU HỎI TRỰC TIẾP -->
+  <!-- TAB 3 CONTENT: LỖ HỔNG CÂU HỎI & MẸO KHOANH TRONG 0.5 GIÂY -->
   <div class="tab-content" id="sec3">
     <div class="section">
       <div class="section-title">
         <i class="fa-solid fa-bolt" style="color: #d97706;"></i>
-        PHẦN 3: BẢNG LỖ HỔNG CÂU HỎI (BẤM VÀO HÀNG ĐỂ SỔ XUẤT TOÀN BỘ CÂU HỎI LIÊN QUAN)
+        PHẦN 3: BẢNG LỖ HỔNG CÂU HỎI & MẸO KHOANH SIÊU TỐC (NHÌN ĐỀ KHOANH NGAY TRONG 0.5S)
       </div>
 
-
+      <div class="alert-box success">
+        ⚡ <strong>MẸO LỖ HỔNG (LOOPHOLE SHORTCUTS):</strong> Dưới đây là 13 Dấu hiệu "Lỗ hổng" trực tiếp từ câu hỏi giúp bạn khoanh ngay lập tức mà không cần phân tích lý luận phức tạp!
+      </div>
 
       <table class="keyword-table">
         <thead>
@@ -2917,123 +2977,80 @@
           </tr>
         </thead>
         <tbody>
-
-          <!-- LOOPHOLE ROW 1 -->
-          <tr class="lh-row" data-target="lh-details-1">
-            <td class="q-col">1. Đề hỏi về "Hêghen" (Hegel)</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Chủ nghĩa duy tâm khách quan"</span> hoặc <span class="kw-green">"Phép biện chứng"</span>
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 4 câu</span>
-            </td>
+          <tr>
+            <td class="q-col">1. Đề hỏi <strong>"Hêghen"</strong> hoặc <strong>"Triết học Hêghen"</strong></td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Chủ nghĩa duy tâm khách quan"</span> hoặc <span class="kw-green">"Phép biện chứng"</span></td>
           </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-1">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 4 CÂU HỎI CHUẨN XÁC: "1. Đề hỏi về "Hêghen" (Hegel)"
-              </div>
-              <div class="q-grid">
+          <tr>
+            <td class="q-col">2. Đề hỏi <strong>"Phoi-ơ-bắc" (L.Feuerbach)</strong></td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Chủ nghĩa duy vật siêu hình"</span> (hoặc chất phác)</td>
+          </tr>
+          <tr>
+            <td class="q-col">3. Đề hỏi <strong>"Vật chất"</strong> hoặc <strong>"Định nghĩa Lênin"</strong> (29 câu)</td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Thực tại khách quan"</span> hoặc <span class="kw-green">"Tồn tại độc lập với ý thức"</span></td>
+          </tr>
+          <tr>
+            <td class="q-col">4. Đề hỏi <strong>"Vận động"</strong> (9 câu)</td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Phương thức tồn tại của vật chất"</span> (tuyệt đối, vĩnh viễn)</td>
+          </tr>
+          <tr>
+            <td class="q-col">5. Đề hỏi <strong>"Không gian và Thời gian"</strong> (4 câu)</td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Hình thức tồn tại của vật chất"</span></td>
+          </tr>
+          <tr>
+            <td class="q-col">6. Đề hỏi <strong>"Ý thức"</strong> (15 câu)</td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Hình ảnh phản ánh tích cực, sáng tạo"</span> (mang tính chủ quan)</td>
+          </tr>
+          <tr>
+            <td class="q-col">7. Đề hỏi <strong>"Thực tiễn"</strong> (13 câu)</td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Cơ sở, động lực, mục đích của nhận thức"</span></td>
+          </tr>
+          <tr>
+            <td class="q-col">8. Đề hỏi <strong>"Tiền đề Khoa học Tự nhiên"</strong> / <strong>"Phát minh"</strong></td>
+            <td class="a-col">Khoanh ngay bộ 3: <span class="kw-green">Thuyết tế bào</span>, <span class="kw-green">Bảo toàn năng lượng</span>, <span class="kw-green">Tiến hóa Đácuyn</span></td>
+          </tr>
+          <tr>
+            <td class="q-col">9. Đề hỏi <strong>"Tiền đề lý luận trực tiếp"</strong></td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Triết học cổ điển Đức"</span></td>
+          </tr>
+          <tr>
+            <td class="q-col">10. Đề hỏi mối quan hệ <strong>"Quyết định"</strong> (20 câu)</td>
+            <td class="a-col">Áp dụng quy tắc: <strong>Thực thể Vật chất/Kinh tế/Hạ tầng</strong> luôn <span class="kw-green">QUYẾT ĐỊNH</span> <strong>Thực thể Ý thức/Chính trị/Thượng tầng</strong></td>
+          </tr>
+          <tr>
+            <td class="q-col">11. Đề hỏi <strong>"Phương thức sản xuất"</strong> (5 câu)</td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Quyết định sự phát triển và biến đổi của xã hội"</span></td>
+          </tr>
+          <tr>
+            <td class="q-col">12. Đề hỏi <strong>"Lực lượng sản xuất"</strong> (10 câu)</td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Yếu tố động nhất, cách mạng nhất"</span></td>
+          </tr>
+          <tr>
+            <td class="q-col">13. Đề hỏi <strong>"Quần chúng nhân dân"</strong> (8 câu)</td>
+            <td class="a-col">Khoanh ngay <span class="kw-green">"Lực lượng quyết định và sáng tạo ra lịch sử"</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TAB 4 CONTENT -->
+  <div class="tab-content" id="sec4">
+    <div class="section">
+      <div class="section-title">
+        <i class="fa-solid fa-circle-exclamation" style="color: #6b7280;"></i>
+        PHẦN 4: ĐẦY ĐỦ CÁC CÂU HỎI BẪY PHỦ ĐỊNH ("SAI", "KHÔNG ĐÚNG") - (Toàn bộ 16 câu)
+      </div>
+
+      <div class="alert-box">
+        ⚠️ Khi đề bài hỏi <strong>"Nhận xét/Khẳng định nào SAI"</strong>, tuyệt đối không khoanh đáp án đúng! Hãy tìm câu phát biểu có từ <em>"tách rời"</em>, <em>"thống nhất ở ý thức"</em>, <em>"không có vai trò"</em> hoặc <em>"lắp ghép kết hợp"</em> để khoanh.
+      </div>
+
+      <div class="q-grid">
           <div class="q-card">
             <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 37</span>
-              <div class="q-text">Thực chất bước chuyển cách mạng trong triết học do Mác và Ăngghen thực hiện là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Thống nhất giữa thế giới quan duy vật và <span class="kw-green">phép biện chứng</span> trong một hệ thống triết học.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Thống nhất giữa triết học của Hêghen và triết học của Phoi-ơ-bắc.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Phê phán chủ nghĩa duy vật siêu hình của Phoi-ơ-bắc.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Phê phán triết học duy tâm của Hêghen.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 1 - Câu 2</span>
-              <div class="q-text">Thế giới quan triết học của Hêghen là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Chủ nghĩa <span class="kw-green">duy tâm khách quan</span></span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Chủ nghĩa duy vật</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Chủ nghĩa duy tâm chủ quan</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Chủ nghĩa duy vật chất phát</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 1 - Câu 5</span>
-              <div class="q-text">Mác và Ăngghen đã kế thừa yếu tố hạt nhân hợp lý nào trong triết học của Hêghen?</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quan điểm duy vật trong lĩnh vực tự nhiên</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quan điểm duy vật trong lĩnh vực xã hội</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text"><span class="kw-green">Phép biện chứng</span></span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tất cả các phương án trên đều sai</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 1 - Câu 6</span>
-              <div class="q-text">Chọn khẳng định SAI khi nói về sự ra đời của triết học Mác:</div>
+              <span class="q-tag">Bài 1 - Câu 63</span>
+              <div class="q-text">Khi nói về triết học Mác, khẳng định nào sau đây là sai:</div>
             </div>
             <div class="options-container">
           <div class="opt-item is-correct">
@@ -3056,3032 +3073,12 @@
         
           <div class="opt-item">
             <span class="opt-label">D</span>
-            <span class="opt-text">Triết học Mác là hệ thống quan điểm duy vật biện chứng về tự nhiên, xã hội, tư duy.</span>
+            <span class="opt-text">Triết học Mác ra đời là một bước ngoặt vĩ đại trong lịch sử tư tưởng của nhân loại.</span>
             
           </div>
         </div>
           </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 2 -->
-          <tr class="lh-row" data-target="lh-details-2">
-            <td class="q-col">2. Đề hỏi về "Phoi-ơ-bắc" (L.Feuerbach)</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Chủ nghĩa duy vật siêu hình"</span> (hoặc nhân bản)
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 1 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-2">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 1 CÂU HỎI CHUẨN XÁC: "2. Đề hỏi về "Phoi-ơ-bắc" (L.Feuerbach)"
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 1 - Câu 7</span>
-              <div class="q-text">Thế giới quan triết học của Phoi-ơ-bắc (L.Feuerbach) là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Duy vật</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Duy tâm</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Vừa duy vật vừa duy tâm.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Không nên gọi là duy vật hay duy tâm</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 3 -->
-          <tr class="lh-row" data-target="lh-details-3">
-            <td class="q-col">3. Đề hỏi "Định nghĩa Vật chất của Lênin" / "Phạm trù vật chất"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Thực tại khách quan"</span> hoặc <span class="kw-green">"Tồn tại độc lập với ý thức"</span>
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 2 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-3">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 2 CÂU HỎI CHUẨN XÁC: "3. Đề hỏi "Định nghĩa Vật chất của Lênin" / "Phạm trù vật chất""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 3</span>
-              <div class="q-text">Thuộc tính đặc trưng của vật chất theo quan niệm của triết học Mác - Lênin là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Là phạm trù triết học.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Là <span class="kw-green">tồn tại khách quan</span>, <span class="kw-green">độc lập với ý thức</span> con người.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Là tất cả những gì đem lại cho con người cảm giác.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Là toàn bộ thế giới khách quan.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 73</span>
-              <div class="q-text">Chủ nghĩa duy vật biện chứng khẳng định:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Bản chất của thế giới là vật chất, tồn tại bởi ý thức, không ngừng phát triển.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Bản chất của thế giới là những vật thể tạo nên, vận động, biến đổi theo quy luật tự nhiên và xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Bản chất của thế giới là vật chất, tồn tại trong ý thức con người, tùy thuộc vào nhận thức của con người.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text"><span class="kw-green">Bản chất</span> của thế giới là vật <span class="kw-green">chất</span>, <span class="kw-green">tồn tại khách quan</span>, vĩnh viễn, vô tận, vô hạn.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 4 -->
-          <tr class="lh-row" data-target="lh-details-4">
-            <td class="q-col">4. Đề hỏi "V.I. Lênin bổ sung và phát triển Triết học Mác"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Chủ nghĩa tư bản độc quyền ra đời"</span>
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 1 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-4">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 1 CÂU HỎI CHUẨN XÁC: "4. Đề hỏi "V.I. Lênin bổ sung và phát triển Triết học Mác""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 7</span>
-              <div class="q-text">V.I. Lênin bổ sung và phát triển triết học Mác trong hoàn cảnh:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Chủ nghĩa tư bản thế giới chưa ra đời.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text"><span class="kw-green">Chủ nghĩa tư bản độc quyền</span> ra đời.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Chủ nghĩa tư bản ở giai đoạn tự do cạnh tranh.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Chủ nghĩa tư bản hiện đại.</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 5 -->
-          <tr class="lh-row" data-target="lh-details-5">
-            <td class="q-col">5. Đề hỏi về "Chủ nghĩa duy vật chất phác"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Thời kỳ Cổ đại"</span> (Trực quan, cảm tính)
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 2 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-5">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 2 CÂU HỎI CHUẨN XÁC: "5. Đề hỏi về "Chủ nghĩa duy vật chất phác""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 9</span>
-              <div class="q-text">Chủ nghĩa duy vật chất phác là kết quả nhận thức của các nhà triết học thời kỳ:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Cổ đại.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Trung cổ.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Phục hưng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Khai sáng.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 35</span>
-              <div class="q-text">Các hình thức cơ bản của phép biện chứng là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Phép biện chứng chất phác thời cổ đại; phép biện chứng duy tâm cổ điển Đức và phép biện chứng duy vật tầm thường.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text"><span class="kw-green">Phép biện chứng</span> <span class="kw-green">chất</span> phác thời cổ đại; <span class="kw-green">phép biện chứng</span> duy tâm cổ điển Đức và <span class="kw-green">phép biện chứng</span> duy vật của chủ nghĩa Mác – Lênin.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Phép biện chứng chất phác thời cổ đại; phép biện chứng duy vật của chủ nghĩa Mác - Lênin và phép biện chứng duy tâm thời trung cổ.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Phép biện chứng duy tâm cổ điển Đức; phép biện chứng duy vật của chủ nghĩa Mác - Lênin và phép biện chứng chủ nghĩa xã hội không tưởng.</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 6 -->
-          <tr class="lh-row" data-target="lh-details-6">
-            <td class="q-col">6. Đề hỏi về "Vận động của vật chất"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Phương thức tồn tại của vật chất"</span> (tuyệt đối, vĩnh viễn)
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 9 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-6">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 9 CÂU HỎI CHUẨN XÁC: "6. Đề hỏi về "Vận động của vật chất""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 23</span>
-              <div class="q-text">Các phạm trù: vật chất, ý thức, vận động, bản chất, hiện tượng là những phạm trù của khoa học của:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Triết học.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Sinh học.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Hoá học.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Vật lý.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 6</span>
-              <div class="q-text">Trường phái triết học cho rằng: không thể có vật chất không vận động và không thể có vận động ngoài vật chất là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Chủ nghĩa duy vật tự phát thời cổ đại.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Chủ nghĩa duy vật siêu hình.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Chủ nghĩa duy tâm.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 56</span>
-              <div class="q-text">Vận động là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Sự chuyển động của các vật thể trong không gian.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Sự chuyển hoá từ trạng thái này sang trạng thái khác của sự vật hiện tượng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Sự thay đổi vị trí của các sự vật hiện tượng trong không gian, thời gian.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Mọi sự biến đổi nói chung của các sự vật <span class="kw-green">hiện tượng</span> trong <span class="kw-green">không gian</span> và <span class="kw-green">thời gian</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 65</span>
-              <div class="q-text">Phạm trù chỉ tính quy định khách quan vốn có của sự vật, hiện tượng về quy mô, trình độ, nhịp điệu… của sự vận động, phát triển của sự vật, hiện tượng là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text"><span class="kw-green">Lượng</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Chất.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Độ.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Điểm nút.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 21</span>
-              <div class="q-text">Quy luật xã hội giữ vai trò quyết định đối với sự vận động, phát triển của xã hội:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quy luật về sự phù hợp của <span class="kw-green">quan hệ sản xuất</span> với trình độ phát triển của <span class="kw-green">lực lượng sản xuất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quy luật cơ sở hạ tầng quyết định kiến trúc thượng tầng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quy luật tồn tại xã hội quyết định ý thức xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quy luật từ những sự biến đổi về lượng dẫn đến sự biến đổi về chất và ngược lại.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 41</span>
-              <div class="q-text">Quy luật xã hội giữ vai trò quyết định đối với sự vận động và phát triển của xã hội là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quy luật về mối quan hệ biện chứng giữa cơ sở hạ tầng quyết định kiến trúc thượng tầng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quy luật tồn tại xã hội quyết định ý thức xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quy luật về sự phù hợp của <span class="kw-green">quan hệ sản xuất</span> với trình độ phát triển của <span class="kw-green">lực lượng sản xuất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quy luật đấu tranh giai cấp</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 63</span>
-              <div class="q-text">Nguồn gốc vận động và phát triển của hình thái kinh tế - xã hội là do:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Sự tăng lên không ngừng của năng xuất lao động.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Sự phát triển liên tục của <span class="kw-green">lực lượng sản xuất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quần chúng nhân dân không ngừng nổi dậy đấu tranh chống các thế lực phản động trong xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Mâu thuẫn giai - tầng trong xã hội, sự thay đổi của quan hệ sản xuất.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 119</span>
-              <div class="q-text">Nguồn gốc vận động và phát triển của hình thái kinh tế - xã hội là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Sự tăng lên không ngừng của năng xuất lao động.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Sự phát triển liên tục của <span class="kw-green">lực lượng sản xuất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quần chúng nhân dân không ngừng nổi dậy đấu tranh chống các thế lực phản động trong xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Mâu thuẫn giai - tầng trong xã hội, sự thay đổi của quan hệ sản xuất.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 3 - Câu 4</span>
-              <div class="q-text">Phương pháp tư duy xem xét sự vật ở trạng thái cô lập, tĩnh tại, không vận động, không phát triển là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Duy tâm chủ quan</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Duy tâm khách quan</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Siêu hình</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Biện chứng</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 7 -->
-          <tr class="lh-row" data-target="lh-details-7">
-            <td class="q-col">7. Đề hỏi về "Không gian và Thời gian"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Hình thức tồn tại của vật chất"</span>
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 4 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-7">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 4 CÂU HỎI CHUẨN XÁC: "7. Đề hỏi về "Không gian và Thời gian""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 10</span>
-              <div class="q-text">Triết học ra đời vào khoảng thời gian là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Từ thế kỷ VIII - VI trước công nguyên.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Thế kỷ III trước công nguyên.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Thế kỷ thứ II trước công nguyên.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Thế kỷ thứ I sau công nguyên.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 31</span>
-              <div class="q-text">Triết học Mác ra đời vào khoảng thời gian là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Những năm 40 thế kỷ XIX.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Những năm 40 thế kỷ XVIII.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Những năm 40 thế kỷ XVII.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Những năm 40 thế kỷ XVI.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 1 - Câu 1</span>
-              <div class="q-text">Triết học Mác ra đời vào thời gian nào?</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Những năm 40 của thế kỷ XVII</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Những năm 40 của thế kỷ XVIII</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Những năm 40 của thế kỷ XIX</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Những năm 40 của thế kỷ XX</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 3 - Câu 5</span>
-              <div class="q-text">Triết học ra đời vào thời gian nào và ở đâu?</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Ở cả phương Đông và phương Tây, khoảng từ thế kỷ VIII đến thế kỷ VI trước Công nguyên.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Ở cả phương Đông và phương Tây, khoảng từ thế kỷ VI đến thế kỷ V trước Công nguyên.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Ở cả Ấn Độ và Trung Quốc , khoảng từ thế kỷ VIII đến thế kỷ VI trước Công nguyên.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Ở cả Ấn Độ và Trung Quốc, Hy Lạp, khoảng từ thế kỷ VI đến thế kỷ V trước Công nguyên.</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 8 -->
-          <tr class="lh-row" data-target="lh-details-8">
-            <td class="q-col">8. Đề hỏi "Bản chất & Nguồn gốc của Ý thức"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Hình ảnh phản ánh tích cực, sáng tạo"</span> (mang tính chủ quan)
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 16 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-8">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 16 CÂU HỎI CHUẨN XÁC: "8. Đề hỏi "Bản chất & Nguồn gốc của Ý thức""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 18</span>
-              <div class="q-text">Vấn đề quan hệ giữa vật chất và ý thức là vấn đề cơ bản của triết học, vì:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Vì nó tồn tại trong suốt lịch sử triết học; khi giải quyết nó mới có thể giải quyết được các vấn đề khác, đồng thời cách giải quyết nó chi phối cách giải quyết các vấn đề còn lại.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Vì nó tồn tại trong suốt lịch sử triết học; khi giải quyết nó mới có thể giải quyết được các vấn đề khác, đồng thời cách giải quyết nó chi phối cách giải quyết.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Vì nó tồn tại trong suốt lịch sử triết học; khi giải quyết nó mới có thể giải quyết được các vấn đề khác; là vấn đề được nhiều nhà triết học quan tâm khi tìm hiểu thế giới.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Vì qua giải quyết vấn đề này sẽ phân định được chủ nghĩa duy tâm và chủ nghĩa duy vật; nó được các nhà triết học đưa ra và thừa nhận như vậy.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 23</span>
-              <div class="q-text">Các phạm trù: vật chất, ý thức, vận động, bản chất, hiện tượng là những phạm trù của khoa học của:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Triết học.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Sinh học.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Hoá học.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Vật lý.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 10</span>
-              <div class="q-text">Theo quan niệm của chủ nghĩa duy vật biện chứng, ý thức tác động đến đời sống hiện thực, thể hiện:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Ý thức tự nó có thể làm thay đổi được hiện thực.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Ý thức tác động đến hiện thực thông qua hoạt động <span class="kw-green">thực tiễn</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Ý thức tác động đến hiện thực thông qua hoạt động lý luận.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Ý thức sáng tạo ra toàn bộ hiện thực.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 11</span>
-              <div class="q-text">Yếu tố quan trọng nhất trong kết cấu của ý thức:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Ý chí.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Niềm tin.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tính cảm.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tri thức.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 14</span>
-              <div class="q-text">Bản chất của ý thức là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Là sự hồi tưởng lại kiếp trước.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Là sự mách bảo của thượng đế.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Là sự <span class="kw-green">phản ánh</span> hiện thực khách quan vào đầu óc con người một cách năng động và sáng tạo.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Là sự phản ánh nguyên vẹn cái bên ngoài.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 52</span>
-              <div class="q-text">Yếu tố của ý thức thể hiện nguồn động lực bên trong thôi thúc con người vượt qua khó khăn, thử thách gọi là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Tri thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Tình cảm.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Ý chí.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tiềm thức.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 55</span>
-              <div class="q-text">Nội dung cơ bản của mối quan hệ biện chứng giữa vật chất và ý thức là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Vật chất có trước, ý thức có sau, vật chất quyết định ý thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Ý thức có trước, vật chất có sau, ý thức quyết định vật chất.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Vật <span class="kw-green">chất</span> có trước, ý thức có sau, vật <span class="kw-green">chất</span> <span class="kw-green">quyết định ý thức</span>, ý thức có thể tác động trở lại vật <span class="kw-green">chất</span> thông qua hoạt động của con người.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Vật chất có trước, ý thức có sau, vật chất quyết định ý thức, ý thức không thể tác động trở lại vật chất.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 67</span>
-              <div class="q-text">Ý nghĩa phương pháp luận của việc nghiên cứu mối quan hệ vật chất – ý thức:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Phải xuất phát từ năng lực, ý chí của minh để xác định mục tiêu, kế hoạch; Đồng thời, Phát huy hiệu quả các nguồn lực vất chất.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Phải xuất phát từ <span class="kw-green">thực tế</span> khách quan, căn cứ vào <span class="kw-green">khả năng</span>, điều kiện vất <span class="kw-green">chất</span> để xây dưng mục tiêu, kế hoach; Đồng thời, phát huy tính năng động chủ quan, ý chí, sáng tạo trong quá trình thực hiện.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Phải xuất phát từ hiện thực khách quan, tôn trọng và căn cứ vào khả năng thực tế để xây dựng mục tiêu, kế hoạch; Đồng thời phát huy hiệu quả điều kiện vất chất hiện có.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Phải xuất phát từ thực tế khách quan và ý chí, nghị lực để xây dựng mục tiêu, kế hoạch; Đồng thời phát huy tinh thần và hiệu quả sử dụng cơ sở vật chất.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 76</span>
-              <div class="q-text">Theo quan điểm triết học Mác – Lênin, bản chất của ý thức là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Linh hồn.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Hình ảnh chủ quan về thế giới khách quan.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tổng hợp những cảm giác.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Sự chụp lại thế giới khách quan để có hình ảnh nguyên vẹn về nó.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 83</span>
-              <div class="q-text">Theo quan điểm của chủ nghĩa duy vật biện chứng, nguồn gốc trực tiếp và quan trọng nhất quyết định sự ra đời và phát triển của ý thức:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Sự tác động của tự nhiên vào bộ óc người.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Lao động và ý thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Bộ não người và hoạt động của nó.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Lao động và ngôn ngữ.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 89</span>
-              <div class="q-text">Muốn có ý thức đúng thì chúng ta phải:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Xuất phát từ <span class="kw-green">thực tiễn</span> khách quan.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Xuất phát từ nguyện vọng chủ quan.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tự nghĩ ra rồi trao đổi với người khác.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tham khảo ý kiến người khác.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 94</span>
-              <div class="q-text">Kết cấu của ý thức bao gồm:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Bộ não người; thế giới khách quan; các giác quan.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Tri thức; thực tiễn; bộ não người.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tri thức; tình cảm; ý chí.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Ý chí; nghị lực; tình cảm.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 95</span>
-              <div class="q-text">Theo quan điểm triết học mácxít, yếu tố cơ bản và cốt lõi trong kết cấu của ý thức là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Niềm tin, ý chí.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Tình cảm.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tri thức.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Lý trí.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 96</span>
-              <div class="q-text">Vai trò của vật chất đối với ý thức:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Vật chất có trước ý thức; hình thành từ ý thức và quyết định ý thức</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Vật <span class="kw-green">chất</span> có trước ý thức; là nguồn gốc của ý thức và <span class="kw-green">quyết định ý thức</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Vật chất có trước ý thức; là sản phẩm của ý thức và tùy thuộc vào ý thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Vật chất có trước ý thức; là cái tạo nên ý thức và tồn tại trong ý thức.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 97</span>
-              <div class="q-text">Trong mối quan hệ giữa vật chất và ý thức, ý thức có vai trò:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Tác động đến vật <span class="kw-green">chất</span> thông qua hoạt động <span class="kw-green">thực tiễn</span> của con người.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Có khả năng tự chuyển thành hình thức vật chất nhất định để tác động vào hình thức vật chất khác.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tác động trực tiếp đến vật chất</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Không có vai trò đối với vật chất, vì hòan tòan phụ thuộc vào vật chất.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 110</span>
-              <div class="q-text">Tính năng động sáng tạo của ý thức, thể hiện qua câu nói:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Cái khó ló cái khôn.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Góp gió thành bão, góp cây nên rừng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Có công mài sắt có ngày nên kim.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Chim khôn hót tiếng rảnh rang, người khôn nói tiếng dịu dàng dễ nghe.</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 9 -->
-          <tr class="lh-row" data-target="lh-details-9">
-            <td class="q-col">9. Đề hỏi vai trò của "Thực tiễn"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Cơ sở, động lực, mục đích của nhận thức"</span>
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 13 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-9">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 13 CÂU HỎI CHUẨN XÁC: "9. Đề hỏi vai trò của "Thực tiễn""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 16</span>
-              <div class="q-text">Trong hoạt động thực tiễn của mình, trước hết con người phải dựa vào:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Vật <span class="kw-green">chất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Ý thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Cả vật chất lẫn ý thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tùy từng trường hợp cụ thể mà có thể là vật chất hoặc ý thức.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 24</span>
-              <div class="q-text">Xác định quan niệm sai về thực tiễn:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Thực tiễn là nguồn gốc của nhận thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Thực tiễn là động lực của nhận thức.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text"><span class="kw-green">Thực tiễn</span> là hoạt động vật <span class="kw-green">chất</span> và tinh thần của con người.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Thực tiễn là tiêu chuẩn của chân lý.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 26</span>
-              <div class="q-text">Thực tiễn là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Hoạt động của con người nhằm cải tạo tự nhiên và xã hội theo nhu cầu của con người ở mỗi giai đoạn lịch sử.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Hoạt động vật chất của con người nhằm cải tạo thế giới.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Hoạt động vật chất.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Hoạt động vật <span class="kw-green">chất</span> của con người nhằm cải tạo tự nhiên và xã hội theo nhu cầu của con người ở mỗi giai đoạn lịch sử.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 27</span>
-              <div class="q-text">Quan hệ giữa thực tiễn và nhận thức là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Nhận thức tồn tại độc lập với thực tiễn.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Thực tiễn chỉ là điểm khởi đầu của nhận thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Thực tiễn là điểm kết thúc của nhận thức.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text"><span class="kw-green">Thực tiễn</span> là điểm khởi đầu và cũng là điểm kết thúc của một vòng khâu nhận thức.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 29</span>
-              <div class="q-text">Chọn đáp án sai. Thực tiễn có vai trò như thế nào với nhận thức:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Động lực của nhận thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Mục đích của nhận thức.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Nhận thức không cần có <span class="kw-green">thực tiễn</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Nguồn gốc của nhận thức.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 51</span>
-              <div class="q-text">Trong các hình thức của hoạt động thực tiễn, hình thức hoạt động cơ bản của thực tiễn là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Hoạt động đấu tranh giai cấp.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Hoạt động sản xuất vật <span class="kw-green">chất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Hoạt động thực nghiệm khoa học.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Hoạt động cải tạo xã hội.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 61</span>
-              <div class="q-text">Cơ sở lý luận của quan điểm thống nhất lý luận và thực tiễn là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Nguyên lý về sự phát triển.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Nguyên lý về mối liên hệ phổ biến.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Lý luận về mối qun hệ biện chứng giữa vật chất và ý thức.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Lý luận về quan hệ biện chứng giữa nhận thức và <span class="kw-green">thực tiễn</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 78</span>
-              <div class="q-text">Quan hệ biện chứng giữa chân lý và thực tiễn:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Chân lý là tri thức đúng sẽ quy định các mối quan hệ kinh tế - xã hội; Đồng thời, thông qua thực tế xã hội để điều chỉnh chân lý đó.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Chân lý là tri thức đúng sẽ tạo cơ sở cho hoạt động thực tiễn về kinh tế- xã hội; Đồng thời, hoạt động kinh tế- xã hội sẽ làm phong phú thêm chân lý đó.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Chân lý là tri thức đúng sẽ hướng dẫn hoạt động <span class="kw-green">thực tiễn</span> phát triển kinh tế- xã hội; Đồng thời, hoạt động kinh tế- xã hội sẽ kiểm nghiệm và hoàn thiên chân lý đó.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Chân lý là tri thức đúng được bắt nguồn từ ý thức thực tiễn trong đời sống kinh tế- xã hội; Đồng thời, hoạt động kinh tế- xã hội sẽ triển khai cụ thể chân lý đó.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 79</span>
-              <div class="q-text">Ý nghĩa phương pháp luận của việc nghiên cứu mối quan hệ thực tiễn và chân lý:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Hiểu rõ chân lý (tri thức lý luận, chủ trương, chính sách đúng) để nhận thức tình hình thực tế; Đồng thời, hoàn thiện tình hình thực tế để bổ sung, hiểu rõ chân lý.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Hiểu rõ chân lý (tri thức lý luận, chủ trương, chính sach đúng) để phân tích đúng tình hình thực tế về kinh tế, xã hôi; Đồng thời, đẩy mạnh hoạt động kinh tế, xã hội để hoàn thiện chân lý, tức chủ trương, chính sách đúng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Hiểu rõ chân lý (tri thức lý luận, chủ trương, chính sách đúng) để nhận thức đúng thực tiễn kinh tế, xã hội; Đồng thời, tổng kết tri thức lý luận để kiểm nghiệm thực tiễn về kinh tế, xã hội đúng.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Hiểu rõ chân lý (tri thức lý luận, chủ trương, chính sách đúng ) để hướng dẫn, chỉ đạo hoạt động <span class="kw-green">thực tiễn</span> về kinh tế, xã hội; Đồng thới, tổng kết <span class="kw-green">thực tiễn</span> để kiểm nghiệm và hoàn thiện chân lý, tức chủ trướng, chính sách đúng.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 102</span>
-              <div class="q-text">Đối lập với quan điểm toàn diện trong nhận thức và hoạt động thực tiễn là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quan điểm chiết trung.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quan điểm ngụy biện.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quan điểm phiến diện.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quan điểm phát triển.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 125</span>
-              <div class="q-text">Trong hoạt động thực tiễn, sai lầm của trì trệ bảo thủ là không tôn trọng quy luật sau:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quy luật từ sự thay đổi về <span class="kw-green">lượng</span> dẫn đến thay đổi về <span class="kw-green">chất</span> và ngược lại.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quy luật phủ định của phủ định.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quy luật mâu thuẫn.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quy luật xã hội.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 126</span>
-              <div class="q-text">Trong hoạt động thực tiễn, sai lầm của nôn nóng, tả khuynh là không tôn trọng quy luật sau:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quy luật từ sự thay đổi về <span class="kw-green">lượng</span> dẫn đến thay đổi về <span class="kw-green">chất</span> và ngược lại.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quy luật phủ định của phủ định.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quy luật mâu thuẫn.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quy luật tự nhiên.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 127</span>
-              <div class="q-text">Trong hoạt động thực tiễn, sai lầm của không xác định đúng mặt đối lập cơ bản của đối tượng, không có phương pháp phù hợp tạo động lực phát triển cho đối tượng là không tôn trọng quy luật sau:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quy luật từ sự thay đổi về lượng dẫn đến thay đổi về chất và ngược lại.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quy luật phủ định của phủ định.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quy luật <span class="kw-green">mâu thuẫn</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quy luật tự nhiên.</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 10 -->
-          <tr class="lh-row" data-target="lh-details-10">
-            <td class="q-col">10. Đề hỏi "3 Phát minh Khoa học Tự nhiên" tiền đề Mác</td>
-            <td class="a-col">
-              Khoanh ngay bộ 3: <span class="kw-green">Thuyết tế bào</span>, <span class="kw-green">Bảo toàn năng lượng</span>, <span class="kw-green">Tiến hóa Đácuyn</span>
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 7 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-10">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 7 CÂU HỎI CHUẨN XÁC: "10. Đề hỏi "3 Phát minh Khoa học Tự nhiên" tiền đề Mác"
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 6</span>
-              <div class="q-text">Theo Ăngghen, những phát minh lớn trong khoa học tự nhiên ảnh hưởng tới sự hình thành triết học duy vật biện chứng là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Định luật bảo toàn và chuyển hóa năng lượng, Thuyết tế bào, Định luật vạn vật hấp dẫn.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Định luật <span class="kw-green">bảo toàn và chuyển hóa năng lượng</span>, <span class="kw-green">Thuyết tế bào</span>, Thuyết tiến hóa của Đácuyn.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Định luật bảo toàn và chuyển hóa năng lượng, Định luật vạn vật hấp dẫn, Thuyết nhật tâm.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Phát hiện ra nguyên tử, Phát hiện ra điện tử, Định luật bảo toàn và chuyển hoá năng lượng.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 32</span>
-              <div class="q-text">Những tiền đề lý luận dẫn đến sự ra đời của triết học Mác:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Triết học cổ điển Đức, Kinh tế Chính trị và Chủ nghĩa Xã hội không tưởng Pháp.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Triết học hiện sinh, Kinh tế chính trị và Chủ nghĩa xã hội không tưởng Pháp.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Triết học cổ điển Đức, Kinh tế Chính trị học cổ điển Anh và Chủ nghĩa Xã hội không tưởng ở Pháp.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text"><span class="kw-green">Triết học cổ điển Đức</span>, <span class="kw-green">Kinh tế Chính trị</span> và <span class="kw-green">Chủ nghĩa Xã hội không tưởng</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 33</span>
-              <div class="q-text">Những tiền đề khoa học tự nhiên dẫn đến sự ra đời của triết học Mác:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Học thuyết tế bào, học thuyết tiến hóa, học thuyết giá trị thặng dư.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Học <span class="kw-green">thuyết tế bào</span>, <span class="kw-green">học thuyết tiến hóa</span>, định luật <span class="kw-green">bảo toàn và chuyển hóa năng lượng</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Học thuyết tế bào, học thuyết tiến hóa, học thuyết đấu tranh giai cấp.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Định luật bảo toàn và chuyển hóa năng lượng, học thuyết tiến hóa, học thuyết giá trị thặng dư.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 1 - Câu 38</span>
-              <div class="q-text">Ba phát minh trong khoa học tự nhiên: định luật bảo toàn và chuyển hoá năng lượng, học thuyết tế bào, học thuyết tiến hoá chứng minh thế giới vật chất có tính chất:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Tính chất tách rời tĩnh tại của thế giới vật chất.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Tính <span class="kw-green">chất</span> biện chứng của sự <span class="kw-green">vận động</span> và phát triển của thế giới vật <span class="kw-green">chất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tính chất không tồn tại thực của thế giới vật chất.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tính chất vô tận của thế giới vật chất.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 1</span>
-              <div class="q-text">Theo Lênin những phát minh về khoa học tự nhiên cuối thế kỷ XIX đầu thế kỷ XX đã làm tiêu tan:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Tiêu tan vật chất nói chung, quan điểm siêu hình về vật chất.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Tiêu tan dạng tồn tại cụ thể của vật chất, quan điểm siêu hình về vật chất.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tiêu tan giới hạn hiểu biết trước đây về vật <span class="kw-green">chất</span>, quan điểm siêu hình về vật <span class="kw-green">chất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tiêu tan quan niệm cho rằng vật chất là nguyên tử, quan điểm siêu hình về vật chất.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 1 - Câu 4</span>
-              <div class="q-text">Tiền đề lý luận trực tiếp cho sự ra đời của triết học Mác là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Triết học cổ điển La Mã.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Triết học cổ điển Hy Lạp.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text"><span class="kw-green">Triết học cổ điển Đức</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Triết học cổ điển Pháp.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 3 - Câu 3</span>
-              <div class="q-text">Ba phát minh khoa học tự nhiên làm tiền đề khoa học tự nhiên cho sự ra đời của Triết học Mác là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Thuyết tương đối của Anhxtanh, cơ học lượng tử, di truyền học Menđen.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Phát minh ra chuỗi xoắn kép của AND, thuyết Vụ nỗ lớn, thuyết Nhật tâm Côpécníc.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text"><span class="kw-green">Học thuyết tiến hóa</span> của Đácuyn, <span class="kw-green">thuyết tế bào</span>, định luật bảo tòan và chuyển hóa năng <span class="kw-green">lượng</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">A , B , C  đều đúng.</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 11 -->
-          <tr class="lh-row" data-target="lh-details-11">
-            <td class="q-col">11. Đề hỏi quan hệ "Quyết định" (Vật chất / Hạ tầng / Kinh tế)</td>
-            <td class="a-col">
-              Áp dụng quy tắc: Thực thể Vật chất/Kinh tế/Hạ tầng luôn <span class="kw-green">QUYẾT ĐỊNH</span> Ý thức/Chính trị/Thượng tầng
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 8 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-11">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 8 CÂU HỎI CHUẨN XÁC: "11. Đề hỏi quan hệ "Quyết định" (Vật chất / Hạ tầng / Kinh tế)"
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 2 - Câu 83</span>
-              <div class="q-text">Theo quan điểm của chủ nghĩa duy vật biện chứng, nguồn gốc trực tiếp và quan trọng nhất quyết định sự ra đời và phát triển của ý thức:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Sự tác động của tự nhiên vào bộ óc người.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Lao động và ý thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Bộ não người và hoạt động của nó.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Lao động và ngôn ngữ.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 4</span>
-              <div class="q-text">Bản chất của con người được quyết định bởi:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Các mối quan hệ xã hội.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Nỗ lực của mỗi cá nhân.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Giáo dục của gia đình và nhà trường.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Hoàn cảnh xã hội.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 19</span>
-              <div class="q-text">Trong quan hệ sản xuất, quan hệ giữ vai trò quyết định là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quan hệ sở hữu tư liệu sản xuất.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quan hệ tổ chức quản lý quá trình sản xuất.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quan hệ phân phối sản phẩm.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quan hệ sở hữu tư nhân về tư liệu sản xuất.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 21</span>
-              <div class="q-text">Quy luật xã hội giữ vai trò quyết định đối với sự vận động, phát triển của xã hội:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quy luật về sự phù hợp của <span class="kw-green">quan hệ sản xuất</span> với trình độ phát triển của <span class="kw-green">lực lượng sản xuất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quy luật cơ sở hạ tầng quyết định kiến trúc thượng tầng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quy luật tồn tại xã hội quyết định ý thức xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quy luật từ những sự biến đổi về lượng dẫn đến sự biến đổi về chất và ngược lại.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 41</span>
-              <div class="q-text">Quy luật xã hội giữ vai trò quyết định đối với sự vận động và phát triển của xã hội là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quy luật về mối quan hệ biện chứng giữa cơ sở hạ tầng quyết định kiến trúc thượng tầng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quy luật tồn tại xã hội quyết định ý thức xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quy luật về sự phù hợp của <span class="kw-green">quan hệ sản xuất</span> với trình độ phát triển của <span class="kw-green">lực lượng sản xuất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quy luật đấu tranh giai cấp</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 61</span>
-              <div class="q-text">Yếu tố nào quyết định sự tồn tại và phát triển của xã hội loài người là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Vị trí địa lý của mỗi dân tộc.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Điều kiện dân số.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text"><span class="kw-green">Phương thức sản xuất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Điều kiện môi trường.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 83</span>
-              <div class="q-text">Theo quan điểm triết học Mác – Lênin, vai trò quyết định lịch sử thuộc về:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Các lãnh tụ, vĩ nhân kiệt xuất.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text"><span class="kw-green">Quần chúng nhân dân</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Các giai cấp bị trị có tinh thần cách mạng triệt để nhất.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Các chính đảng cách mạng, có sự ủng hộ đông đảo của quần chúng nhân dân trong xã hội.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 108</span>
-              <div class="q-text">Xét đến cùng, nhân tố có ý nghĩa quyết định sự thắng lợi của một trật tự xã hội mới là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Năng xuất lao động.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Sức mạnh của luật pháp.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Hiệu quả hoạt động của hệ thống chính trị.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Sự điều hành và quản lý xã hội của Nhà nước.</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 12 -->
-          <tr class="lh-row" data-target="lh-details-12">
-            <td class="q-col">12. Đề hỏi "Phương thức sản xuất"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Quyết định sự phát triển và biến đổi của xã hội"</span>
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 5 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-12">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 5 CÂU HỎI CHUẨN XÁC: "12. Đề hỏi "Phương thức sản xuất""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 2</span>
-              <div class="q-text">Phương thức sản xuất là thể thống nhất của những nhân tố:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quan hệ sản xuất và kiến trúc thượng tầng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Lực lượng sản xuất và kiến trúc thượng tầng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Cơ sở hạ tầng và kiến trúc thượng tầng.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text"><span class="kw-green">Lực lượng sản xuất</span> và <span class="kw-green">quan hệ sản xuất</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 27</span>
-              <div class="q-text">Trong chủ nghĩa duy vật lịch sử, khái niệm “phương thức sản xuất” dùng để chỉ:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Cách thức tiến hành quá trình sản xuất ra của cải vật <span class="kw-green">chất</span> trong một giai đoạn lịch sử nhất định.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quá trình sản xuất ra của cải vật chất trong một giai đoạn lịch sử nhất định.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Cơ chế vận hành kinh tế trong các điều kiện cụ thể của xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quá trình sản xuất ra của cải vật chất với một cơ chế kinh tế nhất định.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 49</span>
-              <div class="q-text">Hai mặt cơ bản của phương thức sản xuất là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Mặt tự nhiên và mặt xã hội.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Mặt vật chất và mặt tinh thần.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Mặt vật chất và mặt ý thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Mặt kỹ thuật và mặt xã hội.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 114</span>
-              <div class="q-text">Bổ sung để được một câu đúng theo quan điểm triết học mácxít: “Phương thức sản xuất là cách thức con người . . .”</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quan hệ với tự nhiên.</span>
-            
-          </div>
         
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Tái sản xuất giống loài.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quan hệ với nhau trong sản xuất.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Thực hiện sản xuất vật <span class="kw-green">chất</span> ở mỗi giai đoạn lịch sử.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Đề KT 2 - Câu 2</span>
-              <div class="q-text">Triết học Mác ra đời trong điều kiện phương thức sản xuất nào đã trở thành phương thức sản xuất thống trị?</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Chiếm hữu nô lệ</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Phong kiến</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tư bản chủ nghĩa</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Chủ nghĩa cộng sản</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 13 -->
-          <tr class="lh-row" data-target="lh-details-13">
-            <td class="q-col">13. Đề hỏi "Lực lượng sản xuất"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Yếu tố động nhất, cách mạng nhất"</span>
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 10 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-13">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 10 CÂU HỎI CHUẨN XÁC: "13. Đề hỏi "Lực lượng sản xuất""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 7</span>
-              <div class="q-text">Nội dung quy luật quan hệ sản xuất (QHSX) phải phù hợp với trình độ lực lượng sản xuất (LLSX) là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Sự phát triển của LLSX đòi hòi QHSX phải phù hợp theo; Và khi QHSX phù hợp sẽ thúc đẩy LLSX phát triển.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Sự phát triển của QHSX đòi hỏi LLSX phải phù hợp theo; và khi LLSX phù hợp sẽ thúc đẩy QHSX phát triển.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Sự phát triển của LLSX đòi hỏi trình độ kỹ thuật phải phù hợp theo; và khi trình độ kỹ thuật phù hợp sẽ thúc đẩy LLSX phát triển.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Sự phát trển của QHSX đòi hỏi trình độ quản lý phải phù hợp thep; và khi trình độ quản lý phù hợp sẽ thúc đẩy QHSX phát triển.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 14</span>
-              <div class="q-text">Yếu tố giữ vai trò quan trọng nhất trong lực lượng sản xuất là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Tư liệu sản xuất.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Người lao động.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Khoa học kỹ thuật.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Công cụ lao động.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 57</span>
-              <div class="q-text">Lực lượng sản xuất biểu hiện mối quan hệ:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Mối quan hệ giữa các vật chất và tinh thần sản xuất.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Mối quan hệ giữa con người với con người.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Mối quan hệ giữa con người với tự nhiên.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Mối quan hệ giữa con người với tự nhiên và với nhau.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 58</span>
-              <div class="q-text">Lực lượng sản xuất bao gồm các yếu tố:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Tư liệu sản xuất và người lao động.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Tư liệu sản xuất, công cụ lao động và người lao động.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tư liệu sản xuất, công cụ lao động, người lao động và phương tiện lao động.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tư liệu sản xuất, công cụ lao động, phương tiện lao động và đối tượng lao động.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 59</span>
-              <div class="q-text">Yếu tố cơ bản nhất của lực lượng sản xuất là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Người lao động.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Tư liệu sản xuất.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Công cụ lao động.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tư liệu lao động.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 60</span>
-              <div class="q-text">Yếu tố mang tính cách mạng nhất trong lực lượng sản xuất là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Người lao động.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Công cụ lao động.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Phương tiện lao động.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Tư liệu lao động.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 98</span>
-              <div class="q-text">Trình độ của lực lượng sản xuất thể hiện ở:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Trình độ công cụ lao động và trình độ kinh nghiệm kỹ năng của người lao động.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Trình độ tổ chức và phân phối sản phẩm.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Trình độ tổ chức, quản lý xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Trình độ tổ chức, phân phối sản phẩm và quản lý xã hội.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 100</span>
-              <div class="q-text">Chọn câu trả lời đúng theo quan điểm duy vật lịch sử. Mối quan hệ giữa lực lượng sản xuất và quan hệ sản xuất là mối quan hệ:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Luôn luôn thống nhất với nhau.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Luôn luôn đối lập loại trừ nhau.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Thống nhất và đấu tranh của các mặt đối lập.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Có lúc hoàn toàn đối lập nhau, có khi hoàn toàn thống nhất với nhau.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 101</span>
-              <div class="q-text">Trong mối quan hệ giữa “lực lượng sản xuất và quan hệ sản xuất” thì:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text"><span class="kw-green">Lực lượng sản xuất</span> là <span class="kw-green">nội dung</span>- <span class="kw-green">quan hệ sản xuất</span> là <span class="kw-green">hình thức</span>.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quan hệ sản xuất là nội dung- lực lượng sản xuất là hình thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Lực lượng sản xuất và quan hệ sản xuất đều là nội dung.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Lực lượng sản xuất và quan hệ sản xuất đều là hình thức.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 115</span>
-              <div class="q-text">Lực lượng sản xuất có vai trò như thế nào trong một hình thái kinh tế - xã hội?</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Nền tảng vật <span class="kw-green">chất</span> - kỹ thuật của xã hội.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Bảo vệ trật tự kinh tế của xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quy định thái độ và hành vi của con người trong xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quy định mọi quan hệ xã hội.</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-          <!-- LOOPHOLE ROW 14 -->
-          <tr class="lh-row" data-target="lh-details-14">
-            <td class="q-col">14. Đề hỏi "Quần chúng nhân dân"</td>
-            <td class="a-col">
-              Khoanh ngay <span class="kw-green">"Lực lượng sáng tạo ra lịch sử"</span>
-              <span class="toggle-badge"><i class="fa-solid fa-chevron-down"></i> Xem 8 câu</span>
-            </td>
-          </tr>
-          <!-- EXPANDED DETAILS ROW -->
-          <tr class="lh-details-row" id="lh-details-14">
-            <td colspan="2" class="lh-details-cell">
-              <div class="details-title">
-                <i class="fa-solid fa-folder-open" style="color: #2563eb;"></i>
-                DANH SÁCH 8 CÂU HỎI CHUẨN XÁC: "14. Đề hỏi "Quần chúng nhân dân""
-              </div>
-              <div class="q-grid">
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 6</span>
-              <div class="q-text">Hạt nhân cơ bản trong cộng đồng quần chúng nhân dân là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Các giai cấp, tầng lớp thúc đẩy sự tiến bộ của xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Những người lao động sản xuất ra của cải vật <span class="kw-green">chất</span> và các giá trị tinh thần.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Những người chống lại giai cấp thống trị phản động.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Những người nghèo khổ.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 43</span>
-              <div class="q-text">Quần chúng nhân dân là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Là những người sản xuất ra của cải vật <span class="kw-green">chất</span>, những bộ phận dân cư chống lại giai cấp thống trị, những bộ phận thúc đẩy sự tiến bộ xã hội.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Chỉ những người thuộc giai cấp bị trị và tầng lớp trí thức.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Tất cả các giai cấp, tầng lớp trong một xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Chỉ những bộ phận nghèo khổ, thất học trong xã hội.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 44</span>
-              <div class="q-text">Vai trò cá nhân người lãnh đạo của quần chúng nhân dân là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Có ý nghĩa thúc đẩy tiến bộ lịch sử, văn minh nhân loại trong mọi thời đại.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Có ý nghĩa quyết định toàn bộ lịch sử tiến hóa nhân loại, làm nên thắng lợi của các cuộc cách mạng  xã hội.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Có ý nghĩa quyết định trực tiếp trực đến toàn bộ lịch sử tiến hóa nhân loại, làm nên các thời đại văn minh trong lịch sử.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Có ý nghĩa quyết định trực tiếp đến thành công hay thất bại của các phong trào cách mạng trong từng hoàn cảnh cụ thể.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 45</span>
-              <div class="q-text">Những phẩm chất cơ bản mà người lãnh tụ của quần chúng nhân dân cần có là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Trí tuệ uyên bác vượt trội; Năng lực tổ chức, tập hợp quần chúng; Phẩm <span class="kw-green">chất</span> đạo đức, ý chí phục vụ nhân dân.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Trí tuệ thông minh, sáng suốt; Được quần chúng tín nhiệm, bầu lên; Phẩm chất đạo đức hiền lành, trung thực.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Trí tuệ năng động, sáng tạo; Thương yêu quần chúng, nhân dân; Phẩm chất trong sáng, hòa đồng với giai cấp và dân tộc.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Trí tuệ nhìn xa, trông rộng; Năng lực chuyên môn vững vàng; Phẩm chất thẳng thắn, trung thực.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 51</span>
-              <div class="q-text">Ý nghĩa phương pháp luận của việc nghiên cứu vai trò của quần chúng nhân dân (QCND) và người lãnh đạo (NLĐ) trong thực hiện các phong trào cách mạng:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Quán triệt vai trò quan trọng của QCND, huy động nhân dân cùng những người lãnh đạo thực hiện tốt các phong trào cách mạng.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Quán triết vai trò to lớn của QCND, giáo dục nhân dân ý chí cách mạng; Đồng thời, phải quan tâm bồi dưỡng cán bộ lãnh đạo nhân dân.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Quán triệt vai trò sáng tạo lịch sử của QCND, tin tưởng và biết huy động sức mạnh to lơn cùa QCND; Đồng thời, phát hiện và bầu người có tài, có đức làm NLĐ.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Quán triệt vai trò quyết định lịch sử của QCND, tin tưởng và động viên mọi tầng lớp nhân dân làm cách mạng; Đồng thời, bầu ra người yêu nước, thương dân làm NLĐ.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 80</span>
-              <div class="q-text">Vai trò của quần chúng nhân dân trong lịch sử:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Là chủ thể sáng tạo ra của cải vật chất cho xã hội tồn tại, phát triển.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Là chủ thế sáng tạo chân chính ra lịch sử, quyết định sự phát triển của lịch sử.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Là chủ thể của các cuộc cách mạng xã hội, đưa xã hội phát triển.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Là chủ thể đấu tranh giai cấp, là động lực phát triển của lịch sử.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 81</span>
-              <div class="q-text">Vai trò sáng tạo lịch sử của quần chúng nhân dân biểu hiện:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Là lực lượng sản xuất vật chất cơ bản của mọi xã hôi; cải tạo thế giới tự nhiên; cải tạo chính bản thân con người.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Là lực lượng sản xuất vật chất cơ bản của xã hội; thực hiện đấu trang giai cấp trong xã hội; tiến hành các cuộc chiến tranh trong lịch sử.</span>
-            
-          </div>
-        
-          <div class="opt-item is-correct">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Là <span class="kw-green">lực lượng sản xuất</span> vất <span class="kw-green">chất</span> cơ bản của mọi xã hôi; sáng tạo ra các giá trị tinh thần của xã hôi; động lực cơ bản của mọi cuộc cách mạng trong lịch sử.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Là lực lượng sản xuất vật chất cơ bản của xã hội; thực hiện các cuộc đấu tranh giải phóng dân tộc; gìn giữ hòa bình thề giới.</span>
-            
-          </div>
-        </div>
-          </div>
-        
-          <div class="q-card">
-            <div class="q-header">
-              <span class="q-tag">Bài 3 - Câu 84</span>
-              <div class="q-text">Những phẩm chất cơ bản mà người lãnh tụ của quần chúng nhân dân cần có là:</div>
-            </div>
-            <div class="options-container">
-          <div class="opt-item is-correct">
-            <span class="opt-label">A</span>
-            <span class="opt-text">Trí tuệ uyên bác vượt trội; Năng lực tổ chức, tập hợp quần chúng; Phẩm <span class="kw-green">chất</span> đạo đức, ý chí phục vụ nhân dân.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">B</span>
-            <span class="opt-text">Trí tuệ thông minh, sáng suốt; Được quần chúng tín nhiệm, bầu lên; Phẩm chất đạo đức hiền lành, trung thực.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">C</span>
-            <span class="opt-text">Trí tuệ năng động, sáng tạo; Thương yêu quần chúng, nhân dân; Phẩm chất trong sáng, hòa đồng với giai cấp và dân tộc.</span>
-            
-          </div>
-        
-          <div class="opt-item">
-            <span class="opt-label">D</span>
-            <span class="opt-text">Trí tuệ nhìn xa, trông rộng; Năng lực chuyên môn vững vàng; Phẩm chất thẳng thắn, trung thực.</span>
-            
-          </div>
-        </div>
-          </div>
-        </div>
-            </td>
-          </tr>
-    
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- TAB 4 CONTENT -->
-  <div class="tab-content" id="sec4">
-    <div class="section">
-      <div class="section-title">
-        <i class="fa-solid fa-circle-exclamation" style="color: #6b7280;"></i>
-        PHẦN 4: ĐẦY ĐỦ CÁC CÂU HỎI BẪY PHỦ ĐỊNH ("SAI", "KHÔNG ĐÚNG") - (Toàn bộ 15 câu)
-      </div>
-
-      <div class="alert-box">
-        ⚠️ Khi đề bài hỏi <strong>"Nhận xét/Khẳng định nào SAI"</strong>, tuyệt đối không khoanh đáp án đúng! Hãy tìm câu phát biểu có từ <em>"tách rời"</em>, <em>"thống nhất ở ý thức"</em>, <em>"không có vai trò"</em> hoặc <em>"lắp ghép kết hợp"</em> để khoanh.
-      </div>
-
-      <div class="q-grid">
           <div class="q-card">
             <div class="q-header">
               <span class="q-tag">Bài 2 - Câu 2</span>
@@ -6472,10 +3469,10 @@
               <div class="q-text">Chỉ rõ quan điểm sai về đấu tranh giai cấp sau đây:</div>
             </div>
             <div class="options-container">
-          <div class="opt-item">
+          <div class="opt-item is-correct">
             <span class="opt-label">A</span>
-            <span class="opt-text">Đấu tranh giai cấp là đấu tranh của các tập đoàn người có quan điểm trái ngược nhau.</span>
-            
+            <span class="opt-text"><span class="kw-green">Đấu tranh giai cấp</span> là đấu tranh của các tập đoàn người có quan điểm trái ngược nhau.</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
           </div>
         
           <div class="opt-item">
@@ -6490,10 +3487,10 @@
             
           </div>
         
-          <div class="opt-item is-correct">
+          <div class="opt-item">
             <span class="opt-label">D</span>
-            <span class="opt-text"><span class="kw-green">Đấu tranh giai cấp</span> là cuộc đấu tranh của <span class="kw-green">quần chúng nhân dân</span> lao động chống lại giai cấp thống trị.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+            <span class="opt-text">Đấu tranh giai cấp là cuộc đấu tranh của quần chúng nhân dân lao động chống lại giai cấp thống trị.</span>
+            
           </div>
         </div>
           </div>
@@ -6570,16 +3567,16 @@
     <div class="section">
       <div class="section-title">
         <i class="fa-solid fa-layer-group" style="color: #7c3aed;"></i>
-        PHẦN 5: ĐẦY ĐỦ TOÀN BỘ CÁC CÂU HỎI CÒN LẠI PHÂN THEO NHÓM MẸO KHÁC (Toàn bộ 242 câu)
+        PHẦN 5: ĐẦY ĐỦ TOÀN BỘ CÁC CÂU HỎI CÒN LẠI PHÂN THEO NHÓM MẸO KHÁC (Toàn bộ 251 câu)
       </div>
 
       <div class="alert-box success">
-        🎯 Phần này bao gồm toàn bộ 242 câu hỏi còn lại trong ngân hàng 331 câu, được phân nhóm theo 5 dạng kiến thức chuyên biệt để học thuộc lòng trong 5 phút!
+        🎯 Phần này bao gồm toàn bộ 251 câu hỏi còn lại trong ngân hàng 331 câu, được phân nhóm theo 5 dạng kiến thức chuyên biệt để học thuộc lòng trong 5 phút!
       </div>
 
       <div class="sub-heading primary">
         <i class="fa-solid fa-brain"></i>
-        5.1. Nhóm Mẹo VẬT CHẤT - Ý THỨC - THỰC TIỄN (102 câu):
+        5.1. Nhóm Mẹo VẬT CHẤT - Ý THỨC - THỰC TIỄN (103 câu):
       </div>
       <p style="font-size: 0.88rem; color: #475569; margin-bottom: 12px;">Mẹo: Luôn ưu tiên chọn đáp án chứa từ khóa <strong>"Thực tại khách quan"</strong>, <strong>"Vận động là phương thức tồn tại"</strong>, <strong>"Phản ánh"</strong>, <strong>"Tính tích cực sáng tạo"</strong>, <strong>"Thực tiễn quyết định nhận thức"</strong>.</p>
       <div class="q-grid">
@@ -7442,6 +4439,38 @@
           <div class="opt-item">
             <span class="opt-label">D</span>
             <span class="opt-text">Bản chất của thế giới là ý thức; ý thức là cái có trước và quyết định, vất chất là cái có sau và bị quyết định.</span>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 61</span>
+              <div class="q-text">Quan điểm nào cho rằng: Nguồn gốc của mọi sự vận động biến đổi là nằm bên ngoài sự vật, hiện tượng?</div>
+            </div>
+            <div class="options-container">
+          <div class="opt-item is-correct">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Phương pháp siêu hình</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Phương pháp biện chứng</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Chủ nghĩa duy vật biện chứng</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Triết học Mác - Lênin</span>
             
           </div>
         </div>
@@ -9417,16 +6446,16 @@
             
           </div>
         
-          <div class="opt-item is-correct">
+          <div class="opt-item">
             <span class="opt-label">C</span>
             <span class="opt-text">Sự phát triển toàn diện con người.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+            
           </div>
         
-          <div class="opt-item">
+          <div class="opt-item is-correct">
             <span class="opt-label">D</span>
-            <span class="opt-text">Sự phát triển của lực lượng sản xuất.</span>
-            
+            <span class="opt-text">Sự phát triển của <span class="kw-green">lực lượng sản xuất</span>.</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
           </div>
         </div>
           </div>
@@ -9850,7 +6879,7 @@
 
       <div class="sub-heading primary">
         <i class="fa-solid fa-infinity"></i>
-        5.2. Nhóm Mẹo PHÉP BIỆN CHỨNG DUY VẬT - QUY LUẬT & CẶP PHẠM TRÙ (83 câu):
+        5.2. Nhóm Mẹo PHÉP BIỆN CHỨNG DUY VẬT - QUY LUẬT & CẶP PHẠM TRÙ (84 câu):
       </div>
       <p style="font-size: 0.88rem; color: #475569; margin-bottom: 12px;">Mẹo: Ưu tiên đáp án khẳng định sự <strong>"Mối liên hệ phổ biến"</strong>, <strong>"Phát triển"</strong>, <strong>"Thống nhất của các mặt đối lập"</strong>, <strong>"Tích lũy về lượng dẫn đến thay đổi về chất"</strong>, <strong>"Cái chung tồn tại trong cái riêng"</strong>.</p>
       <div class="q-grid">
@@ -10233,6 +7262,38 @@
           <div class="opt-item">
             <span class="opt-label">D</span>
             <span class="opt-text">Hệ tư tưởng Đức.</span>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 69</span>
+              <div class="q-text">Quan điểm nào cho rằng: Phát triển của sự vật, hiện tượng chỉ là sự tăng giảm thuần tuý về lượng mà không có sự thay đổi về chất?</div>
+            </div>
+            <div class="options-container">
+          <div class="opt-item">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Duy tâm chủ quan</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Duy tâm khách quan</span>
+            
+          </div>
+        
+          <div class="opt-item is-correct">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Siêu hình</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Biện chứng</span>
             
           </div>
         </div>
@@ -10628,10 +7689,10 @@
               <div class="q-text">Luận điểm nào sau đây xuất phát từ nội dung quy luật từ sự thay đổi về lượng dẫn đến thay đổi về chất và ngược lại:</div>
             </div>
             <div class="options-container">
-          <div class="opt-item is-correct">
+          <div class="opt-item">
             <span class="opt-label">A</span>
-            <span class="opt-text">Khi <span class="kw-green">chất</span> của sự vật có sự thay đổi đến độ nào đó thì <span class="kw-green">lượng</span> của sự vật cũng thay đổi, sự vật mới xuất hiện với <span class="kw-green">chất</span> mới và <span class="kw-green">lượng</span> mới thống nhất với nhau.</span>
-            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+            <span class="opt-text">Khi chất của sự vật có sự thay đổi đến độ nào đó thì lượng của sự vật cũng thay đổi, sự vật mới xuất hiện với chất mới và lượng mới thống nhất với nhau.</span>
+            
           </div>
         
           <div class="opt-item">
@@ -10640,10 +7701,10 @@
             
           </div>
         
-          <div class="opt-item">
+          <div class="opt-item is-correct">
             <span class="opt-label">C</span>
-            <span class="opt-text">Khi lượng của sự vật có sự thay đổi đến một mức độ nào đó thì chất của sự vật mới thay đổi.</span>
-            
+            <span class="opt-text">Khi <span class="kw-green">lượng</span> của sự vật có sự thay đổi đến một mức độ nào đó thì <span class="kw-green">chất</span> của sự vật mới thay đổi.</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
           </div>
         
           <div class="opt-item">
@@ -13192,7 +10253,7 @@
 
       <div class="sub-heading primary">
         <i class="fa-solid fa-user-graduate"></i>
-        5.4. Nhóm Mẹo TRIẾT GIA & LỊCH SỬ TRIẾT HỌC (8 câu):
+        5.4. Nhóm Mẹo TRIẾT GIA & LỊCH SỬ TRIẾT HỌC (12 câu):
       </div>
       <p style="font-size: 0.88rem; color: #475569; margin-bottom: 12px;">Mẹo: Hêghen (Duy tâm khách quan) • Phoiơbắc (Duy vật siêu hình) • Mác & Ăngghen (Sáng lập Duy vật biện chứng) • Lênin (Bổ sung phát triển giai đoạn TBCN độc quyền).</p>
       <div class="q-grid">
@@ -13210,7 +10271,7 @@
         
           <div class="opt-item is-correct">
             <span class="opt-label">B</span>
-            <span class="opt-text"><span class="kw-green">Chủ nghĩa tư bản độc quyền</span> ra đời.</span>
+            <span class="opt-text">Chủ nghĩa tư bản độc quyền ra đời.</span>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
           </div>
         
@@ -13319,6 +10380,134 @@
           <div class="opt-item">
             <span class="opt-label">D</span>
             <span class="opt-text">Tính tư biện.</span>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 60</span>
+              <div class="q-text">Nhà triết học đã ảnh hưởng sâu sắc đến thế giới quan và phương pháp luận của chủ nghĩa Mác:</div>
+            </div>
+            <div class="options-container">
+          <div class="opt-item is-correct">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Hêghen và Phoi-ơ-bắc</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Cantơ và Hêghen</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Phoi-ơ-bắc và Cantơ</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Hêghen và Đêcáctơ</span>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 64</span>
+              <div class="q-text">Các Mác xuất thân từ tôn giáo nào rồi chuyển sang vô thần:</div>
+            </div>
+            <div class="options-container">
+          <div class="opt-item is-correct">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Do thái giáo</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Cơ đốc giáo</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Phật giáo</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Ki tô giáo</span>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 68</span>
+              <div class="q-text">Chọn phương án đúng nhất: Chủ nghĩa Mác - Lênin là học thuyết do:</div>
+            </div>
+            <div class="options-container">
+          <div class="opt-item">
+            <span class="opt-label">A</span>
+            <span class="opt-text">C. Mác sáng lập, Ph. Ăngghen bảo vệ và phát triển</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">C. Mác sáng lập, V.I. Lênin bảo vệ và phát triển</span>
+            
+          </div>
+        
+          <div class="opt-item is-correct">
+            <span class="opt-label">C</span>
+            <span class="opt-text">C. Mác và Ph. Ăngghen sáng lập, V.I. Lênin là người bảo vệ và phát triển</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">C. Mác và V.I. Lênin là người sáng lập, Ph. Ăngghen là người bảo vệ và phát triển</span>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 72</span>
+              <div class="q-text">Điền từ vào chỗ trống, theo triết học Mác - Lênin: Triết học là hệ thống quan điểm…… về thế giới?</div>
+            </div>
+            <div class="options-container">
+          <div class="opt-item">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Lý luận</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Khoa học</span>
+            
+          </div>
+        
+          <div class="opt-item is-correct">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Lý luận chung nhất</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Khách quan</span>
             
           </div>
         </div>
@@ -13455,7 +10644,7 @@
 
       <div class="sub-heading primary">
         <i class="fa-solid fa-list-check"></i>
-        5.5. Nhóm CÂU HỎI TỔNG HỢP CÒN LẠI (28 câu):
+        5.5. Nhóm CÂU HỎI TỔNG HỢP CÒN LẠI (31 câu):
       </div>
       <div class="q-grid">
           <div class="q-card">
@@ -13646,6 +10835,102 @@
             <span class="opt-label">D</span>
             <span class="opt-text">Tính nguỵ biện.</span>
             
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 62</span>
+              <div class="q-text">Điền từ vào chỗ trống: Tri thức triết học mang tính …… dựa trên sự …… sâu sắc về thế giới.</div>
+            </div>
+            <div class="options-container">
+          <div class="opt-item is-correct">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Khái quát cao… trừu tượng hoá</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Khái quát cao… trực quan cảm tính</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Trừu tượng hoá… cụ thể hoá</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Trực quan cảm tính… trừu tượng hoá</span>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 70</span>
+              <div class="q-text">Quan điểm: "Trời sinh voi trời sinh cỏ" là biểu hiện của trường phái triết học nào?</div>
+            </div>
+            <div class="options-container">
+          <div class="opt-item is-correct">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Nhất nguyên <span class="kw-green">duy tâm khách quan</span></span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Nhất nguyên duy tâm chủ quan</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Nhị nguyên</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Đa nguyên</span>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 71</span>
+              <div class="q-text">Ngày nay, triết học có còn được coi là “khoa học của các khoa học” không?</div>
+            </div>
+            <div class="options-container">
+          <div class="opt-item">
+            <span class="opt-label">A</span>
+            <span class="opt-text">Chỉ có triết học duy vật biện chứng.</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">B</span>
+            <span class="opt-text">Tuỳ hệ thống triết học cụ thể.</span>
+            
+          </div>
+        
+          <div class="opt-item">
+            <span class="opt-label">C</span>
+            <span class="opt-text">Có.</span>
+            
+          </div>
+        
+          <div class="opt-item is-correct">
+            <span class="opt-label">D</span>
+            <span class="opt-text">Không.</span>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG CHUẨN</span>
           </div>
         </div>
           </div>
@@ -14358,38 +11643,14 @@
     </div>
   </div>
 
-  <!-- INTERACTIVE SCRIPTS -->
+  <!-- TAB SWITCHING SCRIPT -->
   <script>
-    function initMeoHocPage() {
-      // Tab Switching
+    document.addEventListener('DOMContentLoaded', () => {
       const tabItems = document.querySelectorAll('.tab-item');
       const tabContents = document.querySelectorAll('.tab-content');
 
-      tabItems.forEach((item, index) => {
+      tabItems.forEach(item => {
         item.addEventListener('click', () => {
-          const isGuest = (typeof getUserRole === 'function' ? getUserRole() : localStorage.getItem('lms_user_role')) === 'guest' && localStorage.getItem('lms_is_admin') !== 'true';
-
-          if (isGuest && index > 0) {
-            tabItems.forEach(t => t.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
-            item.classList.add('active');
-
-            const secId = item.dataset.sec;
-            const targetContent = document.getElementById(secId);
-            if (targetContent) {
-              targetContent.classList.add('active');
-              targetContent.innerHTML = `
-                <div class="locked-tab-banner">
-                  <div class="locked-icon"><i class="fa-solid fa-lock"></i></div>
-                  <h3>TÍNH NĂNG BỊ KHÓA DÀNH CHO KHÁCH</h3>
-                  <p>Trang Mẹo Học phần này chỉ dành riêng cho <strong>Tài khoản VIP đã kích hoạt</strong>.<br>Vui lòng nhập Mã VIP 1 thiết bị để mở khóa trọn bộ!</p>
-                  <button class="btn-unlock-vip" onclick="showLoginModal()"><i class="fa-solid fa-key"></i> Kích hoạt Mã VIP</button>
-                </div>
-              `;
-            }
-            return;
-          }
-
           tabItems.forEach(t => t.classList.remove('active'));
           tabContents.forEach(c => c.classList.remove('active'));
 
@@ -14401,41 +11662,8 @@
           }
         });
       });
-
-      // Accordion Table Rows Toggle
-      const lhRows = document.querySelectorAll('.lh-row');
-      lhRows.forEach(row => {
-        row.addEventListener('click', () => {
-          const targetId = row.dataset.target;
-          const targetDetailsRow = document.getElementById(targetId);
-          const icon = row.querySelector('.toggle-badge i');
-
-          if (targetDetailsRow) {
-            const isExpanded = targetDetailsRow.classList.contains('expanded');
-            
-            if (isExpanded) {
-              targetDetailsRow.classList.remove('expanded');
-              row.classList.remove('expanded');
-              if (icon) icon.className = 'fa-solid fa-chevron-down';
-            } else {
-              targetDetailsRow.classList.add('expanded');
-              row.classList.add('expanded');
-              if (icon) icon.className = 'fa-solid fa-chevron-up';
-            }
-          }
-        });
-      });
-    }
-
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      initMeoHocPage();
-    } else {
-      document.addEventListener('DOMContentLoaded', initMeoHocPage);
-    }
+    });
   </script>
 
-  <script src="toast_helper.js"></script>
-  <script src="admin.js"></script>
-  <script src="auth.js"></script>
 </body>
 </html>

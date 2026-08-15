@@ -1,7 +1,7 @@
 window.QUIZ_DATA = {
   "bai1": {
     "title": "Bài 1: Triết học và vai trò của triết học trong đời sống xã hội",
-    "total_questions": 59,
+    "total_questions": 73,
     "questions": [
       {
         "question_id": 1,
@@ -2008,6 +2008,482 @@ window.QUIZ_DATA = {
         "correct_option": "C",
         "explanation": "✅ **Đáp án chính xác!**\n• **Lựa chọn của bạn:** Option **C**: *\"Bản chất của thế giới là ý thức, ý thức là tính thứ nhất, vật chất là tính thứ hai; ý thức là cái có trước và quyết định vật chất.\"*\n💡 **Giải thích:** Đáp án **C** phù hợp chuẩn xác với nội dung Giáo trình Triết học Mác - Lênin.",
         "is_user_correct": true
+      },
+      {
+        "question": "60. Nhà triết học đã ảnh hưởng sâu sắc đến thế giới quan và phương pháp luận của chủ nghĩa Mác:",
+        "options": [
+          {
+            "label": "A",
+            "text": "Hêghen và Phoi-ơ-bắc",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "B",
+            "text": "Cantơ và Hêghen",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Phoi-ơ-bắc và Cantơ",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Hêghen và Đêcáctơ",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "A",
+        "selected_option": "A",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Hêghen (với phép biện chứng) và Phoi-ơ-bắc (với chủ nghĩa duy vật) là hai đại diện tiêu biểu của Triết học cổ điển Đức có ảnh hưởng trực tiếp và sâu sắc nhất đến sự hình thành thế giới quan và phương pháp luận của Triết học Mác.",
+        "question_id": 60
+      },
+      {
+        "question": "61. Quan điểm nào cho rằng: Nguồn gốc của mọi sự vận động biến đổi là nằm bên ngoài sự vật, hiện tượng?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Phương pháp siêu hình",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "B",
+            "text": "Phương pháp biện chứng",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Chủ nghĩa duy vật biện chứng",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Triết học Mác - Lênin",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "A",
+        "selected_option": "A",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Phương pháp siêu hình coi nguyên nhân, nguồn gốc của sự biến đổi và phát triển nằm ở bên ngoài đối tượng (do lực đẩy bên ngoài hoặc Thượng đế).",
+        "question_id": 61
+      },
+      {
+        "question": "62. Điền từ vào chỗ trống: Tri thức triết học mang tính …… dựa trên sự …… sâu sắc về thế giới.",
+        "options": [
+          {
+            "label": "A",
+            "text": "Khái quát cao… trừu tượng hoá",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "B",
+            "text": "Khái quát cao… trực quan cảm tính",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Trừu tượng hoá… cụ thể hoá",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Trực quan cảm tính… trừu tượng hoá",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "A",
+        "selected_option": "A",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Tri thức triết học mang tính *khái quát cao* dựa trên sự *trừu tượng hoá* sâu sắc về thế giới.",
+        "question_id": 62
+      },
+      {
+        "question": "63. Khi nói về triết học Mác, khẳng định nào sau đây là sai:",
+        "options": [
+          {
+            "label": "A",
+            "text": "Triết học Mác là sự kết hợp phép biện chứng của Hêghen và chủ nghĩa duy vật của Phoi-ơ-bắc",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "B",
+            "text": "Triết học Mác có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật.",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Triết học Mác kế thừa và cải tạo phép biện chứng của Hêghen trên cơ sở duy vật.",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Triết học Mác ra đời là một bước ngoặt vĩ đại trong lịch sử tư tưởng của nhân loại.",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "A",
+        "selected_option": "A",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Khẳng định A là sai vì Triết học Mác không phải là sự lắp ghép hay kết hợp giản đơn cơ học giữa Hêghen và Phoi-ơ-bắc, mà là sự kế thừa có phê phán, cải tạo biện chứng và phát triển sáng tạo trên lập trường duy vật.",
+        "question_id": 63
+      },
+      {
+        "question": "64. Các Mác xuất thân từ tôn giáo nào rồi chuyển sang vô thần:",
+        "options": [
+          {
+            "label": "A",
+            "text": "Do thái giáo",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "B",
+            "text": "Cơ đốc giáo",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Phật giáo",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Ki tô giáo",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "A",
+        "selected_option": "A",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** C. Mác xuất thân trong một gia đình gốc Do Thái giáo, sau đó chuyển sang thế giới quan duy vật và lập trường vô thần.",
+        "question_id": 64
+      },
+      {
+        "question": "65. Khi giải quyết vấn đề cơ bản của triết học cần trả lời câu hỏi nào?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Ý thức và vật chất, Trời và Đất có nguồn gốc từ đâu?",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "B",
+            "text": "Vật chất hay ý thức cái nào có trước, cái nào có sau, cái nào quyết định cái nào? Con người có khả năng nhận thức thế giới được hay không?",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "C",
+            "text": "Bản chất, con đường, cách thức, nhiệm vụ, mục tiêu của nhận thức là gì?",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Bản chất của tồn tại, nền tảng của cuộc đời là gì? Thế nào là hạnh phúc, tự do?",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "B",
+        "selected_option": "B",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Vấn đề cơ bản của triết học gồm hai mặt: Mặt thứ nhất trả lời câu hỏi cái nào có trước, cái nào có sau và cái nào quyết định cái nào; Mặt thứ hai trả lời câu hỏi con người có khả năng nhận thức được thế giới hay không.",
+        "question_id": 65
+      },
+      {
+        "question": "66. Hạn chế cơ bản của quan niệm duy vật về vật chất ở thời kỳ cổ đại là:",
+        "options": [
+          {
+            "label": "A",
+            "text": "Có tính chất duy tâm chủ quan",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "B",
+            "text": "Có tính chất duy vật tự phát, là những phỏng đoán dựa trên nhận thức trực quan cảm tính là chủ yếu, chưa có cơ sở khoa học",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "C",
+            "text": "Có tính chất duy vật máy móc siêu hình",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Có tính chất duy vật máy móc",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "B",
+        "selected_option": "B",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Quan niệm duy vật thời cổ đại mang tính ngây thơ, chất phác, trực giác và phỏng đoán cảm tính, chưa có căn cứ khoa học tự nhiên xác thực.",
+        "question_id": 66
+      },
+      {
+        "question": "67. Mặt thứ hai vấn đề cơ bản của triết học trả lời câu hỏi:",
+        "options": [
+          {
+            "label": "A",
+            "text": "Con người có khả năng nhận thức được thế giới hay không?",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "B",
+            "text": "Con người có tồn tại không?",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Giữa ý thức và vật chất, cái nào có trước, cái nào có sau, cái nào quyết định cái nào?",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Linh hồn con người có tồn tại không?",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "A",
+        "selected_option": "A",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Mặt thứ hai của vấn đề cơ bản của triết học là khả tri luận (con người có khả năng nhận thức được thế giới hay không).",
+        "question_id": 67
+      },
+      {
+        "question": "68. Chọn phương án đúng nhất: Chủ nghĩa Mác - Lênin là học thuyết do:",
+        "options": [
+          {
+            "label": "A",
+            "text": "C. Mác sáng lập, Ph. Ăngghen bảo vệ và phát triển",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "B",
+            "text": "C. Mác sáng lập, V.I. Lênin bảo vệ và phát triển",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "C. Mác và Ph. Ăngghen sáng lập, V.I. Lênin là người bảo vệ và phát triển",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "D",
+            "text": "C. Mác và V.I. Lênin là người sáng lập, Ph. Ăngghen là người bảo vệ và phát triển",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "C",
+        "selected_option": "C",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Chủ nghĩa Mác - Lênin do C. Mác và Ph. Ăngghen sáng lập vào những năm 40 của thế kỷ XIX, sau đó được V.I. Lênin bảo vệ và phát triển trong điều kiện lịch sử mới.",
+        "question_id": 68
+      },
+      {
+        "question": "69. Quan điểm nào cho rằng: Phát triển của sự vật, hiện tượng chỉ là sự tăng giảm thuần tuý về lượng mà không có sự thay đổi về chất?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Duy tâm chủ quan",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "B",
+            "text": "Duy tâm khách quan",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Siêu hình",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "D",
+            "text": "Biện chứng",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "C",
+        "selected_option": "C",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Quan điểm siêu hình phủ nhận sự chuyển hóa về chất, chỉ coi phát triển là sự tăng giảm thuần túy về lượng hoặc lặp lại vòng tròn khép kín.",
+        "question_id": 69
+      },
+      {
+        "question": "70. Quan điểm: \"Trời sinh voi trời sinh cỏ\" là biểu hiện của trường phái triết học nào?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Nhất nguyên duy tâm khách quan",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "B",
+            "text": "Nhất nguyên duy tâm chủ quan",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Nhị nguyên",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Đa nguyên",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "A",
+        "selected_option": "A",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Quan điểm \"Trời sinh voi trời sinh cỏ\" gán nguồn gốc sinh thành của vạn vật cho \"Trời\" (một thế lực tâm linh siêu nhiên bên ngoài con người) nên mang bản chất duy tâm khách quan.",
+        "question_id": 70
+      },
+      {
+        "question": "71. Ngày nay, triết học có còn được coi là “khoa học của các khoa học” không?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Chỉ có triết học duy vật biện chứng.",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "B",
+            "text": "Tuỳ hệ thống triết học cụ thể.",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Có.",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Không.",
+            "selected": true,
+            "is_correct": true
+          }
+        ],
+        "correct_option": "D",
+        "selected_option": "D",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Triết học Mác đã chấm dứt hoàn toàn quan niệm coi triết học là \"khoa học của các khoa học\" đứng trên các khoa học chuyên ngành.",
+        "question_id": 71
+      },
+      {
+        "question": "72. Điền từ vào chỗ trống, theo triết học Mác - Lênin: Triết học là hệ thống quan điểm…… về thế giới?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Lý luận",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "B",
+            "text": "Khoa học",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Lý luận chung nhất",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "D",
+            "text": "Khách quan",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "C",
+        "selected_option": "C",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Triết học là hệ thống quan điểm lý luận chung nhất về thế giới và vị trí của con người trong thế giới đó.",
+        "question_id": 72
+      },
+      {
+        "question": "73. Điều kiện lịch sử cho sự ra đời của triết học Mác:",
+        "options": [
+          {
+            "label": "A",
+            "text": "Điều kiện kinh tế - xã hội ; Kinh tế chính trị Mác – Lênin; Tư tưởng triết học và lịch sử nhân loại",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "B",
+            "text": "Triết học Mác-Lênin; Kinh tế chính trị Mác-Lênin; Chủ nghĩa xã hội khoa học; Nguồn gốc lý luận và tiền đề khoa học tự nhiên",
+            "selected": false,
+            "is_correct": false
+          },
+          {
+            "label": "C",
+            "text": "Tiền đề lý luận ; Tiền đề khoa học tự nhiên; Điều kiện kinh tế - xã hội",
+            "selected": true,
+            "is_correct": true
+          },
+          {
+            "label": "D",
+            "text": "Điều kiện kinh tế - xã hội ; Nguồn gốc lý luận và tiền đề khoa học tự nhiên ; Nhân tố chủ quan",
+            "selected": false,
+            "is_correct": false
+          }
+        ],
+        "correct_option": "C",
+        "selected_option": "C",
+        "is_user_correct": true,
+        "explanation": "✅ **Chính xác!** Ba tiền đề/điều kiện khách quan cho sự ra đời của triết học Mác gồm: Điều kiện kinh tế - xã hội, Tiền đề lý luận và Tiền đề khoa học tự nhiên.",
+        "question_id": 73
       }
     ]
   },
@@ -4538,8 +5014,8 @@ window.QUIZ_DATA = {
           {
             "label": "A",
             "text": "Khi chất của sự vật có sự thay đổi đến độ nào đó thì lượng của sự vật cũng thay đổi, sự vật mới xuất hiện với chất mới và lượng mới thống nhất với nhau.",
-            "selected": true,
-            "is_correct": true
+            "selected": false,
+            "is_correct": false
           },
           {
             "label": "B",
@@ -4550,8 +5026,8 @@ window.QUIZ_DATA = {
           {
             "label": "C",
             "text": "Khi lượng của sự vật có sự thay đổi đến một mức độ nào đó thì chất của sự vật mới thay đổi.",
-            "selected": false,
-            "is_correct": false
+            "selected": true,
+            "is_correct": true
           },
           {
             "label": "D",
@@ -4560,9 +5036,9 @@ window.QUIZ_DATA = {
             "is_correct": false
           }
         ],
-        "selected_option": "A",
-        "correct_option": "A",
-        "explanation": "✅ **Đáp án chính xác!**\n• **Lựa chọn của bạn:** Option **A**: *\"Khi chất của sự vật có sự thay đổi đến độ nào đó thì lượng của sự vật cũng thay đổi, sự vật mới xuất hiện với chất mới và lượng mới thống nhất với nhau.\"*\n💡 **Giải thích:** Đáp án **A** phù hợp chuẩn xác với nội dung Giáo trình Triết học Mác - Lênin.",
+        "selected_option": "C",
+        "correct_option": "C",
+        "explanation": "✅ **Chính xác!** Theo quy luật chuyển hóa từ những thay đổi về lượng dẫn đến những thay đổi về chất và ngược lại: khi lượng thay đổi tích lũy đến một mức độ nhất định (vượt qua giới hạn của độ, đạt tới điểm nút) thì chất của sự vật mới biến đổi, bước nhảy diễn ra tạo thành chất mới.",
         "is_user_correct": true
       },
       {
@@ -6788,8 +7264,8 @@ window.QUIZ_DATA = {
           {
             "label": "A",
             "text": "Đấu tranh giai cấp là đấu tranh của các tập đoàn người có quan điểm trái ngược nhau.",
-            "selected": false,
-            "is_correct": false
+            "selected": true,
+            "is_correct": true
           },
           {
             "label": "B",
@@ -6806,13 +7282,13 @@ window.QUIZ_DATA = {
           {
             "label": "D",
             "text": "Đấu tranh giai cấp là cuộc đấu tranh của quần chúng nhân dân lao động chống lại giai cấp thống trị.",
-            "selected": true,
-            "is_correct": true
+            "selected": false,
+            "is_correct": false
           }
         ],
-        "selected_option": "D",
-        "correct_option": "D",
-        "explanation": "✅ **Đáp án chính xác!**\n• **Lựa chọn của bạn:** Option **D**: *\"Đấu tranh giai cấp là cuộc đấu tranh của quần chúng nhân dân lao động chống lại giai cấp thống trị.\"*\n💡 **Giải thích:** Đáp án **D** phù hợp chuẩn xác với nội dung Giáo trình Triết học Mác - Lênin.",
+        "selected_option": "A",
+        "correct_option": "A",
+        "explanation": "✅ **Chính xác!** Nhận định A là quan điểm sai: Đấu tranh giai cấp thực chất là cuộc đấu tranh giữa các tập đoàn người có **lợi ích căn bản đối lập nhau** (lợi ích kinh tế), chứ không đơn thuần chỉ là \"có quan điểm trái ngược nhau\".",
         "is_user_correct": true
       },
       {
@@ -9758,19 +10234,19 @@ window.QUIZ_DATA = {
           {
             "label": "C",
             "text": "Sự phát triển toàn diện con người.",
-            "selected": true,
-            "is_correct": true
+            "selected": false,
+            "is_correct": false
           },
           {
             "label": "D",
             "text": "Sự phát triển của lực lượng sản xuất.",
-            "selected": false,
-            "is_correct": false
+            "selected": true,
+            "is_correct": true
           }
         ],
-        "selected_option": "C",
-        "correct_option": "C",
-        "explanation": "✅ **Đáp án chính xác!**\n• **Lựa chọn của bạn:** Option **C**: *\"Sự phát triển toàn diện con người.\"*\n💡 **Giải thích:** Đáp án **C** phù hợp chuẩn xác với nội dung Giáo trình Triết học Mác - Lênin.",
+        "selected_option": "D",
+        "correct_option": "D",
+        "explanation": "✅ **Chính xác!** Theo chủ nghĩa duy vật lịch sử, sự phát triển của lực lượng sản xuất là tiêu chuẩn khách quan cao nhất, cơ bản và toàn diện nhất để đánh giá sự tiến bộ của một xã hội qua các thời kỳ lịch sử.",
         "is_user_correct": true
       },
       {

@@ -2,7 +2,7 @@ import json, re
 
 with open('quiz_data.js', 'r', encoding='utf-8') as f:
     content = f.read()
-json_str = content.replace("window.QUIZ_DATA = ", "").rstrip(";")
+json_str = re.sub(r"^\s*window\.QUIZ_DATA\s*=\s*", "", content); json_str = re.sub(r";\s*$", "", json_str)
 data = json.loads(json_str)
 
 tab_names = {
