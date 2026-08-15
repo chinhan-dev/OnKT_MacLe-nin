@@ -576,7 +576,7 @@ html = f"""<!DOCTYPE html>
       </div>
       
       <div class="alert-box">
-        ⚠️ <strong>CẢNH BÁO QUAN TRỌNG:</strong> Trong ngân hàng 331 câu hỏi Triết học Mác - Lênin, có 6 câu chứa lựa chọn "Tất cả...". Tuy nhiên:
+        ⚠️ <strong>CẢNH BÁO QUAN TRỌNG:</strong> Trong ngân hàng {len(all_q)} câu hỏi Triết học Mác - Lênin, có 6 câu chứa lựa chọn "Tất cả...". Tuy nhiên:
         <br>• Chỉ có <strong>1 CÂU DUY NHẤT</strong> khoanh đáp án "Tất cả...".
         <br>• Có <strong>5 CÂU LÀ BẪY LỪA</strong> (Khoanh "Tất cả" là SAI, phải khoanh đáp án khác)!
       </div>
@@ -787,7 +787,7 @@ html += f"""
       </div>
 
       <div class="alert-box success">
-        🎯 Phần này bao gồm toàn bộ {len(remaining_qs)} câu hỏi còn lại trong ngân hàng 331 câu, được phân nhóm theo 5 dạng kiến thức chuyên biệt để học thuộc lòng trong 5 phút!
+        🎯 Phần này bao gồm toàn bộ {len(remaining_qs)} câu hỏi còn lại trong ngân hàng {len(all_q)} câu, được phân nhóm theo 5 dạng kiến thức chuyên biệt để học thuộc lòng trong 5 phút!
       </div>
 
       <div class="sub-heading primary">

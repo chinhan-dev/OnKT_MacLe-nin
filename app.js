@@ -79,8 +79,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2500);
   }
 
+  // Update Navigation Tab and SubTab Question Counts Dynamically
+  function updateTabBadges() {
+    if (!window.QUIZ_DATA) return;
+    const b1 = window.QUIZ_DATA.bai1?.questions?.length || 0;
+    const b2 = window.QUIZ_DATA.bai2?.questions?.length || 0;
+    const b3 = window.QUIZ_DATA.bai3?.questions?.length || 0;
+    const kt1 = window.QUIZ_DATA.kt1?.questions?.length || 0;
+    const kt2 = window.QUIZ_DATA.kt2?.questions?.length || 0;
+    const kt3 = window.QUIZ_DATA.kt3?.questions?.length || 0;
+    const ktAll = kt1 + kt2 + kt3;
+
+    const b1Small = document.querySelector('.tab-btn[data-tab="bai1"] small');
+    if (b1Small) b1Small.textContent = `${b1} câu`;
+    const b2Small = document.querySelector('.tab-btn[data-tab="bai2"] small');
+    if (b2Small) b2Small.textContent = `${b2} câu`;
+    const b3Small = document.querySelector('.tab-btn[data-tab="bai3"] small');
+    if (b3Small) b3Small.textContent = `${b3} câu`;
+    const ktSmall = document.querySelector('.tab-btn[data-tab="kt"] small');
+    if (ktSmall) ktSmall.textContent = `${ktAll} câu (KT 1,2,3)`;
+
+    const subKtAll = document.querySelector('.sub-tab-btn[data-subtab="kt_all"]');
+    if (subKtAll) subKtAll.textContent = `Tất cả (${ktAll} câu)`;
+    const subKt1 = document.querySelector('.sub-tab-btn[data-subtab="kt1"]');
+    if (subKt1) subKt1.textContent = `Đề KT 1 (${kt1} câu)`;
+    const subKt2 = document.querySelector('.sub-tab-btn[data-subtab="kt2"]');
+    if (subKt2) subKt2.textContent = `Đề KT 2 (${kt2} câu)`;
+    const subKt3 = document.querySelector('.sub-tab-btn[data-subtab="kt3"]');
+    if (subKt3) subKt3.textContent = `Đề KT 3 (${kt3} câu)`;
+  }
+
   // Render Page Content
   function render() {
+    updateTabBadges();
     const questions = getActiveQuestions();
     updateToggleLabel();
     renderQuestions(questions);
