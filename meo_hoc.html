@@ -37,8 +37,8 @@
       background-color: #f8fafc;
       color: #0f172a;
       line-height: 1.6;
-      padding: 16px 28px;
-      max-width: 1520px;
+      padding: 16px 24px;
+      max-width: 1560px;
       margin: 0 auto;
     }
 
@@ -85,18 +85,18 @@
       color: #f59e0b;
     }
 
-    /* ULTRA-THIN SLEEK 8 TABS NAVIGATION BAR */
+    /* ULTRA-THIN SLEEK 9 TABS NAVIGATION BAR */
     .tab-bar {
       position: sticky;
       top: 10px;
       z-index: 100;
       background-color: #ffffff;
-      padding: 5px;
+      padding: 4px;
       border-radius: 9999px;
       border: 1px solid #cbd5e1;
       display: flex;
       justify-content: space-between;
-      gap: 4px;
+      gap: 3px;
       margin-bottom: 22px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.06);
       overflow-x: auto;
@@ -104,13 +104,13 @@
 
     .tab-item {
       flex: 1;
-      min-width: 130px;
-      padding: 7px 10px;
+      min-width: 110px;
+      padding: 6px 8px;
       border-radius: 9999px;
       border: none;
       background-color: transparent;
       color: #475569;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       cursor: pointer;
       display: flex;
@@ -119,15 +119,15 @@
       justify-content: center;
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       white-space: nowrap;
-      gap: 2px;
+      gap: 1px;
     }
 
     .tab-item i {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
 
     .tab-item small {
-      font-size: 0.66rem;
+      font-size: 0.64rem;
       font-weight: 600;
       opacity: 0.85;
     }
@@ -217,18 +217,18 @@
       color: #6b21a8;
     }
 
-    .alert-box.warning {
-      background-color: #fffbeb;
-      border-color: #fde68a;
-      border-left-color: #f59e0b;
-      color: #92400e;
-    }
-
     .alert-box.cyan {
       background-color: #ecfeff;
       border-color: #a5f3fc;
       border-left-color: #06b6d4;
       color: #0e7490;
+    }
+
+    .alert-box.emerald {
+      background-color: #f0fdfa;
+      border-color: #99f6e4;
+      border-left-color: #0d9488;
+      color: #115e59;
     }
 
     /* Search Input Bar */
@@ -445,6 +445,7 @@
     .sub-heading.primary { color: #2563eb; }
     .sub-heading.purple { color: #7c3aed; }
     .sub-heading.cyan { color: #0891b2; }
+    .sub-heading.emerald { color: #0d9488; }
 
     /* Philosopher Card */
     .philosopher-grid {
@@ -510,7 +511,7 @@
     </div>
   </div>
 
-  <!-- ULTRA-THIN SLEEK 8 TABS NAVIGATION BAR -->
+  <!-- ULTRA-THIN SLEEK 9 TABS NAVIGATION BAR -->
   <nav class="tab-bar">
     <button class="tab-item active" data-sec="sec1">
       <i class="fa-solid fa-bolt"></i>
@@ -545,12 +546,17 @@
     <button class="tab-item" data-sec="sec7">
       <i class="fa-solid fa-circle-nodes"></i>
       <span>7: Bẫy "Siêu Hình"</span>
-      <small>Toàn Bộ 22 Câu</small>
+      <small>22 Câu Siêu Hình</small>
     </button>
     <button class="tab-item" data-sec="sec8">
       <i class="fa-solid fa-ruler-combined"></i>
-      <span>8: Bẫy Dài Nhất (SAI)</span>
-      <small>Ngoại Lệ Dài Nhất</small>
+      <span>8: Bẫy Dài Nhất</span>
+      <small>Dài Nhưng SAI</small>
+    </button>
+    <button class="tab-item" data-sec="sec9">
+      <i class="fa-solid fa-infinity"></i>
+      <span>9: Từ Khóa "Biện Chứng"</span>
+      <small>74 Câu Biện Chứng</small>
     </button>
   </nav>
 
@@ -1012,7 +1018,7 @@
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>D.</strong> <span class="kw-green">Phương pháp siêu hình</span> không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp biện chứng.
+              <strong>D.</strong> <span class="kw-green">Phương pháp siêu hình</span> không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -1034,7 +1040,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật.
+              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp <span class="kw-green">biện chứng</span> và thế giới quan duy vật.
             </div>
             
           </div>
@@ -1430,7 +1436,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> CNDV biện chứng thừa nhận nhận thức là quá trình <span class="kw-green">phản ánh</span> sáng tạo hiện thực khách quan vào trong đầu óc con người dựa trên cơ sở <span class="kw-green">thực tiễn</span>.
+              <strong>B.</strong> CNDV <span class="kw-green">biện chứng</span> thừa nhận nhận thức là quá trình <span class="kw-green">phản ánh</span> sáng tạo hiện thực khách quan vào trong đầu óc con người dựa trên cơ sở <span class="kw-green">thực tiễn</span>.
             </div>
             
           </div>
@@ -1444,7 +1450,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> CNDV biện chứng thừa nhận nhận thức là quá trình biện chứng xuất phát từ <span class="kw-green">thực tiễn</span> và quay về phục vụ <span class="kw-green">thực tiễn</span>.
+              <strong>D.</strong> CNDV <span class="kw-green">biện chứng</span> thừa nhận nhận thức là quá trình <span class="kw-green">biện chứng</span> xuất phát từ <span class="kw-green">thực tiễn</span> và quay về phục vụ <span class="kw-green">thực tiễn</span>.
             </div>
             
           </div>
@@ -1603,28 +1609,28 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp biện chứng là phương pháp nhận thức sự vật trong các mối liên hệ, ràng buộc, quy định lẫn nhau.
+              <strong>A.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp nhận thức sự vật trong các mối liên hệ, ràng buộc, quy định lẫn nhau.
             </div>
             
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Phương pháp biện chứng là phương pháp nhận thức sự vật ở trạng thái <span class="kw-green">vận động</span>, biến đổi, nằm trong khuynh hướng chung là phát triển.
+              <strong>B.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp nhận thức sự vật ở trạng thái <span class="kw-green">vận động</span>, biến đổi, nằm trong khuynh hướng chung là phát triển.
             </div>
             
           </div>
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>C.</strong> Phương pháp biện chứng là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm ngoài đối tượng.
+              <strong>C.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm ngoài đối tượng.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Phương pháp biện chứng là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm bên trong đối tượng.
+              <strong>D.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm bên trong đối tượng.
             </div>
             
           </div>
@@ -1862,7 +1868,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật.
+              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp <span class="kw-green">biện chứng</span> và thế giới quan duy vật.
             </div>
             
           </div>
@@ -2222,7 +2228,7 @@
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>B.</strong> Tính <span class="kw-green">chất</span> biện chứng của sự <span class="kw-green">vận động</span> và phát triển của thế giới vật <span class="kw-green">chất</span>.
+              <strong>B.</strong> Tính <span class="kw-green">chất</span> <span class="kw-green">biện chứng</span> của sự <span class="kw-green">vận động</span> và phát triển của thế giới vật <span class="kw-green">chất</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -2863,7 +2869,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phải nhận thức đúng <span class="kw-green">mâu thuẫn</span> và giải quyết triệt để các <span class="kw-green">mâu thuẫn</span>; Đồng thời, quán triệt quan điểm biện chứng trong xem xet và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phát triển.
+              <strong>A.</strong> Phải nhận thức đúng <span class="kw-green">mâu thuẫn</span> và giải quyết triệt để các <span class="kw-green">mâu thuẫn</span>; Đồng thời, quán triệt quan điểm <span class="kw-green">biện chứng</span> trong xem xet và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phát triển.
             </div>
             
           </div>
@@ -2956,7 +2962,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Là khoa học nghiên cứu về sự <span class="kw-green">vận động</span> của giới tự nhiên một cách biện chứng.
+              <strong>D.</strong> Là khoa học nghiên cứu về sự <span class="kw-green">vận động</span> của giới tự nhiên một cách <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
@@ -3014,14 +3020,14 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Trong mối quan hệ biện chứng.
+              <strong>B.</strong> Trong mối quan hệ <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>C.</strong> Vừa có tính độc lập tương đối, vừa có mối quan hệ biện chứng.
+              <strong>C.</strong> Vừa có tính độc lập tương đối, vừa có mối quan hệ <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -3754,7 +3760,7 @@
             <div class="opts-list">
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp biện chứng.
+              <strong>A.</strong> Phương pháp <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -4222,7 +4228,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Sự thống nhất biện chứng giữa <span class="kw-green">chất</span> và <span class="kw-green">lượng</span>.
+              <strong>A.</strong> Sự thống nhất <span class="kw-green">biện chứng</span> giữa <span class="kw-green">chất</span> và <span class="kw-green">lượng</span>.
             </div>
             
           </div>
@@ -4986,7 +4992,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp tư duy biện chứng.
+              <strong>A.</strong> Phương pháp tư duy <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
@@ -5245,7 +5251,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Phương pháp biện chứng
+              <strong>B.</strong> Phương pháp <span class="kw-green">biện chứng</span>
             </div>
             
           </div>
@@ -5295,7 +5301,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Biện chứng
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span>
             </div>
             
           </div>
@@ -7247,7 +7253,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Quan hệ biện chứng giữa nhận thức và <span class="kw-green">thực tiễn</span>.
+              <strong>D.</strong> Quan hệ <span class="kw-green">biện chứng</span> giữa nhận thức và <span class="kw-green">thực tiễn</span>.
             </div>
             
           </div>
@@ -7406,7 +7412,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phải nhận thức đúng <span class="kw-green">mâu thuẫn</span> và giải quyết triệt để các <span class="kw-green">mâu thuẫn</span>; Đồng thời, quán triệt quan điểm biện chứng trong xem xet và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phát triển.
+              <strong>A.</strong> Phải nhận thức đúng <span class="kw-green">mâu thuẫn</span> và giải quyết triệt để các <span class="kw-green">mâu thuẫn</span>; Đồng thời, quán triệt quan điểm <span class="kw-green">biện chứng</span> trong xem xet và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phát triển.
             </div>
             
           </div>
@@ -7946,7 +7952,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Sự thống nhất biện chứng giữa <span class="kw-green">chất</span> và <span class="kw-green">lượng</span>.
+              <strong>A.</strong> Sự thống nhất <span class="kw-green">biện chứng</span> giữa <span class="kw-green">chất</span> và <span class="kw-green">lượng</span>.
             </div>
             
           </div>
@@ -8025,14 +8031,14 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Trong mối quan hệ biện chứng.
+              <strong>B.</strong> Trong mối quan hệ <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>C.</strong> Vừa có tính độc lập tương đối, vừa có mối quan hệ biện chứng.
+              <strong>C.</strong> Vừa có tính độc lập tương đối, vừa có mối quan hệ <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -11312,7 +11318,7 @@
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>D.</strong> <span class="kw-green">Phương pháp siêu hình</span> không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp biện chứng.
+              <strong>D.</strong> <span class="kw-green">Phương pháp siêu hình</span> không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -11579,7 +11585,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp tư duy biện chứng.
+              <strong>A.</strong> Phương pháp tư duy <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
@@ -11867,7 +11873,7 @@
             <div class="opts-list">
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp biện chứng.
+              <strong>A.</strong> Phương pháp <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -11975,28 +11981,28 @@
             <div class="opts-list">
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>A.</strong> Biện chứng khách quan và biện chứng chủ quan.
+              <strong>A.</strong> <span class="kw-green">Biện chứng</span> khách quan và <span class="kw-green">biện chứng</span> chủ quan.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Biện chứng tự nhiên và biện chứng xã hội.
+              <strong>B.</strong> <span class="kw-green">Biện chứng</span> tự nhiên và <span class="kw-green">biện chứng</span> xã hội.
             </div>
             
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>C.</strong> Biện chứng duy tâm và biện chứng duy vật.
+              <strong>C.</strong> <span class="kw-green">Biện chứng</span> duy tâm và <span class="kw-green">biện chứng</span> duy vật.
             </div>
             
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Biện chứng vật <span class="kw-green">chất</span> và biện chứng ý thức.
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span> vật <span class="kw-green">chất</span> và <span class="kw-green">biện chứng</span> ý thức.
             </div>
             
           </div>
@@ -12313,14 +12319,14 @@
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>C.</strong> Quan điểm biện chứng duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ.
+              <strong>C.</strong> Quan điểm <span class="kw-green">biện chứng</span> duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Quan điểm biện chứng duy vật thừa nhận thế giới không có sự chuyển hóa của giới tự nhiên vô cơ.
+              <strong>D.</strong> Quan điểm <span class="kw-green">biện chứng</span> duy vật thừa nhận thế giới không có sự chuyển hóa của giới tự nhiên vô cơ.
             </div>
             
           </div>
@@ -12378,7 +12384,7 @@
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>B.</strong> Tính <span class="kw-green">chất</span> biện chứng của sự <span class="kw-green">vận động</span> và phát triển của thế giới vật <span class="kw-green">chất</span>.
+              <strong>B.</strong> Tính <span class="kw-green">chất</span> <span class="kw-green">biện chứng</span> của sự <span class="kw-green">vận động</span> và phát triển của thế giới vật <span class="kw-green">chất</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -13206,7 +13212,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Phương pháp biện chứng
+              <strong>B.</strong> Phương pháp <span class="kw-green">biện chứng</span>
             </div>
             
           </div>
@@ -13278,7 +13284,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật.
+              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp <span class="kw-green">biện chứng</span> và thế giới quan duy vật.
             </div>
             
           </div>
@@ -13508,7 +13514,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Biện chứng
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span>
             </div>
             
           </div>
@@ -14320,28 +14326,28 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Là những quan niệm biện chứng tiên nghiệm, có trước kinh nghiệm.
+              <strong>A.</strong> Là những quan niệm <span class="kw-green">biện chứng</span> tiên nghiệm, có trước kinh nghiệm.
             </div>
             
           </div>
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>B.</strong> Là biện chứng của bản thân thế giới.
+              <strong>B.</strong> Là <span class="kw-green">biện chứng</span> của bản thân thế giới.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>C.</strong> Là biện chứng không thể nhận thức được về nó.
+              <strong>C.</strong> Là <span class="kw-green">biện chứng</span> không thể nhận thức được về nó.
             </div>
             
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Là biện chứng của ý niệm tuyệt đối.
+              <strong>D.</strong> Là <span class="kw-green">biện chứng</span> của ý niệm tuyệt đối.
             </div>
             
           </div>
@@ -14356,7 +14362,7 @@
             <div class="opts-list">
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>A.</strong> Mối quan hệ biện chứng giữa vật <span class="kw-green">chất</span> và ý thức.
+              <strong>A.</strong> Mối quan hệ <span class="kw-green">biện chứng</span> giữa vật <span class="kw-green">chất</span> và ý thức.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -15040,14 +15046,14 @@
             <div class="opts-list">
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>A.</strong> <span class="kw-green">Mâu thuẫn</span> biện chứng.
+              <strong>A.</strong> <span class="kw-green">Mâu thuẫn</span> <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Phủ định biện chứng.
+              <strong>B.</strong> Phủ định <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
@@ -15709,7 +15715,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Quan hệ biện chứng giữa nhận thức và <span class="kw-green">thực tiễn</span>.
+              <strong>D.</strong> Quan hệ <span class="kw-green">biện chứng</span> giữa nhận thức và <span class="kw-green">thực tiễn</span>.
             </div>
             
           </div>
@@ -15846,14 +15852,14 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>C.</strong> Lý luận về mối qun hệ biện chứng giữa vật <span class="kw-green">chất</span> và ý thức.
+              <strong>C.</strong> Lý luận về mối qun hệ <span class="kw-green">biện chứng</span> giữa vật <span class="kw-green">chất</span> và ý thức.
             </div>
             
           </div>
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>D.</strong> Lý luận về quan hệ biện chứng giữa nhận thức và <span class="kw-green">thực tiễn</span>.
+              <strong>D.</strong> Lý luận về quan hệ <span class="kw-green">biện chứng</span> giữa nhận thức và <span class="kw-green">thực tiễn</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -16120,7 +16126,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phải nhận thức đúng <span class="kw-green">mâu thuẫn</span> và giải quyết triệt để các <span class="kw-green">mâu thuẫn</span>; Đồng thời, quán triệt quan điểm biện chứng trong xem xet và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phát triển.
+              <strong>A.</strong> Phải nhận thức đúng <span class="kw-green">mâu thuẫn</span> và giải quyết triệt để các <span class="kw-green">mâu thuẫn</span>; Đồng thời, quán triệt quan điểm <span class="kw-green">biện chứng</span> trong xem xet và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phát triển.
             </div>
             
           </div>
@@ -16235,7 +16241,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> CNDV biện chứng thừa nhận nhận thức là quá trình <span class="kw-green">phản ánh</span> sáng tạo hiện thực khách quan vào trong đầu óc con người dựa trên cơ sở <span class="kw-green">thực tiễn</span>.
+              <strong>B.</strong> CNDV <span class="kw-green">biện chứng</span> thừa nhận nhận thức là quá trình <span class="kw-green">phản ánh</span> sáng tạo hiện thực khách quan vào trong đầu óc con người dựa trên cơ sở <span class="kw-green">thực tiễn</span>.
             </div>
             
           </div>
@@ -16249,7 +16255,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> CNDV biện chứng thừa nhận nhận thức là quá trình biện chứng xuất phát từ <span class="kw-green">thực tiễn</span> và quay về phục vụ <span class="kw-green">thực tiễn</span>.
+              <strong>D.</strong> CNDV <span class="kw-green">biện chứng</span> thừa nhận nhận thức là quá trình <span class="kw-green">biện chứng</span> xuất phát từ <span class="kw-green">thực tiễn</span> và quay về phục vụ <span class="kw-green">thực tiễn</span>.
             </div>
             
           </div>
@@ -17185,7 +17191,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Là khoa học nghiên cứu về sự <span class="kw-green">vận động</span> của giới tự nhiên một cách biện chứng.
+              <strong>D.</strong> Là khoa học nghiên cứu về sự <span class="kw-green">vận động</span> của giới tự nhiên một cách <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
@@ -17200,28 +17206,28 @@
             <div class="opts-list">
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>A.</strong> Được xác lập trên nền tảng của thế giới quan duy vật khoa học; và sự thống nhất giữa <span class="kw-green">nội dung</span> thế giới quan (duy vật biên chứng) và phương pháp luận (biện chứng duy vật).
+              <strong>A.</strong> Được xác lập trên nền tảng của thế giới quan duy vật khoa học; và sự thống nhất giữa <span class="kw-green">nội dung</span> thế giới quan (duy vật biên chứng) và phương pháp luận (<span class="kw-green">biện chứng</span> duy vật).
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Được xác lập trên nền tảng thế giới quan biện chứng; và sự thống nhất giữa thế giới quan (duy vật ) và phương pháp luận (tư duy biện chứng).
+              <strong>B.</strong> Được xác lập trên nền tảng thế giới quan <span class="kw-green">biện chứng</span>; và sự thống nhất giữa thế giới quan (duy vật ) và phương pháp luận (tư duy <span class="kw-green">biện chứng</span>).
             </div>
             
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>C.</strong> Được xác lập trên nền tảng thế giới quan <span class="kw-green">duy vật biện chứng</span>; và sự thống nhất giữa <span class="kw-green">nội dung</span> (biện chứng khách quan) và phương pháp luận (biện chứng chủ quan).
+              <strong>C.</strong> Được xác lập trên nền tảng thế giới quan <span class="kw-green">duy vật biện chứng</span>; và sự thống nhất giữa <span class="kw-green">nội dung</span> (<span class="kw-green">biện chứng</span> khách quan) và phương pháp luận (<span class="kw-green">biện chứng</span> chủ quan).
             </div>
             
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Được xác lập trên nền tảng thế giới quan tư duy biện chứng; và sự thống nhất giữa <span class="kw-green">nội dung</span> (thế giới khach quan) và phướng pháp luận (ý thức chủ quan).
+              <strong>D.</strong> Được xác lập trên nền tảng thế giới quan tư duy <span class="kw-green">biện chứng</span>; và sự thống nhất giữa <span class="kw-green">nội dung</span> (thế giới khach quan) và phướng pháp luận (ý thức chủ quan).
             </div>
             
           </div>
@@ -17488,7 +17494,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Sự thống nhất biện chứng giữa <span class="kw-green">chất</span> và <span class="kw-green">lượng</span>.
+              <strong>A.</strong> Sự thống nhất <span class="kw-green">biện chứng</span> giữa <span class="kw-green">chất</span> và <span class="kw-green">lượng</span>.
             </div>
             
           </div>
@@ -17711,14 +17717,14 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Trong mối quan hệ biện chứng.
+              <strong>B.</strong> Trong mối quan hệ <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>C.</strong> Vừa có tính độc lập tương đối, vừa có mối quan hệ biện chứng.
+              <strong>C.</strong> Vừa có tính độc lập tương đối, vừa có mối quan hệ <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -17776,28 +17782,28 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp biện chứng là phương pháp nhận thức sự vật trong các mối liên hệ, ràng buộc, quy định lẫn nhau.
+              <strong>A.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp nhận thức sự vật trong các mối liên hệ, ràng buộc, quy định lẫn nhau.
             </div>
             
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Phương pháp biện chứng là phương pháp nhận thức sự vật ở trạng thái <span class="kw-green">vận động</span>, biến đổi, nằm trong khuynh hướng chung là phát triển.
+              <strong>B.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp nhận thức sự vật ở trạng thái <span class="kw-green">vận động</span>, biến đổi, nằm trong khuynh hướng chung là phát triển.
             </div>
             
           </div>
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>C.</strong> Phương pháp biện chứng là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm ngoài đối tượng.
+              <strong>C.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm ngoài đối tượng.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Phương pháp biện chứng là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm bên trong đối tượng.
+              <strong>D.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm bên trong đối tượng.
             </div>
             
           </div>
@@ -19869,7 +19875,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Quy luật về mối quan hệ biện chứng giữa <span class="kw-green">cơ sở hạ tầng</span> quyết định <span class="kw-green">kiến trúc thượng tầng</span>.
+              <strong>A.</strong> Quy luật về mối quan hệ <span class="kw-green">biện chứng</span> giữa <span class="kw-green">cơ sở hạ tầng</span> quyết định <span class="kw-green">kiến trúc thượng tầng</span>.
             </div>
             
           </div>
@@ -22941,7 +22947,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật.
+              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp <span class="kw-green">biện chứng</span> và thế giới quan duy vật.
             </div>
             
           </div>
@@ -23423,7 +23429,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Biện chứng
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span>
             </div>
             
           </div>
@@ -23524,7 +23530,7 @@
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>D.</strong> <span class="kw-green">Phương pháp siêu hình</span> không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp biện chứng.
+              <strong>D.</strong> <span class="kw-green">Phương pháp siêu hình</span> không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -23539,7 +23545,7 @@
             <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp tư duy biện chứng.
+              <strong>A.</strong> Phương pháp tư duy <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
@@ -23690,7 +23696,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Phương pháp biện chứng
+              <strong>B.</strong> Phương pháp <span class="kw-green">biện chứng</span>
             </div>
             
           </div>
@@ -23740,7 +23746,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Biện chứng
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span>
             </div>
             
           </div>
@@ -23848,7 +23854,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Biện chứng
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span>
             </div>
             
           </div>
@@ -23907,7 +23913,7 @@
           <div class="opts-list">
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp biện chứng.
+              <strong>A.</strong> Phương pháp <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -23957,14 +23963,14 @@
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>C.</strong> Quan điểm biện chứng duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ.
+              <strong>C.</strong> Quan điểm <span class="kw-green">biện chứng</span> duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Quan điểm biện chứng duy vật thừa nhận thế giới không có sự chuyển hóa của giới tự nhiên vô cơ.
+              <strong>D.</strong> Quan điểm <span class="kw-green">biện chứng</span> duy vật thừa nhận thế giới không có sự chuyển hóa của giới tự nhiên vô cơ.
             </div>
             
           </div>
@@ -24799,7 +24805,7 @@
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>D.</strong> <span class="kw-green">Phương pháp siêu hình</span> không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp biện chứng.
+              <strong>D.</strong> <span class="kw-green">Phương pháp siêu hình</span> không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -25037,7 +25043,7 @@
           <div class="opts-list">
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>A.</strong> Mối quan hệ biện chứng giữa vật <span class="kw-green">chất</span> và ý thức.
+              <strong>A.</strong> Mối quan hệ <span class="kw-green">biện chứng</span> giữa vật <span class="kw-green">chất</span> và ý thức.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -25111,28 +25117,28 @@
           <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp biện chứng là phương pháp nhận thức sự vật trong các mối liên hệ, ràng buộc, quy định lẫn nhau.
+              <strong>A.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp nhận thức sự vật trong các mối liên hệ, ràng buộc, quy định lẫn nhau.
             </div>
             
           </div>
         
           <div class="opt-row opt-trick">
             <div class="opt-content">
-              <strong>B.</strong> Phương pháp biện chứng là phương pháp nhận thức sự vật ở trạng thái <span class="kw-green">vận động</span>, biến đổi, nằm trong khuynh hướng chung là phát triển.
+              <strong>B.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp nhận thức sự vật ở trạng thái <span class="kw-green">vận động</span>, biến đổi, nằm trong khuynh hướng chung là phát triển.
             </div>
             <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY DÀI NHẤT (+24 ký tự)</span>
           </div>
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>C.</strong> Phương pháp biện chứng là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm ngoài đối tượng.
+              <strong>C.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm ngoài đối tượng.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Phương pháp biện chứng là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm bên trong đối tượng.
+              <strong>D.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm bên trong đối tượng.
             </div>
             
           </div>
@@ -25524,28 +25530,28 @@
           <div class="opts-list">
           <div class="opt-row opt-trick">
             <div class="opt-content">
-              <strong>A.</strong> Là những quan niệm biện chứng tiên nghiệm, có trước kinh nghiệm.
+              <strong>A.</strong> Là những quan niệm <span class="kw-green">biện chứng</span> tiên nghiệm, có trước kinh nghiệm.
             </div>
             <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY DÀI NHẤT (+19 ký tự)</span>
           </div>
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>B.</strong> Là biện chứng của bản thân thế giới.
+              <strong>B.</strong> Là <span class="kw-green">biện chứng</span> của bản thân thế giới.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>C.</strong> Là biện chứng không thể nhận thức được về nó.
+              <strong>C.</strong> Là <span class="kw-green">biện chứng</span> không thể nhận thức được về nó.
             </div>
             
           </div>
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Là biện chứng của ý niệm tuyệt đối.
+              <strong>D.</strong> Là <span class="kw-green">biện chứng</span> của ý niệm tuyệt đối.
             </div>
             
           </div>
@@ -26322,7 +26328,7 @@
         
           <div class="opt-row opt-trick">
             <div class="opt-content">
-              <strong>D.</strong> Quan hệ biện chứng giữa nhận thức và <span class="kw-green">thực tiễn</span>.
+              <strong>D.</strong> Quan hệ <span class="kw-green">biện chứng</span> giữa nhận thức và <span class="kw-green">thực tiễn</span>.
             </div>
             <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY DÀI NHẤT (+13 ký tự)</span>
           </div>
@@ -27203,14 +27209,14 @@
         
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>C.</strong> Quan điểm biện chứng duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ.
+              <strong>C.</strong> Quan điểm <span class="kw-green">biện chứng</span> duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
         
           <div class="opt-row opt-trick">
             <div class="opt-content">
-              <strong>D.</strong> Quan điểm biện chứng duy vật thừa nhận thế giới không có sự chuyển hóa của giới tự nhiên vô cơ.
+              <strong>D.</strong> Quan điểm <span class="kw-green">biện chứng</span> duy vật thừa nhận thế giới không có sự chuyển hóa của giới tự nhiên vô cơ.
             </div>
             <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY DÀI NHẤT (+9 ký tự)</span>
           </div>
@@ -28268,7 +28274,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>B.</strong> Phương pháp biện chứng
+              <strong>B.</strong> Phương pháp <span class="kw-green">biện chứng</span>
             </div>
             
           </div>
@@ -30061,7 +30067,7 @@
           <div class="opts-list">
           <div class="opt-row opt-correct">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp biện chứng.
+              <strong>A.</strong> Phương pháp <span class="kw-green">biện chứng</span>.
             </div>
             <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
           </div>
@@ -30226,7 +30232,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Biện chứng
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span>
             </div>
             
           </div>
@@ -30658,7 +30664,7 @@
         
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>D.</strong> Biện chứng
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span>
             </div>
             
           </div>
@@ -30673,7 +30679,7 @@
           <div class="opts-list">
           <div class="opt-row opt-normal">
             <div class="opt-content">
-              <strong>A.</strong> Phương pháp tư duy biện chứng.
+              <strong>A.</strong> Phương pháp tư duy <span class="kw-green">biện chứng</span>.
             </div>
             
           </div>
@@ -31496,6 +31502,2707 @@
     </div>
   </div>
 
+  <!-- TAB 9: TẬP HỢP TẤT CẢ CÁC CÂU CÓ TỪ KHÓA "BIỆN CHỨNG" -->
+  <div class="tab-content" id="sec9">
+    <div class="section">
+      <div class="section-title">
+        <i class="fa-solid fa-infinity" style="color: #0d9488;"></i>
+        PHẦN 9: TẬP HỢP TOÀN BỘ CÁC CÂU HỎI CÓ CHỨA TỪ KHÓA "BIỆN CHỨNG" (74 câu)
+      </div>
+
+      <div class="alert-box emerald">
+        ♾️ <strong>BÍ KÍP TỪ KHÓA "BIỆN CHỨNG":</strong>
+        <br>• Khi câu hỏi hỏi về: <em>"Mối liên hệ phổ biến và sự phát triển"</em>, <em>"Nhận thức đối tượng trong trạng thái vận động, ràng buộc"</em>, <em>"Hạt nhân hợp lý của Hêghen"</em>, <em>"Biện chứng khách quan / Biện chứng chủ quan"</em> $ightarrow$ <strong>KHOANH "BIỆN CHỨNG" LÀ ĐÚNG</strong>!
+        <br>• Khi câu hỏi hỏi về: <em>Quan điểm siêu hình</em>, <em>chủ nghĩa duy vật cổ đại / máy móc</em>, hoặc <em>hỏi câu SAI</em> $ightarrow$ <strong>"BIỆN CHỨNG" LÀ PHƯƠNG ÁN NHIỄU (KHÔNG ĐƯỢC KHOANH)</strong>!
+      </div>
+
+      <div class="search-box-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="tab9SearchInput" class="search-input" placeholder="Gõ từ khóa để lọc trong 74 câu có từ biện chứng...">
+      </div>
+
+      <!-- 9.1 Đáp án ĐÚNG chứa từ Biện chứng -->
+      <div class="sub-heading success">
+        <i class="fa-solid fa-check-double"></i>
+        9.1. Danh Sách 25 Câu Mà Đáp Án ĐÚNG Chứa Từ "Biện Chứng" (KHOANH BIỆN CHỨNG):
+      </div>
+      <p style="font-size: 0.86rem; color: #475569; margin-bottom: 12px;">Các câu dưới đây định nghĩa chuẩn xác về phương pháp biện chứng, phép biện chứng duy vật, biện chứng khách quan và chủ quan:</p>
+      <div class="q-grid">
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 8</span>
+              <div class="q-text">Nhận xét nào sau đây là sai:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Phương pháp siêu hình</span> nhận thức đối tượng ở trạng thái tĩnh, đồng nhất đối tượng với trạng thái tĩnh nhất thời đó.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Phương pháp siêu hình</span> chỉ nhìn thấy những sự vật riêng biệt mà không nhìn thấy mối liên hệ qua lại giữa những sự vật ấy, chỉ nhìn thấy cây mà không thấy rừng.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Phương pháp siêu hình</span> có công lớn trong việc giải quyết các vấn đề có liên quan đến cơ học cổ điển.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Phương pháp siêu hình</span> không có vai trò gì trong sự phát triển của triết học và do đó đã được thay thế bằng phương pháp <span class="kw-green">biện chứng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 22</span>
+              <div class="q-text">Hình thức nào của chủ nghĩa duy vật đã không còn đồng nhất vật chất với những dạng cụ thể của vật chất, và nó đã xác định rõ vật chất là thực tại khách quan:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Chủ nghĩa <span class="kw-green">duy vật chất phác</span> thời cổ đại.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Chủ nghĩa duy vật <span class="kw-green">siêu hình</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Chủ nghĩa duy vật nói chung.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 24</span>
+              <div class="q-text">Quan điểm “Vừa thấy cây vừa thấy rừng” thuộc về phương pháp nhận thức:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Phương pháp <span class="kw-green">biện chứng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Phương pháp siêu hình</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Phương pháp tư duy trừu tượng.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Phương pháp logic - lịch sử.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 27</span>
+              <div class="q-text">Theo triết học Mác- Lênin, biện chứng bao gồm:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Biện chứng</span> khách quan và <span class="kw-green">biện chứng</span> chủ quan.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Biện chứng</span> tự nhiên và <span class="kw-green">biện chứng</span> xã hội.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Biện chứng</span> duy tâm và <span class="kw-green">biện chứng</span> duy vật.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span> vật <span class="kw-green">chất</span> và <span class="kw-green">biện chứng</span> ý thức.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 28</span>
+              <div class="q-text">Chủ nghĩa duy vật phát triển qua các hình thức:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Chủ nghĩa duy vật cổ đại, chủ nghĩa duy vật <span class="kw-green">siêu hình</span>, chủ nghĩa duy vật máy móc.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Chủ nghĩa duy vật cổ đại, chủ nghĩa duy vật <span class="kw-green">siêu hình</span>, chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Chủ nghĩa duy vật nhân bản, chủ nghĩa duy vật <span class="kw-green">siêu hình</span>, chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Chủ nghĩa duy vật <span class="kw-green">siêu hình</span>, chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 35</span>
+              <div class="q-text">Các hình thức cơ bản của phép biện chứng là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Phép biện chứng</span> <span class="kw-green">chất</span> phác thời cổ đại; <span class="kw-green">phép biện chứng</span> duy tâm cổ điển Đức và <span class="kw-green">phép biện chứng</span> duy vật tầm thường.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Phép biện chứng</span> <span class="kw-green">chất</span> phác thời cổ đại; <span class="kw-green">phép biện chứng</span> duy tâm cổ điển Đức và <span class="kw-green">phép biện chứng</span> duy vật của chủ nghĩa Mác – Lênin.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Phép biện chứng</span> <span class="kw-green">chất</span> phác thời cổ đại; <span class="kw-green">phép biện chứng</span> duy vật của chủ nghĩa Mác - Lênin và <span class="kw-green">phép biện chứng</span> duy tâm thời trung cổ.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Phép biện chứng</span> duy tâm cổ điển Đức; <span class="kw-green">phép biện chứng</span> duy vật của chủ nghĩa Mác - Lênin và <span class="kw-green">phép biện chứng</span> <span class="kw-green">chủ nghĩa xã hội không tưởng</span>.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 36</span>
+              <div class="q-text">Về mặt triết học, định luật bảo toàn và chuyển hoá năng lượng chứng minh cho quan điểm:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Quan điểm <span class="kw-green">siêu hình</span> phủ nhận sự <span class="kw-green">vận động</span>, phát triển của thế giới vật <span class="kw-green">chất</span>
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Quan điểm duy tâm phủ nhận sự <span class="kw-green">vận động</span> là khách quan của thế giới vật <span class="kw-green">chất</span>
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Quan điểm <span class="kw-green">biện chứng</span> duy vật thừa nhận sự chuyển hoá lẫn nhau của giới tự nhiên vô cơ.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Quan điểm <span class="kw-green">biện chứng</span> duy vật thừa nhận thế giới không có sự chuyển hóa của giới tự nhiên vô cơ.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 37</span>
+              <div class="q-text">Thực chất bước chuyển cách mạng trong triết học do Mác và Ăngghen thực hiện là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Thống nhất giữa thế giới quan duy vật và <span class="kw-green">phép biện chứng</span> trong một hệ thống triết học.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Thống nhất giữa triết học của Hêghen và triết học của Phoi-ơ-bắc.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Phê phán chủ nghĩa duy vật <span class="kw-green">siêu hình</span> của Phoi-ơ-bắc.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Phê phán triết học duy tâm của Hêghen.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 38</span>
+              <div class="q-text">Ba phát minh trong khoa học tự nhiên: định luật bảo toàn và chuyển hoá năng lượng, học thuyết tế bào, học thuyết tiến hoá chứng minh thế giới vật chất có tính chất:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Tính <span class="kw-green">chất</span> tách rời tĩnh tại của thế giới vật <span class="kw-green">chất</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Tính <span class="kw-green">chất</span> <span class="kw-green">biện chứng</span> của sự <span class="kw-green">vận động</span> và phát triển của thế giới vật <span class="kw-green">chất</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Tính <span class="kw-green">chất</span> không tồn tại thực của thế giới vật <span class="kw-green">chất</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Tính <span class="kw-green">chất</span> vô tận của thế giới vật <span class="kw-green">chất</span>.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 45</span>
+              <div class="q-text">Thực chất bước chuyển cách mạng trong triết học do C.Mác và Ph.Ăngghen thực hiện là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Thống nhất <span class="kw-green">phép biện chứng</span> và thế giới quan duy vật trong một hệ thống triết học; xây dựng được chủ nghĩa <span class="kw-green">duy vật lịch sử</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Thống nhất phép <span class="kw-green">siêu hình</span> và thế giới quan duy vật trong một hệ thống triết học; xây dựng được chủ nghĩa <span class="kw-green">duy vật lịch sử</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Thống nhất phép <span class="kw-green">siêu hình</span> và thế giới quan duy tâm trong một hệ thống triết học; xây dựng được chủ nghĩa <span class="kw-green">duy vật lịch sử</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Thống nhất phép <span class="kw-green">siêu hình</span> và thế giới quan duy tâm trong một hệ thống triết học; phát hiện sứ mệnh lịch sử của giai cấp công nhân.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 51</span>
+              <div class="q-text">Xét về lịch sử hình thành và giá trị tư tưởng thì chủ nghĩa Ph.Ăngghen ở giai đoạn 1844 - 1848 nhằm mục đích là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Tiếp tục hoàn thành các tác phẩm triết học nhằm phê phán tôn giáo.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Hình thành những nguyên lý triết học <span class="kw-green">duy vật biện chứng</span>, <span class="kw-green">duy vật lịch sử</span> và chủ nghĩa xã hội khoa học.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Nghiên cứu về vai trò của hoạt động <span class="kw-green">thực tiễn</span> đối với nhận thức.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Hoàn thành bộ “Tư Bản”.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 1 - Câu 63</span>
+              <div class="q-text">Khi nói về triết học Mác, khẳng định nào sau đây là sai:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Triết học Mác là sự kết hợp <span class="kw-green">phép biện chứng</span> của Hêghen và chủ nghĩa duy vật của Phoi-ơ-bắc
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp <span class="kw-green">biện chứng</span> và thế giới quan duy vật.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Triết học Mác kế thừa và cải tạo <span class="kw-green">phép biện chứng</span> của Hêghen trên cơ sở duy vật.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Triết học Mác ra đời là một bước ngoặt vĩ đại trong lịch sử tư tưởng của nhân loại.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 6</span>
+              <div class="q-text">Trường phái triết học cho rằng: không thể có vật chất không vận động và không thể có vận động ngoài vật chất là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Chủ nghĩa duy vật tự phát thời cổ đại.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Chủ nghĩa duy vật <span class="kw-green">siêu hình</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Chủ nghĩa duy tâm.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 18</span>
+              <div class="q-text">Phép biện chứng duy vật là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Phép biện chứng</span> được xác lập trên lập trường của chủ nghĩa duy vật.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Phép biện chứng</span> của ý niệm tuyệt đối.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Phép biện chứng</span> do Ăngghen sáng lập.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Phép biện chứng</span> do V.I. Lênin sáng lập.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 19</span>
+              <div class="q-text">Biện chứng khách quan là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Là những quan niệm <span class="kw-green">biện chứng</span> tiên nghiệm, có trước kinh nghiệm.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Là <span class="kw-green">biện chứng</span> của bản thân thế giới.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Là <span class="kw-green">biện chứng</span> không thể nhận thức được về nó.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Là <span class="kw-green">biện chứng</span> của ý niệm tuyệt đối.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 20</span>
+              <div class="q-text">Cơ sở lý luận của quan điểm: Tôn trọng khách quan là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Mối quan hệ <span class="kw-green">biện chứng</span> giữa vật <span class="kw-green">chất</span> và ý thức.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Nguyên lý về mối liên hệ phổ biến.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Quy luật thống nhất và đấu tranh của các mặt đối lập.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Quy luật từ những sự biến đổi về <span class="kw-green">lượng</span> dẫn đến biến đổi về <span class="kw-green">chất</span> và ngược lại.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 39</span>
+              <div class="q-text">Phạm trù nói lên sự thống nhất, đấu tranh và chuyển hóa của các mặt đối lập được hiểu là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Mâu thuẫn</span> <span class="kw-green">biện chứng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Phủ định <span class="kw-green">biện chứng</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Phát triển.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Vận động</span>.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 61</span>
+              <div class="q-text">Cơ sở lý luận của quan điểm thống nhất lý luận và thực tiễn là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Nguyên lý về sự phát triển.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Nguyên lý về mối liên hệ phổ biến.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Lý luận về mối qun hệ <span class="kw-green">biện chứng</span> giữa vật <span class="kw-green">chất</span> và ý thức.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Lý luận về quan hệ <span class="kw-green">biện chứng</span> giữa nhận thức và <span class="kw-green">thực tiễn</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 99</span>
+              <div class="q-text">Đặc trưng cơ bản của phép biện chứng duy vật là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Được xác lập trên nền tảng của thế giới quan duy vật khoa học; và sự thống nhất giữa <span class="kw-green">nội dung</span> thế giới quan (duy vật biên chứng) và phương pháp luận (<span class="kw-green">biện chứng</span> duy vật).
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Được xác lập trên nền tảng thế giới quan <span class="kw-green">biện chứng</span>; và sự thống nhất giữa thế giới quan (duy vật ) và phương pháp luận (tư duy <span class="kw-green">biện chứng</span>).
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Được xác lập trên nền tảng thế giới quan <span class="kw-green">duy vật biện chứng</span>; và sự thống nhất giữa <span class="kw-green">nội dung</span> (<span class="kw-green">biện chứng</span> khách quan) và phương pháp luận (<span class="kw-green">biện chứng</span> chủ quan).
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Được xác lập trên nền tảng thế giới quan tư duy <span class="kw-green">biện chứng</span>; và sự thống nhất giữa <span class="kw-green">nội dung</span> (thế giới khach quan) và phướng pháp luận (ý thức chủ quan).
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 113</span>
+              <div class="q-text">Xác định đáp án đúng nhất. Trực quan sinh động và tư duy trừu tượng tồn tại trong quá trình nhận thức là:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Có tính độc lập tương đối.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Trong mối quan hệ <span class="kw-green">biện chứng</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Vừa có tính độc lập tương đối, vừa có mối quan hệ <span class="kw-green">biện chứng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Tác động qua lại với nhau.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 114</span>
+              <div class="q-text">Xác định mệnh đề đúng theo quan điểm của triết học Mác – Lênin:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Tổng số các mặt, các yếu tố, quan hệ do con người tạo ra là <span class="kw-green">nội dung</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Quan hệ giữa <span class="kw-green">nội dung</span> và <span class="kw-green">hình thức</span> không có <span class="kw-green">mâu thuẫn</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Nội dung</span> của sự vật biến đổi chậm hơn <span class="kw-green">hình thức</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Chủ nghĩa <span class="kw-green">duy vật biện chứng</span> chủ yếu nói tới <span class="kw-green">hình thức</span> bên trong của sự vật.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Bài 2 - Câu 115</span>
+              <div class="q-text">Xác định phương án sai theo quan điểm của triết học Mác - Lênin về phương pháp biện chứng:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp nhận thức sự vật trong các mối liên hệ, ràng buộc, quy định lẫn nhau.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp nhận thức sự vật ở trạng thái <span class="kw-green">vận động</span>, biến đổi, nằm trong khuynh hướng chung là phát triển.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm ngoài đối tượng.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Phương pháp <span class="kw-green">biện chứng</span> là phương pháp xem xét <span class="kw-green">nguyên nhân</span> của mọi biến đổi nằm bên trong đối tượng.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Đề KT 1 - Câu 5</span>
+              <div class="q-text">Mác và Ăngghen đã kế thừa yếu tố hạt nhân hợp lý nào trong triết học của Hêghen?</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Quan điểm duy vật trong lĩnh vực tự nhiên
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Quan điểm duy vật trong lĩnh vực xã hội
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Phép biện chứng</span>
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Tất cả các phương án trên đều sai
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Đề KT 1 - Câu 6</span>
+              <div class="q-text">Chọn khẳng định SAI khi nói về sự ra đời của triết học Mác:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Triết học Mác là sự kết hợp <span class="kw-green">phép biện chứng</span> của Hêghen và chủ nghĩa duy vật của Phoi-ơ-bắc
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Triết học Mác có sự thống nhất giữa phương pháp <span class="kw-green">biện chứng</span> và thế giới quan duy vật.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Triết học Mác kế thừa và cải tạo <span class="kw-green">phép biện chứng</span> của Hêghen trên cơ sở duy vật.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Triết học Mác là hệ thống quan điểm <span class="kw-green">duy vật biện chứng</span> về tự nhiên, xã hội, tư duy.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        
+          <div class="q-card">
+            <div class="q-header">
+              <span class="q-tag">Đề KT 3 - Câu 1</span>
+              <div class="q-text">Sự sáng tạo triết học của Mác và Ăngghen thể hiện ở việc xây dựng:</div>
+            </div>
+            <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Phép biện chứng</span> duy tâm - chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Phép biện chứng</span> duy vật - chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Phép biện chứng</span> duy tâm - chủ nghĩa duy vật siêu hình.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Phép biện chứng</span> duy vật - chủ nghĩa duy vật siêu hình.
+            </div>
+            
+          </div>
+        </div>
+          </div>
+        </div>
+
+      <!-- 9.2 Phương án chứa Biện chứng là BẪY LỪA -->
+      <div class="sub-heading danger" style="margin-top: 28px;">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        9.2. Danh Sách 49 Câu Mà Phương Án Có Từ "Biện Chứng" Là BẪY LỪA (KHÔNG KHOANH BIỆN CHỨNG):
+      </div>
+      <p style="font-size: 0.86rem; color: #475569; margin-bottom: 12px;">Các câu dưới đây có phương án chứa từ 'biện chứng' nhưng đó là phương án SAI (đã được viền đỏ nét đứt và gắn nhãn bẫy):</p>
+
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 1</span>
+            <div class="q-text">Xác định phương án đúng theo quan điểm của triết học duy vật biện chứng:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Chủ nghĩa duy vật thường là thế giới quan của các giai cấp và các lực <span class="kw-green">lượng</span> xã hội tiến bộ.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Chủ nghĩa duy vật luôn có mối liên hệ với khoa học, đề cao lao động trí óc hơn lao động chân tay.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Chủ nghĩa duy vật luôn có mối liên hệ với khoa học, đề cao lao động chân tay hơn lao động trí óc.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Chủ nghĩa duy vật là một sự phát triển phiến diện của một trong những mặt, một trong những khía cạnh của nhận thức.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 3</span>
+            <div class="q-text">Có quan niệm cho rằng: Thế giới bao gồm trần gian, thiên đường và địa ngục. Theo quan điểm của chủ nghĩa duy vật biện chứng quan niệm đó đúng hay sai:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Đúng.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Sai.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Vừa đúng vừa sai.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Tất cả đều sai.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 6</span>
+            <div class="q-text">Theo Ăngghen, những phát minh lớn trong khoa học tự nhiên ảnh hưởng tới sự hình thành triết học duy vật biện chứng là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Định luật <span class="kw-green">bảo toàn và chuyển hóa năng lượng</span>, <span class="kw-green">Thuyết tế bào</span>, Định luật vạn vật hấp dẫn.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Định luật <span class="kw-green">bảo toàn và chuyển hóa năng lượng</span>, <span class="kw-green">Thuyết tế bào</span>, Thuyết tiến hóa của Đácuyn.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Định luật <span class="kw-green">bảo toàn và chuyển hóa năng lượng</span>, Định luật vạn vật hấp dẫn, Thuyết nhật tâm.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Phát hiện ra nguyên tử, Phát hiện ra điện tử, Định luật bảo toàn và chuyển hoá năng <span class="kw-green">lượng</span>.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 14</span>
+            <div class="q-text">Nguồn gốc lý luận của Triết học Mác là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Triết học cổ điển Đức</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Kinh tế chính trị</span> hiện đại.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Chủ nghĩa xã hội.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Phép biện chứng</span> tự phát.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 16</span>
+            <div class="q-text">Phương pháp tư duy coi nguyên nhân của sự biến đổi nằm ngoài đối tượng là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>A.</strong> Phương pháp tư duy <span class="kw-green">biện chứng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Phương pháp tư duy trừu tượng hóa.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Phương pháp tư duy logic-lịch sử.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Phương pháp tư duy <span class="kw-green">siêu hình</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 46</span>
+            <div class="q-text">Cống hiến vĩ đại nhất của C.Mác về triết học là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>A.</strong> Chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Chủ nghĩa <span class="kw-green">duy vật lịch sử</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Coi <span class="kw-green">thực tiễn</span> là trung tâm.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Phép biện chứng</span> duy vật.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 53</span>
+            <div class="q-text">Chủ nghĩa duy vật có phương pháp nhìn thế giới như một cổ máy khổng lồ mà mỗi bộ phận tạo nên thế giới đó về cơ bản là ở trạng thái biệt lập và tĩnh tại là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Chủ nghĩa <span class="kw-green">duy vật chất phác</span> thời cổ đại.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Chủ nghĩa duy vật <span class="kw-green">siêu hình</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>C.</strong> Chủ nghĩa <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Chủ nghĩa duy vật nói chung.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 61</span>
+            <div class="q-text">Quan điểm nào cho rằng: Nguồn gốc của mọi sự vận động biến đổi là nằm bên ngoài sự vật, hiện tượng?</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Phương pháp siêu hình</span>
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>B.</strong> Phương pháp <span class="kw-green">biện chứng</span>
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>C.</strong> Chủ nghĩa <span class="kw-green">duy vật biện chứng</span>
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Triết học Mác - Lênin
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 69</span>
+            <div class="q-text">Quan điểm nào cho rằng: Phát triển của sự vật, hiện tượng chỉ là sự tăng giảm thuần tuý về lượng mà không có sự thay đổi về chất?</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Duy tâm chủ quan
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Duy tâm khách quan</span>
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Siêu hình</span>
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span>
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 1 - Câu 71</span>
+            <div class="q-text">Ngày nay, triết học có còn được coi là “khoa học của các khoa học” không?</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>A.</strong> Chỉ có triết học <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Tuỳ hệ thống triết học cụ thể.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Có.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Không.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 7</span>
+            <div class="q-text">Theo quan niệm của chủ nghĩa duy vật biện chứng, thế giới thống nhất ở:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Tính vật <span class="kw-green">chất</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Tính khách quan.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Tính hiện thực.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Tính độc lập.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 9</span>
+            <div class="q-text">Tìm đáp án sai theo quan điểm của chủ nghĩa duy vật biện chứng:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Phản ánh</span> là thuộc tính của mọi dạng vật <span class="kw-green">chất</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Ý thức là <span class="kw-green">hình thức</span> <span class="kw-green">phản ánh</span> chỉ có ở con người.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Thuộc tính <span class="kw-green">phản ánh</span> cũng phát triển từ thấp đến cao, từ đơn giản đến phức tạp.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Ý thức là thuộc tính của một dạng vật <span class="kw-green">chất</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 10</span>
+            <div class="q-text">Theo quan niệm của chủ nghĩa duy vật biện chứng, ý thức tác động đến đời sống hiện thực, thể hiện:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Ý thức tự nó có thể làm thay đổi được hiện thực.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Ý thức tác động đến hiện thực thông qua hoạt động <span class="kw-green">thực tiễn</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Ý thức tác động đến hiện thực thông qua hoạt động lý luận.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Ý thức sáng tạo ra toàn bộ hiện thực.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 12</span>
+            <div class="q-text">Xác định câu trả lời đúng theo quan điểm của triết học duy vật biện chứng:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Ý chí là yếu tố quan trọng nhất trong kết cấu của ý thức.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Ý thức có nguồn gốc tự nhiên và nguồn gốc xã hội.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Tình cảm là yếu tố quan trọng nhất trong kết cấu của ý thức.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Ý thức chỉ đạo mọi hành vi của con người.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 21</span>
+            <div class="q-text">Quy luật được xem là “hạt nhân của phép biện chứng” là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Quy luật thống nhất và đấu tranh của các mặt đối lập.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Quy luật từ những sự biến đổi về <span class="kw-green">lượng</span> dẫn đến biến đổi về <span class="kw-green">chất</span> và ngược lại.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Quy luật <span class="kw-green">phủ định của phủ định</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Quy luật <span class="kw-green">đấu tranh giai cấp</span>.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 33</span>
+            <div class="q-text">Trong triết học Mác - Lênin, thuật ngữ “biện chứng” được dùng để chỉ:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Nghệ thuật đàm thoại, tranh luận để đạt tới chân lý.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Mối liên hệ giữa các sự vật, <span class="kw-green">hiện tượng</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Sự <span class="kw-green">vận động</span> của các sự vật, <span class="kw-green">hiện tượng</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Những mối liên hệ, tương tác, chuyển hoá và <span class="kw-green">vận động</span>, phát triển theo quy luật của các sự vật, <span class="kw-green">hiện tượng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 36</span>
+            <div class="q-text">Theo quan điểm triết học, biện chứng là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Nhận thức đối tượng ở trạng thái cô lập, tách rời và giữa các mặt đối lập có ranh giới tuyệt đối.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Nhận thức đối tượng trong trạng thái <span class="kw-green">vận động</span> biến đổi, quy định ràng buộc lẫn nhau.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Nhận thức đối tượng trong các mối liên hệ với các đối tượng khác, trong sự tĩnh tại, không <span class="kw-green">vận động</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Nhận thức đối tượng ở trạng thái tĩnh tại; nếu có sự biến đổi thì chỉ là sự biến đổi về số <span class="kw-green">lượng</span>, <span class="kw-green">nguyên nhân</span> của sự biến đổi nằm ở ngoài đối tượng.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 40</span>
+            <div class="q-text">Phát triển theo quan niệm của chủ nghĩa duy vật biện chứng được hiểu là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Phát triển là sự thay đổi thuần túy về mặt số <span class="kw-green">lượng</span> hay khối <span class="kw-green">lượng</span> của sự vật <span class="kw-green">hiện tượng</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Phát triển là sự thay đổi vị trí của sự vật trong <span class="kw-green">không gian</span>, <span class="kw-green">thời gian</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Phát triển không chỉ là sự thay đổi về số <span class="kw-green">lượng</span> và khối <span class="kw-green">lượng</span> mà còn là sự thay đổi về <span class="kw-green">chất</span> của sự vật <span class="kw-green">hiện tượng</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Phát triển là sự <span class="kw-green">vận động</span>.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 42</span>
+            <div class="q-text">Theo quan điểm của chủ nghĩa duy vật biện chứng, luận điểm nào sau đây là sai:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Chân lý có tính khách quan.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Chân lý có tính tương đối.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Chân lý có tính cụ thể.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Chân lý có tính trừu tượng.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 47</span>
+            <div class="q-text">Theo quan điểm của triết học duy vật biện chứng về phát triển là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Phát triển của sự vật không có tính kế thừa.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Phát triển của sự vật có tính kế thừa, nhưng đó là sự kế thừa nguyên xi cái cũ hoặc lắp ghép từ cái cũ sang cái mới một cách máy móc về mặt <span class="kw-green">hình thức</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Phát triển của sự vật có tính kế thừa, nhưng trên cơ sở có phê phán, chọn lọc, cải tạo và phát triển.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Phát triển của sự vật có tính kế thừa, nhưng là quá trình bằng phẳng liên tục theo đường thẳng đứng.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 53</span>
+            <div class="q-text">Con đường biện chứng của quá trình nhận thức là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Từ cảm tính đến lý tính, từ lý tính đến hành động.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Từ hành động đến cảm tính, từ cảm tính đến tư duy trừu tượng.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Từ trực quan sinh động đến tư duy trừu tượng, từ tư duy trừu tượng đến hệ thống khái niệm.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Từ trực quan sinh động đến tư duy trừu tượng, từ tư duy trừu tượng đến <span class="kw-green">thực tiễn</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 54</span>
+            <div class="q-text">Theo quan điểm của chủ nghĩa duy vật biện chứng, mối liên hệ giữa các sự vật có tính chất:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Tính <span class="kw-green">ngẫu nhiên</span>, chủ quan, tính đa dạng và phong phú.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Tính khách quan, tính phổ biến, tính đa dạng và phong phú.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Tính khách quan, tính đặc thù, tính đa dạng và phong phú.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Tính khách quan, tính đa dạng và phong phú.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 55</span>
+            <div class="q-text">Nội dung cơ bản của mối quan hệ biện chứng giữa vật chất và ý thức là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Vật <span class="kw-green">chất</span> có trước, ý thức có sau, vật <span class="kw-green">chất</span> <span class="kw-green">quyết định ý thức</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Ý thức có trước, vật <span class="kw-green">chất</span> có sau, ý thức quyết định vật <span class="kw-green">chất</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Vật <span class="kw-green">chất</span> có trước, ý thức có sau, vật <span class="kw-green">chất</span> <span class="kw-green">quyết định ý thức</span>, ý thức có thể tác động trở lại vật <span class="kw-green">chất</span> thông qua hoạt động của con người.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Vật <span class="kw-green">chất</span> có trước, ý thức có sau, vật <span class="kw-green">chất</span> <span class="kw-green">quyết định ý thức</span>, ý thức không thể tác động trở lại vật <span class="kw-green">chất</span>.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 57</span>
+            <div class="q-text">Cơ sở lý luận của quan điểm phát huy tính năng động, sáng tạo là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Vật <span class="kw-green">chất</span> quyết định thức.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Nguyên lý về mối liên hệ phổ biến.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Ý thức tác động trở lại vật <span class="kw-green">chất</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>D.</strong> Quan hệ <span class="kw-green">biện chứng</span> giữa nhận thức và <span class="kw-green">thực tiễn</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 63</span>
+            <div class="q-text">Các nguyên lý cơ bản của phép biện chứng duy vật là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Nguyên lý về sự <span class="kw-green">tồn tại khách quan</span> của vật <span class="kw-green">chất</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Nguyên lý về sự <span class="kw-green">vận động</span> và đứng im của các sự vật.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Nguyên lý về mối liên hệ phổ biến và sự phát triển.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Nguyên lý về tính liên tục và tính gián đoạn của thế giới vật <span class="kw-green">chất</span>.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 69</span>
+            <div class="q-text">Ý nghĩa phương pháp luận của việc nghiên cứu quy luật mâu thuẫn:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>A.</strong> Phải nhận thức đúng <span class="kw-green">mâu thuẫn</span> và giải quyết triệt để các <span class="kw-green">mâu thuẫn</span>; Đồng thời, quán triệt quan điểm <span class="kw-green">biện chứng</span> trong xem xet và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phát triển.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Phải phân loại <span class="kw-green">mâu thuẫn</span>, giải quyết kịp thời các <span class="kw-green">mâu thuẫn</span>; Đồng thời, quán triệt quan điểm <span class="kw-green">duy vật lịch sử</span> trong xem xét và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phát triển.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Phải hiểu đúng <span class="kw-green">mâu thuẫn</span> và giải quyết đồng bộ các loại <span class="kw-green">mâu thuẫn</span>; Đồng thơi, quán triệt quan điểm thực tiển trong xem xét và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phát triển.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Phải tôn trọng <span class="kw-green">mâu thuẫn</span>, nhận thức đúng và giải quyết hợp lý các <span class="kw-green">mâu thuẫn</span>; Đồng thời, quán triệt quan điểm toàn diện và lịch sử cụ thể trong xem xét và giải quyết <span class="kw-green">mâu thuẫn</span> cho sự vật phá triển.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 72</span>
+            <div class="q-text">Theo quan điểm triết học Mác – Lênin, luận điểm nào sau đây sai:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> CNDV (chủ nghĩa duy vật) thừa nhận nhận thức là sự <span class="kw-green">phản ánh</span> sáng tạo hiện thực khách quan vào trong đầu óc con người dựa trên cơ sở <span class="kw-green">thực tiễn</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>B.</strong> CNDV <span class="kw-green">biện chứng</span> thừa nhận nhận thức là quá trình <span class="kw-green">phản ánh</span> sáng tạo hiện thực khách quan vào trong đầu óc con người dựa trên cơ sở <span class="kw-green">thực tiễn</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> CNDV thừa nhận nhận thức là sự <span class="kw-green">phản ánh</span> hiện thực khách quan vào đầu óc con người.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>D.</strong> CNDV <span class="kw-green">biện chứng</span> thừa nhận nhận thức là quá trình <span class="kw-green">biện chứng</span> xuất phát từ <span class="kw-green">thực tiễn</span> và quay về phục vụ <span class="kw-green">thực tiễn</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 73</span>
+            <div class="q-text">Chủ nghĩa duy vật biện chứng khẳng định:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Bản chất</span> của thế giới là vật <span class="kw-green">chất</span>, tồn tại bởi ý thức, không ngừng phát triển.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Bản chất</span> của thế giới là những vật thể tạo nên, <span class="kw-green">vận động</span>, biến đổi theo quy luật tự nhiên và xã hội.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Bản chất</span> của thế giới là vật <span class="kw-green">chất</span>, tồn tại trong ý thức con người, tùy thuộc vào nhận thức của con người.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Bản chất</span> của thế giới là vật <span class="kw-green">chất</span>, <span class="kw-green">tồn tại khách quan</span>, vĩnh viễn, vô tận, vô hạn.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 78</span>
+            <div class="q-text">Quan hệ biện chứng giữa chân lý và thực tiễn:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Chân lý là tri thức đúng sẽ quy định các mối quan hệ kinh tế - xã hội; Đồng thời, thông qua <span class="kw-green">thực tế</span> xã hội để điều chỉnh chân lý đó.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Chân lý là tri thức đúng sẽ tạo cơ sở cho hoạt động <span class="kw-green">thực tiễn</span> về kinh tế- xã hội; Đồng thời, hoạt động kinh tế- xã hội sẽ làm phong phú thêm chân lý đó.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Chân lý là tri thức đúng sẽ hướng dẫn hoạt động <span class="kw-green">thực tiễn</span> phát triển kinh tế- xã hội; Đồng thời, hoạt động kinh tế- xã hội sẽ kiểm nghiệm và hoàn thiên chân lý đó.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Chân lý là tri thức đúng được bắt nguồn từ ý thức <span class="kw-green">thực tiễn</span> trong đời sống kinh tế- xã hội; Đồng thời, hoạt động kinh tế- xã hội sẽ triển khai cụ thể chân lý đó.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 83</span>
+            <div class="q-text">Theo quan điểm của chủ nghĩa duy vật biện chứng, nguồn gốc trực tiếp và quan trọng nhất quyết định sự ra đời và phát triển của ý thức:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Sự tác động của tự nhiên vào bộ óc người.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Lao động và ý thức.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Bộ não người và hoạt động của nó.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Lao động và ngôn ngữ.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 86</span>
+            <div class="q-text">Theo quan điểm của chủ nghĩa duy vật biện chứng, luận điểm nào sau đây là sai:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Nhận thức cảm tính gắn liền với <span class="kw-green">thực tiễn</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Nhận thức cảm tính chưa phân biệt được cái <span class="kw-green">bản chất</span> với cái không <span class="kw-green">bản chất</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Nhận thức cảm tính <span class="kw-green">phản ánh</span> sai sự vật.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Nhận thức cảm tính chưa <span class="kw-green">phản ánh</span> đầy đủ và sâu sắc sự vật.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 87</span>
+            <div class="q-text">Xác định quan niệm sai về mâu thuẫn và vai trò của mâu thuẫn:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Sự liên hệ, tác động qua lại lẫn nhau giữa các mặt đối lập trong các sự vật là <span class="kw-green">mâu thuẫn</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Mâu thuẫn</span> vừa có tính khách quan vừa có tính phổ biến trong tự nhiên xã hội và tư duy.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>C.</strong> Quy luật <span class="kw-green">mâu thuẫn</span> là hạt nhân của <span class="kw-green">phép biện chứng</span> duy vật, nó chỉ rõ nguồn gốc, động lực của sự phát triển.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Sự thống nhất, đấu tranh chuyển hoá giữa các mặt đối lập gọi là <span class="kw-green">mâu thuẫn</span>.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 90</span>
+            <div class="q-text">Theo quan niệm của chủ nghĩa duy vật biện chứng, các mối liên hệ có vai trò đối với sự tồn tại và phát triển của sự vật là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Có vai trò khác nhau, nên chỉ cần biết một số mối liên hệ.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Có vai trò ngang bằng nhau.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Có vai trò khác nhau, cần phải xem xét mọi mối liên hệ.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Có vai trò ngang bằng nhau, nên chỉ cần xem xét một mối liên hệ
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 91</span>
+            <div class="q-text">Quan điểm nào cho rằng thế giới vô cơ, thế giới sinh vật và xã hội loài người là 3 lĩnh vực hoàn toàn khác biệt nhau, không quan hệ gì với nhau:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Quan điểm duy vật <span class="kw-green">siêu hình</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>B.</strong> Quan điểm <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Quan điểm <span class="kw-green">duy tâm khách quan</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Quan điểm duy tâm chủ quan
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 92</span>
+            <div class="q-text">Quan điểm nào cho rằng tồn tại là sự phức hợp của những cảm giác:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Quan điểm duy vật <span class="kw-green">siêu hình</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>B.</strong> Quan điểm <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Quan điểm <span class="kw-green">duy tâm khách quan</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> Quan điểm duy tâm chủ quan.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 93</span>
+            <div class="q-text">Quan điểm nào cho rằng bản chất thế giới là Ý niệm, vạn vật trong thế giới, kể cả con người chỉ là hình bóng của Ý niệm:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Quan điểm duy vật <span class="kw-green">siêu hình</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>B.</strong> Quan điểm <span class="kw-green">duy vật biện chứng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Quan điểm <span class="kw-green">duy tâm khách quan</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Quan điểm duy tâm chủ quan.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 98</span>
+            <div class="q-text">Phép biện chứng duy vật là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Là khoa học về sự <span class="kw-green">vận động</span>, phát triển của các sự vật, <span class="kw-green">hiện tượng</span> trong tự nhiên, xã hội và tư duy.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Là khoa học về sự <span class="kw-green">vận động</span>, phát triển của sự vật, <span class="kw-green">hiện tượng</span> trong tự nhiên và xã hội.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Là khoa học về những quy luật phổ biến của sự <span class="kw-green">vận động</span> và sự phát triển của tự nhiên, của xã hội loài người và của tư duy.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>D.</strong> Là khoa học nghiên cứu về sự <span class="kw-green">vận động</span> của giới tự nhiên một cách <span class="kw-green">biện chứng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 101</span>
+            <div class="q-text">Tính chất của mâu thuẫn biện chứng là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Tính khách quan, tính lịch sử và tính vĩnh cửu.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Tính khách quan, tính tuyệt đối và tính cụ thể.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Tinh khách quan, tính phổ biến và tính đa dạng, phong phú.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Tính tuyệt đối, tính tương đối và tính <span class="kw-green">vận động</span>, phát triển.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 105</span>
+            <div class="q-text">Phát triển trong phép biện chứng duy vật là chỉ:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Sự thay đổi về mặt số <span class="kw-green">lượng</span> hay khối <span class="kw-green">lượng</span> của sự vật, <span class="kw-green">hiện tượng</span> tạo nên sự <span class="kw-green">vận động</span>, lớn dần lên của nó.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Sự thay đổi vị trí của sự vật, <span class="kw-green">hiện tượng</span> trong <span class="kw-green">không gian</span> tạo nên sự biểu hiện phong phú, đa dạng của chúng.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Quá trình <span class="kw-green">vận động</span> của sự vật theo khuynh hướng đi lên: từ trình độ thấp đến trình độ cao, từ kém hoàn thiện đến hoàn thiện hơn, là sự biến đổi về <span class="kw-green">chất</span> của sự vật.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Quá trình <span class="kw-green">vận động</span> mang tính lịch sử của thế giới vật <span class="kw-green">chất</span> theo khuynh hướng đi lên gắn vơi hoàn cảnh cụ thể.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 106</span>
+            <div class="q-text">“Bước nhảy” trong phép biện chứng duy vật dùng để chỉ:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Sự thay đổi về <span class="kw-green">chất</span> của sự vật.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Sự thay đổi về <span class="kw-green">lượng</span> của sự vật.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Sự <span class="kw-green">mâu thuẫn</span> giữa <span class="kw-green">chất</span> và <span class="kw-green">lượng</span> của sự vật.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Sự tích lũy dần về <span class="kw-green">chất</span> của sự vật.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 2 - Câu 107</span>
+            <div class="q-text">“Điểm nút” trong phép biện chứng duy dùng để chỉ:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>A.</strong> Sự thống nhất <span class="kw-green">biện chứng</span> giữa <span class="kw-green">chất</span> và <span class="kw-green">lượng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Sự thay đổi từ <span class="kw-green">chất</span> cũ sang <span class="kw-green">chất</span> mới và ngược lại.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Thời điểm diễn ra sự thay đổi về <span class="kw-green">chất</span> của sự vật, <span class="kw-green">hiện tượng</span>.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Lượng</span> thay đổi đến một giới hạn nhất định thì dẫn đến sự thay đổi về <span class="kw-green">chất</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 3 - Câu 41</span>
+            <div class="q-text">Quy luật xã hội giữ vai trò quyết định đối với sự vận động và phát triển của xã hội là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>A.</strong> Quy luật về mối quan hệ <span class="kw-green">biện chứng</span> giữa <span class="kw-green">cơ sở hạ tầng</span> quyết định <span class="kw-green">kiến trúc thượng tầng</span>.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Quy luật <span class="kw-green">tồn tại xã hội</span> <span class="kw-green">quyết định ý thức</span> xã hội.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Quy luật về sự phù hợp của <span class="kw-green">quan hệ sản xuất</span> với trình độ phát triển của <span class="kw-green">lực lượng sản xuất</span>.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Quy luật <span class="kw-green">đấu tranh giai cấp</span>
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 3 - Câu 62</span>
+            <div class="q-text">Trong mối quan hệ biện chứng giữa cơ sở hạ tầng (CSHT) và kiến trúc thượng tầng (KTTT) thì:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> CSHT quyết định KTTT.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> KTTT quyết định CSHT.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Tuỳ thuộc vào thời đại kinh tế cụ thể mà xác định CSHT quyết định KTTT, hay KTTT quyết định CSHT.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Không cái nào quyết định cái nào.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 3 - Câu 93</span>
+            <div class="q-text">Cơ sở lí luận nền tảng của đường lối xây dựng chủ nghĩa xã hội của Đảng Cộng sản Việt Nam là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Học thuyết về giai cấp và <span class="kw-green">đấu tranh giai cấp</span> của triết học Mác-Lênin.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Phép biện chứng</span> duy vật.
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Học thuyết về hình thái kinh tế-xã hội.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Chủ nghĩa <span class="kw-green">duy vật lịch sử</span>.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Bài 3 - Câu 103</span>
+            <div class="q-text">Thực chất của quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Quan hệ giữa kinh tế và văn hóa.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>B.</strong> Quan hệ giữa kinh tế và chính trị.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Quan hệ giữa vật <span class="kw-green">chất</span> và tinh thần.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Quan hệ giữa <span class="kw-green">tồn tại xã hội</span> với <span class="kw-green">ý thức xã hội</span>.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Đề KT 1 - Câu 8</span>
+            <div class="q-text">Chủ nghĩa duy vật biện chứng do ai sáng lập / xây dựng?</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> Mác và Ph. Ăngghen xây dựng
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Mác xây dựng
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Ph. Ăngghen xây dựng
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Mác và Ph. Ăngghen và Lênin xây dựng
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Đề KT 1 - Câu 10</span>
+            <div class="q-text">Hình thức triết học thống trị ở Châu Âu thời Trung cổ là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>A.</strong> <span class="kw-green">Triết học kinh viện</span>
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Triết học tự nhiên
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>C.</strong> Triết học <span class="kw-green">siêu hình</span>
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>D.</strong> Triết học <span class="kw-green">duy vật biện chứng</span>
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Đề KT 2 - Câu 1</span>
+            <div class="q-text">Khẳng định nào sau đây biểu hiện quan điểm của phương pháp biện chứng?</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Coi sự phát triển chỉ là sự thay đổi về số <span class="kw-green">lượng</span>, do những lực <span class="kw-green">lượng</span> bên ngòai chi phối.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> Coi sự phát triển chỉ là sự thay đổi <span class="kw-green">chất</span> <span class="kw-green">lượng</span>, xảy ra một cách gián đọan, do những <span class="kw-green">mâu thuẫn</span> gây ra.
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> Coi sự vật tồn tại trong mối liên hệ với những sự vật khác, trong sự <span class="kw-green">vận động</span> và biến đổi của chính nó.
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>D.</strong> Tất cả đều đúng.
+            </div>
+            
+          </div>
+        </div>
+        </div>
+    
+        <div class="q-card" style="margin-bottom: 12px;">
+          <div class="q-header">
+            <span class="q-tag">Đề KT 3 - Câu 4</span>
+            <div class="q-text">Phương pháp tư duy xem xét sự vật ở trạng thái cô lập, tĩnh tại, không vận động, không phát triển là:</div>
+          </div>
+          <div class="opts-list">
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>A.</strong> Duy tâm chủ quan
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-normal">
+            <div class="opt-content">
+              <strong>B.</strong> <span class="kw-green">Duy tâm khách quan</span>
+            </div>
+            
+          </div>
+        
+          <div class="opt-row opt-correct">
+            <div class="opt-content">
+              <strong>C.</strong> <span class="kw-green">Siêu hình</span>
+            </div>
+            <span class="badge badge-correct"><i class="fa-solid fa-check"></i> ĐÁP ÁN ĐÚNG</span>
+          </div>
+        
+          <div class="opt-row opt-trick">
+            <div class="opt-content">
+              <strong>D.</strong> <span class="kw-green">Biện chứng</span>
+            </div>
+            <span class="badge badge-trick"><i class="fa-solid fa-xmark"></i> BẪY BIỆN CHỨNG (SAI)</span>
+          </div>
+        </div>
+        </div>
+    
+    </div>
+  </div>
+
   <!-- Interactive JavaScript -->
   <script>
     // Tab switching
@@ -31537,6 +34244,7 @@
     setupFilter('allQuestionsSearchInput', '#sec6', '.q-card');
     setupFilter('tab7SearchInput', '#sec7', '.q-card');
     setupFilter('tab8SearchInput', '#sec8', '.q-card');
+    setupFilter('tab9SearchInput', '#sec9', '.q-card');
   </script>
 </body>
 </html>
